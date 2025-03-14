@@ -1,0 +1,6 @@
+@FitGear_HostAddress = http://localhost:5209
+
+GET {{FitGear_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
