@@ -14,7 +14,7 @@ namespace FitGear.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Announcements",
+                name: "Announcement",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -293,7 +293,7 @@ namespace FitGear.Migrations
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "Announcements");
+                name: "Announcement");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

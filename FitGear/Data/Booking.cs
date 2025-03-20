@@ -10,5 +10,5 @@ public class Booking
     public string UserId { get; set; } 
     public User User { get; set; }
     public int AnnouncementId { get; set; }
-    public Announcement Announcement { get; set; }
+    public Announcement? Announcement { get; set; }
 }

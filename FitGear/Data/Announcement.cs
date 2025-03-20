@@ -10,5 +10,5 @@ public class Announcement
     public DateTime? UpdatedAt { get; set; }
     public decimal PricePerDay { get; set; }
 
-    public IList<Booking> Bookings { get; set; } = new List<Booking>();
+    public IList<Booking>? Bookings { get; set; } = new List<Booking>();
 }
