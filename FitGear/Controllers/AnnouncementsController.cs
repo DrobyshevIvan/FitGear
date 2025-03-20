@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using FitGear.Contracts;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -15,20 +16,20 @@ namespace FitGear.Controllers
     [ApiController]
     public class AnnouncementsController : ControllerBase
     {
-        private readonly FitGearDbContext _context;
+        private readonly IAnnouncementsRepository _announcementsRepository;
         private readonly IMapper _mapper;
 
-        public AnnouncementsController(FitGearDbContext context, IMapper _mapper)
+        public AnnouncementsController(IAnnouncementsRepository announcementsRepository, IMapper mapper)
         {
-            _context = context;
-            this._mapper = _mapper;
+            _announcementsRepository = announcementsRepository;
+            _mapper = mapper;
         }
 
         // GET: api/Announcement
         [HttpGet]
         public async Task<ActionResult<IEnumerable<GetAnnouncementDto>>> GetAnnouncements()
         {
-            var announcements = await _context.Announcements.ToListAsync();
+            var announcements = await _announcementsRepository.GetAllAsync();
             var records = _mapper.Map<List<GetAnnouncementDto>>(announcements);
             return Ok(records);
         }
@@ -37,7 +38,7 @@ namespace FitGear.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<GetAnnouncementDto>> GetAnnouncement(int id)
         {
-            var announcement = await _context.Announcements.FindAsync(id);
+            var announcement = await _announcementsRepository.GetAsync(id);
 
             if (announcement == null)
             {
@@ -62,7 +63,7 @@ namespace FitGear.Controllers
 
             // _context.Entry(announcement).State = EntityState.Modified;
 
-            var announcement = await _context.Announcements.FindAsync(id);
+            var announcement = await _announcementsRepository.GetAsync(id);
 
             if (announcement == null)
             {
@@ -73,11 +74,11 @@ namespace FitGear.Controllers
             
             try
             {
-                await _context.SaveChangesAsync();
+                await _announcementsRepository.UpdateAsync(announcement);
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!AnnouncementExists(id))
+                if (!await AnnouncementExists(id))
                 {
                     return NotFound();
                 }
@@ -96,8 +97,7 @@ namespace FitGear.Controllers
         public async Task<ActionResult<Announcement>> PostAnnouncement(CreateAnnouncementDto createAnnouncementDto)
         {
             var announcement = _mapper.Map<Announcement>(createAnnouncementDto);
-            _context.Announcements.Add(announcement);
-            await _context.SaveChangesAsync();
+            await _announcementsRepository.AddAsync(announcement);
 
             return CreatedAtAction("GetAnnouncement", new { id = announcement.Id }, announcement);
         }
@@ -106,21 +106,20 @@ namespace FitGear.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAnnouncement(int id)
         {
-            var announcement = await _context.Announcements.FindAsync(id);
+            var announcement = await _announcementsRepository.GetAsync(id);
             if (announcement == null)
             {
                 return NotFound();
             }
 
-            _context.Announcements.Remove(announcement);
-            await _context.SaveChangesAsync();
+            await _announcementsRepository.DeleteAsync(id);
 
             return NoContent();
         }
 
-        private bool AnnouncementExists(int id)
+        private Task<bool> AnnouncementExists(int id)
         {
-            return _context.Announcements.Any(e => e.Id == id);
+            return _announcementsRepository.Exists(id);
         }
     }
 }

@@ -2,10 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using FitGear.Contracts;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FitGear.Data;
+using FitGear.Models.Booking;
 
 namespace FitGear.Controllers
 {
@@ -13,53 +16,64 @@ namespace FitGear.Controllers
     [ApiController]
     public class BookingsController : ControllerBase
     {
-        private readonly FitGearDbContext _context;
+        private readonly IBookingRepository _bookingRepository;
+        private readonly IMapper _mapper;
 
-        public BookingsController(FitGearDbContext context)
+        public BookingsController(IBookingRepository bookingRepository, IMapper mapper)
         {
-            _context = context;
+            _bookingRepository = bookingRepository;
+            _mapper = mapper;
         }
 
         // GET: api/Bookings
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Booking>>> GetBookings()
+        public async Task<ActionResult<IEnumerable<GetBookingDto>>> GetBookings()
         {
-            return await _context.Bookings.ToListAsync();
+            var bookings = await _bookingRepository.GetAllAsync();
+            var records = _mapper.Map<List<GetBookingDto>>(bookings);
+            return Ok(records);
         }
 
         // GET: api/Bookings/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Booking>> GetBooking(int id)
+        public async Task<ActionResult<GetBookingDto>> GetBooking(int id)
         {
-            var booking = await _context.Bookings.FindAsync(id);
+            var booking = await _bookingRepository.GetAsync(id);
 
             if (booking == null)
             {
                 return NotFound();
             }
 
-            return booking;
+            return Ok(_mapper.Map<GetBookingDto>(booking));
         }
 
         // PUT: api/Bookings/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutBooking(int id, Booking booking)
+        public async Task<IActionResult> PutBooking(int id, UpdateBookingDto bookingDto)
         {
-            if (id != booking.Id)
+            if (id != bookingDto.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(booking).State = EntityState.Modified;
+            var booking = await _bookingRepository.GetAsync(id);
 
+            if (booking == null)
+            {
+                return NotFound();
+            }
+            
+            _mapper.Map(bookingDto, booking);
+            
             try
             {
-                await _context.SaveChangesAsync();
+                await _bookingRepository.UpdateAsync(booking);
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!BookingExists(id))
+                if (!await BookingExists(id))
                 {
                     return NotFound();
                 }
@@ -75,10 +89,10 @@ namespace FitGear.Controllers
         // POST: api/Bookings
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Booking>> PostBooking(Booking booking)
+        public async Task<ActionResult<Booking>> PostBooking(CreateBookingDto createBookingDto)
         {
-            _context.Bookings.Add(booking);
-            await _context.SaveChangesAsync();
+            var booking = _mapper.Map<Booking>(createBookingDto);
+            await _bookingRepository.AddAsync(booking);
 
             return CreatedAtAction("GetBooking", new { id = booking.Id }, booking);
         }
@@ -87,21 +101,20 @@ namespace FitGear.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBooking(int id)
         {
-            var booking = await _context.Bookings.FindAsync(id);
+            var booking = await _bookingRepository.GetAsync(id);
             if (booking == null)
             {
                 return NotFound();
             }
 
-            _context.Bookings.Remove(booking);
-            await _context.SaveChangesAsync();
+            await _bookingRepository.DeleteAsync(id);
 
             return NoContent();
         }
 
-        private bool BookingExists(int id)
+        private Task<bool> BookingExists(int id)
         {
-            return _context.Bookings.Any(e => e.Id == id);
+            return _bookingRepository.Exists(id);
         }
     }
 }
