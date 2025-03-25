@@ -90,7 +90,7 @@ export default function AnnouncementsPage() {
             />
 
             {loading ? (
-                <Title>Loading...</Title>
+                <Title>Загрузка...</Title>
             ) : (
                 <Announcements
                     announcements={announcements}
