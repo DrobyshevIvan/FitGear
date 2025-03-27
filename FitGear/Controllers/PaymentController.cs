@@ -73,13 +73,28 @@ namespace FitGear.Controllers
 
         // DELETE: api/Payment/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeletePayment(int id)
+        public async Task<IActionResult> RefundPayment(int id)
         {
             var payment = await _paymentService.RefundPaymentAsync(id);
             if (payment == null)
             {
                 return NotFound();
             }
+            
+            return NoContent();
+        }
+        
+        // DELETE api/Payment/5/delete
+        [HttpDelete("{paymentId}/delete")]
+        public async Task<IActionResult> DeletePayment(int paymentId)
+        {
+            var payment = await _paymentService.GetPaymentAsync(paymentId);
+            if (payment == null) 
+            {
+                return NotFound(new {messgae = "Payment not found"});
+            }
+            
+            await _paymentService.DeletePaymentAndBookingAsync(paymentId);
             
             return NoContent();
         }

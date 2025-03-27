@@ -38,6 +38,10 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
     public async Task DeleteAsync(int id)
     {
         var entity = await GetAsync(id);
+        if (entity == null)
+        {
+            throw new KeyNotFoundException($"Entity with id {id} not found");
+        }
         _context.Set<T>().Remove(entity);
         await _context.SaveChangesAsync();
     }

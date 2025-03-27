@@ -1,0 +1,490 @@
+2025-03-27 10:43:06.513 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 8:43:06
+2025-03-27 10:43:07.302 +02:00 [INF] Now listening on: http://localhost:5209
+2025-03-27 10:43:07.304 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-27 10:43:07.304 +02:00 [INF] Hosting environment: Development
+2025-03-27 10:43:07.305 +02:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-03-27 10:43:49.827 +02:00 [INF] HTTP POST /api/Payment responded 201 in 477.5239 ms
+2025-03-27 10:44:33.270 +02:00 [INF] HTTP GET /api/Payment/user/string responded 200 in 219.8037 ms
+2025-03-27 10:44:41.140 +02:00 [INF] HTTP PUT /api/Payment/12/process responded 200 in 128.2513 ms
+2025-03-27 10:45:30.930 +02:00 [INF] HTTP POST /api/Bookings responded 404 in 27.5875 ms
+2025-03-27 10:45:35.539 +02:00 [INF] HTTP POST /api/Bookings responded 404 in 7.3869 ms
+2025-03-27 10:45:38.377 +02:00 [INF] HTTP POST /api/Bookings responded 404 in 4.5620 ms
+2025-03-27 10:45:41.356 +02:00 [INF] HTTP POST /api/Bookings responded 404 in 3.5319 ms
+2025-03-27 10:45:44.164 +02:00 [INF] HTTP POST /api/Bookings responded 404 in 3.8401 ms
+2025-03-27 10:45:46.831 +02:00 [INF] HTTP POST /api/Bookings responded 404 in 3.5483 ms
+2025-03-27 10:45:52.235 +02:00 [INF] HTTP GET /api/Announcements responded 200 in 74.2845 ms
+2025-03-27 10:46:00.772 +02:00 [ERR] HTTP POST /api/Bookings responded 500 in 7.2751 ms
+System.InvalidOperationException: No available quantity for this announcement
+   at FitGear.Services.BookingService.CreateBookingAsync(CreateBookingDto createBookingDto) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\BookingService.cs:line 36
+   at FitGear.Controllers.BookingsController.PostBooking(CreateBookingDto createBookingDto) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\BookingsController.cs:line 188
+   at lambda_method465(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-03-27 10:46:00.785 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No available quantity for this announcement
+   at FitGear.Services.BookingService.CreateBookingAsync(CreateBookingDto createBookingDto) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\BookingService.cs:line 36
+   at FitGear.Controllers.BookingsController.PostBooking(CreateBookingDto createBookingDto) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\BookingsController.cs:line 188
+   at lambda_method465(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-27 10:46:15.897 +02:00 [INF] HTTP PUT /api/Announcements/15 responded 400 in 24.1124 ms
+2025-03-27 10:46:20.461 +02:00 [INF] HTTP PUT /api/Announcements/15 responded 204 in 26.3650 ms
+2025-03-27 10:46:27.424 +02:00 [INF] HTTP POST /api/Bookings responded 201 in 38.7314 ms
+2025-03-27 10:47:02.153 +02:00 [INF] HTTP POST /api/Payment responded 201 in 57.8995 ms
+2025-03-27 10:47:13.898 +02:00 [INF] HTTP GET /api/Payment/user/string responded 200 in 7.7382 ms
+2025-03-27 10:47:26.986 +02:00 [INF] HTTP PUT /api/Payment/13/process responded 200 in 30.8289 ms
+2025-03-27 10:47:47.123 +02:00 [INF] Application is shutting down...
+2025-03-27 10:47:49.302 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 8:47:49
+2025-03-27 10:47:50.007 +02:00 [INF] Now listening on: http://localhost:5209
+2025-03-27 10:47:50.008 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-27 10:47:50.009 +02:00 [INF] Hosting environment: Development
+2025-03-27 10:47:50.009 +02:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-03-27 10:48:25.957 +02:00 [INF] HTTP GET /api/Bookings responded 200 in 259.1652 ms
+2025-03-27 10:49:06.271 +02:00 [INF] HTTP PUT /api/Bookings/1009 responded 204 in 626.7178 ms
+2025-03-27 10:49:21.915 +02:00 [INF] Application is shutting down...
+2025-03-27 10:49:24.032 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 8:49:24
+2025-03-27 10:49:24.753 +02:00 [INF] Now listening on: http://localhost:5209
+2025-03-27 10:49:24.755 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-27 10:49:24.755 +02:00 [INF] Hosting environment: Development
+2025-03-27 10:49:24.756 +02:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-03-27 10:50:40.542 +02:00 [INF] HTTP POST /api/Bookings responded 404 in 292.2245 ms
+2025-03-27 10:50:45.194 +02:00 [ERR] HTTP POST /api/Bookings responded 500 in 89.6821 ms
+System.InvalidOperationException: No available quantity for this announcement
+   at FitGear.Services.BookingService.CreateBookingAsync(CreateBookingDto createBookingDto) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\BookingService.cs:line 36
+   at FitGear.Controllers.BookingsController.PostBooking(CreateBookingDto createBookingDto) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\BookingsController.cs:line 188
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-03-27 10:50:45.209 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No available quantity for this announcement
+   at FitGear.Services.BookingService.CreateBookingAsync(CreateBookingDto createBookingDto) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\BookingService.cs:line 36
+   at FitGear.Controllers.BookingsController.PostBooking(CreateBookingDto createBookingDto) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\BookingsController.cs:line 188
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-27 10:50:55.293 +02:00 [INF] HTTP PUT /api/Announcements/15 responded 400 in 23.6481 ms
+2025-03-27 10:50:59.772 +02:00 [INF] HTTP PUT /api/Announcements/17 responded 204 in 156.7463 ms
+2025-03-27 10:51:04.458 +02:00 [INF] HTTP PUT /api/Bookings/1009 responded 204 in 69.1809 ms
+2025-03-27 10:51:20.856 +02:00 [INF] HTTP POST /api/Bookings responded 201 in 174.8038 ms
+2025-03-27 10:51:53.325 +02:00 [INF] HTTP POST /api/Payment responded 201 in 103.7135 ms
+2025-03-27 10:52:03.191 +02:00 [INF] HTTP PUT /api/Payment/14/process responded 200 in 138.5255 ms
+2025-03-27 10:52:18.378 +02:00 [INF] Application is shutting down...
+2025-03-27 10:52:19.692 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 8:52:19
+2025-03-27 10:52:20.408 +02:00 [INF] Now listening on: http://localhost:5209
+2025-03-27 10:52:20.410 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-27 10:52:20.411 +02:00 [INF] Hosting environment: Development
+2025-03-27 10:52:20.412 +02:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-03-27 11:01:43.226 +02:00 [ERR] HTTP POST /api/Bookings responded 500 in 351.2672 ms
+System.InvalidOperationException: No available quantity for this announcement
+   at FitGear.Services.BookingService.CreateBookingAsync(CreateBookingDto createBookingDto) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\BookingService.cs:line 36
+   at FitGear.Controllers.BookingsController.PostBooking(CreateBookingDto createBookingDto) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\BookingsController.cs:line 188
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-03-27 11:01:43.243 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No available quantity for this announcement
+   at FitGear.Services.BookingService.CreateBookingAsync(CreateBookingDto createBookingDto) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\BookingService.cs:line 36
+   at FitGear.Controllers.BookingsController.PostBooking(CreateBookingDto createBookingDto) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\BookingsController.cs:line 188
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-27 11:01:54.054 +02:00 [INF] HTTP PUT /api/Announcements/18 responded 204 in 319.3236 ms
+2025-03-27 11:01:57.906 +02:00 [INF] HTTP POST /api/Bookings responded 201 in 129.0690 ms
+2025-03-27 11:02:06.344 +02:00 [INF] HTTP POST /api/Payment responded 201 in 80.2727 ms
+2025-03-27 11:02:17.213 +02:00 [INF] HTTP PUT /api/Payment/15/process responded 200 in 509.3527 ms
+2025-03-27 11:03:10.354 +02:00 [INF] HTTP GET /api/Payment/user/string responded 200 in 235.3889 ms
+2025-03-27 11:03:17.808 +02:00 [INF] HTTP GET /api/Payment/8 responded 200 in 87.4606 ms
+2025-03-27 11:03:20.802 +02:00 [INF] HTTP GET /api/Payment/15 responded 200 in 5.4210 ms
+2025-03-27 11:03:29.459 +02:00 [INF] Application is shutting down...
+2025-03-27 11:03:32.734 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 9:03:32
+2025-03-27 11:03:33.437 +02:00 [INF] Now listening on: http://localhost:5209
+2025-03-27 11:03:33.439 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-27 11:03:33.439 +02:00 [INF] Hosting environment: Development
+2025-03-27 11:03:33.440 +02:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-03-27 11:04:10.531 +02:00 [INF] Application is shutting down...
+2025-03-27 11:04:11.724 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 9:04:11
+2025-03-27 11:04:12.437 +02:00 [INF] Now listening on: http://localhost:5209
+2025-03-27 11:04:12.439 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-27 11:04:12.440 +02:00 [INF] Hosting environment: Development
+2025-03-27 11:04:12.440 +02:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-03-27 11:06:52.450 +02:00 [INF] Application is shutting down...
+2025-03-27 11:07:00.773 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 9:07:00
+2025-03-27 11:07:01.509 +02:00 [INF] Now listening on: http://localhost:5209
+2025-03-27 11:07:01.511 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-27 11:07:01.512 +02:00 [INF] Hosting environment: Development
+2025-03-27 11:07:01.512 +02:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-03-27 11:07:01.783 +02:00 [INF] Updating booking 1011 status from Active to Completed
+2025-03-27 11:07:34.742 +02:00 [INF] HTTP PUT /api/Announcements/18 responded 400 in 147.5394 ms
+2025-03-27 11:07:38.826 +02:00 [INF] HTTP PUT /api/Announcements/19 responded 204 in 111.7249 ms
+2025-03-27 11:08:00.575 +02:00 [INF] HTTP POST /api/Bookings responded 201 in 442.8045 ms
+2025-03-27 11:08:08.533 +02:00 [INF] HTTP POST /api/Payment responded 201 in 136.0266 ms
+2025-03-27 11:08:17.312 +02:00 [INF] HTTP PUT /api/Payment/16/process responded 200 in 194.8157 ms
+2025-03-27 11:10:25.179 +02:00 [INF] Application is shutting down...
+2025-03-27 11:10:28.613 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 9:10:28
+2025-03-27 11:10:29.314 +02:00 [INF] Now listening on: http://localhost:5209
+2025-03-27 11:10:29.316 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-27 11:10:29.316 +02:00 [INF] Hosting environment: Development
+2025-03-27 11:10:29.317 +02:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-03-27 11:10:29.652 +02:00 [INF] Updating booking 1012 status from Confirmed to Active
+2025-03-27 11:11:17.530 +02:00 [INF] Application is shutting down...
+2025-03-27 11:11:18.689 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 9:11:18
+2025-03-27 11:11:19.517 +02:00 [INF] Now listening on: http://localhost:5209
+2025-03-27 11:11:19.519 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-27 11:11:19.519 +02:00 [INF] Hosting environment: Development
+2025-03-27 11:11:19.520 +02:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-03-27 11:11:19.805 +02:00 [INF] Updating booking 1012 status from Active to Completed
+2025-03-27 11:16:50.219 +02:00 [INF] Application is shutting down...
+2025-03-27 11:16:55.622 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 9:16:55
+2025-03-27 11:16:56.389 +02:00 [INF] Now listening on: http://localhost:5209
+2025-03-27 11:16:56.391 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-27 11:16:56.392 +02:00 [INF] Hosting environment: Development
+2025-03-27 11:16:56.392 +02:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-03-27 11:18:22.340 +02:00 [ERR] HTTP DELETE /api/Payment/9/delete responded 500 in 496.7741 ms
+System.InvalidOperationException: The association between entity types 'Booking' and 'Payment' has been severed, but the relationship is either marked as required or is implicitly required because the foreign key is not nullable. If the dependent/child entity should be deleted when a required relationship is severed, configure the relationship to use cascade deletes. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.HandleConceptualNulls(Boolean sensitiveLoggingEnabled, Boolean force, Boolean isCascadeDelete)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.CascadeDelete(InternalEntityEntry entry, Boolean force, IEnumerable`1 foreignKeys)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry.set_State(EntityState value)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Remove(TEntity entity)
+   at FitGear.Repository.GenericRepository`1.DeleteAsync(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Repository\GenericRepository.cs:line 41
+   at FitGear.Services.PaymentService.DeletePaymentAndBookingAsync(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\PaymentService.cs:line 138
+   at FitGear.Controllers.PaymentController.DeletePayment(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\PaymentController.cs:line 97
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-03-27 11:18:22.368 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The association between entity types 'Booking' and 'Payment' has been severed, but the relationship is either marked as required or is implicitly required because the foreign key is not nullable. If the dependent/child entity should be deleted when a required relationship is severed, configure the relationship to use cascade deletes. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.HandleConceptualNulls(Boolean sensitiveLoggingEnabled, Boolean force, Boolean isCascadeDelete)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.CascadeDelete(InternalEntityEntry entry, Boolean force, IEnumerable`1 foreignKeys)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry.set_State(EntityState value)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Remove(TEntity entity)
+   at FitGear.Repository.GenericRepository`1.DeleteAsync(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Repository\GenericRepository.cs:line 41
+   at FitGear.Services.PaymentService.DeletePaymentAndBookingAsync(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\PaymentService.cs:line 138
+   at FitGear.Controllers.PaymentController.DeletePayment(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\PaymentController.cs:line 97
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-27 11:21:13.114 +02:00 [INF] Application is shutting down...
+2025-03-27 11:21:18.891 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 9:21:18
+2025-03-27 11:21:19.689 +02:00 [INF] Now listening on: http://localhost:5209
+2025-03-27 11:21:19.691 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-27 11:21:19.692 +02:00 [INF] Hosting environment: Development
+2025-03-27 11:21:19.692 +02:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-03-27 11:21:22.983 +02:00 [ERR] HTTP DELETE /api/Payment/9/delete responded 500 in 1153.2776 ms
+System.ArgumentNullException: Value cannot be null. (Parameter 'entity')
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Remove(TEntity entity)
+   at FitGear.Repository.GenericRepository`1.DeleteAsync(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Repository\GenericRepository.cs:line 41
+   at FitGear.Services.PaymentService.DeletePaymentAndBookingAsync(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\PaymentService.cs:line 141
+   at FitGear.Controllers.PaymentController.DeletePayment(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\PaymentController.cs:line 97
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-03-27 11:21:23.003 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'entity')
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Remove(TEntity entity)
+   at FitGear.Repository.GenericRepository`1.DeleteAsync(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Repository\GenericRepository.cs:line 41
+   at FitGear.Services.PaymentService.DeletePaymentAndBookingAsync(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\PaymentService.cs:line 141
+   at FitGear.Controllers.PaymentController.DeletePayment(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\PaymentController.cs:line 97
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-27 11:22:23.873 +02:00 [INF] Application is shutting down...
+2025-03-27 11:22:47.474 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 9:22:47
+2025-03-27 11:22:48.198 +02:00 [INF] Now listening on: http://localhost:5209
+2025-03-27 11:22:48.200 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-27 11:22:48.201 +02:00 [INF] Hosting environment: Development
+2025-03-27 11:22:48.201 +02:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-03-27 11:22:51.836 +02:00 [ERR] HTTP DELETE /api/Payment/9/delete responded 500 in 196.9103 ms
+System.Collections.Generic.KeyNotFoundException: Payment with id 9 not found.
+   at FitGear.Repository.PaymentRepository.GetWithDetailsAsync(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Repository\PaymentRepository.cs:line 35
+   at FitGear.Services.PaymentService.GetPaymentAsync(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\PaymentService.cs:line 81
+   at FitGear.Controllers.PaymentController.DeletePayment(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\PaymentController.cs:line 91
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-03-27 11:22:51.855 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: Payment with id 9 not found.
+   at FitGear.Repository.PaymentRepository.GetWithDetailsAsync(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Repository\PaymentRepository.cs:line 35
+   at FitGear.Services.PaymentService.GetPaymentAsync(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\PaymentService.cs:line 81
+   at FitGear.Controllers.PaymentController.DeletePayment(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\PaymentController.cs:line 91
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-27 11:23:11.938 +02:00 [ERR] HTTP DELETE /api/Payment/8/delete responded 500 in 825.3582 ms
+System.ArgumentNullException: Value cannot be null. (Parameter 'entity')
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Remove(TEntity entity)
+   at FitGear.Repository.GenericRepository`1.DeleteAsync(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Repository\GenericRepository.cs:line 41
+   at FitGear.Services.PaymentService.DeletePaymentAndBookingAsync(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\PaymentService.cs:line 141
+   at FitGear.Controllers.PaymentController.DeletePayment(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\PaymentController.cs:line 97
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-03-27 11:23:11.943 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'entity')
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Remove(TEntity entity)
+   at FitGear.Repository.GenericRepository`1.DeleteAsync(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Repository\GenericRepository.cs:line 41
+   at FitGear.Services.PaymentService.DeletePaymentAndBookingAsync(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\PaymentService.cs:line 141
+   at FitGear.Controllers.PaymentController.DeletePayment(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\PaymentController.cs:line 97
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-27 11:26:10.380 +02:00 [INF] Application is shutting down...
+2025-03-27 11:26:14.930 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 9:26:14
+2025-03-27 11:26:15.658 +02:00 [INF] Now listening on: http://localhost:5209
+2025-03-27 11:26:15.660 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-27 11:26:15.661 +02:00 [INF] Hosting environment: Development
+2025-03-27 11:26:15.661 +02:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-03-27 11:26:26.101 +02:00 [INF] HTTP DELETE /api/Payment/5/delete responded 204 in 868.3740 ms
+2025-03-27 11:27:11.992 +02:00 [INF] HTTP GET /api/Announcements responded 200 in 237.2302 ms
+2025-03-27 11:27:35.865 +02:00 [INF] HTTP POST /api/Announcements responded 201 in 179.7855 ms
+2025-03-27 11:27:36.648 +02:00 [INF] HTTP POST /api/Announcements responded 201 in 8.8317 ms
+2025-03-27 11:27:37.393 +02:00 [INF] HTTP POST /api/Announcements responded 201 in 6.4124 ms
+2025-03-27 11:27:37.955 +02:00 [INF] HTTP POST /api/Announcements responded 201 in 6.8580 ms
+2025-03-27 11:27:38.755 +02:00 [INF] HTTP POST /api/Announcements responded 201 in 5.0134 ms
+2025-03-27 11:27:39.208 +02:00 [INF] HTTP POST /api/Announcements responded 201 in 5.6786 ms
+2025-03-27 11:27:39.770 +02:00 [INF] HTTP POST /api/Announcements responded 201 in 7.0051 ms
+2025-03-27 11:28:10.334 +02:00 [INF] HTTP POST /api/Bookings responded 404 in 152.1325 ms
+2025-03-27 11:28:17.625 +02:00 [INF] HTTP GET /api/Announcements responded 200 in 152.0923 ms
+2025-03-27 11:28:29.522 +02:00 [INF] HTTP POST /api/Bookings responded 201 in 188.6755 ms
+2025-03-27 11:29:13.245 +02:00 [INF] HTTP POST /api/Payment responded 201 in 245.1350 ms
+2025-03-27 11:29:30.888 +02:00 [INF] HTTP PUT /api/Payment/17/process responded 200 in 110.2636 ms
+2025-03-27 11:31:14.105 +02:00 [INF] HTTP POST /api/Bookings responded 201 in 67.4450 ms
+2025-03-27 11:32:16.032 +02:00 [INF] HTTP POST /api/Payment responded 201 in 172.0999 ms
+2025-03-27 11:33:02.995 +02:00 [INF] HTTP DELETE /api/Payment/18/delete responded 204 in 128.4675 ms
+2025-03-27 11:33:54.325 +02:00 [INF] HTTP POST /api/Payment responded 201 in 23.6170 ms
+2025-03-27 11:34:10.080 +02:00 [INF] HTTP DELETE /api/Payment/19/delete responded 204 in 12.0418 ms
+2025-03-27 11:37:10.419 +02:00 [INF] Application is shutting down...
+2025-03-27 11:37:18.057 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 9:37:18
+2025-03-27 11:37:18.792 +02:00 [INF] Now listening on: http://localhost:5209
+2025-03-27 11:37:18.794 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-27 11:37:18.794 +02:00 [INF] Hosting environment: Development
+2025-03-27 11:37:18.795 +02:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-03-27 11:37:27.405 +02:00 [INF] HTTP POST /api/Payment responded 201 in 359.2368 ms
+2025-03-27 11:37:36.955 +02:00 [ERR] HTTP DELETE /api/Payment/20/delete responded 500 in 339.5275 ms
+System.Collections.Generic.KeyNotFoundException: Entity with id 20 not found
+   at FitGear.Repository.GenericRepository`1.DeleteAsync(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Repository\GenericRepository.cs:line 43
+   at FitGear.Services.PaymentService.DeletePaymentAndBookingAsync(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\PaymentService.cs:line 141
+   at FitGear.Controllers.PaymentController.DeletePayment(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\PaymentController.cs:line 97
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-03-27 11:37:36.967 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: Entity with id 20 not found
+   at FitGear.Repository.GenericRepository`1.DeleteAsync(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Repository\GenericRepository.cs:line 43
+   at FitGear.Services.PaymentService.DeletePaymentAndBookingAsync(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\PaymentService.cs:line 141
+   at FitGear.Controllers.PaymentController.DeletePayment(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\PaymentController.cs:line 97
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-27 11:37:51.708 +02:00 [ERR] HTTP POST /api/Payment responded 500 in 9.7276 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FitGear.Controllers.PaymentController.PostPayment(CreatePaymentDto createPaymentDto) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\PaymentController.cs:line 58
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-03-27 11:37:51.712 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FitGear.Controllers.PaymentController.PostPayment(CreatePaymentDto createPaymentDto) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\PaymentController.cs:line 58
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-27 11:42:45.163 +02:00 [INF] Application is shutting down...
+2025-03-27 11:42:50.648 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 9:42:50
+2025-03-27 11:42:51.453 +02:00 [INF] Now listening on: http://localhost:5209
+2025-03-27 11:42:51.455 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-27 11:42:51.455 +02:00 [INF] Hosting environment: Development
+2025-03-27 11:42:51.456 +02:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-03-27 11:42:59.736 +02:00 [INF] HTTP POST /api/Bookings responded 201 in 491.2004 ms
+2025-03-27 11:43:14.241 +02:00 [INF] HTTP POST /api/Payment responded 201 in 139.9085 ms
+2025-03-27 11:43:23.884 +02:00 [INF] HTTP DELETE /api/Payment/21/delete responded 204 in 190.3015 ms
+2025-03-27 11:57:51.799 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 9:57:51
+2025-03-27 11:57:52.367 +02:00 [INF] Updating booking 1013 status from Active to Completed
+2025-03-27 12:12:52.577 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 10:12:52
+2025-03-27 12:27:52.781 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 10:27:52
+2025-03-27 12:27:57.607 +02:00 [INF] HTTP GET /api/Payment/1 responded 200 in 404.1093 ms

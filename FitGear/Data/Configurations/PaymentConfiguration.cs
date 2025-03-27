@@ -21,7 +21,7 @@ public class PaymentConfiguration : IEntityTypeConfiguration<Payment>
         builder.HasOne(p => p.Booking)
             .WithOne(b => b.Payment)
             .HasForeignKey<Payment>(p => p.BookingId)
-            .OnDelete(DeleteBehavior.Restrict); // запретит удаление бронирования, если у него есть связанный платеж
+            .OnDelete(DeleteBehavior.Cascade); // запретит удаление бронирования, если у него есть связанный платеж
         
         builder.Property(p => p.Status)
             .HasConversion<string>();

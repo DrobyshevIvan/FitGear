@@ -131,13 +131,13 @@ public class PaymentService : IPaymentService
             // Log that the payment was not found
             return;
         }
-
-        var booking = payment.Booking;
-        if (booking != null) 
+        
+        await _paymentRepository.DeleteAsync(paymentId);
+        
+        var booking = await _bookingRepository.GetAsync(payment.BookingId);
+        if (booking != null)
         {
             await _bookingRepository.DeleteAsync(booking.Id);
         }
-
-        await _paymentRepository.DeleteAsync(paymentId);
     }
 }

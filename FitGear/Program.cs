@@ -8,6 +8,7 @@ using FitGear.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,6 +50,11 @@ builder.Services.AddScoped<IPaymentService, PaymentService>();
 
 builder.Services.AddAutoMapper(typeof(MapperConfig));
 
+builder.Host.UseSerilog((ctx, lc) =>
+    lc.WriteTo.Console().ReadFrom.Configuration(ctx.Configuration));
+
+builder.Services.AddHostedService<BookingStatusUpdateService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -63,6 +69,7 @@ if (app.Environment.IsDevelopment())
 app.UseCors("AllowAll");
 
 app.MapControllers();
+app.UseSerilogRequestLogging();
 
 app.Run();
 
