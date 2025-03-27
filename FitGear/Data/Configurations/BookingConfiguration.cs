@@ -10,11 +10,14 @@ public class BookingConfiguration : IEntityTypeConfiguration<Booking>
         builder.HasOne(b => b.User)
             .WithMany(u => u.Bookings)
             .HasForeignKey(b => b.UserId)
-            .OnDelete(DeleteBehavior.Cascade); // При удалении удалятся все бронирования пользователя
+            .OnDelete(DeleteBehavior.Restrict); // запретит удаление пользователя, если у него есть связанные бронирования
         
         builder.HasOne(b => b.Announcement)
             .WithMany(a => a.Bookings)
             .HasForeignKey(b => b.AnnouncementId)
             .OnDelete(DeleteBehavior.Restrict); // запретит удаление объявления, если у него есть связанные бронирования.
+        
+        builder.Property(b => b.Status)
+            .HasConversion<string>();
     }
 }

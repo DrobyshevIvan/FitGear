@@ -4,6 +4,7 @@ using FitGear.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FitGear.Migrations
 {
     [DbContext(typeof(FitGearDbContext))]
-    partial class FitGearDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250326060340_AddedEntities_Notification_Payment_Review")]
+    partial class AddedEntities_Notification_Payment_Review
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -305,19 +308,19 @@ namespace FitGear.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "c99a02c6-f4b0-4a34-84f4-d279082d8be0",
+                            Id = "aae9c953-57f2-4da6-a0ac-4233f57e8f66",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
-                            Id = "4d5737e8-1000-47a4-b573-a40950bec33e",
+                            Id = "5d0e2598-e5bd-4162-bd8b-cf98d6e99696",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "2e78215d-c1b7-4313-b523-4725d97bfe31",
+                            Id = "fc90660c-6ddf-41f0-a247-19e623048062",
                             Name = "Moderator",
                             NormalizedName = "MODERATOR"
                         });

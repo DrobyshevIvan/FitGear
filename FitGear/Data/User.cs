@@ -9,4 +9,7 @@ public class User : IdentityUser
     public DateTime CreatedAt { get; set; }
     
     public IList<Booking> Bookings { get; set; } = new List<Booking>();
+    public IList<Review> Reviews { get; set; } = new List<Review>();
+    public IList<Notification> Notifications { get; set; } = new List<Notification>();
+    public IList<Payment> Payments { get; set; } = new List<Payment>();
 }
