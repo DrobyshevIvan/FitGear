@@ -488,3 +488,5 @@ System.NullReferenceException: Object reference not set to an instance of an obj
 2025-03-27 12:12:52.577 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 10:12:52
 2025-03-27 12:27:52.781 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 10:27:52
 2025-03-27 12:27:57.607 +02:00 [INF] HTTP GET /api/Payment/1 responded 200 in 404.1093 ms
+2025-03-27 12:42:52.946 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 10:42:52
+2025-03-27 21:13:26.243 +02:00 [INF] Cheeking for bookings to update status at: 27.03.2025 19:13:26
