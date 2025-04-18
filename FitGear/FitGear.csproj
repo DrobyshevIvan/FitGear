@@ -12,12 +12,12 @@
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.14"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.14"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.14" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.14" />
+        
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.14">
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.3" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.0-preview.3.25171.5" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.0-preview.2.25163.2" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.0-preview.2.25163.2" />
         <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
@@ -30,7 +30,11 @@
 
     <ItemGroup>
       <Folder Include="Frontend\" />
-      <Folder Include="Models\User\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\FitGear.Core\FitGear.Core.csproj" />
+      <ProjectReference Include="..\FitGear.Data\FitGear.Data.csproj" />
     </ItemGroup>
 
 </Project>
