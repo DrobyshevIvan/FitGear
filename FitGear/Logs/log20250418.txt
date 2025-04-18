@@ -8,3 +8,9 @@
 2025-04-18 12:39:38.759 +03:00 [INF] Hosting environment: Development
 2025-04-18 12:39:38.759 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
 2025-04-18 12:39:46.594 +03:00 [INF] HTTP GET /api/Bookings/8 responded 200 in 339.1449 ms
+2025-04-18 12:46:59.284 +03:00 [INF] Application is shutting down...
+2025-04-18 12:47:06.040 +03:00 [INF] Cheeking for bookings to update status at: 18.04.2025 9:47:06
+2025-04-18 12:47:06.947 +03:00 [INF] Now listening on: http://localhost:5209
+2025-04-18 12:47:06.949 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-18 12:47:06.950 +03:00 [INF] Hosting environment: Development
+2025-04-18 12:47:06.950 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
