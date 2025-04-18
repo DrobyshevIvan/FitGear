@@ -4,6 +4,7 @@ using FitGear.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FitGear.Migrations
 {
     [DbContext(typeof(FitGearDbContext))]
-    partial class FitGearDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250326062929_AddedEnumsForStatusFor_Booking_Payment")]
+    partial class AddedEnumsForStatusFor_Booking_Payment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -305,19 +308,19 @@ namespace FitGear.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "e6f4e5b4-89b9-4910-8776-b3c1afaf8bba",
+                            Id = "c99a02c6-f4b0-4a34-84f4-d279082d8be0",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
-                            Id = "02adc4ff-92d9-4bc8-800b-ef6730409b78",
+                            Id = "4d5737e8-1000-47a4-b573-a40950bec33e",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "e439f856-8ac4-4733-ba6c-22166f0eb048",
+                            Id = "2e78215d-c1b7-4313-b523-4725d97bfe31",
                             Name = "Moderator",
                             NormalizedName = "MODERATOR"
                         });
@@ -464,7 +467,7 @@ namespace FitGear.Migrations
                     b.HasOne("FitGear.Data.Booking", "Booking")
                         .WithOne("Payment")
                         .HasForeignKey("FitGear.Data.Payment", "BookingId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("FitGear.Data.User", "User")

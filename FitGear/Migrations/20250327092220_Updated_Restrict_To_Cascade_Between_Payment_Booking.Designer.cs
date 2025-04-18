@@ -4,6 +4,7 @@ using FitGear.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FitGear.Migrations
 {
     [DbContext(typeof(FitGearDbContext))]
-    partial class FitGearDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250327092220_Updated_Restrict_To_Cascade_Between_Payment_Booking")]
+    partial class Updated_Restrict_To_Cascade_Between_Payment_Booking
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

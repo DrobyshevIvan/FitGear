@@ -11,4 +11,5 @@ public class Announcement
     public decimal PricePerDay { get; set; }
 
     public IList<Booking>? Bookings { get; set; } = new List<Booking>();
+    public IList<Review>? Reviews { get; set; } = new List<Review>();
 }

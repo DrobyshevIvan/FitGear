@@ -2,11 +2,13 @@ using System.Text.Json.Serialization;
 using FitGear.Configurations;
 using FitGear.Contracts;
 using FitGear.Data;
+using FitGear.Middleware;
 using FitGear.Repository;
 using FitGear.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +28,7 @@ builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
         options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
     });
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -42,8 +45,15 @@ builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepositor
 builder.Services.AddScoped<IAnnouncementsRepository, AnnouncementsRepository>();
 builder.Services.AddScoped<IBookingRepository, BookingRepository>();
 builder.Services.AddScoped<IBookingService, BookingService>();
+builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
+builder.Services.AddScoped<IPaymentService, PaymentService>();
 
 builder.Services.AddAutoMapper(typeof(MapperConfig));
+
+builder.Host.UseSerilog((ctx, lc) =>
+    lc.WriteTo.Console().ReadFrom.Configuration(ctx.Configuration));
+
+builder.Services.AddHostedService<BookingStatusUpdateService>();
 
 var app = builder.Build();
 
@@ -59,6 +69,7 @@ if (app.Environment.IsDevelopment())
 app.UseCors("AllowAll");
 
 app.MapControllers();
+app.UseSerilogRequestLogging();
 
 app.Run();
 
