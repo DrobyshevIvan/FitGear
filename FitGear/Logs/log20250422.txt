@@ -1,0 +1,231 @@
+2025-04-22 07:45:20.969 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 4:45:20
+2025-04-22 07:59:54.836 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 07:59:55.107 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 401 in 274.1789 ms
+2025-04-22 08:00:21.295 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 5:00:21
+2025-04-22 08:15:21.371 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 5:15:21
+2025-04-22 08:17:19.446 +03:00 [INF] Application is shutting down...
+2025-04-22 08:17:48.253 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 5:17:48
+2025-04-22 08:17:49.595 +03:00 [INF] Now listening on: http://localhost:5209
+2025-04-22 08:17:49.597 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-22 08:17:49.598 +03:00 [INF] Hosting environment: Development
+2025-04-22 08:17:49.599 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-04-22 08:17:54.793 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:20:33.396 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 401 in 159080.8917 ms
+2025-04-22 08:20:51.439 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 5:20:51
+2025-04-22 08:20:52.193 +03:00 [INF] Now listening on: http://localhost:5209
+2025-04-22 08:20:52.194 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-22 08:20:52.195 +03:00 [INF] Hosting environment: Development
+2025-04-22 08:20:52.196 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-04-22 08:20:57.805 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:20:58.589 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 927.6085 ms
+2025-04-22 08:21:07.471 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:21:07.669 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 202.2596 ms
+2025-04-22 08:21:43.126 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:21:43.289 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 169.3637 ms
+2025-04-22 08:21:49.569 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:21:49.616 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 48.1795 ms
+2025-04-22 08:26:21.528 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:26:21.624 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 96.4265 ms
+2025-04-22 08:27:31.080 +03:00 [INF] Application is shutting down...
+2025-04-22 08:27:34.456 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 5:27:34
+2025-04-22 08:27:35.275 +03:00 [INF] Now listening on: http://localhost:5209
+2025-04-22 08:27:35.277 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-22 08:27:35.278 +03:00 [INF] Hosting environment: Development
+2025-04-22 08:27:35.278 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-04-22 08:27:37.903 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:27:37.933 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 210.9043 ms
+2025-04-22 08:27:51.413 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:27:51.415 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 4.9988 ms
+2025-04-22 08:27:54.294 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:27:54.296 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 9.8347 ms
+2025-04-22 08:28:12.371 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:28:12.372 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.5426 ms
+2025-04-22 08:28:40.073 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:28:40.074 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 3.1428 ms
+2025-04-22 08:34:20.189 +03:00 [INF] Application is shutting down...
+2025-04-22 08:34:25.530 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 5:34:25
+2025-04-22 08:34:26.238 +03:00 [INF] Now listening on: http://localhost:5209
+2025-04-22 08:34:26.240 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-22 08:34:26.241 +03:00 [INF] Hosting environment: Development
+2025-04-22 08:34:26.241 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-04-22 08:34:31.582 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:34:32.080 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 401 in 674.0777 ms
+2025-04-22 08:34:38.088 +03:00 [INF] Login Attempt for test@gmail.com
+2025-04-22 08:34:38.091 +03:00 [INF] Looking for user with email test@gmail.com
+2025-04-22 08:34:38.426 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImMwYjlkMWMzLTQ1YjgtNGRkYS1hMjk0LWFlOTQ2ZmY0MGU1YSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzQ1MzAwNjc4LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.NNFW10XGeyvDKXTYJeQw57aF09DvMIjOOPd4uEof-7Q
+2025-04-22 08:34:38.604 +03:00 [INF] HTTP POST /api/User/login responded 200 in 525.7089 ms
+2025-04-22 08:34:43.974 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:34:43.984 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 401 in 17.4197 ms
+2025-04-22 08:34:49.904 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:34:49.905 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.5633 ms
+2025-04-22 08:35:46.773 +03:00 [INF] Application is shutting down...
+2025-04-22 08:35:49.443 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 5:35:49
+2025-04-22 08:35:50.148 +03:00 [INF] Now listening on: http://localhost:5209
+2025-04-22 08:35:50.149 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-22 08:35:50.150 +03:00 [INF] Hosting environment: Development
+2025-04-22 08:35:50.150 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-04-22 08:35:54.857 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:35:54.888 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 159.5942 ms
+2025-04-22 08:36:03.337 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:36:03.339 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 5.6174 ms
+2025-04-22 08:37:17.295 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:37:17.296 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 9.4535 ms
+2025-04-22 08:37:45.420 +03:00 [INF] Application is shutting down...
+2025-04-22 08:37:48.426 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 5:37:48
+2025-04-22 08:37:49.160 +03:00 [INF] Now listening on: http://localhost:5209
+2025-04-22 08:37:49.162 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-22 08:37:49.163 +03:00 [INF] Hosting environment: Development
+2025-04-22 08:37:49.163 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-04-22 08:37:53.580 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:37:53.609 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 185.5348 ms
+2025-04-22 08:41:48.123 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:41:48.126 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 7.9722 ms
+2025-04-22 08:42:40.368 +03:00 [INF] Application is shutting down...
+2025-04-22 08:42:48.574 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 5:42:48
+2025-04-22 08:42:49.715 +03:00 [INF] Now listening on: http://localhost:5209
+2025-04-22 08:42:49.717 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-22 08:42:49.718 +03:00 [INF] Hosting environment: Development
+2025-04-22 08:42:49.718 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-04-22 08:42:55.083 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:42:55.618 +03:00 [ERR] HTTP POST /api/User/refreshtoken responded 500 in 881.6557 ms
+System.ArgumentNullException: Value cannot be null. (Parameter 'user')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at Microsoft.AspNetCore.Shared.ArgumentNullThrowHelper.ThrowIfNull(Object argument, String paramName)
+   at Microsoft.AspNetCore.Identity.UserManager`1.GetAuthenticationTokenAsync(TUser user, String loginProvider, String tokenName)
+   at FitGear.Services.AccountService.VerifyRefreshToken(AuthResponseDto request) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 78
+   at FitGear.Controllers.UserController.RefreshToken(AuthResponseDto request) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\UserController.cs:line 76
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-04-22 08:42:55.657 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'user')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at Microsoft.AspNetCore.Shared.ArgumentNullThrowHelper.ThrowIfNull(Object argument, String paramName)
+   at Microsoft.AspNetCore.Identity.UserManager`1.GetAuthenticationTokenAsync(TUser user, String loginProvider, String tokenName)
+   at FitGear.Services.AccountService.VerifyRefreshToken(AuthResponseDto request) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 78
+   at FitGear.Controllers.UserController.RefreshToken(AuthResponseDto request) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\UserController.cs:line 76
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-22 08:44:25.187 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 5:44:25
+2025-04-22 08:44:26.253 +03:00 [INF] Now listening on: http://localhost:5209
+2025-04-22 08:44:26.255 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-22 08:44:26.256 +03:00 [INF] Hosting environment: Development
+2025-04-22 08:44:26.256 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-04-22 08:44:30.821 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:44:30.881 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 401.3921 ms
+2025-04-22 08:44:47.209 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 5:44:47
+2025-04-22 08:44:48.383 +03:00 [INF] Now listening on: http://localhost:5209
+2025-04-22 08:44:48.384 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-22 08:44:48.385 +03:00 [INF] Hosting environment: Development
+2025-04-22 08:44:48.386 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-04-22 08:45:01.905 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 5:45:01
+2025-04-22 08:45:02.988 +03:00 [INF] Now listening on: http://localhost:5209
+2025-04-22 08:45:02.989 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-22 08:45:02.990 +03:00 [INF] Hosting environment: Development
+2025-04-22 08:45:02.990 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-04-22 08:45:08.310 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:45:50.013 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 5:45:50
+2025-04-22 08:45:51.074 +03:00 [INF] Now listening on: http://localhost:5209
+2025-04-22 08:45:51.076 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-22 08:45:51.077 +03:00 [INF] Hosting environment: Development
+2025-04-22 08:45:51.077 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-04-22 08:45:58.065 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:46:27.839 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 5:46:27
+2025-04-22 08:46:28.919 +03:00 [INF] Now listening on: http://localhost:5209
+2025-04-22 08:46:28.921 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-22 08:46:28.922 +03:00 [INF] Hosting environment: Development
+2025-04-22 08:46:28.923 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-04-22 08:46:37.155 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:52:09.087 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 5:52:09
+2025-04-22 08:52:10.168 +03:00 [INF] Now listening on: http://localhost:5209
+2025-04-22 08:52:10.170 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-22 08:52:10.171 +03:00 [INF] Hosting environment: Development
+2025-04-22 08:52:10.171 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-04-22 08:52:15.270 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:53:00.866 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 45929.5655 ms
+2025-04-22 08:53:12.343 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:53:45.467 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 401 in 33127.1155 ms
+2025-04-22 08:53:52.085 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 08:54:00.617 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 8535.0459 ms
+2025-04-22 08:54:15.310 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 10:13:09.312 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 7:13:09
+2025-04-22 10:13:42.823 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 4767513.9043 ms
+2025-04-22 10:14:09.469 +03:00 [INF] Login Attempt for test@gmail.com
+2025-04-22 10:14:09.472 +03:00 [INF] Looking for user with email test@gmail.com
+2025-04-22 10:14:09.617 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImYwMDdhMzJjLTBhYjEtNDQ1Yy1hMGYyLTIzMzExZTQyMGM5MyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzQ1MzA2NjQ5LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.17jZAisfXFg28vwl8oGIfBHiAUA56gP8eKrLl_Wet0Y
+2025-04-22 10:14:09.654 +03:00 [INF] HTTP POST /api/User/login responded 200 in 267.7086 ms
+2025-04-22 10:14:11.717 +03:00 [INF] Login Attempt for test@gmail.com
+2025-04-22 10:14:11.718 +03:00 [INF] Looking for user with email test@gmail.com
+2025-04-22 10:14:11.790 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImY0YjVmNTdjLWQ4OGMtNGFjNS1iMGNkLTk2YzY1ZWExODBlOSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzQ1MzA2NjUxLCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.N1IluFTWbObYpK5U99b0qKYWTwBsaOST1fTNaoG5e2E
+2025-04-22 10:14:11.849 +03:00 [INF] HTTP POST /api/User/login responded 200 in 132.0366 ms
+2025-04-22 10:14:15.920 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 10:14:18.506 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 401 in 2586.5611 ms
+2025-04-22 10:14:26.342 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 10:14:28.712 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2370.7010 ms
+2025-04-22 10:28:10.286 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 7:28:10
+2025-04-22 10:43:10.348 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 7:43:10
+2025-04-22 10:47:17.906 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 10:47:21.242 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 3369.2093 ms
+2025-04-22 10:47:23.955 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 10:47:25.715 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 401 in 1760.7061 ms
+2025-04-22 10:47:32.803 +03:00 [INF] Login Attempt for test@gmail.com
+2025-04-22 10:47:32.804 +03:00 [INF] Looking for user with email test@gmail.com
+2025-04-22 10:47:32.878 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImFiZDYxOGEwLWVjYTgtNGM3My1hYWM0LTAxMDBlOGVlOGEwYiIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNzQ1MzA4NjUyLCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.YyO59Tyx3nP0aJogjUpLFeQKzT_GonsIw0-9hLQixOA
+2025-04-22 10:47:32.958 +03:00 [INF] HTTP POST /api/User/login responded 200 in 155.3210 ms
+2025-04-22 10:52:18.389 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 10:52:20.614 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2227.9914 ms
+2025-04-22 10:52:24.720 +03:00 [INF] Login Attempt for test@gmail.com
+2025-04-22 10:52:24.721 +03:00 [INF] Looking for user with email test@gmail.com
+2025-04-22 10:52:24.821 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImIwMzA0YzEwLWYzMDctNDM0NS1hNTFkLWZlZmVmMmM0YzUyMSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ1MzA4OTQ0LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.DCEksZ5sh2AI_cny4TVFjzV6N7QdeOKqesBlIyipNBQ
+2025-04-22 10:52:24.881 +03:00 [INF] HTTP POST /api/User/login responded 200 in 162.5145 ms
+2025-04-22 10:52:29.650 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 10:52:32.195 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2546.3921 ms
+2025-04-22 10:52:39.641 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 10:52:41.528 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1887.7398 ms
+2025-04-22 10:52:44.795 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 10:52:46.632 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1837.6461 ms
+2025-04-22 10:58:10.366 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 7:58:10
+2025-04-22 11:13:10.381 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 8:13:10
+2025-04-22 11:28:10.474 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 8:28:10
+2025-04-22 11:43:10.575 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 8:43:10
+2025-04-22 11:51:09.456 +03:00 [INF] Cheeking for bookings to update status at: 22.04.2025 8:51:09
+2025-04-22 11:51:10.808 +03:00 [INF] Now listening on: http://localhost:5209
+2025-04-22 11:51:10.809 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-22 11:51:10.810 +03:00 [INF] Hosting environment: Development
+2025-04-22 11:51:10.811 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-04-22 11:51:22.977 +03:00 [INF] Login Attempt for test@gmail.com
+2025-04-22 11:51:22.984 +03:00 [INF] Looking for user with email test@gmail.com
+2025-04-22 11:51:25.127 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjYwMTU4OTJmLTMxMzYtNDEyZC05YWNkLWJkZWNjMjE5NjMzNyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ1MzEyNDg1LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.5dndzgm2ZZ4qfIZuzzd2ScybbZlO6VRvH325nGo0_6A
+2025-04-22 11:51:27.724 +03:00 [INF] HTTP POST /api/User/login responded 200 in 5212.7236 ms
+2025-04-22 11:51:44.856 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 11:51:49.507 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 401 in 4662.2240 ms
+2025-04-22 11:52:02.016 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-04-22 11:52:02.017 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 6.0351 ms

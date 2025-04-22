@@ -14,3 +14,4 @@
 2025-04-18 12:47:06.949 +03:00 [INF] Application started. Press Ctrl+C to shut down.
 2025-04-18 12:47:06.950 +03:00 [INF] Hosting environment: Development
 2025-04-18 12:47:06.950 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-04-18 12:51:33.846 +03:00 [INF] Application is shutting down...

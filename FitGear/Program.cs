@@ -1,12 +1,16 @@
+using System.Text;
 using System.Text.Json.Serialization;
 using FitGear.Configurations;
 using FitGear.Contracts;
+using FitGear.Core.Contracts;
 using FitGear.Data;
 using FitGear.Middleware;
 using FitGear.Repository;
 using FitGear.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
 
@@ -20,7 +24,14 @@ builder.Services.AddDbContext<FitGearDbContext>(options =>
 
 builder.Services.AddIdentityCore<User>()
     .AddRoles<IdentityRole>()
-    .AddEntityFrameworkStores<FitGearDbContext>();
+    .AddTokenProvider<DataProtectorTokenProvider<User>>("FitGearApi")
+    .AddEntityFrameworkStores<FitGearDbContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.Configure<DataProtectionTokenProviderOptions>(opts =>
+{
+    opts.TokenLifespan = TimeSpan.FromDays(7); // Время жизни refresh token
+});
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -47,6 +58,28 @@ builder.Services.AddScoped<IBookingRepository, BookingRepository>();
 builder.Services.AddScoped<IBookingService, BookingService>();
 builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
 builder.Services.AddScoped<IPaymentService, PaymentService>();
+builder.Services.AddScoped<IAuthManager, AuthManager>();
+builder.Services.AddScoped<IAccountService, AccountService>();
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme; // ""Bearer
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.Zero,
+        ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
+        ValidAudience = builder.Configuration["JwtSettings:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration
+            ["JwtSettings:Key"]))
+    };
+});
 
 builder.Services.AddAutoMapper(typeof(MapperConfig));
 
@@ -70,6 +103,9 @@ app.UseCors("AllowAll");
 
 app.MapControllers();
 app.UseSerilogRequestLogging();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.Run();
 
