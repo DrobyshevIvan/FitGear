@@ -13,33 +13,59 @@ export interface UpdateAnnouncementRequest {
     pricePerDay: number;
 }
 
-export const getAllAnnouncements = async (): Promise<Announcement[]> => {
-    const response = await fetch("http://localhost:5209/api/Announcements");
-    const data = await response.json();
+// Вспомогательная функция для получения токена
+const getAuthHeader = () => {
+    const token = localStorage.getItem('accessToken');
+    return token ? { 'Authorization': `Bearer ${token}` } : {};
+};
 
-    // Извлекаем массив объявлений из поля $values
+export const getAllAnnouncements = async (): Promise<Announcement[]> => {
+    const authHeaders = getAuthHeader();
+    const headers = { ...authHeaders } as Record<string, string>;
+    
+    const response = await fetch("http://localhost:5209/api/Announcements", {
+        headers
+    });
+    
+    if (!response.ok) {
+        throw new Error("Failed to fetch announcements");
+    }
+    
+    const data = await response.json();
     return data.$values || [];
 };
 
 export const createAnnouncement = async (announcementRequest: CreateAnnouncementRequest) => {
-    await fetch("http://localhost:5209/api/Announcements", {
+    const authHeaders = getAuthHeader();
+    const headers = {
+        "content-type": "application/json",
+        ...authHeaders
+    } as Record<string, string>;
+    
+    const response = await fetch("http://localhost:5209/api/Announcements", {
         method: "POST",
-        headers: {
-            "content-type": "application/json",
-        },
+        headers,
         body: JSON.stringify(announcementRequest),
     });
+    
+    if (!response.ok) {
+        throw new Error("Failed to create announcement");
+    }
 };
 
 export const updateAnnouncement = async (id: number, announcementRequest: UpdateAnnouncementRequest) => {
     console.log("Updating announcement with ID:", id);
     console.log("Request body:", announcementRequest);
 
+    const authHeaders = getAuthHeader();
+    const headers = {
+        "content-type": "application/json",
+        ...authHeaders
+    } as Record<string, string>;
+
     const response = await fetch(`http://localhost:5209/api/Announcements/${id}`, {
         method: "PUT",
-        headers: {
-            "content-type": "application/json",
-        },
+        headers,
         body: JSON.stringify(announcementRequest),
     });
 
@@ -49,7 +75,15 @@ export const updateAnnouncement = async (id: number, announcementRequest: Update
 };
 
 export const deleteAnnouncement = async (id: number) => {
-    await fetch(`http://localhost:5209/api/Announcements/${id}`, {
+    const authHeaders = getAuthHeader();
+    const headers = { ...authHeaders } as Record<string, string>;
+    
+    const response = await fetch(`http://localhost:5209/api/Announcements/${id}`, {
         method: "DELETE",
+        headers
     });
+    
+    if (!response.ok) {
+        throw new Error("Failed to delete announcement");
+    }
 };
