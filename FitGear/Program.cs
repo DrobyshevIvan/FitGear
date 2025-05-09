@@ -63,7 +63,12 @@ builder.Services.AddSwaggerGen(c =>
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", b => b.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
+    options.AddPolicy("AllowFrontend", b => b
+        .WithOrigins("http://localhost:3000") // или твой реальный адрес фронта
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowCredentials()
+    );
 });
 
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
@@ -79,6 +84,25 @@ builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultSignInScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddCookie().AddGoogle(options =>
+{
+    var clientId = builder.Configuration["Authentication:Google:ClientId"];
+
+    if (clientId == null)
+    {
+        throw new ArgumentNullException(nameof(clientId));
+    }
+
+    var clientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
+
+    if (clientSecret == null)
+    {
+        throw new ArgumentNullException(nameof(clientSecret));
+    }
+
+    options.ClientId = clientId;
+    options.ClientSecret = clientSecret;
 }).AddJwtBearer(options =>
 {
     options.TokenValidationParameters = new TokenValidationParameters
@@ -132,7 +156,7 @@ if (app.Environment.IsDevelopment())
 
 
 // app.UseHttpsRedirection();
-app.UseCors("AllowAll");
+app.UseCors("AllowFrontend");
 
 app.MapControllers();
 app.UseSerilogRequestLogging();

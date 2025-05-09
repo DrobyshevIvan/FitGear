@@ -55,7 +55,7 @@ namespace FitGear.Controllers
         public async Task<ActionResult> Login([FromBody] LoginDto loginDto)
         {
             _logger.LogInformation($"Login Attempt for {loginDto.Email}");
-            var authResponse = await _accountService.LoginAsync(loginDto);
+            var authResponse = await _accountService.LoginAsync(loginDto, HttpContext);
             if (authResponse == null)
             {
                 return Unauthorized();
@@ -73,13 +73,24 @@ namespace FitGear.Controllers
         public async Task<ActionResult> RefreshToken([FromBody] AuthResponseDto request)
         {
             _logger.LogInformation($"Refresh Token Attempt for {request.UserId}");
-            var authResponse = await _accountService.VerifyRefreshToken(request);
+            var authResponse = await _accountService.VerifyRefreshToken(request, HttpContext);
             if (authResponse == null)
             {
-                return Unauthorized();
+                return Unauthorized("Authorization failed");
             }
 
             return Ok(authResponse);
         }
+        
+        // // GET: api/User/Roles
+        // [HttpGet]
+        // [Route("roles")]
+        // [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        // [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        // [ProducesResponseType(StatusCodes.Status200OK)]
+        // public async Task<ActionResult> GetRoles()
+        // {
+        //     
+        // }
     }
 }

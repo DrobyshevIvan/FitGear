@@ -8,4 +8,5 @@ public interface IAuthManager
 {
     Task<string> CreateRefreshToken(User user);
     Task<string> GenerateToken(User user);
+    Task<User?> FindUserByRefreshToken(string refreshToken);
 }

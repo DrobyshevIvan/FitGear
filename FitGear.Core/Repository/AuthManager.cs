@@ -5,7 +5,9 @@ using AutoMapper;
 using FitGear.Core.Contracts;
 using FitGear.Data;
 using HotelListing.API.Core.Models.Users;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
@@ -18,6 +20,7 @@ public class AuthManager : IAuthManager
     private readonly UserManager<User> _userManager;
     private readonly IConfiguration _configuration;
     private readonly ILogger<AuthManager> _logger;
+    private readonly FitGearDbContext _context;
 
     private const string _loginProvider = "FitGearApi";
     private const string _refreshToken = "RefreshToken";
@@ -26,12 +29,14 @@ public class AuthManager : IAuthManager
     public AuthManager(IMapper mapper, 
         UserManager<User> userManager, 
         IConfiguration configuration,
-        ILogger<AuthManager> logger)
+        ILogger<AuthManager> logger,
+        FitGearDbContext context)
     {
         _mapper = mapper;
         _userManager = userManager;
         _configuration = configuration;
         _logger = logger;
+        _context = context;
     }
     
     public async Task<string> CreateRefreshToken(User user)
@@ -84,5 +89,24 @@ public class AuthManager : IAuthManager
             );
 
         return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+
+    public async Task<User?> FindUserByRefreshToken(string refreshToken)
+    {
+        var userToken = await _context.Set<IdentityUserToken<string>>()
+            .FirstOrDefaultAsync(t =>
+                t.LoginProvider == _loginProvider &&
+                t.Name == _refreshToken &&
+                t.Value == refreshToken);
+
+        if (userToken == null)
+        {
+            _logger.LogWarning($"No user found for provided refresh token");
+            return null;
+        }
+
+        // Получить пользователя по userId
+        var user = await _userManager.FindByIdAsync(userToken.UserId);
+        return user;
     }
 }

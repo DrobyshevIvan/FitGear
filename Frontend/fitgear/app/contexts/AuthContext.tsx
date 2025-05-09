@@ -1,22 +1,34 @@
-'use client';
+"use client";
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { useRouter } from 'next/navigation';
-import axios from 'axios';
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from "react";
+import { useRouter } from "next/navigation";
+import axios from "axios";
 
 interface AuthContextType {
   isAuthenticated: boolean;
   user: any | null;
   login: (email: string, password: string) => Promise<void>;
-  register: (firstName: string, lastName: string, email: string, password: string) => Promise<void>;
-  logout: () => void;
+  register: (
+    firstName: string,
+    lastName: string,
+    email: string,
+    password: string
+  ) => Promise<void>;
+  logout: () => Promise<void>;
   loading: boolean;
   error: string | null;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-const API_BASE_URL = 'http://localhost:5209'; // URL вашего бэкенда
+const API_BASE_URL = "http://localhost:5209"; // URL вашего бэкенда
+axios.defaults.withCredentials = true;
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<any | null>(null);
@@ -24,145 +36,121 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
 
-  useEffect(() => {
-    // Проверяем наличие токена при загрузке
-    if (typeof window !== 'undefined') {
-      const token = localStorage.getItem('accessToken');
-      if (token) {
-        // Декодируем JWT для получения данных пользователя
-        try {
-          const base64Url = token.split('.')[1];
-          const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-          const payload = JSON.parse(window.atob(base64));
-          setUser({
-            email: payload.email,
-            uid: payload.uid,
-            roles: payload['http://schemas.microsoft.com/ws/2008/06/identity/claims/role']
-          });
-        } catch (e) {
-          localStorage.removeItem('accessToken');
-          localStorage.removeItem('refreshToken');
-        }
-      }
+  // Получение информации о пользователе
+  const fetchUserInfo = async () => {
+    try {
+      const response = await axios.get(`${API_BASE_URL}/api/User/me`); // реализуй этот endpoint на backend
+      setUser(response.data);
+    } catch {
+      setUser(null);
+    } finally {
       setLoading(false);
     }
+  };
+
+  useEffect(() => {
+    fetchUserInfo();
+    // eslint-disable-next-line
   }, []);
 
-  // Настройка axios для добавления токена к запросам
+  // Interceptors для обработки 401 и refresh
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Interceptor для автоматического добавления токена к запросам
-      const requestInterceptor = axios.interceptors.request.use(
-        (config) => {
-          const token = localStorage.getItem('accessToken');
-          if (token) {
-            config.headers.Authorization = `Bearer ${token}`;
+    const responseInterceptor = axios.interceptors.response.use(
+      (response) => response,
+      async (error) => {
+        const originalRequest = error.config;
+        if (error.response?.status === 401 && !originalRequest._retry) {
+          originalRequest._retry = true;
+          try {
+            await axios.post(
+              `${API_BASE_URL}/api/User/refreshtoken`,
+              {},
+              { withCredentials: true }
+            );
+            // После refresh повторяем оригинальный запрос
+            return axios(originalRequest);
+          } catch (refreshError) {
+            await logout();
+            return Promise.reject(refreshError);
           }
-          return config;
-        },
-        (error) => Promise.reject(error)
-      );
-
-      // Interceptor для обработки 401 ошибок (истекший токен)
-      const responseInterceptor = axios.interceptors.response.use(
-        (response) => response,
-        async (error) => {
-          const originalRequest = error.config;
-          
-          if (error.response?.status === 401 && !originalRequest._retry) {
-            originalRequest._retry = true;
-            
-            try {
-              const refreshToken = localStorage.getItem('refreshToken');
-              if (!refreshToken) {
-                throw new Error("No refresh token available");
-              }
-              
-              const response = await axios.post(`${API_BASE_URL}/api/User/refreshtoken`, { refreshToken });
-              
-              localStorage.setItem('accessToken', response.data.token);
-              localStorage.setItem('refreshToken', response.data.refreshToken);
-              
-              // Обновляем заголовок и повторяем запрос
-              originalRequest.headers.Authorization = `Bearer ${response.data.token}`;
-              return axios(originalRequest);
-            } catch (refreshError) {
-              // Если не удалось обновить токен, выходим из системы
-              logout();
-              return Promise.reject(refreshError);
-            }
-          }
-          
-          return Promise.reject(error);
         }
-      );
-
-      // Очищаем interceptors при размонтировании
-      return () => {
-        axios.interceptors.request.eject(requestInterceptor);
-        axios.interceptors.response.eject(responseInterceptor);
-      };
-    }
+        return Promise.reject(error);
+      }
+    );
+    return () => {
+      axios.interceptors.response.eject(responseInterceptor);
+    };
   }, []);
 
   const login = async (email: string, password: string) => {
     setLoading(true);
     setError(null);
-    
     try {
-      console.log(`Отправка запроса на ${API_BASE_URL}/api/User/login`);
-      const response = await axios.post(`${API_BASE_URL}/api/User/login`, { email, password });
-      console.log('Ответ от сервера:', response.data);
-      
-      localStorage.setItem('accessToken', response.data.token);
-      localStorage.setItem('refreshToken', response.data.refreshToken);
-      
-      // Декодируем JWT для получения данных пользователя
-      const base64Url = response.data.token.split('.')[1];
-      const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-      const payload = JSON.parse(window.atob(base64));
-      
-      setUser({
-        email: payload.email,
-        uid: payload.uid,
-        roles: payload['http://schemas.microsoft.com/ws/2008/06/identity/claims/role']
-      });
-      
-      router.push('/'); // Перенаправление на главную после входа
+      await axios.post(
+        `${API_BASE_URL}/api/User/login`,
+        { email, password },
+        { withCredentials: true }
+      );
+      await fetchUserInfo();
+      router.push("/");
     } catch (error: any) {
-      console.error('Ошибка при входе:', error);
-      console.error('Ответ сервера:', error.response?.data);
-      setError(error.response?.data?.message || `Ошибка входа: ${error.message}`);
+      setError(
+        error.response?.data?.message || `Ошибка входа: ${error.message}`
+      );
     } finally {
       setLoading(false);
     }
   };
 
-  const register = async (firstName: string, lastName: string, email: string, password: string) => {
+  const register = async (
+    firstName: string,
+    lastName: string,
+    email: string,
+    password: string
+  ) => {
     setLoading(true);
     setError(null);
-    
     try {
-      await axios.post(`${API_BASE_URL}/api/User/register`, { firstName, lastName, email, password });
-      
-      // После успешной регистрации выполняем вход
+      await axios.post(
+        `${API_BASE_URL}/api/User/register`,
+        { firstName, lastName, email, password },
+        { withCredentials: true }
+      );
       await login(email, password);
     } catch (error: any) {
-      setError(error.response?.data?.message || 'Ошибка регистрации. Пожалуйста, попробуйте еще раз.');
+      setError(
+        error.response?.data?.message ||
+          "Ошибка регистрации. Пожалуйста, попробуйте еще раз."
+      );
     } finally {
       setLoading(false);
     }
   };
 
-  const logout = () => {
-    localStorage.removeItem('accessToken');
-    localStorage.removeItem('refreshToken');
+  const logout = async () => {
+    try {
+      await axios.post(
+        `${API_BASE_URL}/api/User/logout`,
+        {},
+        { withCredentials: true }
+      );
+    } catch {}
     setUser(null);
-    router.push('/login');
+    router.push("/login");
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated: !!user, user, login, register, logout, loading, error }}>
+    <AuthContext.Provider
+      value={{
+        isAuthenticated: !!user,
+        user,
+        login,
+        register,
+        logout,
+        loading,
+        error,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );
@@ -171,7 +159,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 export function useAuth() {
   const context = useContext(AuthContext);
   if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
 }
