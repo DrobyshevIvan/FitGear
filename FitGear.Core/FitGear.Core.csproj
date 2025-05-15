@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="14.0.0" />
+        <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+        <PackageReference Include="Serilog.Expressions" Version="5.1.0-dev-02301" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\FitGear.Data\FitGear.Data.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FitGear.Data;
 using FitGear.Models.Announcement;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FitGear.Controllers
 {
@@ -54,6 +55,7 @@ namespace FitGear.Controllers
         // PUT: api/Announcement/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize(Roles = "Administrator, Moderator")]
         public async Task<IActionResult> PutAnnouncement(int id, UpdateAnnouncementDto announcementDto)
         {
             if (id != announcementDto.Id)
@@ -94,6 +96,7 @@ namespace FitGear.Controllers
         // POST: api/Announcement
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize(Roles = "Administrator, Moderator")]
         public async Task<ActionResult<Announcement>> PostAnnouncement(CreateAnnouncementDto createAnnouncementDto)
         {
             var announcement = _mapper.Map<Announcement>(createAnnouncementDto);
@@ -104,6 +107,7 @@ namespace FitGear.Controllers
 
         // DELETE: api/Announcement/5
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrator, Moderator")]
         public async Task<IActionResult> DeleteAnnouncement(int id)
         {
             var announcement = await _announcementsRepository.GetAsync(id);

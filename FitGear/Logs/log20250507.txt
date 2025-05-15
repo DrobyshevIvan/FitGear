@@ -1,0 +1,15 @@
+2025-05-07 20:14:38.483 +03:00 [INF] Cheeking for bookings to update status at: 07.05.2025 17:14:38
+2025-05-07 20:14:39.545 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-07 20:14:39.547 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-07 20:14:39.547 +03:00 [INF] Hosting environment: Development
+2025-05-07 20:14:39.548 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-07 20:20:26.136 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-07 20:20:26.140 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-07 20:20:27.580 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImNmNzE0NzUxLWJlY2ItNDhmNC1hZmI1LTU0ODRiOWE0MGM0OCIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2NjM5MDI3LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.ecAFdI5mvVJRchNSyfDuS-iT7KjMjCFwUhoKbB1J-BA
+2025-05-07 20:20:29.464 +03:00 [INF] HTTP POST /api/User/login responded 200 in 3490.5679 ms
+2025-05-07 20:20:32.952 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 256.8169 ms
+2025-05-07 20:20:32.970 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 14.7704 ms
+2025-05-07 20:29:48.095 +03:00 [INF] Cheeking for bookings to update status at: 07.05.2025 17:29:48
+2025-05-07 20:44:48.537 +03:00 [INF] Cheeking for bookings to update status at: 07.05.2025 17:44:48
+2025-05-07 20:59:48.655 +03:00 [INF] Cheeking for bookings to update status at: 07.05.2025 17:59:48
+2025-05-07 21:14:48.961 +03:00 [INF] Cheeking for bookings to update status at: 07.05.2025 18:14:48
