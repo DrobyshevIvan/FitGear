@@ -311,3 +311,51 @@ System.InvalidOperationException: The LINQ expression 'DbSet<User>()
 2025-05-09 13:20:20.982 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.6126 ms
 2025-05-09 13:20:22.886 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
 2025-05-09 13:20:22.886 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.5615 ms
+2025-05-09 13:28:58.336 +03:00 [INF] Cheeking for bookings to update status at: 09.05.2025 10:28:58
+2025-05-09 13:28:59.736 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-09 13:28:59.738 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-09 13:28:59.738 +03:00 [INF] Hosting environment: Development
+2025-05-09 13:28:59.739 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-09 13:29:45.545 +03:00 [ERR] HTTP GET /api/User/Roles responded 500 in 228.5471 ms
+System.InvalidOperationException: Could not create an instance of type 'Microsoft.AspNetCore.Http.HttpContext'. Model bound complex types must not be abstract or value types and must have a parameterless constructor. Record types must have a single primary constructor. Alternatively, give the 'httpContext' parameter a non-null default value.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder.CreateModel(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder.BindModelCoreAsync(ModelBindingContext bindingContext, Int32 propertyData)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-05-09 13:29:45.566 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Could not create an instance of type 'Microsoft.AspNetCore.Http.HttpContext'. Model bound complex types must not be abstract or value types and must have a parameterless constructor. Record types must have a single primary constructor. Alternatively, give the 'httpContext' parameter a non-null default value.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder.CreateModel(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinder.BindModelCoreAsync(ModelBindingContext bindingContext, Int32 propertyData)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-09 13:31:03.102 +03:00 [INF] Cheeking for bookings to update status at: 09.05.2025 10:31:03
+2025-05-09 13:31:03.927 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-09 13:31:03.929 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-09 13:31:03.930 +03:00 [INF] Hosting environment: Development
+2025-05-09 13:31:03.931 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-09 13:31:09.890 +03:00 [INF] HTTP GET /api/User/Roles responded 200 in 299.2242 ms
+2025-05-09 13:31:30.171 +03:00 [INF] Login Attempt for test1@gmail.com
+2025-05-09 13:31:30.176 +03:00 [INF] Looking for user with email test1@gmail.com
+2025-05-09 13:31:30.336 +03:00 [INF] Token generated for User with email test1@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MUBnbWFpbC5jb20iLCJqdGkiOiI5OGQ2MzU2NC0wMDk1LTQ2MzMtOWEyMi01ZTYyNDNkMzZmNWIiLCJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsInVpZCI6IjBjYWNjNzk0LTQ3NTAtNDYwNC1iMDMwLWFhMjEwMWU2MGMzMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDY3ODcyOTAsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.9W7T-UT_BLlHWnp6dDW5oizYrKyDUhoQbWUOpxOBfIk
+2025-05-09 13:31:30.613 +03:00 [INF] HTTP POST /api/User/login responded 200 in 478.0041 ms
+2025-05-09 13:31:33.967 +03:00 [INF] HTTP GET /api/User/Roles responded 200 in 33.3034 ms
+2025-05-09 15:44:57.340 +03:00 [INF] Application is shutting down...

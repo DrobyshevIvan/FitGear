@@ -23,5 +23,6 @@ public class MapperConfig : Profile
         CreateMap<Payment, GetPaymentDto>().ReverseMap();
 
         CreateMap<User, ApiUserDto>().ReverseMap();
+        CreateMap<User, UserProfileDto>().ReverseMap();
     }
 }

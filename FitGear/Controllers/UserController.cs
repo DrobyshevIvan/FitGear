@@ -82,15 +82,21 @@ namespace FitGear.Controllers
             return Ok(authResponse);
         }
         
-        // // GET: api/User/Roles
-        // [HttpGet]
-        // [Route("roles")]
-        // [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        // [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        // [ProducesResponseType(StatusCodes.Status200OK)]
-        // public async Task<ActionResult> GetRoles()
-        // {
-        //     
-        // }
+        // GET: api/User/Roles
+        [HttpGet]
+        [Route("roles")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult> GetRoles()
+        {
+            var roles = await _accountService.GetRolesFromRefreshToken(HttpContext);
+            if (roles == null)
+            {
+                return NotFound("No roles found");
+            }
+
+            return Ok(roles.ToList());
+        }
     }
 }

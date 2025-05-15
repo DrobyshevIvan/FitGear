@@ -101,9 +101,9 @@ public class AccountService : IAccountService
             {
                 throw new KeyNotFoundException("Refresh token not found");
             }
-            
+
             var accessToken = httpContext.Request.Cookies["X-Access-Token"];
-            
+
             if (!string.IsNullOrEmpty(accessToken))
             {
                 var jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
@@ -171,5 +171,20 @@ public class AccountService : IAccountService
             _logger.LogError(ex, "Error verifying refresh token");
             return null;
         }
+    }
+
+    public async Task<IEnumerable<string>> GetRolesFromRefreshToken(HttpContext httpContext)
+    {
+        var refreshToken = httpContext.Request.Cookies["X-Refresh-Token"];
+        _user = await _authManager.FindUserByRefreshToken(refreshToken);
+        
+        if (_user == null)
+        {
+            throw new KeyNotFoundException("User not found");
+        }
+
+        var roles = await _userManager.GetRolesAsync(_user);
+
+        return roles;
     }
 }

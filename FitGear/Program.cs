@@ -3,6 +3,7 @@ using System.Text.Json.Serialization;
 using FitGear.Configurations;
 using FitGear.Contracts;
 using FitGear.Core.Contracts;
+using FitGear.Core.Contracts.IRepositories;
 using FitGear.Data;
 using FitGear.Middleware;
 using FitGear.Repository;
@@ -79,6 +80,8 @@ builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
 builder.Services.AddScoped<IPaymentService, PaymentService>();
 builder.Services.AddScoped<IAuthManager, AuthManager>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IUserProfileService, UserProfileService>();
+builder.Services.AddScoped<IUserProfileRepository, UserProfileRepository>();
 
 builder.Services.AddAuthentication(options =>
 {

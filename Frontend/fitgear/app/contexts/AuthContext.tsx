@@ -10,9 +10,17 @@ import {
 import { useRouter } from "next/navigation";
 import axios from "axios";
 
+interface User {
+  id: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  roles: string[];
+}
+
 interface AuthContextType {
   isAuthenticated: boolean;
-  user: any | null;
+  user: User | null;
   login: (email: string, password: string) => Promise<void>;
   register: (
     firstName: string,
@@ -23,6 +31,7 @@ interface AuthContextType {
   logout: () => Promise<void>;
   loading: boolean;
   error: string | null;
+  hasRole: (role: string) => boolean;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -31,7 +40,7 @@ const API_BASE_URL = "http://localhost:5209"; // URL вашего бэкенда
 axios.defaults.withCredentials = true;
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<any | null>(null);
+  const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
@@ -39,8 +48,25 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   // Получение информации о пользователе
   const fetchUserInfo = async () => {
     try {
-      const response = await axios.get(`${API_BASE_URL}/api/User/me`); // реализуй этот endpoint на backend
-      setUser(response.data);
+      const rolesResponse = await axios.get<string[]>(
+        `${API_BASE_URL}/api/User/roles`
+      );
+      console.log("ROLES FROM BACKEND:", rolesResponse.data);
+      let roles: string[] = [];
+      if (Array.isArray(rolesResponse.data)) {
+        roles = rolesResponse.data;
+      } else if (rolesResponse.data?.$values) {
+        roles = rolesResponse.data.$values;
+      } else if (typeof rolesResponse.data === "string") {
+        roles = [rolesResponse.data];
+      }
+      setUser({
+        id: "",
+        email: "",
+        firstName: "",
+        lastName: "",
+        roles,
+      });
     } catch {
       setUser(null);
     } finally {
@@ -92,10 +118,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         { withCredentials: true }
       );
       await fetchUserInfo();
-      router.push("/");
+      router.push("/announcements"); // Змінюємо перенаправлення на сторінку оголошень
     } catch (error: any) {
       setError(
-        error.response?.data?.message || `Ошибка входа: ${error.message}`
+        error.response?.data?.message || `Помилка входу: ${error.message}`
       );
     } finally {
       setLoading(false);
@@ -139,6 +165,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     router.push("/login");
   };
 
+  // Функція для перевірки ролі користувача
+  const hasRole = (role: string): boolean => {
+    return Array.isArray(user?.roles) && user?.roles.includes(role);
+  };
+
+  console.log("USER:", user);
+  console.log("USER IN PAGE:", user);
+
   return (
     <AuthContext.Provider
       value={{
@@ -149,6 +183,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         logout,
         loading,
         error,
+        hasRole,
       }}
     >
       {children}

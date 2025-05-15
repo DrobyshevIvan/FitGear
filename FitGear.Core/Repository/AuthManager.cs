@@ -26,8 +26,8 @@ public class AuthManager : IAuthManager
     private const string _refreshToken = "RefreshToken";
     private const int REFRESH_TOKEN_EXPIRY_DAYS = 7;
 
-    public AuthManager(IMapper mapper, 
-        UserManager<User> userManager, 
+    public AuthManager(IMapper mapper,
+        UserManager<User> userManager,
         IConfiguration configuration,
         ILogger<AuthManager> logger,
         FitGearDbContext context)
@@ -38,25 +38,25 @@ public class AuthManager : IAuthManager
         _logger = logger;
         _context = context;
     }
-    
+
     public async Task<string> CreateRefreshToken(User user)
     {
         await _userManager.RemoveAuthenticationTokenAsync(user, _loginProvider,
             _refreshToken);
-        
+
         var randomNumber = new byte[32];
         using var rng = System.Security.Cryptography.RandomNumberGenerator.Create();
         rng.GetBytes(randomNumber);
-        
+
         var newRefreshToken = Convert.ToBase64String(randomNumber);
         var result = await _userManager.SetAuthenticationTokenAsync(user, _loginProvider,
             _refreshToken, newRefreshToken);
-        
+
         if (!result.Succeeded)
         {
             throw new ApplicationException("Failed to create refresh token");
         }
-        
+
         return newRefreshToken;
     }
 

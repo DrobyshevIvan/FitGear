@@ -1,0 +1,614 @@
+2025-05-10 08:08:44.774 +03:00 [INF] Cheeking for bookings to update status at: 10.05.2025 5:08:44
+2025-05-10 08:08:48.019 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-10 08:08:48.021 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-10 08:08:48.021 +03:00 [INF] Hosting environment: Development
+2025-05-10 08:08:48.022 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-10 08:09:28.413 +03:00 [ERR] Failed executing DbCommand (34,849ms) [Parameters=[@__now_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[AnnouncementId], [b].[From], [b].[Status], [b].[To], [b].[UserId]
+FROM [Bookings] AS [b]
+WHERE ([b].[Status] = N'Confirmed' AND [b].[From] <= @__now_0) OR ([b].[Status] = N'Active' AND [b].[To] < @__now_0)
+2025-05-10 08:09:28.442 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'FitGear.Data.FitGearDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Время ожидания операции истекло.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:b3e03b26-6c16-4468-869b-45a160e4d016
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Время ожидания операции истекло.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:b3e03b26-6c16-4468-869b-45a160e4d016
+Error Number:-2,State:0,Class:11
+2025-05-10 08:09:28.453 +03:00 [ERR] An error occurred while updating booking status
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Время ожидания операции истекло.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FitGear.Repository.BookingRepository.GetActiveBookingsAsync() in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear.Core\Repository\BookingRepository.cs:line 20
+   at FitGear.Services.BookingStatusUpdateService.ExecuteAsync(CancellationToken stoppingToken) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\BookingStatusUpdateService.cs:line 30
+ClientConnectionId:b3e03b26-6c16-4468-869b-45a160e4d016
+Error Number:-2,State:0,Class:11
+2025-05-10 08:09:33.731 +03:00 [WRN] No user found for provided refresh token
+2025-05-10 08:09:33.738 +03:00 [ERR] HTTP GET /api/User/roles responded 500 in 29699.4265 ms
+System.Collections.Generic.KeyNotFoundException: User not found
+   at FitGear.Services.AccountService.GetRolesFromRefreshToken(HttpContext httpContext) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 183
+   at FitGear.Controllers.UserController.GetRoles() in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\UserController.cs:line 93
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-05-10 08:09:33.748 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: User not found
+   at FitGear.Services.AccountService.GetRolesFromRefreshToken(HttpContext httpContext) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 183
+   at FitGear.Controllers.UserController.GetRoles() in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\UserController.cs:line 93
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-10 08:09:45.656 +03:00 [WRN] No user found for provided refresh token
+2025-05-10 08:09:45.657 +03:00 [ERR] HTTP GET /api/User/roles responded 500 in 305.2696 ms
+System.Collections.Generic.KeyNotFoundException: User not found
+   at FitGear.Services.AccountService.GetRolesFromRefreshToken(HttpContext httpContext) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 183
+   at FitGear.Controllers.UserController.GetRoles() in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\UserController.cs:line 93
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-05-10 08:09:45.662 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: User not found
+   at FitGear.Services.AccountService.GetRolesFromRefreshToken(HttpContext httpContext) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 183
+   at FitGear.Controllers.UserController.GetRoles() in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\UserController.cs:line 93
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-10 08:09:59.050 +03:00 [WRN] No user found for provided refresh token
+2025-05-10 08:09:59.052 +03:00 [ERR] HTTP GET /api/User/roles responded 500 in 22.9662 ms
+System.Collections.Generic.KeyNotFoundException: User not found
+   at FitGear.Services.AccountService.GetRolesFromRefreshToken(HttpContext httpContext) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 183
+   at FitGear.Controllers.UserController.GetRoles() in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\UserController.cs:line 93
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-05-10 08:09:59.060 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: User not found
+   at FitGear.Services.AccountService.GetRolesFromRefreshToken(HttpContext httpContext) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 183
+   at FitGear.Controllers.UserController.GetRoles() in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\UserController.cs:line 93
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-10 08:10:12.471 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 08:10:12.474 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 08:10:13.964 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjU4MGViYWUwLWI1MDMtNDYxYS1iYTRkLTgyZGFjMjIwOGVmYiIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODU0NDEzLCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.ETt4kgaKwTxIA3NzGN9rhT-uFCHS_2AOFQD5SbTiRi4
+2025-05-10 08:10:15.538 +03:00 [INF] HTTP POST /api/User/login responded 200 in 3130.2212 ms
+2025-05-10 08:10:15.594 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 49.2070 ms
+2025-05-10 08:10:15.600 +03:00 [INF] HTTP GET /api/User/me responded 404 in 0.7825 ms
+2025-05-10 08:10:29.379 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 08:10:29.380 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 08:10:29.459 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImE2MzZlOTEyLTUyMTItNDZmZi1iMWEwLTE4ZTlhOTM5N2Y2NiIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODU0NDI5LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.fSt400vuRwZ2G0rP_qyABN3nrF9Xx5fGPfeNOerWAEw
+2025-05-10 08:10:29.495 +03:00 [INF] HTTP POST /api/User/login responded 200 in 119.5873 ms
+2025-05-10 08:10:29.510 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 9.1774 ms
+2025-05-10 08:10:29.517 +03:00 [INF] HTTP GET /api/User/me responded 404 in 0.3275 ms
+2025-05-10 08:10:34.336 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 08:10:34.337 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 08:10:34.413 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImNhYTI1NTY5LTdlZDMtNGZhYS04NzI3LTcxYmRjYmYzYWNkOCIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODU0NDM0LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.OCdP9lM1KgTJnqKfH-eqZ-U0Dxpqatw68VadLNJav-Q
+2025-05-10 08:10:34.461 +03:00 [INF] HTTP POST /api/User/login responded 200 in 126.3111 ms
+2025-05-10 08:10:34.473 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 6.2953 ms
+2025-05-10 08:10:34.478 +03:00 [INF] HTTP GET /api/User/me responded 404 in 0.4946 ms
+2025-05-10 08:11:16.025 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 08:11:16.026 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 08:11:16.100 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImQ5MWMwODFlLTlhYWEtNDBmNi05MWM0LWRjOTYwOWVmNDNmMSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODU0NDc2LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.1g7wxxs5HwVRnozdWUhgwgwfMjTfWjkitdz75i7q6hw
+2025-05-10 08:11:16.120 +03:00 [INF] HTTP POST /api/User/login responded 200 in 97.3343 ms
+2025-05-10 08:11:16.134 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 6.5181 ms
+2025-05-10 08:11:16.140 +03:00 [INF] HTTP GET /api/User/me responded 404 in 0.3532 ms
+2025-05-10 08:13:40.892 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 08:13:40.893 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 08:13:41.053 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjJhZTVkN2ZlLTM3ZWEtNGMwZS1iZmJkLTQ5MGQxMDY3ODY5ZSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODU0NjIxLCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.Vh9jsO8UtbBH8f3w8VQSQRRNZkx58Qmvv26saTVHO7U
+2025-05-10 08:13:41.229 +03:00 [INF] HTTP POST /api/User/login responded 200 in 337.7962 ms
+2025-05-10 08:13:41.256 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 22.5036 ms
+2025-05-10 08:15:04.924 +03:00 [WRN] No user found for provided refresh token
+2025-05-10 08:15:04.925 +03:00 [ERR] HTTP GET /api/User/roles responded 500 in 141.1565 ms
+System.Collections.Generic.KeyNotFoundException: User not found
+   at FitGear.Services.AccountService.GetRolesFromRefreshToken(HttpContext httpContext) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 183
+   at FitGear.Controllers.UserController.GetRoles() in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\UserController.cs:line 93
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-05-10 08:15:04.931 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: User not found
+   at FitGear.Services.AccountService.GetRolesFromRefreshToken(HttpContext httpContext) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 183
+   at FitGear.Controllers.UserController.GetRoles() in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\UserController.cs:line 93
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-10 08:18:57.371 +03:00 [INF] Cheeking for bookings to update status at: 10.05.2025 5:18:57
+2025-05-10 08:18:58.405 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-10 08:18:58.406 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-10 08:18:58.407 +03:00 [INF] Hosting environment: Development
+2025-05-10 08:18:58.407 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-10 08:19:26.339 +03:00 [WRN] No user found for provided refresh token
+2025-05-10 08:19:26.351 +03:00 [ERR] HTTP GET /api/User/roles responded 500 in 467.6410 ms
+System.Collections.Generic.KeyNotFoundException: User not found
+   at FitGear.Services.AccountService.GetRolesFromRefreshToken(HttpContext httpContext) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 183
+   at FitGear.Controllers.UserController.GetRoles() in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\UserController.cs:line 93
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-05-10 08:19:26.380 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: User not found
+   at FitGear.Services.AccountService.GetRolesFromRefreshToken(HttpContext httpContext) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 183
+   at FitGear.Controllers.UserController.GetRoles() in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\UserController.cs:line 93
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-10 08:19:30.425 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 08:19:30.427 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 08:19:31.160 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImE0ZTI5MjVmLWJkYTMtNDE5ZS1iZTBiLTMwMDdlMmVlYWM4MSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODU0OTcxLCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.zYjRZ3TXqKnjhrcujaYe0-9W4Yn07eOO7NQTpRLGJPo
+2025-05-10 08:19:31.534 +03:00 [INF] HTTP POST /api/User/login responded 200 in 1158.5416 ms
+2025-05-10 08:19:31.582 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 43.7217 ms
+2025-05-10 08:19:33.562 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 435.2796 ms
+2025-05-10 08:19:33.578 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 12.5407 ms
+2025-05-10 08:19:34.973 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 11.5957 ms
+2025-05-10 08:19:40.902 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 5.4784 ms
+2025-05-10 08:19:41.809 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.5360 ms
+2025-05-10 08:19:43.356 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 08:19:43.357 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 08:19:43.426 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6Ijk4MTlhYmQ0LWMzY2ItNDVjYi05YzA5LTlmOTFhMDBiYTJhOCIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODU0OTgzLCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.S2S-u4Gs8I8kjhCvHHT_WuHUBPnsiROUD4fUJmumcOc
+2025-05-10 08:19:43.437 +03:00 [INF] HTTP POST /api/User/login responded 200 in 82.3225 ms
+2025-05-10 08:19:43.445 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 4.2103 ms
+2025-05-10 08:19:43.696 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.6898 ms
+2025-05-10 08:19:43.699 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.0580 ms
+2025-05-10 08:19:44.128 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 3.4935 ms
+2025-05-10 08:20:14.314 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 11.6889 ms
+2025-05-10 08:20:15.989 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.3236 ms
+2025-05-10 08:20:15.993 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.5662 ms
+2025-05-10 08:20:16.367 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 3.7305 ms
+2025-05-10 08:20:18.080 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.5635 ms
+2025-05-10 08:20:18.087 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.5552 ms
+2025-05-10 08:20:18.533 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 4.5101 ms
+2025-05-10 08:20:19.446 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.1932 ms
+2025-05-10 08:20:19.450 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.1305 ms
+2025-05-10 08:20:19.835 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 5.3709 ms
+2025-05-10 08:20:20.760 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.8220 ms
+2025-05-10 08:20:20.764 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.4050 ms
+2025-05-10 08:20:21.152 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 4.5870 ms
+2025-05-10 08:20:28.094 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 4.0581 ms
+2025-05-10 08:20:29.246 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.2839 ms
+2025-05-10 08:20:55.362 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 08:20:55.363 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 08:20:55.457 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImE1NzJmOWUzLWZjMzEtNGI2Mi05MzBiLTcwZWFkOWYyZTY0YyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODU1MDU1LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.ChWP6wtpOWiDeSfh9DZv54uvWOxXzdSSVg0xC29PyvI
+2025-05-10 08:20:55.487 +03:00 [INF] HTTP POST /api/User/login responded 200 in 126.8199 ms
+2025-05-10 08:20:55.494 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 3.2502 ms
+2025-05-10 08:20:55.760 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.8935 ms
+2025-05-10 08:20:55.762 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.7845 ms
+2025-05-10 08:20:56.378 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 4.2521 ms
+2025-05-10 08:21:14.728 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.3160 ms
+2025-05-10 08:21:16.100 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 08:21:16.101 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 08:21:17.561 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjEyZjZjNzM0LTFlMzMtNDUwMi04MTUwLTFhMzQ5MzllNDQ1YSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODU1MDc3LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.eCkkMD6yKbHQViLWHPo2-LLBdsaf0K9SB_zAuLmS6Mw
+2025-05-10 08:21:17.993 +03:00 [INF] HTTP POST /api/User/login responded 200 in 1893.9458 ms
+2025-05-10 08:21:18.295 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 296.6274 ms
+2025-05-10 08:21:18.908 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 165.5864 ms
+2025-05-10 08:21:19.398 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 13.0996 ms
+2025-05-10 08:21:22.848 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.3134 ms
+2025-05-10 08:21:24.582 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 08:21:24.583 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 08:21:24.658 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjkxMjFiMTIxLWZlZWItNDE2ZS1iYjZiLTRlOTQ0NDMwMzEzYyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODU1MDg0LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.ZLcpQMVPV3HDVg3yaZnDsJ8MImvyMMj3sTOBWq48O6w
+2025-05-10 08:21:24.721 +03:00 [INF] HTTP POST /api/User/login responded 200 in 139.5913 ms
+2025-05-10 08:21:24.732 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 5.3320 ms
+2025-05-10 08:21:25.170 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.9761 ms
+2025-05-10 08:21:25.173 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.0264 ms
+2025-05-10 08:21:25.895 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 4.0946 ms
+2025-05-10 08:23:28.323 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-10 08:23:28.845 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 529.3467 ms
+2025-05-10 08:23:35.075 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-10 08:23:35.080 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 6.5528 ms
+2025-05-10 08:23:37.210 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-10 08:23:37.211 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.3363 ms
+2025-05-10 08:23:55.605 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-10 08:23:55.606 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.8300 ms
+2025-05-10 08:24:01.617 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 13.1888 ms
+2025-05-10 08:24:03.536 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.0820 ms
+2025-05-10 08:24:06.014 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 08:24:06.015 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 08:24:06.091 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjUyYTI3YWQ0LWE1NTMtNGY1Yi1hZDFkLWI5ZmE2NWNmMDU1NiIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODU1MjQ2LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.Z6yX0bTzKXVPbnA_KnJHa2XjrKbUjR-9OI6WhLsR0bM
+2025-05-10 08:24:06.110 +03:00 [INF] HTTP POST /api/User/login responded 200 in 95.5934 ms
+2025-05-10 08:24:06.115 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 2.2248 ms
+2025-05-10 08:24:06.542 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.5091 ms
+2025-05-10 08:24:06.544 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.1689 ms
+2025-05-10 08:24:07.248 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 3.6798 ms
+2025-05-10 08:24:22.715 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-10 08:24:22.716 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.3355 ms
+2025-05-10 08:24:46.113 +03:00 [INF] Application is shutting down...
+2025-05-10 08:24:50.926 +03:00 [INF] Cheeking for bookings to update status at: 10.05.2025 5:24:50
+2025-05-10 08:24:51.631 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-10 08:24:51.633 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-10 08:24:51.633 +03:00 [INF] Hosting environment: Development
+2025-05-10 08:24:51.634 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-10 08:25:03.887 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 64.6632 ms
+2025-05-10 08:25:09.437 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 08:25:09.443 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 08:25:09.703 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjRkYWI0MGMwLTllNmQtNDI1NC1hMWUyLWViZmI4YmZmZTIzMCIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODU1MzA5LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.VIIOP5c8betK_IMdBlR9DWe0BOgWUDlBXLX1U6lCgDs
+2025-05-10 08:25:10.022 +03:00 [INF] HTTP POST /api/User/login responded 200 in 745.3183 ms
+2025-05-10 08:25:10.126 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 97.5264 ms
+2025-05-10 08:25:10.625 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 55.2050 ms
+2025-05-10 08:25:10.632 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.4354 ms
+2025-05-10 08:25:11.268 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 21.8133 ms
+2025-05-10 08:25:11.273 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 3.9172 ms
+2025-05-10 08:26:43.892 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 130.3491 ms
+2025-05-10 08:26:43.899 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.4173 ms
+2025-05-10 08:26:45.319 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 565.9042 ms
+2025-05-10 08:33:10.358 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.2354 ms
+2025-05-10 08:33:17.080 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 08:33:17.081 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 08:33:17.660 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjM1ZGY0NDFmLTY4NTEtNDI0Yy1iMWUxLTBkYzczYzdlYjM4NCIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODU1Nzk3LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.qYHfAhMTrWwAFfS7jcUkP5Bx6lRLjxddyP6Q1KLVBGQ
+2025-05-10 08:33:17.824 +03:00 [INF] HTTP POST /api/User/login responded 200 in 745.2641 ms
+2025-05-10 08:33:17.836 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 6.1306 ms
+2025-05-10 08:33:20.383 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 180.9948 ms
+2025-05-10 08:33:20.401 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 10.8783 ms
+2025-05-10 08:33:25.467 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 31.6968 ms
+2025-05-10 08:35:19.086 +03:00 [INF] Application is shutting down...
+2025-05-10 08:35:29.338 +03:00 [INF] Cheeking for bookings to update status at: 10.05.2025 5:35:29
+2025-05-10 08:35:30.043 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-10 08:35:30.044 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-10 08:35:30.045 +03:00 [INF] Hosting environment: Development
+2025-05-10 08:35:30.045 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-10 08:37:05.621 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 21.2696 ms
+2025-05-10 08:37:07.098 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 08:37:07.100 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 08:37:07.513 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjI1Y2U3ZTYyLTUyMjQtNDk3YS1iOWYzLTNlYmZhNGQ0ZTJiZCIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODU2MDI3LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.V_TC4gHMmkFOq8lLjGx_dMNE9GjnvPU-ip3czlqMpbI
+2025-05-10 08:37:07.739 +03:00 [INF] HTTP POST /api/User/login responded 200 in 747.5841 ms
+2025-05-10 08:37:07.829 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 83.4581 ms
+2025-05-10 08:37:08.377 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 68.4516 ms
+2025-05-10 08:37:08.383 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.6347 ms
+2025-05-10 08:37:18.374 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 18.1743 ms
+2025-05-10 08:37:20.233 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 6.7179 ms
+2025-05-10 08:37:22.300 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 5.1590 ms
+2025-05-10 08:37:25.462 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.4416 ms
+2025-05-10 08:37:25.465 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.2391 ms
+2025-05-10 08:37:32.406 +03:00 [INF] HTTP PUT /api/Announcements/1 responded 401 in 6.5910 ms
+2025-05-10 08:37:53.889 +03:00 [INF] HTTP PUT /api/Announcements/1 responded 401 in 1.3617 ms
+2025-05-10 08:38:25.841 +03:00 [INF] HTTP POST /api/Announcements responded 401 in 1.7570 ms
+2025-05-10 08:38:28.501 +03:00 [INF] HTTP POST /api/Announcements responded 401 in 0.1388 ms
+2025-05-10 08:38:29.301 +03:00 [INF] HTTP POST /api/Announcements responded 401 in 0.2093 ms
+2025-05-10 08:38:48.191 +03:00 [INF] HTTP DELETE /api/Announcements/1025 responded 401 in 0.2191 ms
+2025-05-10 08:41:14.247 +03:00 [INF] HTTP DELETE /api/Announcements/1 responded 401 in 0.3028 ms
+2025-05-10 08:41:21.271 +03:00 [INF] HTTP DELETE /api/Announcements/1 responded 401 in 0.1596 ms
+2025-05-10 08:41:28.119 +03:00 [INF] HTTP DELETE /api/Announcements/1025 responded 401 in 0.1902 ms
+2025-05-10 08:42:14.973 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.2161 ms
+2025-05-10 08:42:16.608 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 08:42:16.609 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 08:42:16.785 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImRiM2EzYjRlLWQ0MDctNDVlMi1hOThjLTg5OWM1M2U1OGRjMiIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODU2MzM2LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.kRAkeeCtSyNKebO-_Ijx1jjQGuuKIwFytpDFz4w6gx0
+2025-05-10 08:42:16.863 +03:00 [INF] HTTP POST /api/User/login responded 200 in 256.1805 ms
+2025-05-10 08:42:16.877 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 8.0240 ms
+2025-05-10 08:42:17.260 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.2851 ms
+2025-05-10 08:42:17.264 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.7959 ms
+2025-05-10 08:42:22.615 +03:00 [INF] HTTP DELETE /api/Announcements/27 responded 401 in 0.2497 ms
+2025-05-10 08:42:49.391 +03:00 [INF] HTTP PUT /api/Announcements/1025 responded 401 in 0.1606 ms
+2025-05-10 08:46:57.665 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 61.7309 ms
+2025-05-10 08:46:57.966 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.1989 ms
+2025-05-10 08:47:00.735 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.1153 ms
+2025-05-10 08:47:02.223 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 08:47:02.224 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 08:47:02.294 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImRjNTMyODAwLWU5MDUtNDQ0Ny05ZGZhLTY5MDRkZjMyZGFiNSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODU2NjIyLCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.A8TmAUGwOR4aFheUtITm58P9v-WI6LNlaRzXvwQjKys
+2025-05-10 08:47:03.191 +03:00 [INF] HTTP POST /api/User/login responded 200 in 968.2773 ms
+2025-05-10 08:47:03.199 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 3.1637 ms
+2025-05-10 08:47:03.580 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.5869 ms
+2025-05-10 08:47:03.585 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.1200 ms
+2025-05-10 08:47:06.832 +03:00 [INF] HTTP DELETE /api/Announcements/1025 responded 204 in 465.0275 ms
+2025-05-10 08:47:06.839 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.4854 ms
+2025-05-10 08:47:26.667 +03:00 [INF] HTTP PUT /api/Announcements/1024 responded 204 in 140.8898 ms
+2025-05-10 08:47:26.672 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.5484 ms
+2025-05-10 08:49:08.391 +03:00 [INF] HTTP PUT /api/Announcements/1024 responded 401 in 0.2170 ms
+2025-05-10 08:49:08.424 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 400 in 25.9597 ms
+2025-05-10 08:49:08.430 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.0907 ms
+2025-05-10 08:49:28.736 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 18.8179 ms
+2025-05-10 08:49:34.474 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 4.1891 ms
+2025-05-10 08:50:30.210 +03:00 [INF] Cheeking for bookings to update status at: 10.05.2025 5:50:30
+2025-05-10 10:21:55.855 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 239.1197 ms
+2025-05-10 10:25:07.500 +03:00 [INF] Application is shutting down...
+2025-05-10 10:44:56.462 +03:00 [INF] Cheeking for bookings to update status at: 10.05.2025 7:44:56
+2025-05-10 10:44:57.617 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-10 10:44:57.619 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-10 10:44:57.620 +03:00 [INF] Hosting environment: Development
+2025-05-10 10:44:57.620 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-10 10:45:21.563 +03:00 [INF] Application is shutting down...
+2025-05-10 10:48:37.270 +03:00 [INF] Cheeking for bookings to update status at: 10.05.2025 7:48:37
+2025-05-10 10:48:37.991 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-10 10:48:37.992 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-10 10:48:37.993 +03:00 [INF] Hosting environment: Development
+2025-05-10 10:48:37.993 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-10 10:48:39.363 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - FitGear.Controllers.UserProfileController.GetUserProfile (FitGear). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-10 10:48:46.048 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - FitGear.Controllers.UserProfileController.GetUserProfile (FitGear). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-10 10:48:49.913 +03:00 [INF] Application is shutting down...
+2025-05-10 10:50:09.029 +03:00 [INF] Cheeking for bookings to update status at: 10.05.2025 7:50:09
+2025-05-10 10:50:09.729 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-10 10:50:09.732 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-10 10:50:09.732 +03:00 [INF] Hosting environment: Development
+2025-05-10 10:50:09.733 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-10 10:50:10.501 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - FitGear.Controllers.UserProfileController.GetUserProfile (FitGear). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`4 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(OpenApiDocument document, IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-10 10:51:50.172 +03:00 [INF] Application is shutting down...
+2025-05-10 10:51:55.455 +03:00 [INF] Cheeking for bookings to update status at: 10.05.2025 7:51:55
+2025-05-10 10:51:56.203 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-10 10:51:56.205 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-10 10:51:56.206 +03:00 [INF] Hosting environment: Development
+2025-05-10 10:51:56.206 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-10 10:52:02.926 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 46.2329 ms
+2025-05-10 10:53:26.624 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 2.4057 ms
+2025-05-10 10:53:33.310 +03:00 [INF] Login Attempt for test1@gmail.com
+2025-05-10 10:53:33.314 +03:00 [INF] Looking for user with email test1@gmail.com
+2025-05-10 10:53:33.586 +03:00 [INF] Token generated for User with email test1@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MUBnbWFpbC5jb20iLCJqdGkiOiIzMzIxNWNiOS00NzllLTRhY2ItOWQwZi1mNzlkODFmN2NhNGMiLCJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsInVpZCI6IjBjYWNjNzk0LTQ3NTAtNDYwNC1iMDMwLWFhMjEwMWU2MGMzMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDY4NjQyMTMsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.XAxc0fxxKx5RJ0NHGsFD9B5W3MqtBvTn85JFj-QpHkg
+2025-05-10 10:53:33.901 +03:00 [INF] HTTP POST /api/User/login responded 200 in 708.4005 ms
+2025-05-10 10:53:36.914 +03:00 [ERR] HTTP GET /api/UserProfile/profile responded 500 in 32.9037 ms
+System.InvalidOperationException: Unable to resolve service for type 'FitGear.Services.UserProfileService' while attempting to activate 'FitGear.Controllers.UserProfileController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method323(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-05-10 10:53:36.927 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'FitGear.Services.UserProfileService' while attempting to activate 'FitGear.Controllers.UserProfileController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method323(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-10 10:55:25.342 +03:00 [INF] Application is shutting down...
+2025-05-10 10:56:02.444 +03:00 [INF] Cheeking for bookings to update status at: 10.05.2025 7:56:02
+2025-05-10 10:56:03.130 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-10 10:56:03.132 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-10 10:56:03.133 +03:00 [INF] Hosting environment: Development
+2025-05-10 10:56:03.133 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-10 10:56:08.723 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 25.0561 ms
+2025-05-10 10:56:13.791 +03:00 [INF] Login Attempt for test1@gmail.com
+2025-05-10 10:56:13.795 +03:00 [INF] Looking for user with email test1@gmail.com
+2025-05-10 10:56:14.300 +03:00 [INF] Token generated for User with email test1@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MUBnbWFpbC5jb20iLCJqdGkiOiI3YzkxYmZjOC03ZDllLTRlYTQtOTg1Yy1hN2RhYTFjNzllOWMiLCJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsInVpZCI6IjBjYWNjNzk0LTQ3NTAtNDYwNC1iMDMwLWFhMjEwMWU2MGMzMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDY4NjQzNzQsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.x5q3kdoUzFjbPYBeKovlMFS2Z0BqMrMR5_wb2_V8AVk
+2025-05-10 10:56:14.694 +03:00 [INF] HTTP POST /api/User/login responded 200 in 997.2561 ms
+2025-05-10 10:56:18.189 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 124.0395 ms
+2025-05-10 10:56:33.382 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 10:56:33.383 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 10:56:33.525 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjRlNGJkYTg4LTlmOGYtNDlkYi05YjJiLTgzOGQyOGI2NDZhNSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODY0MzkzLCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.9jtoXqIyIBkFxsTlnhz3E5UqXpdxcAXrssmy5xZFpq4
+2025-05-10 10:56:33.554 +03:00 [INF] HTTP POST /api/User/login responded 200 in 174.1913 ms
+2025-05-10 10:56:36.510 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 12.5070 ms
+2025-05-10 11:02:07.825 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 0.4408 ms
+2025-05-10 11:02:07.838 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 0.4765 ms
+2025-05-10 11:02:07.902 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 400 in 56.0242 ms
+2025-05-10 11:02:07.902 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 400 in 55.6973 ms
+2025-05-10 11:02:07.908 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.1842 ms
+2025-05-10 11:02:07.908 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.1840 ms
+2025-05-10 11:02:40.869 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 11:02:40.870 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 11:02:41.419 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjVlNGZhNzEzLTJjN2EtNDg3ZC1iYmU3LTU0ZDk0ODQyMTEwYiIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODY0NzYxLCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.uc0oEaclUZqLsMhYZeh5vZcVrwrVTwlJDhhOFucpZqs
+2025-05-10 11:02:41.707 +03:00 [INF] HTTP POST /api/User/login responded 200 in 838.1655 ms
+2025-05-10 11:02:41.727 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 16.9943 ms
+2025-05-10 11:02:42.460 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 179.1596 ms
+2025-05-10 11:02:42.467 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.1595 ms
+2025-05-10 11:02:44.289 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 174.5305 ms
+2025-05-10 11:02:44.299 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 8.0634 ms
+2025-05-10 11:02:48.706 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 13.9078 ms
+2025-05-10 11:02:50.217 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 7.9875 ms
+2025-05-10 11:02:50.220 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 2.3146 ms
+2025-05-10 11:03:00.392 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.9448 ms
+2025-05-10 11:03:00.395 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.0390 ms
+2025-05-10 11:03:02.983 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 15.3385 ms
+2025-05-10 11:03:02.991 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 6.0921 ms
+2025-05-10 11:03:06.462 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 10.8369 ms
+2025-05-10 11:03:07.585 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 10.1132 ms
+2025-05-10 11:03:07.590 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 3.9324 ms
+2025-05-10 11:05:46.346 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.4900 ms
+2025-05-10 11:05:46.351 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.4753 ms
+2025-05-10 11:05:50.316 +03:00 [INF] HTTP PUT /api/Announcements/1 responded 401 in 0.6950 ms
+2025-05-10 11:05:50.322 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 400 in 1.8691 ms
+2025-05-10 11:05:50.326 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.1468 ms
+2025-05-10 11:05:55.399 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 11:05:55.399 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 11:05:55.548 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjMwNDNiYzgwLTIxMmYtNDUxNC1hMWY4LWEyMzIyYzcwN2UyZCIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODY0OTU1LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.aQPA1F9wvhs6YwqN_vTEpKRqpTiXUDgTlme3zc-9P14
+2025-05-10 11:05:55.627 +03:00 [INF] HTTP POST /api/User/login responded 200 in 228.4394 ms
+2025-05-10 11:05:55.662 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 32.5783 ms
+2025-05-10 11:05:55.819 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 9.2759 ms
+2025-05-10 11:05:55.823 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.6548 ms
+2025-05-10 11:05:57.120 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 20.2520 ms
+2025-05-10 11:05:57.131 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 8.0041 ms
+2025-05-10 11:08:10.941 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 7.6662 ms
+2025-05-10 11:08:10.948 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.7306 ms
+2025-05-10 11:08:13.409 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 0.4048 ms
+2025-05-10 11:08:13.412 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 0.3328 ms
+2025-05-10 11:08:13.422 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 400 in 2.8356 ms
+2025-05-10 11:08:13.422 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 400 in 0.8573 ms
+2025-05-10 11:08:13.428 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.0868 ms
+2025-05-10 11:08:13.428 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.0375 ms
+2025-05-10 11:08:18.092 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-10 11:08:18.093 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-10 11:08:18.161 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImEwZmZmZDcyLWI4YzQtNDE1OC1hY2YyLTJlMGMxNmFiZWJmNSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ2ODY1MDk4LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.JhhorX0KrKmvcoPo2aCEB-33gZJEmXlRH9OJ1vXKuE8
+2025-05-10 11:08:18.285 +03:00 [INF] HTTP POST /api/User/login responded 200 in 193.5706 ms
+2025-05-10 11:08:18.311 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 22.9974 ms
+2025-05-10 11:08:18.464 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.5954 ms
+2025-05-10 11:08:18.468 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.3601 ms
