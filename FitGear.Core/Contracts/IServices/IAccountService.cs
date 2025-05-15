@@ -9,4 +9,5 @@ public interface IAccountService
     Task<IEnumerable<IdentityError>> RegisterAsync(ApiUserDto userDto);
     Task<AuthResponseDto> LoginAsync(LoginDto loginDto, HttpContext httpContext);
     Task<AuthResponseDto> VerifyRefreshToken(AuthResponseDto request, HttpContext httpContext);
+    Task<IEnumerable<string>> GetRolesFromRefreshToken(HttpContext httpContext);
 }

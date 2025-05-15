@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export interface CreateAnnouncementRequest {
     title: string;
     description: string;
@@ -35,27 +37,17 @@ export const getAllAnnouncements = async (): Promise<Announcement[]> => {
     return data.$values || [];
 };
 
-export const createAnnouncement = async (announcementRequest: CreateAnnouncementRequest) => {
-    const authHeaders = getAuthHeader();
-    const headers = {
-        "content-type": "application/json",
-        ...authHeaders
-    } as Record<string, string>;
-    
-    const response = await fetch("http://localhost:5209/api/Announcements", {
-        method: "POST",
-        headers,
-        body: JSON.stringify(announcementRequest),
-    });
-    
-    if (!response.ok) {
-        throw new Error("Failed to create announcement");
-    }
+export const createAnnouncement = async (request: CreateAnnouncementRequest) => {
+    return axios.post(
+        "http://localhost:5209/api/Announcements",
+        request,
+        { withCredentials: true }
+    );
 };
 
-export const updateAnnouncement = async (id: number, announcementRequest: UpdateAnnouncementRequest) => {
+export const updateAnnouncement = async (id: number, request: UpdateAnnouncementRequest) => {
     console.log("Updating announcement with ID:", id);
-    console.log("Request body:", announcementRequest);
+    console.log("Request body:", request);
 
     const authHeaders = getAuthHeader();
     const headers = {
@@ -63,27 +55,19 @@ export const updateAnnouncement = async (id: number, announcementRequest: Update
         ...authHeaders
     } as Record<string, string>;
 
-    const response = await fetch(`http://localhost:5209/api/Announcements/${id}`, {
-        method: "PUT",
-        headers,
-        body: JSON.stringify(announcementRequest),
-    });
-
-    if (!response.ok) {
-        throw new Error("Failed to update announcement");
-    }
+    return axios.put(
+        `http://localhost:5209/api/Announcements/${id}`,
+        request,
+        { withCredentials: true }
+    );
 };
 
 export const deleteAnnouncement = async (id: number) => {
     const authHeaders = getAuthHeader();
     const headers = { ...authHeaders } as Record<string, string>;
     
-    const response = await fetch(`http://localhost:5209/api/Announcements/${id}`, {
-        method: "DELETE",
-        headers
-    });
-    
-    if (!response.ok) {
-        throw new Error("Failed to delete announcement");
-    }
+    return axios.delete(
+        `http://localhost:5209/api/Announcements/${id}`,
+        { withCredentials: true }
+    );
 };
