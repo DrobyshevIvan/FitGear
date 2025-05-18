@@ -5,10 +5,11 @@ import { Menu, Button } from "antd";
 import { Header } from "antd/es/layout/layout";
 import Link from "next/link";
 import { useAuth } from "../contexts/AuthContext";
+import type { MenuItemType } from "antd/es/menu/interface";
 
 export function AppHeader() {
   const { isAuthenticated, user, logout, loading, hasRole } = useAuth();
-  const [items, setItems] = useState<any[]>([]);
+  const [items, setItems] = useState<MenuItemType[]>([]);
 
   useEffect(() => {
     const baseItems = [

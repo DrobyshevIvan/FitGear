@@ -8,6 +8,7 @@ using FitGear.Data;
 using FitGear.Middleware;
 using FitGear.Repository;
 using FitGear.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -82,6 +83,7 @@ builder.Services.AddScoped<IAuthManager, AuthManager>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IUserProfileService, UserProfileService>();
 builder.Services.AddScoped<IUserProfileRepository, UserProfileRepository>();
+builder.Services.AddScoped<IAnnouncementService, AnnouncementService>();
 
 builder.Services.AddAuthentication(options =>
 {
@@ -106,6 +108,7 @@ builder.Services.AddAuthentication(options =>
 
     options.ClientId = clientId;
     options.ClientSecret = clientSecret;
+    options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 }).AddJwtBearer(options =>
 {
     options.TokenValidationParameters = new TokenValidationParameters
@@ -161,11 +164,12 @@ if (app.Environment.IsDevelopment())
 // app.UseHttpsRedirection();
 app.UseCors("AllowFrontend");
 
-app.MapControllers();
 app.UseSerilogRequestLogging();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.MapControllers();
 
 app.Run();
 

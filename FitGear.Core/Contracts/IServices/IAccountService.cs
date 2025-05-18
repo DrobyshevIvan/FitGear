@@ -1,4 +1,5 @@
-﻿using HotelListing.API.Core.Models.Users;
+﻿using System.Security.Claims;
+using HotelListing.API.Core.Models.Users;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 
@@ -10,4 +11,5 @@ public interface IAccountService
     Task<AuthResponseDto> LoginAsync(LoginDto loginDto, HttpContext httpContext);
     Task<AuthResponseDto> VerifyRefreshToken(AuthResponseDto request, HttpContext httpContext);
     Task<IEnumerable<string>> GetRolesFromRefreshToken(HttpContext httpContext);
+    Task LoginWithGoogleAsync(ClaimsPrincipal? claimsPrincipal, HttpContext httpContext);
 }

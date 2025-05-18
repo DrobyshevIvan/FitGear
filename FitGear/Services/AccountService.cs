@@ -1,4 +1,5 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using AutoMapper;
 using FitGear.Contracts;
 using FitGear.Core.Contracts;
@@ -71,16 +72,16 @@ public class AccountService : IAccountService
         var accessTokenOptions = new CookieOptions
         {
             HttpOnly = true,
-            Secure = true,
+            // Secure = true,
             SameSite = SameSiteMode.Strict,
-            Expires = DateTime.UtcNow.AddMinutes(2)
+            Expires = DateTime.UtcNow.AddMinutes(10)
         };
         httpContext.Response.Cookies.Append("X-Access-Token", token, accessTokenOptions);
 
         var refreshTokenOptions = new CookieOptions
         {
             HttpOnly = true,
-            Secure = true,
+            // Secure = true,
             SameSite = SameSiteMode.Strict,
             Expires = DateTime.UtcNow.AddDays(7)
         };
@@ -126,7 +127,8 @@ public class AccountService : IAccountService
 
             _user = await _authManager.FindUserByRefreshToken(refreshToken);
 
-            var storedRefreshToken = await _userManager.GetAuthenticationTokenAsync(_user, _loginProvider, _refreshToken);
+            var storedRefreshToken =
+                await _userManager.GetAuthenticationTokenAsync(_user, _loginProvider, _refreshToken);
 
             if (storedRefreshToken != refreshToken)
             {
@@ -144,16 +146,16 @@ public class AccountService : IAccountService
             var accessTokenOptions = new CookieOptions
             {
                 HttpOnly = true,
-                Secure = true,
+                // Secure = true,
                 SameSite = SameSiteMode.Strict,
-                Expires = DateTime.UtcNow.AddMinutes(2)
+                Expires = DateTime.UtcNow.AddMinutes(10)
             };
             httpContext.Response.Cookies.Append("X-Access-Token", token, accessTokenOptions);
 
             var refreshTokenOptions = new CookieOptions
             {
                 HttpOnly = true,
-                Secure = true,
+                // Secure = true,
                 SameSite = SameSiteMode.Strict,
                 Expires = DateTime.UtcNow.AddDays(7)
             };
@@ -177,7 +179,7 @@ public class AccountService : IAccountService
     {
         var refreshToken = httpContext.Request.Cookies["X-Refresh-Token"];
         _user = await _authManager.FindUserByRefreshToken(refreshToken);
-        
+
         if (_user == null)
         {
             throw new KeyNotFoundException("User not found");
@@ -186,5 +188,90 @@ public class AccountService : IAccountService
         var roles = await _userManager.GetRolesAsync(_user);
 
         return roles;
+    }
+
+    public async Task LoginWithGoogleAsync(ClaimsPrincipal? claimsPrincipal, HttpContext httpContext)
+    {
+        if (claimsPrincipal == null)
+        {
+            throw new ArgumentNullException($"Claims principal is null {nameof(claimsPrincipal)}");
+        }
+
+        var email = claimsPrincipal.FindFirstValue(ClaimTypes.Email);
+
+        if (email is null)
+        {
+            throw new KeyNotFoundException("Email not found in claims");
+        }
+
+        var user = await _userManager.FindByEmailAsync(email);
+
+        if (user == null)
+        {
+            var newUser = new User
+            {
+                UserName = email,
+                Email = email,
+                FirstName = claimsPrincipal.FindFirstValue(ClaimTypes.GivenName) ?? string.Empty,
+                LastName = claimsPrincipal.FindFirstValue(ClaimTypes.Surname) ?? string.Empty,
+                EmailConfirmed = true
+            };
+
+            var result = await _userManager.CreateAsync(newUser);
+
+            if (!result.Succeeded)
+            {
+                throw new Exception(
+                    $"User creation failed {string.Join(", ", result.Errors.Select(e => e.Description))}");
+            }
+
+            await _userManager.AddToRoleAsync(newUser, "User");
+            user = newUser;
+        }
+
+        var providerKey = claimsPrincipal.FindFirstValue(ClaimTypes.NameIdentifier) ?? email;
+        var info = new UserLoginInfo("Google", providerKey, "Google");
+
+        var userLogins = await _userManager.GetLoginsAsync(user);
+        var googleLogin = userLogins.FirstOrDefault(l => l.LoginProvider == info.LoginProvider && l.ProviderKey == info.ProviderKey);
+
+        if (googleLogin == null)
+        {
+            var loginResult = await _userManager.AddLoginAsync(user, info);
+            if (!loginResult.Succeeded)
+            {
+                // Логирование ошибок loginResult.Errors
+                throw new Exception($"Failed to add Google login: {string.Join(", ", loginResult.Errors.Select(e => e.Description))}");
+            }
+        }
+        else
+        {
+            // Логин уже существует, можно просто залогировать этот факт, если нужно
+            _logger.LogInformation($"User {user.Email} already has Google login linked.");
+        }
+
+        var accessToken = await _authManager.GenerateToken(user);
+        var refreshTokenValue = await _authManager.CreateRefreshToken(user); // Renamed
+
+        _logger.LogInformation($"Setting cookies for Google user {user.Email}.");
+        var accessTokenOptions = new CookieOptions
+        {
+            HttpOnly = true,
+            // Secure = true, // IMPORTANT: Set to true in production if served over HTTPS
+            SameSite = SameSiteMode.Strict, // Or SameSiteMode.Lax depending on your cross-site needs
+            Expires = DateTime.UtcNow.AddMinutes(10) // Consistent with LoginAsync
+        };
+        httpContext.Response.Cookies.Append("X-Access-Token", accessToken, accessTokenOptions);
+
+        var refreshTokenOptions = new CookieOptions
+        {
+            HttpOnly = true,
+            // Secure = true, // IMPORTANT: Set to true in production if served over HTTPS
+            SameSite = SameSiteMode.Strict,
+            Expires = DateTime.UtcNow.AddDays(7) // Consistent
+        };
+        httpContext.Response.Cookies.Append("X-Refresh-Token", refreshTokenValue, refreshTokenOptions);
+
+        _logger.LogInformation($"Google login successful for {user.Email}. Tokens set in cookies.");
     }
 }
