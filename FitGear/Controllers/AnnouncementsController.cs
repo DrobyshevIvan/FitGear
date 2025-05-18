@@ -17,12 +17,12 @@ namespace FitGear.Controllers
     [ApiController]
     public class AnnouncementsController : ControllerBase
     {
-        private readonly IAnnouncementsRepository _announcementsRepository;
+        private readonly IAnnouncementService _announcementService;
         private readonly IMapper _mapper;
 
-        public AnnouncementsController(IAnnouncementsRepository announcementsRepository, IMapper mapper)
+        public AnnouncementsController(IAnnouncementService announcementService, IMapper mapper)
         {
-            _announcementsRepository = announcementsRepository;
+            _announcementService = announcementService;
             _mapper = mapper;
         }
 
@@ -30,23 +30,21 @@ namespace FitGear.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<GetAnnouncementDto>>> GetAnnouncements()
         {
-            var announcements = await _announcementsRepository.GetAllAsync();
-            var records = _mapper.Map<List<GetAnnouncementDto>>(announcements);
-            return Ok(records);
+            var announcements = await _announcementService.GetAnnouncementsAsync();
+            return Ok(announcements);
         }
 
         // GET: api/Announcement/5
         [HttpGet("{id}")]
         public async Task<ActionResult<GetAnnouncementDto>> GetAnnouncement(int id)
         {
-            var announcement = await _announcementsRepository.GetAsync(id);
-
+            var announcement = await _announcementService.GetAnnouncementByIdAsync(id);
             if (announcement == null)
             {
                 return NotFound();
             }
 
-            return Ok(_mapper.Map<GetAnnouncementDto>(announcement));
+            return Ok(announcement);
         }
         
         // Нужно будет сделать контроллер GET для модератора/админа для просмотра всех бронирований и уже там бы будем обращатся к контексту
@@ -63,31 +61,10 @@ namespace FitGear.Controllers
                 return BadRequest();
             }
 
-            // _context.Entry(announcement).State = EntityState.Modified;
-
-            var announcement = await _announcementsRepository.GetAsync(id);
-
-            if (announcement == null)
+            var result = await _announcementService.UpdateAnnouncementAsync(id, announcementDto);
+            if (!result)
             {
                 return NotFound();
-            }
-            
-            _mapper.Map(announcementDto, announcement);
-            
-            try
-            {
-                await _announcementsRepository.UpdateAsync(announcement);
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!await AnnouncementExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
             }
 
             return NoContent();
@@ -99,10 +76,8 @@ namespace FitGear.Controllers
         [Authorize(Roles = "Administrator, Moderator")]
         public async Task<ActionResult<Announcement>> PostAnnouncement(CreateAnnouncementDto createAnnouncementDto)
         {
-            var announcement = _mapper.Map<Announcement>(createAnnouncementDto);
-            await _announcementsRepository.AddAsync(announcement);
-
-            return CreatedAtAction("GetAnnouncement", new { id = announcement.Id }, announcement);
+            var announcement = await _announcementService.CreateAnnouncementAsync(createAnnouncementDto);
+            return CreatedAtAction(nameof(GetAnnouncement), new { id = announcement.Id }, announcement);
         }
 
         // DELETE: api/Announcement/5
@@ -110,20 +85,18 @@ namespace FitGear.Controllers
         [Authorize(Roles = "Administrator, Moderator")]
         public async Task<IActionResult> DeleteAnnouncement(int id)
         {
-            var announcement = await _announcementsRepository.GetAsync(id);
-            if (announcement == null)
+            var result = await _announcementService.DeleteAnnouncementAsync(id);
+            if (!result)
             {
                 return NotFound();
             }
-
-            await _announcementsRepository.DeleteAsync(id);
 
             return NoContent();
         }
 
         private Task<bool> AnnouncementExists(int id)
         {
-            return _announcementsRepository.Exists(id);
+            return _announcementService.AnnouncementExistsAsync(id);
         }
     }
 }

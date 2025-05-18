@@ -1,0 +1,983 @@
+2025-05-16 07:44:13.224 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 400 in 714.8848 ms
+2025-05-16 07:44:14.876 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.1486 ms
+2025-05-16 07:46:46.520 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-16 07:46:46.525 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-16 07:46:47.266 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjllMjY4ZmI0LTI3MDgtNDE5OC05YmZkLWY4NzZkNjMyMjA1MyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3MzcxNDA3LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.KSUps3tfNUKLNlUwfwisd5qTAN6_3nHZwNgESh5QxRE
+2025-05-16 07:46:47.512 +03:00 [INF] HTTP POST /api/User/login responded 200 in 1011.2164 ms
+2025-05-16 07:46:52.572 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 113.7487 ms
+2025-05-16 07:46:52.644 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 25.0901 ms
+2025-05-16 07:46:58.226 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 5.0830 ms
+2025-05-16 07:46:58.245 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 15.5355 ms
+2025-05-16 07:48:07.629 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 114.1090 ms
+2025-05-16 07:48:07.640 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 10.2067 ms
+2025-05-16 07:48:13.813 +03:00 [INF] Login Attempt for test1@gmail.com
+2025-05-16 07:48:13.814 +03:00 [INF] Looking for user with email test1@gmail.com
+2025-05-16 07:48:13.990 +03:00 [INF] Token generated for User with email test1@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MUBnbWFpbC5jb20iLCJqdGkiOiI0ZTJlN2ZlNy01OWY3LTQzOTEtYTk4OS01NGRkNzZiYTRjNDkiLCJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsInVpZCI6IjBjYWNjNzk0LTQ3NTAtNDYwNC1iMDMwLWFhMjEwMWU2MGMzMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDczNzE0OTMsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.xw-a4ZX7tpzsaQGTE7W2oNRSThfVt0c_sOPf6qhjU08
+2025-05-16 07:48:14.096 +03:00 [INF] HTTP POST /api/User/login responded 200 in 284.1388 ms
+2025-05-16 07:48:15.607 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 56.8062 ms
+2025-05-16 07:48:15.772 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 14.5049 ms
+2025-05-16 07:48:24.181 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 8.5766 ms
+2025-05-16 07:48:24.271 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 16.2740 ms
+2025-05-16 07:48:26.409 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.3415 ms
+2025-05-16 07:49:18.971 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-16 07:49:18.972 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-16 07:49:19.576 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImY0YmRlMjM3LWQzOWQtNDAwMi1hOTQyLWE5NzM3OWY1OWRkYiIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3MzcxNTU5LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.Ckn8p8ZmlV0IxGxoPtKMjmIGV21TDZNW_NdoFlpfvlM
+2025-05-16 07:49:19.789 +03:00 [INF] HTTP POST /api/User/login responded 200 in 821.0217 ms
+2025-05-16 07:49:28.588 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 30.9380 ms
+2025-05-16 07:49:28.779 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 23.9795 ms
+2025-05-16 07:49:59.099 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 173.2093 ms
+2025-05-16 07:49:59.111 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 9.7045 ms
+2025-05-16 07:56:00.666 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 4:56:00
+2025-05-16 07:56:27.838 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.1677 ms
+2025-05-16 07:56:29.658 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-16 07:56:29.659 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-16 07:56:29.934 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjM4YWEwYmU5LWUzNTQtNDEwNi05NmE5LTBjNjBlMDEwMDM3NyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3MzcxOTg5LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.SP9KJSo5HK085C9gP4dcO8JiqGjuAxKlAJDKjHMW-r8
+2025-05-16 07:56:30.008 +03:00 [INF] HTTP POST /api/User/login responded 200 in 350.3109 ms
+2025-05-16 07:56:32.404 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 238.2472 ms
+2025-05-16 07:56:32.456 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 13.6310 ms
+2025-05-16 07:57:00.476 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 7.7742 ms
+2025-05-16 07:57:00.567 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 87.3340 ms
+2025-05-16 08:02:52.239 +03:00 [WRN] No user found for provided refresh token
+2025-05-16 08:02:55.068 +03:00 [ERR] HTTP GET /api/User/Roles responded 500 in 3345.0875 ms
+System.Collections.Generic.KeyNotFoundException: User not found
+   at FitGear.Services.AccountService.GetRolesFromRefreshToken(HttpContext httpContext) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 185
+   at FitGear.Controllers.UserController.GetRoles() in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\UserController.cs:line 102
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-05-16 08:02:55.375 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: User not found
+   at FitGear.Services.AccountService.GetRolesFromRefreshToken(HttpContext httpContext) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 185
+   at FitGear.Controllers.UserController.GetRoles() in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\UserController.cs:line 102
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-16 08:03:01.857 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-16 08:03:01.858 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-16 08:03:02.090 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjU0NTE2M2EwLTQ3NDAtNGZhYy1iZTRiLTM1YmNkYzc5NjZjYSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3MzcyMzgyLCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.KqiLgF3YxrBG3MpWVn4dubUeV8t6tdMPDlN_igneUCs
+2025-05-16 08:03:02.241 +03:00 [INF] HTTP POST /api/User/login responded 200 in 384.5035 ms
+2025-05-16 08:03:05.125 +03:00 [INF] HTTP GET /api/User/Roles responded 200 in 318.8397 ms
+2025-05-16 08:04:12.644 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-16 08:04:12.645 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-16 08:04:12.835 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjQxYWM5NjRiLWYxYmMtNGM5NS04N2VmLTFkN2ZhYjAyY2EzZCIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3MzcyNDUyLCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.7-tPWXDkTwy9e98bzT8ZysiLaCksuyrAia0r0NoCkcY
+2025-05-16 08:04:12.976 +03:00 [INF] HTTP POST /api/User/login responded 200 in 333.3390 ms
+2025-05-16 08:04:15.018 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 34.1304 ms
+2025-05-16 08:04:15.151 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 9.7530 ms
+2025-05-16 08:05:10.940 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 19.8850 ms
+2025-05-16 08:05:11.144 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 202.2079 ms
+2025-05-16 08:05:59.748 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 8.9270 ms
+2025-05-16 08:05:59.762 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 12.4958 ms
+2025-05-16 08:07:43.741 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.3517 ms
+2025-05-16 08:07:46.254 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-16 08:07:46.255 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-16 08:07:46.454 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImM3OTI0MjE4LTQzODItNGFlMy1hMTQwLTEyOTA1NjQ0Y2FkMyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3MzcyNjY2LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.EV0Vk8nPcGXWqcqYGfAombwcIxFZbP6MwfXPIk71vxQ
+2025-05-16 08:07:46.544 +03:00 [INF] HTTP POST /api/User/login responded 200 in 290.1639 ms
+2025-05-16 08:07:49.645 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 37.5402 ms
+2025-05-16 08:07:49.846 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 116.9416 ms
+2025-05-16 08:07:50.068 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 110.3295 ms
+2025-05-16 08:10:03.869 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 0.5054 ms
+2025-05-16 08:10:03.874 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 0.3002 ms
+2025-05-16 08:10:03.898 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 400 in 1.5448 ms
+2025-05-16 08:10:03.898 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 400 in 1.5102 ms
+2025-05-16 08:10:03.920 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.2236 ms
+2025-05-16 08:10:03.920 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.2235 ms
+2025-05-16 08:10:46.095 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-16 08:10:46.095 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-16 08:10:46.335 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6Ijc5Mjk1OGNlLWRlNzQtNDgzZS1hZDA4LWFjNjAzYTE1OTZjNSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3MzcyODQ2LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.yLpbN53ELkjjFdgzi20wYLhYag26ac1S8kgAqVA346U
+2025-05-16 08:10:46.447 +03:00 [INF] HTTP POST /api/User/login responded 200 in 352.5053 ms
+2025-05-16 08:10:48.917 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 22.7280 ms
+2025-05-16 08:10:49.047 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 23.0465 ms
+2025-05-16 08:10:49.312 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 95.2576 ms
+2025-05-16 08:11:00.810 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 5:11:00
+2025-05-16 08:12:49.651 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 400 in 1.1999 ms
+2025-05-16 08:12:49.656 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.2139 ms
+2025-05-16 08:13:23.421 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-16 08:13:23.422 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-16 08:13:23.569 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjdlYWU1YTU2LTlmODYtNDEzOS1hNjllLWI3ZmM3M2FlMzQyMSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3MzczMDAzLCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.gq2JxVemLbA6-GwA8DCDOU2HIu9L2Ck4cX_avVh0Sxs
+2025-05-16 08:13:23.635 +03:00 [INF] HTTP POST /api/User/login responded 200 in 215.4947 ms
+2025-05-16 08:13:24.796 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 15.0060 ms
+2025-05-16 08:13:24.977 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 12.5657 ms
+2025-05-16 08:13:25.192 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 87.8922 ms
+2025-05-16 08:15:25.118 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 400 in 0.8872 ms
+2025-05-16 08:15:25.123 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.1448 ms
+2025-05-16 08:17:25.268 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 400 in 76.1999 ms
+2025-05-16 08:17:25.277 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.1843 ms
+2025-05-16 08:19:25.649 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 400 in 1.4255 ms
+2025-05-16 08:19:25.692 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.1483 ms
+2025-05-16 08:21:25.656 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 400 in 2.0941 ms
+2025-05-16 08:21:25.663 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.1441 ms
+2025-05-16 08:22:06.552 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-16 08:22:06.553 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-16 08:22:06.806 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImRiMDBjNTJjLWEwZDUtNDRhNi04ZWYzLTg1ZGYzZWM0ZjA0OCIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3MzczNTI2LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.K3DcUjugcgn-I85aVvBCNxTnAlIaRWpjwu7xdFxa1MU
+2025-05-16 08:22:06.895 +03:00 [INF] HTTP POST /api/User/login responded 200 in 343.8772 ms
+2025-05-16 08:22:08.890 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 30.5455 ms
+2025-05-16 08:22:09.110 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 66.0990 ms
+2025-05-16 08:22:09.302 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 26.6170 ms
+2025-05-16 08:23:59.415 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 08:23:59.492 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 208.3674 ms
+2025-05-16 08:24:07.225 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 0.3125 ms
+2025-05-16 08:25:29.219 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-16 08:25:29.219 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-16 08:25:29.365 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjNkYjVkNjUyLTYwZmUtNDZhZi05N2M0LTk2ZWYwNjQ0OTkyMyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3MzczNzI5LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.SogIfmjyNKSBKJBqpxg80DBCnPsyKcloKWOepFEGbRE
+2025-05-16 08:25:29.438 +03:00 [INF] HTTP POST /api/User/login responded 200 in 220.2353 ms
+2025-05-16 08:25:30.541 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 9.8138 ms
+2025-05-16 08:25:30.693 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 14.9345 ms
+2025-05-16 08:25:30.907 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 21.4915 ms
+2025-05-16 08:25:54.398 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 7.0786 ms
+2025-05-16 08:25:54.418 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 15.8145 ms
+2025-05-16 08:25:56.572 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 17.0018 ms
+2025-05-16 08:25:56.588 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 13.8398 ms
+2025-05-16 08:26:00.941 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 5:26:00
+2025-05-16 08:26:33.201 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 5:26:33
+2025-05-16 08:26:34.325 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-16 08:26:34.326 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-16 08:26:34.327 +03:00 [INF] Hosting environment: Development
+2025-05-16 08:26:34.327 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-16 08:26:45.083 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 72.3586 ms
+2025-05-16 08:26:49.264 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-16 08:26:49.268 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-16 08:26:49.496 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjVjNmM4M2VkLWQwN2YtNGNkNy04ODg1LTFhNjZkY2M2ZTU4MyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3MzczODA5LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.ajzo4HnztpTWlVFnhFM92CHsq-nrnosEKPhY7R5PFCI
+2025-05-16 08:26:49.870 +03:00 [INF] HTTP POST /api/User/login responded 200 in 756.0666 ms
+2025-05-16 08:26:51.229 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 180.6106 ms
+2025-05-16 08:26:51.336 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 63.7971 ms
+2025-05-16 08:26:51.587 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 113.0348 ms
+2025-05-16 08:28:41.501 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 08:28:41.508 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 19.2845 ms
+2025-05-16 08:30:31.657 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 08:30:32.069 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 412.9088 ms
+2025-05-16 08:32:21.655 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 08:32:21.656 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.9949 ms
+2025-05-16 08:32:58.563 +03:00 [INF] Application is shutting down...
+2025-05-16 08:33:02.286 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 5:33:02
+2025-05-16 08:33:03.046 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-16 08:33:03.048 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-16 08:33:03.049 +03:00 [INF] Hosting environment: Development
+2025-05-16 08:33:03.049 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-16 08:33:14.254 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 37.9915 ms
+2025-05-16 08:33:17.153 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-16 08:33:17.157 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-16 08:33:17.809 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImU1NmI1NDM1LTIyODAtNDMzNS05ZGE2LTYzMGJkNWVmMDM2NyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3Mzc0MTk3LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.8pDVprEkLGuZvJFf-6ZPiWVwZJrxhud-jjGmU_-zZVI
+2025-05-16 08:33:18.198 +03:00 [INF] HTTP POST /api/User/login responded 200 in 1163.1466 ms
+2025-05-16 08:33:18.899 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 132.6576 ms
+2025-05-16 08:33:18.959 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 29.7654 ms
+2025-05-16 08:33:19.113 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 115.9865 ms
+2025-05-16 08:33:26.942 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 10.2135 ms
+2025-05-16 08:33:26.961 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 15.0230 ms
+2025-05-16 08:33:27.911 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 7.1390 ms
+2025-05-16 08:33:27.920 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.7696 ms
+2025-05-16 08:35:09.021 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 08:35:09.028 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 14.9622 ms
+2025-05-16 08:36:02.822 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 6.6523 ms
+2025-05-16 08:37:27.062 +03:00 [INF] Application is shutting down...
+2025-05-16 08:37:32.857 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 5:37:32
+2025-05-16 08:37:33.699 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-16 08:37:33.701 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-16 08:37:33.702 +03:00 [INF] Hosting environment: Development
+2025-05-16 08:37:33.703 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-16 08:37:43.194 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-16 08:37:43.198 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-16 08:37:43.552 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImJjNjg0NmYwLTA5MGYtNDVhYS1hMmQ1LTk0YjBlNTEwYmNmNyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3Mzc0NDYzLCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.e8GR4VewCW-ylsIOctIcT3Kn9zoGYtRLPkWWKZAnpyU
+2025-05-16 08:37:43.779 +03:00 [INF] HTTP POST /api/User/login responded 200 in 726.1340 ms
+2025-05-16 08:37:45.080 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 238.6284 ms
+2025-05-16 08:37:45.203 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 38.5027 ms
+2025-05-16 08:37:45.345 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 104.5115 ms
+2025-05-16 08:39:35.268 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 08:39:35.276 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 22.8142 ms
+2025-05-16 08:39:45.115 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 5.2114 ms
+2025-05-16 08:39:45.121 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 1.3747 ms
+2025-05-16 08:39:45.144 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 08:39:45.145 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 08:39:45.521 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 377.1997 ms
+2025-05-16 08:39:45.538 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 7.9735 ms
+2025-05-16 08:39:45.603 +03:00 [ERR] Error verifying refresh token
+System.ApplicationException: Failed to create refresh token
+   at FitGear.Repository.AuthManager.CreateRefreshToken(User user) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear.Core\Repository\AuthManager.cs:line 57
+   at FitGear.Services.AccountService.VerifyRefreshToken(AuthResponseDto request, HttpContext httpContext) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 144
+2025-05-16 08:39:45.635 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 401 in 493.4011 ms
+2025-05-16 08:39:45.643 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 08:39:45.645 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.6844 ms
+2025-05-16 08:39:45.653 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 08:39:45.654 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.9878 ms
+2025-05-16 08:39:45.666 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 5.3427 ms
+2025-05-16 08:39:47.062 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 79.8920 ms
+2025-05-16 08:39:47.071 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 5.5091 ms
+2025-05-16 08:39:48.521 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 5.5413 ms
+2025-05-16 08:39:48.526 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 4.1009 ms
+2025-05-16 08:41:17.158 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 5.1510 ms
+2025-05-16 08:41:17.162 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.9627 ms
+2025-05-16 08:41:25.249 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 08:41:25.250 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.8872 ms
+2025-05-16 08:41:26.648 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 7.2714 ms
+2025-05-16 08:41:26.653 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 3.0517 ms
+2025-05-16 08:41:27.414 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.5231 ms
+2025-05-16 08:41:27.416 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.3329 ms
+2025-05-16 08:41:29.925 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 4.2241 ms
+2025-05-16 08:41:29.970 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 5.7769 ms
+2025-05-16 08:41:31.571 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 4.2104 ms
+2025-05-16 08:41:31.612 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 4.3596 ms
+2025-05-16 08:41:33.053 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.8063 ms
+2025-05-16 08:41:33.061 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.0193 ms
+2025-05-16 08:41:34.923 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 3.1323 ms
+2025-05-16 08:41:34.928 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 3.9142 ms
+2025-05-16 08:41:48.779 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 6.0339 ms
+2025-05-16 08:41:48.782 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.1371 ms
+2025-05-16 08:42:23.102 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 0.3704 ms
+2025-05-16 08:42:23.106 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 0.2216 ms
+2025-05-16 08:42:23.132 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 08:42:23.132 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 08:42:23.238 +03:00 [ERR] Error verifying refresh token
+System.ApplicationException: Failed to create refresh token
+   at FitGear.Repository.AuthManager.CreateRefreshToken(User user) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear.Core\Repository\AuthManager.cs:line 57
+   at FitGear.Services.AccountService.VerifyRefreshToken(AuthResponseDto request, HttpContext httpContext) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 144
+2025-05-16 08:42:23.240 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 401 in 109.0073 ms
+2025-05-16 08:42:23.251 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 08:42:23.255 +03:00 [WRN] No user found for provided refresh token
+2025-05-16 08:42:23.259 +03:00 [ERR] Error verifying refresh token
+System.ArgumentNullException: Value cannot be null. (Parameter 'user')
+   at System.ArgumentNullException.Throw(String paramName)
+   at Microsoft.AspNetCore.Shared.ArgumentNullThrowHelper.ThrowIfNull(Object argument, String paramName)
+   at Microsoft.AspNetCore.Identity.UserManager`1.GetAuthenticationTokenAsync(TUser user, String loginProvider, String tokenName)
+   at FitGear.Services.AccountService.VerifyRefreshToken(AuthResponseDto request, HttpContext httpContext) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 130
+2025-05-16 08:42:23.267 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 401 in 17.3137 ms
+2025-05-16 08:42:23.276 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 08:42:23.280 +03:00 [WRN] No user found for provided refresh token
+2025-05-16 08:42:23.282 +03:00 [ERR] Error verifying refresh token
+System.ArgumentNullException: Value cannot be null. (Parameter 'user')
+   at System.ArgumentNullException.Throw(String paramName)
+   at Microsoft.AspNetCore.Shared.ArgumentNullThrowHelper.ThrowIfNull(Object argument, String paramName)
+   at Microsoft.AspNetCore.Identity.UserManager`1.GetAuthenticationTokenAsync(TUser user, String loginProvider, String tokenName)
+   at FitGear.Services.AccountService.VerifyRefreshToken(AuthResponseDto request, HttpContext httpContext) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 130
+2025-05-16 08:42:23.284 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 152.2768 ms
+2025-05-16 08:42:23.287 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 401 in 11.7636 ms
+2025-05-16 08:42:23.295 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 08:42:23.296 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 4.3249 ms
+2025-05-16 08:42:23.296 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.5670 ms
+2025-05-16 08:42:23.302 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 08:42:23.303 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.5142 ms
+2025-05-16 08:42:23.315 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 08:42:23.316 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.9795 ms
+2025-05-16 08:42:23.323 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 08:42:23.323 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.8119 ms
+2025-05-16 08:42:23.329 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 2.0406 ms
+2025-05-16 08:42:25.086 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.7140 ms
+2025-05-16 08:42:25.089 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.9091 ms
+2025-05-16 08:42:32.818 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.4432 ms
+2025-05-16 08:42:42.755 +03:00 [INF] HTTP GET /api/User/login/google responded 302 in 27.5053 ms
+2025-05-16 08:42:51.763 +03:00 [INF] HTTP GET /signin-google responded 302 in 474.7339 ms
+2025-05-16 08:42:51.808 +03:00 [INF] User ivan.drobyshev@nure.ua already has Google login linked.
+2025-05-16 08:42:51.838 +03:00 [INF] Setting cookies for Google user ivan.drobyshev@nure.ua.
+2025-05-16 08:42:51.839 +03:00 [INF] Google login successful for ivan.drobyshev@nure.ua. Tokens set in cookies.
+2025-05-16 08:42:51.840 +03:00 [INF] HTTP GET /api/User/login/google/callback responded 302 in 72.4239 ms
+2025-05-16 08:42:52.944 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 18.4934 ms
+2025-05-16 08:42:53.085 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 13.3450 ms
+2025-05-16 08:42:53.231 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.0407 ms
+2025-05-16 08:43:02.420 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 9.7365 ms
+2025-05-16 08:43:02.424 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 3.3044 ms
+2025-05-16 08:44:43.242 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 08:44:43.243 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.5236 ms
+2025-05-16 08:44:47.493 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 5.1130 ms
+2025-05-16 08:44:47.496 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.7903 ms
+2025-05-16 08:44:48.559 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 10.0912 ms
+2025-05-16 08:44:48.563 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 3.1091 ms
+2025-05-16 08:44:49.288 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.3022 ms
+2025-05-16 08:44:49.290 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.8805 ms
+2025-05-16 08:46:33.659 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 08:46:33.851 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 192.7361 ms
+2025-05-16 08:47:46.158 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 132.0269 ms
+2025-05-16 08:47:46.162 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 2.1461 ms
+2025-05-16 08:47:46.900 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.8811 ms
+2025-05-16 08:47:46.902 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.2328 ms
+2025-05-16 08:48:23.651 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 08:48:23.652 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.5771 ms
+2025-05-16 08:50:13.663 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 08:50:13.911 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 249.1258 ms
+2025-05-16 08:52:03.656 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 08:52:03.657 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.5461 ms
+2025-05-16 08:52:34.375 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 5:52:34
+2025-05-16 08:53:53.660 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 08:53:53.821 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 161.7422 ms
+2025-05-16 08:56:20.660 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 08:56:20.828 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 167.9456 ms
+2025-05-16 08:58:20.654 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 08:58:20.654 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.4922 ms
+2025-05-16 09:00:20.654 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:00:20.905 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 251.2879 ms
+2025-05-16 09:01:20.665 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:01:20.666 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.1226 ms
+2025-05-16 09:03:20.665 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:03:20.776 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 111.8294 ms
+2025-05-16 09:05:20.657 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:05:20.658 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.2594 ms
+2025-05-16 09:07:20.652 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:07:20.800 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 148.5681 ms
+2025-05-16 09:07:34.439 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 6:07:34
+2025-05-16 09:09:20.667 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:09:20.668 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.4364 ms
+2025-05-16 09:11:20.660 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:11:20.725 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 65.8971 ms
+2025-05-16 09:12:20.657 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:12:20.658 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.8900 ms
+2025-05-16 09:14:20.668 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:14:20.701 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 33.4423 ms
+2025-05-16 09:16:20.666 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:16:20.668 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.4983 ms
+2025-05-16 09:18:20.659 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:18:20.865 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 206.8258 ms
+2025-05-16 09:20:20.659 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:20:20.660 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.5521 ms
+2025-05-16 09:22:20.661 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:22:20.868 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 207.0513 ms
+2025-05-16 09:22:34.760 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 6:22:34
+2025-05-16 09:23:20.666 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:23:20.667 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.9517 ms
+2025-05-16 09:25:20.671 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:25:20.853 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 182.1784 ms
+2025-05-16 09:27:20.659 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:27:20.660 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.5048 ms
+2025-05-16 09:29:20.652 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:29:20.766 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 114.6684 ms
+2025-05-16 09:31:20.661 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:31:20.662 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.4816 ms
+2025-05-16 09:33:20.655 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:33:20.817 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 162.5245 ms
+2025-05-16 09:34:20.668 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:34:20.669 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.9705 ms
+2025-05-16 09:36:20.658 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:36:20.802 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 145.2825 ms
+2025-05-16 09:37:34.776 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 6:37:34
+2025-05-16 09:38:20.661 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:38:20.663 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.0444 ms
+2025-05-16 09:40:20.653 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:40:20.742 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 89.8830 ms
+2025-05-16 09:42:20.665 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:42:20.666 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.2786 ms
+2025-05-16 09:44:20.664 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:44:20.723 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 58.8053 ms
+2025-05-16 09:45:20.655 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:45:20.656 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.6686 ms
+2025-05-16 09:47:20.650 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:47:20.760 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 110.3121 ms
+2025-05-16 09:49:20.662 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:49:20.664 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.4959 ms
+2025-05-16 09:51:20.665 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:51:20.745 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 79.7473 ms
+2025-05-16 09:52:34.845 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 6:52:34
+2025-05-16 09:53:20.665 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:53:20.666 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.6981 ms
+2025-05-16 09:55:20.665 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:55:20.796 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 131.3579 ms
+2025-05-16 09:56:20.651 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:56:20.652 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.3050 ms
+2025-05-16 09:58:20.666 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 09:58:20.757 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 91.4569 ms
+2025-05-16 10:00:20.655 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:00:20.656 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.3259 ms
+2025-05-16 10:02:20.650 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:02:20.710 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 59.7663 ms
+2025-05-16 10:04:20.663 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:04:20.664 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.8076 ms
+2025-05-16 10:06:20.657 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:06:20.722 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 65.2592 ms
+2025-05-16 10:07:20.675 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:07:20.676 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.9701 ms
+2025-05-16 10:07:34.910 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 7:07:34
+2025-05-16 10:09:20.673 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:09:20.758 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 85.9891 ms
+2025-05-16 10:11:20.675 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:11:20.676 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.8337 ms
+2025-05-16 10:13:20.653 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:13:20.747 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 94.6544 ms
+2025-05-16 10:15:20.656 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:15:20.657 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.8274 ms
+2025-05-16 10:17:20.658 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:17:20.972 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 314.1676 ms
+2025-05-16 10:18:20.664 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:18:20.665 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.3096 ms
+2025-05-16 10:20:20.657 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:20:20.773 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 116.5168 ms
+2025-05-16 10:22:20.660 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:22:20.661 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.5241 ms
+2025-05-16 10:22:34.992 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 7:22:34
+2025-05-16 10:24:20.658 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:24:20.734 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 76.0722 ms
+2025-05-16 10:26:20.664 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:26:20.665 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.5721 ms
+2025-05-16 10:28:20.663 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:28:20.753 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 89.9072 ms
+2025-05-16 10:29:20.651 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:29:20.652 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.3432 ms
+2025-05-16 10:29:55.142 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 17.1613 ms
+2025-05-16 10:29:55.148 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 3.2514 ms
+2025-05-16 10:29:55.975 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 40.2843 ms
+2025-05-16 10:29:55.979 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.7561 ms
+2025-05-16 10:30:37.535 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.0673 ms
+2025-05-16 10:30:47.872 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-16 10:30:47.873 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-16 10:30:48.011 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjY5MDgzNDI5LThjOTItNDhjMy04NTkyLTc5N2I4ZGU2NDdmZCIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3MzgxMjQ4LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.9-9UWDas4PESs_9oWvPf1quyGB0gS--oOWMZCl6RkQ4
+2025-05-16 10:30:48.048 +03:00 [INF] HTTP POST /api/User/login responded 200 in 175.9445 ms
+2025-05-16 10:30:49.212 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 6.9853 ms
+2025-05-16 10:30:49.327 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 7.7620 ms
+2025-05-16 10:30:49.487 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 51.1701 ms
+2025-05-16 10:30:55.293 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 4.2198 ms
+2025-05-16 10:30:55.296 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 3.2097 ms
+2025-05-16 10:30:58.207 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.5930 ms
+2025-05-16 10:30:58.212 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.3635 ms
+2025-05-16 10:31:02.226 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 1.6268 ms
+2025-05-16 10:31:02.228 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 1.5786 ms
+2025-05-16 10:31:27.255 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 2.4610 ms
+2025-05-16 10:31:27.299 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 2.0383 ms
+2025-05-16 10:31:29.082 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 2.7538 ms
+2025-05-16 10:31:29.085 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 2.0505 ms
+2025-05-16 10:31:38.206 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.2135 ms
+2025-05-16 10:31:38.208 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.0647 ms
+2025-05-16 10:33:17.340 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 10:33:17.527 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 187.4913 ms
+2025-05-16 10:33:18.166 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.2097 ms
+2025-05-16 10:33:21.398 +03:00 [INF] HTTP GET /api/User/login/google responded 302 in 3.0926 ms
+2025-05-16 10:33:31.463 +03:00 [INF] HTTP GET /signin-google responded 302 in 361.9676 ms
+2025-05-16 10:33:31.530 +03:00 [INF] User ivan.drobyshev@nure.ua already has Google login linked.
+2025-05-16 10:33:31.536 +03:00 [INF] Setting cookies for Google user ivan.drobyshev@nure.ua.
+2025-05-16 10:33:31.537 +03:00 [INF] Google login successful for ivan.drobyshev@nure.ua. Tokens set in cookies.
+2025-05-16 10:33:31.537 +03:00 [INF] HTTP GET /api/User/login/google/callback responded 302 in 70.8757 ms
+2025-05-16 10:33:32.696 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 6.2950 ms
+2025-05-16 10:33:32.863 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 6.4560 ms
+2025-05-16 10:33:33.042 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.9292 ms
+2025-05-16 10:33:34.897 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 3.8105 ms
+2025-05-16 10:33:34.902 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 3.1668 ms
+2025-05-16 10:33:39.861 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.3369 ms
+2025-05-16 10:33:39.864 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.3391 ms
+2025-05-16 10:33:41.603 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.1713 ms
+2025-05-16 10:33:41.605 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.3082 ms
+2025-05-16 10:33:43.355 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.0692 ms
+2025-05-16 10:33:43.357 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.1676 ms
+2025-05-16 10:33:43.993 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 3.7322 ms
+2025-05-16 10:33:43.996 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 1.8598 ms
+2025-05-16 10:33:45.285 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 1.7433 ms
+2025-05-16 10:33:45.291 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 4.2869 ms
+2025-05-16 10:33:45.655 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.0130 ms
+2025-05-16 10:33:45.658 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.3415 ms
+2025-05-16 10:33:46.699 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 2.0545 ms
+2025-05-16 10:33:46.702 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 1.7432 ms
+2025-05-16 10:33:46.941 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.4459 ms
+2025-05-16 10:33:46.943 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.2337 ms
+2025-05-16 10:33:47.797 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 1.7447 ms
+2025-05-16 10:33:47.800 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 1.9500 ms
+2025-05-16 10:33:48.091 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.1835 ms
+2025-05-16 10:33:48.092 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.0838 ms
+2025-05-16 10:33:49.015 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 1.8440 ms
+2025-05-16 10:33:49.020 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 4.5841 ms
+2025-05-16 10:33:49.443 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.1262 ms
+2025-05-16 10:33:49.445 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.0990 ms
+2025-05-16 10:33:50.386 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 3.2974 ms
+2025-05-16 10:33:50.394 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 4.6959 ms
+2025-05-16 10:33:50.657 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.1100 ms
+2025-05-16 10:33:50.660 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.1508 ms
+2025-05-16 10:33:51.967 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 2.1988 ms
+2025-05-16 10:33:51.970 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 2.3325 ms
+2025-05-16 10:33:52.727 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.1827 ms
+2025-05-16 10:33:52.730 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.3613 ms
+2025-05-16 10:35:23.049 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:35:23.050 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.3078 ms
+2025-05-16 10:37:13.052 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:37:13.121 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 69.3671 ms
+2025-05-16 10:37:35.030 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 7:37:35
+2025-05-16 10:39:03.051 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:39:03.051 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.1196 ms
+2025-05-16 10:40:53.660 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:40:53.762 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 102.8778 ms
+2025-05-16 10:42:43.652 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:42:43.653 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.1978 ms
+2025-05-16 10:44:33.654 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:44:33.736 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 82.2276 ms
+2025-05-16 10:47:20.669 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:47:20.852 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 184.1766 ms
+2025-05-16 10:48:20.664 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:48:20.665 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.7506 ms
+2025-05-16 10:50:20.661 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:50:20.748 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 86.9832 ms
+2025-05-16 10:52:20.653 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:52:20.655 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.9098 ms
+2025-05-16 10:52:35.105 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 7:52:35
+2025-05-16 10:54:20.662 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:54:20.757 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 95.3957 ms
+2025-05-16 10:56:20.668 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:56:20.670 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 3.7129 ms
+2025-05-16 10:58:15.160 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:58:15.372 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 212.3109 ms
+2025-05-16 10:58:30.299 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 2.4985 ms
+2025-05-16 10:58:30.303 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 1.8914 ms
+2025-05-16 10:58:31.140 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 21.5381 ms
+2025-05-16 10:58:31.143 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.0271 ms
+2025-05-16 10:59:13.051 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 10:59:13.052 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 0.9363 ms
+2025-05-16 11:01:03.053 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:01:03.267 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 214.9022 ms
+2025-05-16 11:02:53.040 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:02:53.041 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.1588 ms
+2025-05-16 11:04:43.652 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:04:44.409 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 757.0624 ms
+2025-05-16 11:06:33.043 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:06:33.044 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.3777 ms
+2025-05-16 11:07:35.177 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 8:07:35
+2025-05-16 11:08:12.730 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 1.1297 ms
+2025-05-16 11:08:12.733 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 0.2703 ms
+2025-05-16 11:08:12.757 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:08:12.758 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:08:13.121 +03:00 [ERR] Error verifying refresh token
+System.ApplicationException: Failed to create refresh token
+   at FitGear.Repository.AuthManager.CreateRefreshToken(User user) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear.Core\Repository\AuthManager.cs:line 57
+   at FitGear.Services.AccountService.VerifyRefreshToken(AuthResponseDto request, HttpContext httpContext) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 144
+2025-05-16 11:08:13.126 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 401 in 367.6500 ms
+2025-05-16 11:08:13.136 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:08:13.139 +03:00 [WRN] No user found for provided refresh token
+2025-05-16 11:08:13.140 +03:00 [ERR] Error verifying refresh token
+System.ArgumentNullException: Value cannot be null. (Parameter 'user')
+   at System.ArgumentNullException.Throw(String paramName)
+   at Microsoft.AspNetCore.Shared.ArgumentNullThrowHelper.ThrowIfNull(Object argument, String paramName)
+   at Microsoft.AspNetCore.Identity.UserManager`1.GetAuthenticationTokenAsync(TUser user, String loginProvider, String tokenName)
+   at FitGear.Services.AccountService.VerifyRefreshToken(AuthResponseDto request, HttpContext httpContext) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 130
+2025-05-16 11:08:13.141 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 384.9142 ms
+2025-05-16 11:08:13.144 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 401 in 8.4050 ms
+2025-05-16 11:08:13.157 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:08:13.157 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 5.4373 ms
+2025-05-16 11:08:13.159 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 3.2803 ms
+2025-05-16 11:08:13.172 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:08:13.174 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 3.6533 ms
+2025-05-16 11:08:13.183 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:08:13.186 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 3.4385 ms
+2025-05-16 11:08:13.196 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 4.8769 ms
+2025-05-16 11:08:14.669 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 48.3756 ms
+2025-05-16 11:08:14.680 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.6405 ms
+2025-05-16 11:08:23.044 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:08:23.044 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 0.9373 ms
+2025-05-16 11:10:13.651 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:10:13.652 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.2016 ms
+2025-05-16 11:12:20.661 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:12:20.847 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 186.6766 ms
+2025-05-16 11:14:20.663 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:14:20.664 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.4006 ms
+2025-05-16 11:16:20.661 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:16:20.817 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 156.0998 ms
+2025-05-16 11:18:20.653 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:18:20.654 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.6280 ms
+2025-05-16 11:20:20.651 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:20:20.847 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 195.8721 ms
+2025-05-16 11:21:20.660 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:21:20.661 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.7798 ms
+2025-05-16 11:22:35.351 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 8:22:35
+2025-05-16 11:23:20.661 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:23:20.751 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 90.2157 ms
+2025-05-16 11:25:20.661 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:25:20.662 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.2052 ms
+2025-05-16 11:27:20.652 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:27:20.922 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 270.8054 ms
+2025-05-16 11:29:20.663 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:29:20.664 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.7326 ms
+2025-05-16 11:31:20.665 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:31:20.846 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 181.9295 ms
+2025-05-16 11:32:20.670 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:32:20.671 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.5551 ms
+2025-05-16 11:34:20.656 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:34:20.759 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 103.3323 ms
+2025-05-16 11:36:20.676 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:36:20.677 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.3241 ms
+2025-05-16 11:37:35.535 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 8:37:35
+2025-05-16 11:38:20.654 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:38:20.785 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 131.0176 ms
+2025-05-16 11:40:20.649 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:40:20.650 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.7956 ms
+2025-05-16 11:41:14.573 +03:00 [INF] Application is shutting down...
+2025-05-16 11:41:24.031 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 8:41:24
+2025-05-16 11:41:24.783 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-16 11:41:24.785 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-16 11:41:24.785 +03:00 [INF] Hosting environment: Development
+2025-05-16 11:41:24.786 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-16 11:41:42.385 +03:00 [INF] Application is shutting down...
+2025-05-16 11:41:46.683 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 8:41:46
+2025-05-16 11:41:47.484 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-16 11:41:47.485 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-16 11:41:47.486 +03:00 [INF] Hosting environment: Development
+2025-05-16 11:41:47.486 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-16 11:42:03.187 +03:00 [INF] HTTP DELETE /api/Payment/1 responded 401 in 27.7434 ms
+2025-05-16 11:42:09.246 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-16 11:42:09.250 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-16 11:42:09.609 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjdjYmZjYzNjLWU3OTctNGQ2ZC05Yjk1LTk4ZGQwNDBmMjhkOSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3Mzg1NTI5LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.HH43q1rFz3gzjN2k7gM_SeBK0lGmnq67frJrMASWfJk
+2025-05-16 11:42:09.842 +03:00 [INF] HTTP POST /api/User/login responded 200 in 730.3079 ms
+2025-05-16 11:42:15.504 +03:00 [INF] HTTP DELETE /api/Payment/1 responded 204 in 585.3426 ms
+2025-05-16 11:42:20.665 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:42:20.731 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 74.8699 ms
+2025-05-16 11:42:23.058 +03:00 [INF] HTTP DELETE /api/Payment/1 responded 204 in 47.5594 ms
+2025-05-16 11:42:52.511 +03:00 [INF] HTTP DELETE /api/Payment/11 responded 204 in 108.0944 ms
+2025-05-16 11:43:20.664 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:43:20.669 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 15.2808 ms
+2025-05-16 11:43:24.539 +03:00 [INF] HTTP DELETE /api/Payment/11/delete responded 204 in 265.2326 ms
+2025-05-16 11:44:36.786 +03:00 [INF] HTTP POST /api/Announcements responded 401 in 0.4541 ms
+2025-05-16 11:44:52.213 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 11:44:52.360 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 148.5349 ms
+2025-05-16 11:44:58.866 +03:00 [INF] HTTP POST /api/Announcements responded 201 in 289.2004 ms
+2025-05-16 11:45:20.672 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:45:20.674 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 3.4303 ms
+2025-05-16 11:47:16.846 +03:00 [INF] HTTP POST /api/Bookings responded 201 in 223.9319 ms
+2025-05-16 11:47:20.662 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:47:20.663 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.5839 ms
+2025-05-16 11:48:00.038 +03:00 [INF] HTTP POST /api/Payment responded 201 in 132.3815 ms
+2025-05-16 11:48:22.882 +03:00 [ERR] HTTP PUT /api/Payment/2019/process responded 500 in 12.9833 ms
+System.Collections.Generic.KeyNotFoundException: Payment with id 2019 not found.
+   at FitGear.Repository.PaymentRepository.GetWithDetailsAsync(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear.Core\Repository\PaymentRepository.cs:line 35
+   at FitGear.Services.PaymentService.ProcessPaymentAsync(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\PaymentService.cs:line 44
+   at FitGear.Controllers.PaymentController.ProcessPayment(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\PaymentController.cs:line 70
+   at lambda_method643(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-05-16 11:48:22.906 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: Payment with id 2019 not found.
+   at FitGear.Repository.PaymentRepository.GetWithDetailsAsync(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear.Core\Repository\PaymentRepository.cs:line 35
+   at FitGear.Services.PaymentService.ProcessPaymentAsync(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\PaymentService.cs:line 44
+   at FitGear.Controllers.PaymentController.ProcessPayment(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\PaymentController.cs:line 70
+   at lambda_method643(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-16 11:49:20.664 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:49:20.665 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.7202 ms
+2025-05-16 11:51:20.684 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:51:20.688 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 8.0188 ms
+2025-05-16 11:53:20.666 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:53:21.253 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 587.8300 ms
+2025-05-16 11:54:20.650 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:54:20.651 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.1511 ms
+2025-05-16 11:55:32.315 +03:00 [INF] HTTP DELETE /api/Payment/2019/delete responded 401 in 0.3639 ms
+2025-05-16 11:55:37.120 +03:00 [INF] Refresh Token Attempt for eaab3be9-a58c-4955-a3f9-6d41fca3b376
+2025-05-16 11:55:37.332 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 212.6676 ms
+2025-05-16 11:55:44.245 +03:00 [ERR] HTTP DELETE /api/Payment/2019/delete responded 500 in 65.1395 ms
+System.Collections.Generic.KeyNotFoundException: Payment with id 2019 not found.
+   at FitGear.Repository.PaymentRepository.GetWithDetailsAsync(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear.Core\Repository\PaymentRepository.cs:line 35
+   at FitGear.Services.PaymentService.GetPaymentAsync(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\PaymentService.cs:line 81
+   at FitGear.Controllers.PaymentController.DeletePayment(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\PaymentController.cs:line 98
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-05-16 11:55:44.250 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: Payment with id 2019 not found.
+   at FitGear.Repository.PaymentRepository.GetWithDetailsAsync(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear.Core\Repository\PaymentRepository.cs:line 35
+   at FitGear.Services.PaymentService.GetPaymentAsync(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\PaymentService.cs:line 81
+   at FitGear.Controllers.PaymentController.DeletePayment(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\PaymentController.cs:line 98
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-16 11:56:00.360 +03:00 [INF] HTTP DELETE /api/Payment/1021/delete responded 204 in 121.8685 ms
+2025-05-16 11:56:20.658 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:56:20.659 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.4172 ms
+2025-05-16 11:56:23.497 +03:00 [INF] HTTP GET /api/Announcements/1050 responded 404 in 85.3296 ms
+2025-05-16 11:56:32.172 +03:00 [INF] HTTP GET /api/Announcements/1026 responded 200 in 6.0328 ms
+2025-05-16 11:56:47.567 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 8:56:47
+2025-05-16 11:58:20.657 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 11:58:20.658 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.8499 ms
+2025-05-16 12:00:20.663 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 12:00:20.664 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.8895 ms
+2025-05-16 12:02:20.661 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 12:02:20.663 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.7724 ms
+2025-05-16 12:04:19.318 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 12:04:19.518 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 200.2856 ms
+2025-05-16 12:05:19.321 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 12:05:19.322 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.1734 ms
+2025-05-16 12:07:19.316 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 12:07:19.317 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.4792 ms
+2025-05-16 12:09:19.333 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 12:09:19.334 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 3.0375 ms
+2025-05-16 12:09:46.593 +03:00 [INF] HTTP POST /api/Announcements responded 401 in 0.2866 ms
+2025-05-16 12:10:26.986 +03:00 [INF] Application is shutting down...
+2025-05-16 12:10:32.213 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 9:10:32
+2025-05-16 12:10:32.969 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-16 12:10:32.972 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-16 12:10:32.972 +03:00 [INF] Hosting environment: Development
+2025-05-16 12:10:32.973 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-16 12:10:38.908 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-16 12:10:38.911 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-16 12:10:39.396 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjBkZDczZDQzLWNmY2ItNGVjOC05NmZkLTIwM2M5OTQ2M2RmOSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3Mzg3MjM5LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.EXfZkIQQkmBxjtd6x8BQmAbCPjKrKq5thkvO7QNSfRs
+2025-05-16 12:10:40.217 +03:00 [INF] HTTP POST /api/User/login responded 200 in 1445.5982 ms
+2025-05-16 12:10:42.848 +03:00 [INF] HTTP GET /api/User/Roles responded 200 in 95.4812 ms
+2025-05-16 12:11:19.339 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 12:11:19.345 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 22.2942 ms
+2025-05-16 12:12:08.024 +03:00 [INF] HTTP POST /api/Bookings responded 201 in 253.9800 ms
+2025-05-16 12:12:17.981 +03:00 [INF] HTTP POST /api/Payment responded 201 in 71.3815 ms
+2025-05-16 12:12:28.707 +03:00 [ERR] HTTP PUT /api/Payment/2020/process responded 500 in 32.7820 ms
+System.Collections.Generic.KeyNotFoundException: Payment with id 2020 not found.
+   at FitGear.Repository.PaymentRepository.GetWithDetailsAsync(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear.Core\Repository\PaymentRepository.cs:line 35
+   at FitGear.Services.PaymentService.ProcessPaymentAsync(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\PaymentService.cs:line 44
+   at FitGear.Controllers.PaymentController.ProcessPayment(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\PaymentController.cs:line 70
+   at lambda_method600(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-05-16 12:12:28.719 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: Payment with id 2020 not found.
+   at FitGear.Repository.PaymentRepository.GetWithDetailsAsync(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear.Core\Repository\PaymentRepository.cs:line 35
+   at FitGear.Services.PaymentService.ProcessPaymentAsync(Int32 paymentId) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\PaymentService.cs:line 44
+   at FitGear.Controllers.PaymentController.ProcessPayment(Int32 id) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\PaymentController.cs:line 70
+   at lambda_method600(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-16 12:12:39.007 +03:00 [INF] HTTP PUT /api/Payment/1022/process responded 200 in 65.0250 ms
+2025-05-16 12:13:19.318 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-16 12:13:19.319 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.4382 ms
+2025-05-16 12:14:15.358 +03:00 [INF] HTTP POST /api/Bookings responded 201 in 73.9068 ms
+2025-05-16 12:14:30.755 +03:00 [INF] HTTP DELETE /api/Bookings/2021 responded 204 in 34.3352 ms
+2025-05-16 12:15:03.114 +03:00 [INF] Application is shutting down...
+2025-05-16 12:15:05.948 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 9:15:05
+2025-05-16 12:15:06.689 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-16 12:15:06.691 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-16 12:15:06.692 +03:00 [INF] Hosting environment: Development
+2025-05-16 12:15:06.692 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-16 12:15:06.783 +03:00 [INF] Updating booking 2020 status from Active to Completed
+2025-05-16 12:15:30.660 +03:00 [INF] HTTP POST /api/Bookings responded 201 in 348.8268 ms
+2025-05-16 12:15:42.326 +03:00 [INF] HTTP POST /api/Payment responded 201 in 164.3544 ms
+2025-05-16 12:15:59.860 +03:00 [INF] HTTP PUT /api/Payment/1023/process responded 200 in 153.7508 ms
+2025-05-16 12:16:39.845 +03:00 [INF] HTTP GET /api/Bookings/8 responded 200 in 13.6063 ms
+2025-05-16 12:16:42.729 +03:00 [INF] Application is shutting down...
+2025-05-16 12:16:44.114 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 9:16:44
+2025-05-16 12:16:44.803 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-16 12:16:44.805 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-16 12:16:44.805 +03:00 [INF] Hosting environment: Development
+2025-05-16 12:16:44.806 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-16 12:16:44.904 +03:00 [INF] Updating booking 2022 status from Confirmed to Active
+2025-05-16 12:16:57.121 +03:00 [INF] Application is shutting down...
+2025-05-16 12:16:59.693 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 9:16:59
+2025-05-16 12:17:00.407 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-16 12:17:00.409 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-16 12:17:00.410 +03:00 [INF] Hosting environment: Development
+2025-05-16 12:17:00.411 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-16 12:17:00.510 +03:00 [INF] Updating booking 2022 status from Active to Completed
+2025-05-16 12:32:00.591 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 9:32:00
+2025-05-16 12:47:00.612 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 9:47:00
+2025-05-16 13:02:00.667 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 10:02:00
+2025-05-16 13:10:33.144 +03:00 [INF] Application is shutting down...
+2025-05-16 13:10:42.173 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 10:10:42
+2025-05-16 13:10:43.171 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-16 13:10:43.173 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-16 13:10:43.173 +03:00 [INF] Hosting environment: Development
+2025-05-16 13:10:43.174 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-16 13:11:02.115 +03:00 [ERR] HTTP GET /api/Announcements responded 500 in 54.3603 ms
+System.InvalidOperationException: Unable to resolve service for type 'FitGear.Contracts.IAnnouncementService' while attempting to activate 'FitGear.Controllers.AnnouncementsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method42(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-05-16 13:11:02.134 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'FitGear.Contracts.IAnnouncementService' while attempting to activate 'FitGear.Controllers.AnnouncementsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method42(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-16 13:11:41.230 +03:00 [INF] Application is shutting down...
+2025-05-16 13:11:44.457 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 10:11:44
+2025-05-16 13:11:45.195 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-16 13:11:45.197 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-16 13:11:45.198 +03:00 [INF] Hosting environment: Development
+2025-05-16 13:11:45.198 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-16 13:11:58.048 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 257.4036 ms
+2025-05-16 13:12:06.568 +03:00 [INF] HTTP GET /api/Announcements/1026 responded 200 in 115.8647 ms
+2025-05-16 13:12:10.751 +03:00 [INF] HTTP POST /api/Announcements responded 401 in 7.6171 ms
+2025-05-16 13:12:14.226 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-16 13:12:14.229 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-16 13:12:14.518 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6Ijc5OTlkZjc0LTljNDAtNGExYi1iZDM4LWYyMWZiYThkNmI0YyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3MzkwOTM0LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.wP1DtMMQB6W50J6iQZTHN2NJMTQToekJLqwiFQkqXFc
+2025-05-16 13:12:14.784 +03:00 [INF] HTTP POST /api/User/login responded 200 in 592.4584 ms
+2025-05-16 13:12:18.391 +03:00 [INF] HTTP POST /api/Announcements responded 201 in 197.4174 ms
+2025-05-16 13:12:32.026 +03:00 [INF] HTTP PUT /api/Announcements/19 responded 400 in 26.8218 ms
+2025-05-16 13:12:38.755 +03:00 [ERR] HTTP PUT /api/Announcements/1027 responded 500 in 9.4830 ms
+System.InvalidOperationException: The instance of entity type 'Announcement' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState[TEntity](TEntity entity, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.Update[TEntity](TEntity entity)
+   at FitGear.Repository.GenericRepository`1.UpdateAsync(T entity)
+   at FitGear.Services.AnnouncementService.UpdateAnnouncementAsync(Int32 id, UpdateAnnouncementDto announcementDto) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AnnouncementService.cs:line 54
+   at FitGear.Controllers.AnnouncementsController.PutAnnouncement(Int32 id, UpdateAnnouncementDto announcementDto) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\AnnouncementsController.cs:line 64
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-05-16 13:12:38.771 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The instance of entity type 'Announcement' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState[TEntity](TEntity entity, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.Update[TEntity](TEntity entity)
+   at FitGear.Repository.GenericRepository`1.UpdateAsync(T entity)
+   at FitGear.Services.AnnouncementService.UpdateAnnouncementAsync(Int32 id, UpdateAnnouncementDto announcementDto) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Services\AnnouncementService.cs:line 54
+   at FitGear.Controllers.AnnouncementsController.PutAnnouncement(Int32 id, UpdateAnnouncementDto announcementDto) in C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear\Controllers\AnnouncementsController.cs:line 64
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-16 13:14:13.991 +03:00 [INF] Application is shutting down...
+2025-05-16 13:14:19.212 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 10:14:19
+2025-05-16 13:14:19.914 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-16 13:14:19.916 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-16 13:14:19.917 +03:00 [INF] Hosting environment: Development
+2025-05-16 13:14:19.917 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-16 13:14:24.297 +03:00 [INF] HTTP PUT /api/Announcements/1027 responded 204 in 488.2219 ms
+2025-05-16 13:14:30.414 +03:00 [INF] HTTP GET /api/Announcements/1027 responded 200 in 65.7114 ms
+2025-05-16 13:14:36.339 +03:00 [INF] HTTP DELETE /api/Announcements/1027 responded 204 in 187.0410 ms
+2025-05-16 13:14:39.700 +03:00 [INF] HTTP GET /api/Announcements/1027 responded 404 in 25.3468 ms
+2025-05-16 13:29:20.367 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 10:29:20
+2025-05-16 13:44:20.538 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 10:44:20
+2025-05-16 13:59:20.688 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 10:59:20
+2025-05-16 14:14:23.074 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 11:14:23
+2025-05-16 19:26:00.500 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 16:26:00
+2025-05-16 19:41:00.748 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 16:41:00
+2025-05-16 19:56:00.961 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 16:56:00
+2025-05-16 20:11:01.143 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 17:11:01
+2025-05-16 20:26:01.410 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 17:26:01
+2025-05-16 20:41:01.678 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 17:41:01
+2025-05-16 20:56:01.831 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 17:56:01
+2025-05-16 21:11:02.066 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 18:11:02
+2025-05-16 21:26:02.353 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 18:26:02
+2025-05-16 21:41:02.448 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 18:41:02
+2025-05-16 21:56:02.686 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 18:56:02
+2025-05-16 22:11:02.816 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 19:11:02
+2025-05-16 22:26:02.990 +03:00 [INF] Cheeking for bookings to update status at: 16.05.2025 19:26:02

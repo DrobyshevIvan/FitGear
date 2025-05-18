@@ -17,6 +17,7 @@ public class UserProfileController : ControllerBase
         _userProfileService = userProfileService;
     }
     
+    // GET: api/UserProfile/profile
     [HttpGet("profile")]
     [Authorize]
     public async Task<ActionResult<UserProfileDto>> GetUserProfile()

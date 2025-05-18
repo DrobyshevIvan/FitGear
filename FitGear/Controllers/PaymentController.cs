@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FitGear.Data;
 using FitGear.Models.Payment;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FitGear.Controllers
 {
@@ -21,9 +22,10 @@ namespace FitGear.Controllers
         {
             _paymentService = paymentService;
         }
-
+        
         // GET: api/Payment/user/5
         [HttpGet("user/{userId}")]
+        [Authorize(Roles = "Administrator, Moderator")]
         public async Task<ActionResult<IEnumerable<GetPaymentDto>>> GetPaymentsByUserId(string userId)
         {
             var payments = await _paymentService.GetUserPaymentsAsync(userId);
@@ -32,6 +34,7 @@ namespace FitGear.Controllers
 
         // GET: api/Payment/5
         [HttpGet("{id}")]
+        [Authorize(Roles = "Administrator, Moderator")]
         public async Task<ActionResult<GetPaymentDto>> GetPayment(int id)
         {
             var payment = await _paymentService.GetPaymentAsync(id);
@@ -47,6 +50,7 @@ namespace FitGear.Controllers
         // POST: api/Payment
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<Payment>> PostPayment(CreatePaymentDto createPaymentDto)
         {
             var payment = await _paymentService.CreatePaymentAsync(createPaymentDto);
@@ -60,6 +64,7 @@ namespace FitGear.Controllers
         
         // PUT: api/Payment/5/process
         [HttpPut("{id}/process")]
+        [Authorize(Roles = "Administrator, Moderator")]
         public async Task<ActionResult<Payment>> ProcessPayment(int id)
         {
             var payment = await _paymentService.ProcessPaymentAsync(id);
@@ -73,6 +78,7 @@ namespace FitGear.Controllers
 
         // DELETE: api/Payment/5
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrator, Moderator")]
         public async Task<IActionResult> RefundPayment(int id)
         {
             var payment = await _paymentService.RefundPaymentAsync(id);
@@ -85,7 +91,9 @@ namespace FitGear.Controllers
         }
         
         // DELETE api/Payment/5/delete
+        // Ендпоинт для удаления платежа и бронирования(будет использован если пользователь уже перешел на форму оплаты, но решил с нее уйти)
         [HttpDelete("{paymentId}/delete")]
+        [Authorize]
         public async Task<IActionResult> DeletePayment(int paymentId)
         {
             var payment = await _paymentService.GetPaymentAsync(paymentId);

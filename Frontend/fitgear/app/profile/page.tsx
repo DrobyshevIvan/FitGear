@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Card, Spin, Tag, Typography, message } from "antd";
+import { Card, Spin, Tag, Typography } from "antd";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
@@ -18,10 +18,13 @@ interface UserProfile {
 export default function ProfilePage() {
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [loading, setLoading] = useState(true);
+  const [fetchTried, setFetchTried] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
+    let didCancel = false;
     const fetchProfile = async () => {
+      setLoading(true);
       try {
         const response = await axios.get(
           `${API_BASE_URL}/api/UserProfile/profile`,
@@ -33,24 +36,37 @@ export default function ProfilePage() {
         } else if (response.data.roles?.$values) {
           roles = response.data.roles.$values;
         }
-        setProfile({
-          id: response.data.id,
-          email: response.data.email,
-          firstName: response.data.firstName,
-          lastName: response.data.lastName,
-          roles,
-        });
-      } catch (error: unknown) {
-        message.error("Не удалось загрузить профиль пользователя");
-        if (axios.isAxiosError(error) && error.response?.status === 401) {
-          router.push("/login");
+        if (!didCancel) {
+          setProfile({
+            id: response.data.id,
+            email: response.data.email,
+            firstName: response.data.firstName,
+            lastName: response.data.lastName,
+            roles,
+          });
+        }
+      } catch {
+        if (!didCancel) {
+          setProfile(null);
         }
       } finally {
-        setLoading(false);
+        if (!didCancel) {
+          setLoading(false);
+          setFetchTried(true);
+        }
       }
     };
     fetchProfile();
+    return () => {
+      didCancel = true;
+    };
   }, [router]);
+
+  useEffect(() => {
+    if (!loading && fetchTried && !profile) {
+      router.push("/login");
+    }
+  }, [loading, fetchTried, profile, router]);
 
   if (loading) {
     return (

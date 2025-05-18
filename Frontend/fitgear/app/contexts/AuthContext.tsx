@@ -45,13 +45,43 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
 
+  // Функция выхода должна быть объявлена до использования в useEffect
+  const logout = async () => {
+    try {
+      await axios.post(
+        `${API_BASE_URL}/api/User/logout`,
+        {},
+        { withCredentials: true }
+      );
+    } catch {}
+    setUser(null);
+    router.push("/login");
+  };
+
+  useEffect(() => {
+    // Интервал в миллисекундах (например, 2 минуты)
+    const interval = setInterval(async () => {
+      try {
+        await axios.post(
+          `${API_BASE_URL}/api/User/refreshtoken`,
+          { userId: user?.id },
+          { withCredentials: true }
+        );
+      } catch {
+        // Не вызываем logout сразу, пусть этим займётся interceptor
+      }
+    }, 110 * 1000); // 1 минута 50 секунд
+
+    return () => clearInterval(interval);
+  }, [user]);
+
   // Получение информации о пользователе
   const fetchUserInfo = async () => {
     try {
-      const rolesResponse = await axios.get<string[]>(
-        `${API_BASE_URL}/api/User/roles`
+      const profileResponse = await axios.get(
+        `${API_BASE_URL}/api/UserProfile/profile`
       );
-      console.log("ROLES FROM BACKEND:", rolesResponse.data);
+      const rolesResponse = await axios.get(`${API_BASE_URL}/api/User/roles`);
       let roles: string[] = [];
       if (Array.isArray(rolesResponse.data)) {
         roles = rolesResponse.data;
@@ -61,14 +91,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         roles = [rolesResponse.data];
       }
       setUser({
-        id: "",
-        email: "",
-        firstName: "",
-        lastName: "",
+        id: profileResponse.data.id,
+        email: profileResponse.data.email,
+        firstName: profileResponse.data.firstName,
+        lastName: profileResponse.data.lastName,
         roles,
       });
-    } catch {
-      setUser(null);
+    } catch (error: unknown) {
+      if ((error as any)?.response?.status !== 401) {
+        setUser(null);
+      }
     } finally {
       setLoading(false);
     }
@@ -90,10 +122,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           try {
             await axios.post(
               `${API_BASE_URL}/api/User/refreshtoken`,
-              {},
+              { userId: user?.id },
               { withCredentials: true }
             );
-            // После refresh повторяем оригинальный запрос
             return axios(originalRequest);
           } catch (refreshError) {
             await logout();
@@ -106,7 +137,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return () => {
       axios.interceptors.response.eject(responseInterceptor);
     };
-  }, []);
+  }, [logout, user]);
 
   const login = async (email: string, password: string) => {
     setLoading(true);
@@ -153,18 +184,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   };
 
-  const logout = async () => {
-    try {
-      await axios.post(
-        `${API_BASE_URL}/api/User/logout`,
-        {},
-        { withCredentials: true }
-      );
-    } catch {}
-    setUser(null);
-    router.push("/login");
-  };
-
   // Функція для перевірки ролі користувача
   const hasRole = (role: string): boolean => {
     return Array.isArray(user?.roles) && user?.roles.includes(role);
@@ -198,3 +217,11 @@ export function useAuth() {
   }
   return context;
 }
+
+export const getAllAnnouncements = async (): Promise<Announcement[]> => {
+  const response = await axios.get("http://localhost:5209/api/Announcements", {
+    withCredentials: true,
+  });
+  // Если сервер возвращает .data.$values
+  return response.data.$values || [];
+};
