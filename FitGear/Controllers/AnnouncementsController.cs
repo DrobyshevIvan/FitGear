@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using FitGear.Contracts;
+using FitGear.Core.Filters;
+using FitGear.Core.Sorting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -28,9 +30,10 @@ namespace FitGear.Controllers
 
         // GET: api/Announcement
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<GetAnnouncementDto>>> GetAnnouncements()
+        public async Task<ActionResult<IEnumerable<GetAnnouncementDto>>> GetAnnouncements([FromQuery] AnnouncementFilter filter,
+            [FromQuery] SortParams sortParams)
         {
-            var announcements = await _announcementService.GetAnnouncementsAsync();
+            var announcements = await _announcementService.GetAnnouncementsAsync(filter, sortParams);
             return Ok(announcements);
         }
 

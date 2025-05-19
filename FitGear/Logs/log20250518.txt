@@ -1,3 +1,9 @@
 2025-05-18 08:14:05.559 +03:00 [INF] Cheeking for bookings to update status at: 18.05.2025 5:14:05
 2025-05-18 08:29:05.901 +03:00 [INF] Cheeking for bookings to update status at: 18.05.2025 5:29:05
 2025-05-18 08:44:06.073 +03:00 [INF] Cheeking for bookings to update status at: 18.05.2025 5:44:06
+2025-05-18 08:59:06.227 +03:00 [INF] Cheeking for bookings to update status at: 18.05.2025 5:59:06
+2025-05-18 12:43:15.460 +03:00 [INF] Cheeking for bookings to update status at: 18.05.2025 9:43:15
+2025-05-18 12:58:15.782 +03:00 [INF] Cheeking for bookings to update status at: 18.05.2025 9:58:15
+2025-05-18 13:13:16.066 +03:00 [INF] Cheeking for bookings to update status at: 18.05.2025 10:13:16
+2025-05-18 13:22:16.962 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 514.8152 ms
+2025-05-18 13:22:39.237 +03:00 [INF] Application is shutting down...

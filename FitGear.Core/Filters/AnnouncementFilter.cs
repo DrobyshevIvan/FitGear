@@ -6,6 +6,6 @@ public class AnnouncementFilter
     public string? Description { get; set; }
     public DateTime? CreatedAt { get; set; }
     public DateTime? UpdatedAt { get; set; }
-    public decimal? PricePerDay { get; set; }
-
+    public decimal? MinPricePerDay { get; set; }
+    public decimal? MaxPricePerDay { get; set; }
 }

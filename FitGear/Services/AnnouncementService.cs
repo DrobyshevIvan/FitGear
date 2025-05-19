@@ -1,7 +1,11 @@
 ﻿using AutoMapper;
 using FitGear.Contracts;
+using FitGear.Core.Extenstions;
+using FitGear.Core.Filters;
+using FitGear.Core.Sorting;
 using FitGear.Data;
 using FitGear.Models.Announcement;
+using Microsoft.EntityFrameworkCore;
 
 namespace FitGear.Services;
 
@@ -17,11 +21,34 @@ public class AnnouncementService : IAnnouncementService
         _mapper = mapper;
     }
     
-    public async Task<IEnumerable<GetAnnouncementDto>> GetAnnouncementsAsync()
+    public async Task<IEnumerable<GetAnnouncementDto>> GetAnnouncementsAsync(AnnouncementFilter filter, SortParams sortParams)
     {
-        var announcements = await _announcementsRepository.GetAllAsync();
+        var query = _announcementsRepository.GetQueryable();
+        
+        if (filter != null)
+        {
+            query = query.Filter(filter);
+        }
+        
+        if (sortParams != null)
+        {
+            query = query.Sort(sortParams);
+        }
+        
+        var announcements = await query.ToListAsync();
         return _mapper.Map<List<GetAnnouncementDto>>(announcements);
     }
+
+    // public async Task<IEnumerable<GetAnnouncementDto>> GetFilteredAnnouncementsAsync(AnnouncementFilter filter)
+    // {
+    //     var query = _announcementsRepository.GetQueryable();
+    //
+    //     query = query.Filter(filter);
+    //     
+    //     var announcements = await query.ToListAsync();
+    //     
+    //     return _mapper.Map<List<GetAnnouncementDto>>(announcements);
+    // }
     
     public async Task<GetAnnouncementDto> GetAnnouncementByIdAsync(int id)
     {
