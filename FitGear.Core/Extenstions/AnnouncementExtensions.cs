@@ -1,5 +1,6 @@
 ﻿using System.Linq.Expressions;
 using FitGear.Core.Filters;
+using FitGear.Core.Pagination;
 using FitGear.Core.Sorting;
 using FitGear.Data;
 
@@ -31,6 +32,15 @@ public static class AnnouncementExtensions
         }
 
         return query;
+    }
+
+    public static IQueryable<Announcement> Paginate(this IQueryable<Announcement> query, PageParams pageParams)
+    {
+        var page = pageParams.Page ?? 1;
+        var pageSize = pageParams.Size ?? 10;
+
+        return query.Skip((page - 1) * pageSize)
+            .Take(pageSize);
     }
 
     public static IQueryable<Announcement> Sort(this IQueryable<Announcement> query, SortParams sortParams)
