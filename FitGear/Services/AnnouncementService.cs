@@ -2,6 +2,7 @@
 using FitGear.Contracts;
 using FitGear.Core.Extenstions;
 using FitGear.Core.Filters;
+using FitGear.Core.Pagination;
 using FitGear.Core.Sorting;
 using FitGear.Data;
 using FitGear.Models.Announcement;
@@ -21,7 +22,9 @@ public class AnnouncementService : IAnnouncementService
         _mapper = mapper;
     }
     
-    public async Task<IEnumerable<GetAnnouncementDto>> GetAnnouncementsAsync(AnnouncementFilter filter, SortParams sortParams)
+    public async Task<IEnumerable<GetAnnouncementDto>> GetAnnouncementsAsync(AnnouncementFilter filter, 
+        SortParams sortParams, 
+        PageParams pageParams)
     {
         var query = _announcementsRepository.GetQueryable();
         
@@ -33,6 +36,11 @@ public class AnnouncementService : IAnnouncementService
         if (sortParams != null)
         {
             query = query.Sort(sortParams);
+        }
+        
+        if(pageParams != null)
+        {
+            query = query.Paginate(pageParams);
         }
         
         var announcements = await query.ToListAsync();

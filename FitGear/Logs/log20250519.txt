@@ -44,3 +44,24 @@
 2025-05-19 12:18:52.472 +03:00 [INF] Cheeking for bookings to update status at: 19.05.2025 9:18:52
 2025-05-19 12:33:52.649 +03:00 [INF] Cheeking for bookings to update status at: 19.05.2025 9:33:52
 2025-05-19 14:06:49.615 +03:00 [INF] Cheeking for bookings to update status at: 19.05.2025 11:06:49
+2025-05-19 17:20:31.052 +03:00 [INF] Cheeking for bookings to update status at: 19.05.2025 14:20:31
+2025-05-19 17:35:31.277 +03:00 [INF] Cheeking for bookings to update status at: 19.05.2025 14:35:31
+2025-05-19 17:38:36.776 +03:00 [INF] Application is shutting down...
+2025-05-19 17:38:59.322 +03:00 [INF] Cheeking for bookings to update status at: 19.05.2025 14:38:59
+2025-05-19 17:39:00.321 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-19 17:39:00.323 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-19 17:39:00.324 +03:00 [INF] Hosting environment: Development
+2025-05-19 17:39:00.324 +03:00 [INF] Content root path: C:\Study\2_2\ПрПА\FitGear\backend\FitGear\FitGear
+2025-05-19 17:39:15.158 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 802.9048 ms
+2025-05-19 17:39:19.973 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 50.9984 ms
+2025-05-19 17:39:24.310 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 11.9215 ms
+2025-05-19 17:39:24.797 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.6770 ms
+2025-05-19 17:39:25.325 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 98.8239 ms
+2025-05-19 17:39:25.771 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.9212 ms
+2025-05-19 17:39:26.146 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.6244 ms
+2025-05-19 17:39:26.532 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 5.3532 ms
+2025-05-19 17:39:26.914 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.8391 ms
+2025-05-19 17:39:29.696 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.8519 ms
+2025-05-19 17:54:00.679 +03:00 [INF] Cheeking for bookings to update status at: 19.05.2025 14:54:00
+2025-05-19 18:09:01.004 +03:00 [INF] Cheeking for bookings to update status at: 19.05.2025 15:09:01
+2025-05-19 18:12:36.015 +03:00 [INF] Application is shutting down...
