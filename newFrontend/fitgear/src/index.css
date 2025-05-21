@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+     --main-color: #002E6E;
+  }
+}
