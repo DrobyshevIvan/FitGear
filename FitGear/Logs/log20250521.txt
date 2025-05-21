@@ -1,0 +1,39 @@
+2025-05-21 08:45:12.570 +03:00 [INF] Cheeking for bookings to update status at: 21.05.2025 5:45:12
+2025-05-21 08:45:13.645 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-21 08:45:13.647 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-21 08:45:13.648 +03:00 [INF] Hosting environment: Development
+2025-05-21 08:45:13.648 +03:00 [INF] Content root path: C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear
+2025-05-21 08:45:37.502 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 52.8133 ms
+2025-05-21 08:45:58.036 +03:00 [INF] HTTP GET /api/User/login/google responded 302 in 130.1594 ms
+2025-05-21 08:46:06.383 +03:00 [INF] HTTP GET /signin-google responded 302 in 631.8751 ms
+2025-05-21 08:46:12.457 +03:00 [INF] User ivan.drobyshev@nure.ua already has Google login linked.
+2025-05-21 08:46:19.355 +03:00 [INF] Setting cookies for Google user ivan.drobyshev@nure.ua.
+2025-05-21 08:46:19.356 +03:00 [INF] Google login successful for ivan.drobyshev@nure.ua. Tokens set in cookies.
+2025-05-21 08:46:19.360 +03:00 [INF] HTTP GET /api/User/login/google/callback responded 302 in 12956.2396 ms
+2025-05-21 08:46:24.213 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 293.1269 ms
+2025-05-21 08:46:24.974 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 756.1348 ms
+2025-05-21 08:46:27.568 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2578.2043 ms
+2025-05-21 08:46:32.190 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 173.3897 ms
+2025-05-21 08:46:32.205 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 10.4703 ms
+2025-05-21 10:28:11.449 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-21 10:28:35.168 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 23737.0376 ms
+2025-05-21 10:29:05.179 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-21 10:29:05.186 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 8.4077 ms
+2025-05-21 10:30:54.995 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-21 10:30:54.996 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.0402 ms
+2025-05-21 10:30:59.261 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 47.1221 ms
+2025-05-21 10:30:59.343 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 79.3462 ms
+2025-05-21 10:31:00.682 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 156.2310 ms
+2025-05-21 10:31:00.691 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 6.5255 ms
+2025-05-21 10:32:45.183 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-21 10:32:45.183 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.6387 ms
+2025-05-21 10:34:35.179 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-21 10:34:35.180 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.4088 ms
+2025-05-21 10:36:25.178 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-21 10:36:25.179 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.6951 ms
+2025-05-21 10:38:38.189 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-21 10:38:39.086 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 897.4885 ms
+2025-05-21 10:40:38.187 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-21 10:40:38.188 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.0512 ms
+2025-05-21 10:40:48.458 +03:00 [INF] Cheeking for bookings to update status at: 21.05.2025 7:40:48
+2025-05-21 10:41:41.261 +03:00 [INF] Application is shutting down...
