@@ -1,0 +1,56 @@
+import { useState, useContext, useEffect } from "react";
+import iconEyeOn from '../assets/eyeOn.svg';
+import iconEyeOff from '../assets/eyeOff.svg';
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../contexts/AuthContext";
+
+
+export default function LoginPage() {
+    const navigate = useNavigate();
+    const [isHidden, setHidden] = useState(true);
+    const { user, login, loading } = useContext(AuthContext);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    useEffect(() => {
+        if (user) {
+            navigate('/');
+        }
+    }, [user, navigate]);
+
+    const handleSignIn = async (e) => {
+        e.preventDefault();
+        await login(email, password);
+    };
+
+    return (
+        <>
+            <div className="flex justify-center items-center min-h-screen">
+                <form className="flex flex-col items-center w-[25vw] h-[500px] mt-[-100px] border border-gray-300 shadow-xl/10 rounded-md">
+                    <h1 className="text-3xl my-6 text-medium">Fitgear</h1>
+                    <h3 className="text-2xl mt-2 mb-8 border-b-1 w-95 py-3">Login</h3>
+                    <div className="w-90">
+                        <input type="text" onChange={e => setEmail(e.target.value)}
+                            className="bg-gray-50 border border-gray-300 text-gray-900 
+                            text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 
+                            block w-full p-3" placeholder="login" required />
+                    </div>
+                    <div className="mt-6">
+                            <div className="relative w-90">
+                            <input type={isHidden ? "password" : "text"} onChange={e => setPassword(e.target.value)} className="py-3 text-sm ps-4 pe-10 block w-full border border-gray-300 
+                            rounded-lg focus:border-blue-500 focus:ring-blue-500" placeholder="Enter password" />
+                            <button type="button" className="absolute inset-y-0 end-0 flex items-center z-20 px-3 cursor-pointer text-gray-400 rounded-e-md focus:outline-hidden focus:text-blue-600 ">
+                                <img src={isHidden ? iconEyeOff : iconEyeOn} alt="icon" onClick={() => setHidden(prev => !prev)}/>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="submit" onClick={handleSignIn} className="bg-blue-700 text-white w-60 mt-6 py-3 border border-blue-700 cursor-pointer hover:bg-white hover:text-black select-none">
+                        Login
+                    </button>
+                    <p className="mb-5">New here? <a onClick={() => navigate("/register")} className="text-blue-500 cursor-pointer underline select-none">Sign up</a></p>
+                    <p>or</p>
+                </form> 
+            </div>  
+        </>
+    );
+}

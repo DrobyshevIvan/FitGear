@@ -5,7 +5,7 @@ export default function Header() {
         { name: "Manage", path: "/manage/anouncements"},
         { name: "About us", path: "/"},
         { name: "Contacts", path: "/" },
-        { name: "Policies", path: "/" },
+        { name: "Log in", path: "/login" },
     ];
 
     return (

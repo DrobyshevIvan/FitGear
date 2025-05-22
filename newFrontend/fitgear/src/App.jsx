@@ -5,6 +5,8 @@ import Users from './pages/UsersManage'
 import Anouncements from './pages/AnouncementsManage'
 import MainPage from './pages/MainPage'
 import EditAnnouncement from './pages/EditAnnouncement'
+import LoginPage from './pages/LoginPage'
+import RegisterPage from './pages/RegisterPage'
 
 import './App.css'
 
@@ -13,6 +15,8 @@ function App() {
     <>
     <Routes>
       <Route path="/" element={<MainPage />}/>
+      <Route path="/login" element={<LoginPage />}/>
+      <Route path="/Register" element={<RegisterPage />}/>
 
       <Route path="/manage" element={<ManagePage />}>
         <Route path="users" element={<Users />} />
