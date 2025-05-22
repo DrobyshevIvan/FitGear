@@ -1,28 +1,26 @@
 import { useState } from 'react'
 import { Routes, Navigate, Route } from 'react-router-dom'
-import SideBar from './components/sideBar'
 import ManagePage from './pages/ManagePage'
 import Users from './pages/UsersManage'
 import Anouncements from './pages/AnouncementsManage'
+import MainPage from './pages/MainPage'
+import EditAnnouncement from './pages/EditAnnouncement'
 
 import './App.css'
 
 function App() {
   return (
     <>
-    <div className='flex'>
-      <SideBar />
-      <div className='flex-1 ml-4'>
-        <Routes>
-          <Route path="/" element={<Navigate to="/manage" />}/>
+    <Routes>
+      <Route path="/" element={<MainPage />}/>
 
-          <Route path="/manage" element={<ManagePage />}>
-            <Route path="users" element={<Users />}/>
-            <Route path="anouncements" element={<Anouncements />}/>
-          </Route>
-        </Routes>
-      </div>
-    </div>
+      <Route path="/manage" element={<ManagePage />}>
+        <Route path="users" element={<Users />} />
+        <Route path="anouncements" element={<Anouncements />}>
+          <Route path="edit/:id" element={<EditAnnouncement />} />
+        </Route> 
+      </Route>
+    </Routes>
     </>
   );
 }

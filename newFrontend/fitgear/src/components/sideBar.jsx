@@ -15,9 +15,9 @@ export default function SideBar() {
     return (
         <>
         <div className="fixed w-[350px] left-0 top-0 h-screen bg-[var(--main-color)] text-white flex flex-col justify-between py-6 px-4">
-            <div>
-                <h1 className="text-5xl font-medium my-6">Fitgear</h1>
-            </div>
+            <NavLink to="/" className="mx-auto w-35 my-4">
+                <h1 className="text-5xl font-medium select-none">Fitgear</h1>
+            </NavLink>
 
             <div className='flex flex-col items-center space-y-2'>
                 {navItems.map(item => (

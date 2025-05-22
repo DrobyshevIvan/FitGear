@@ -2,12 +2,16 @@ import { getAllAnnouncements } from "../services/anouncements"
 import { useEffect, useState } from "react"
 import Card from "../components/productCard";
 import iconAdd from '../assets/plus.svg';
-import iconSearch from '../assets/search.svg';
 import AddAnnouncement from "./addAnnouncement";
+import { useNavigate, Outlet, useMatch } from "react-router-dom";
+import SearchBar from "../components/SearchBar";
+
 
 
 export default function Anouncements() {
+    const navigate = useNavigate();
     const [anouncements, setAnnounces] = useState([]);
+    const isEditing = useMatch("/manage/anouncements/edit/:id");
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [filter, setFilters] = useState({
         search: "",
@@ -24,6 +28,10 @@ export default function Anouncements() {
         fetchAnouncements();
     }, [filter]);
 
+    if (isEditing) {
+        return <Outlet />;
+    }
+
     return (
         <>
             <div className="flex gap-5">
@@ -31,25 +39,15 @@ export default function Anouncements() {
                     <img src={iconAdd} alt="icon" />
                     Add new
                 </button>
-                <form className="w-[700px]">
-                    <div className="relative">
-                        <div className="inset-y-0 left-0 flex items-center pl-5 pointer-events-none absolute">
-                            <img src={iconSearch} alt="icon" />
-                        </div>
-                        <input type="search" id="default-search"
-                            onChange={(e) => setFilters({...filter, search: e.target.value})}
-                            className="block w-full p-4 pl-13 h-13 text-lg text-gray-900 border rounded-full bg-gray-50 focus:border-gray-400"
-                            placeholder="Search"
-                            required
-                        />
-                    </div>
-                </form>
+                <SearchBar search={filter.search} onSearchChange={search => setFilters(prev => ({ ...prev, search }))}/>
             </div>
+
             <AddAnnouncement isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onSubmit={() => console.log("submited")} />
+                
             <div>
                 <div className="grid place-items-center mt-6 px-14 grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
                     {anouncements.map(n => (
-                        <Card key={n.id} title={n.title} onEdit={() => console.log('edit')} onRemove={() => console.log('remove')}/>
+                        <Card key={n.id} title={n.title} onEdit={() => navigate(`edit/${n.id}`)} onRemove={() => console.log('remove')}/>
                     ))}
                 </div>
             </div>
