@@ -1,12 +1,14 @@
 import { Button, StyleSheet, Text, TextInput, View, Image } from "react-native";
 import React, { useState } from "react";
 import { useAuth } from "./context/AuthContext";
+import { useRouter } from "expo-router";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const auth = useAuth();
+  const router = useRouter();
 
   const login = async () => {
     if (!email || !password) {
@@ -18,6 +20,7 @@ const Login = () => {
       setIsLoading(true);
       const result = await auth.onLogin(email, password);
       console.log("Login successful:", result);
+      router.push("/Home");
     } catch (error: any) {
       console.error("Login error:", error);
       alert(error.response?.data?.message || "Login failed. Please try again.");

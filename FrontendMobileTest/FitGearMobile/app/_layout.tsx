@@ -1,3 +1,4 @@
+import "./api";
 import { Fragment, ReactNode } from "react";
 import { View } from "react-native";
 import { StatusBar } from "expo-status-bar";

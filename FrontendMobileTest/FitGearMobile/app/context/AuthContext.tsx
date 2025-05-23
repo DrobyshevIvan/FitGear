@@ -33,6 +33,38 @@ export const useAuth = () => {
   return context;
 };
 
+export const refreshToken = async () => {
+  const refreshToken = await SecureStore.getItemAsync(REFRESH_TOKEN_KEY);
+  const accessToken = await SecureStore.getItemAsync(ACCESS_TOKEN_KEY);
+
+  if (!refreshToken || !accessToken) {
+    throw new Error("No tokens found");
+  }
+
+  const result = await axios.post(
+    `${API_URL}/User/refreshtoken`,
+    {
+      accessToken: accessToken,
+      refreshToken: refreshToken,
+    },
+    {
+      headers: { "X-Mobile-Client": "true" },
+    }
+  );
+
+  const { accessToken: newAccessToken, refreshToken: newRefreshToken } =
+    result.data as {
+      accessToken: string;
+      refreshToken: string;
+    };
+
+  await SecureStore.setItemAsync(ACCESS_TOKEN_KEY, String(newAccessToken));
+  await SecureStore.setItemAsync(REFRESH_TOKEN_KEY, String(newRefreshToken));
+  axios.defaults.headers.common["Authorization"] = `Bearer ${newAccessToken}`;
+
+  return { accessToken: newAccessToken, refreshToken: newRefreshToken };
+};
+
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   console.log("AuthProvider: Initializing...");
 
@@ -152,57 +184,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       return response.data;
     } catch (error) {
       console.error("AuthProvider: Login failed:", error);
-      throw error;
-    }
-  };
-
-  const refreshToken = async () => {
-    try {
-      const refreshToken = await SecureStore.getItemAsync(REFRESH_TOKEN_KEY);
-      const accessToken = await SecureStore.getItemAsync(ACCESS_TOKEN_KEY);
-
-      if (!refreshToken || !accessToken) {
-        throw new Error("No tokens found");
-      }
-
-      const result = await axios.post(
-        `${API_URL}/User/refreshtoken`,
-        {
-          accessToken: accessToken,
-          refreshToken: refreshToken,
-        },
-        {
-          headers: { "X-Mobile-Client": "true" },
-        }
-      );
-
-      console.log("file: AuthContext.tsx ~ refreshToken ~ result:", result);
-
-      const { accessToken: newAccessToken, refreshToken: newRefreshToken } =
-        result.data as {
-          accessToken: string;
-          refreshToken: string;
-        };
-
-      setAuthState({
-        accessToken: newAccessToken,
-        authenticated: true,
-        refreshToken: newRefreshToken,
-      });
-
-      await SecureStore.setItemAsync(ACCESS_TOKEN_KEY, String(newAccessToken));
-      await SecureStore.setItemAsync(
-        REFRESH_TOKEN_KEY,
-        String(newRefreshToken)
-      );
-
-      axios.defaults.headers.common[
-        "Authorization"
-      ] = `Bearer ${newAccessToken}`;
-
-      return result;
-    } catch (error) {
-      console.error("Error refreshing token:", error);
       throw error;
     }
   };

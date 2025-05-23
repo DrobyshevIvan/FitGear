@@ -12,7 +12,7 @@ export default function Index() {
     <View>
       <Text style={{ fontSize: 32, color: "red" }}>Это главная страница!</Text>
       <Button
-        title="Перейти на другую страницу"
+        title="Перейти на сторінку входу"
         onPress={() => router.push("/Login")}
       />
     </View>
