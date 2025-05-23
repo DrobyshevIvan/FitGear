@@ -4,16 +4,19 @@ using FitGear.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace FitGear.Migrations
+namespace FitGear.Data.Migrations
 {
     [DbContext(typeof(FitGearDbContext))]
-    partial class FitGearDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250523094255_Added_PhoneNumber_To_User")]
+    partial class Added_PhoneNumber_To_User
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
