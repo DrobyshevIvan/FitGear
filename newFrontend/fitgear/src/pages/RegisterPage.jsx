@@ -7,13 +7,20 @@ import { AuthContext } from "../contexts/AuthContext";
 
 export default function RegisterPage() {
     const navigate = useNavigate();
-    const {register, loading} = useContext(AuthContext);
+    const {register, loading, error, setError } = useContext(AuthContext);
     const [isHidden, setHidden] = useState(true);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [confirmedPassword, setConfirmedPassword] = useState("");
 
     const handleSignUp = async (e) => {
         e.preventDefault();
+        if (password != confirmedPassword) {
+            setError("Passwords don't match")
+            return;
+        }
+
+        setError("");
         await register(email, password, "firstname", "last-name")
     }
 
@@ -44,11 +51,13 @@ export default function RegisterPage() {
                                 <img src={isHidden ? iconEyeOff : iconEyeOn} alt="icon" onClick={() => setHidden(prev => !prev)} />
                             </button>
                         </div>
-                        <div className="relative w-90 mt-5">
-                            <input type="password" className="py-3 text-sm ps-4 pe-10 block w-full border border-gray-300 
-                            rounded-lg focus:border-blue-500 focus:ring-blue-500" placeholder="Repeat password" required />
+                        <div className="relative w-90 mt-5">    
+                            <input type="password" onChange={e => setConfirmedPassword(e.target.value)}
+                            className="py-3 text-sm ps-4 pe-10 block w-full border border-gray-300 
+                            rounded-lg focus:border-blue-500 focus:ring-blue-500" placeholder="Confirm password" required />
                         </div>
                     </div>
+                    {error && <p className="text-red-600 my-2">{error}</p>}
                     <button onClick={handleSignUp} className="bg-blue-700 text-white w-60 mt-6 py-3 border border-blue-700 cursor-pointer hover:bg-white hover:text-black select-none">
                         Sign up
                     </button>

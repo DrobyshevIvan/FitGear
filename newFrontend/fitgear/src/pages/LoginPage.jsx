@@ -8,7 +8,7 @@ import { AuthContext } from "../contexts/AuthContext";
 export default function LoginPage() {
     const navigate = useNavigate();
     const [isHidden, setHidden] = useState(true);
-    const { user, login, loading } = useContext(AuthContext);
+    const { user, login, error, setError } = useContext(AuthContext);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -36,13 +36,14 @@ export default function LoginPage() {
                             block w-full p-3" placeholder="login" required />
                     </div>
                     <div className="mt-6">
-                            <div className="relative w-90">
-                            <input type={isHidden ? "password" : "text"} onChange={e => setPassword(e.target.value)} className="py-3 text-sm ps-4 pe-10 block w-full border border-gray-300 
-                            rounded-lg focus:border-blue-500 focus:ring-blue-500" placeholder="Enter password" />
+                        <div className="relative w-90">
+                            <input type={isHidden ? "password" : "text"} onChange={e => setPassword(e.target.value)} className={`py-3 text-sm ps-4 pe-10 block w-full border 
+                            rounded-lg ${error ? "border-red-500 focus:border-red-500 focus:ring-red-500" : "border-gray-300 focus:border-blue-500 focus:ring-blue-500"}`} placeholder="Enter password" />
                             <button type="button" className="absolute inset-y-0 end-0 flex items-center z-20 px-3 cursor-pointer text-gray-400 rounded-e-md focus:outline-hidden focus:text-blue-600 ">
-                                <img src={isHidden ? iconEyeOff : iconEyeOn} alt="icon" onClick={() => setHidden(prev => !prev)}/>
+                                <img src={isHidden ? iconEyeOff : iconEyeOn} alt="icon" onClick={() => setHidden(prev => !prev)} />
                             </button>
                         </div>
+                        {error && <p className="text-red-600">{error}</p>}
                     </div>
                     <button type="submit" onClick={handleSignIn} className="bg-blue-700 text-white w-60 mt-6 py-3 border border-blue-700 cursor-pointer hover:bg-white hover:text-black select-none">
                         Login

@@ -1,13 +1,7 @@
 import axios from "axios";
 
-const getAuthHeader = () => {
-    const token = localStorage.getItem('accessToken');
-    return token ? { 'Authorization': `Bearer ${token}` } : {};
-};
-
 export const getAllAnnouncements = async (filter) => {
   try {
-    const headers = getAuthHeader();
     const response = await axios.get("http://localhost:5209/api/Announcements", { 
       params: {
         Title: filter?.search,

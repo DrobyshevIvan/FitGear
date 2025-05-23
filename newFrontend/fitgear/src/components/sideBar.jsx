@@ -1,9 +1,11 @@
-import { useState } from "react";
-import { NavLink } from 'react-router-dom'
+import { useState, useContext } from "react";
+import { NavLink } from 'react-router-dom';
+import { AuthContext } from "../contexts/AuthContext";
 
 
 export default function SideBar() {
     const [active, setActive] = useState("Manage");
+    const { logout } = useContext(AuthContext);
 
     const navItems = [
         { name: "Manage", path: "/manage"},
@@ -40,7 +42,9 @@ export default function SideBar() {
                 <button className="flex justify-center cursor-pointer gap-3 px-4 py-2 hover:bg-blue-600 rounded-md w-70 text-left ">
                     Settings
                 </button>
-                <button className="flex justify-center cursor-pointer gap-3 px-4 py-2 hover:bg-blue-600 rounded-md w-70 text-left">
+                <button
+                    onClick={logout}
+                    className="flex justify-center cursor-pointer gap-3 px-4 py-2 hover:bg-blue-600 rounded-md w-70 text-left">
                     Exit
                 </button>
             </div>
