@@ -1,4 +1,5 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
+using System.Runtime.CompilerServices;
 using System.Security.Claims;
 using AutoMapper;
 using FitGear.Contracts;
@@ -68,28 +69,40 @@ public class AccountService : IAccountService
         var token = await _authManager.GenerateToken(_user);
         _logger.LogInformation($"Token generated for User with email {loginDto.Email} | Token: {token}");
         var refreshToken = await _authManager.CreateRefreshToken(_user);
+        
+        var isMobile = httpContext.Request.Headers.ContainsKey("X-Mobile-Client");
 
-        var accessTokenOptions = new CookieOptions
+        if (!isMobile)
         {
-            HttpOnly = true,
-            // Secure = true,
-            SameSite = SameSiteMode.Strict,
-            Expires = DateTime.UtcNow.AddMinutes(10)
-        };
-        httpContext.Response.Cookies.Append("X-Access-Token", token, accessTokenOptions);
+            var accessTokenOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                // Secure = true,
+                SameSite = SameSiteMode.Strict,
+                Expires = DateTime.UtcNow.AddMinutes(10)
+            };
+            httpContext.Response.Cookies.Append("X-Access-Token", token, accessTokenOptions);
 
-        var refreshTokenOptions = new CookieOptions
-        {
-            HttpOnly = true,
-            // Secure = true,
-            SameSite = SameSiteMode.Strict,
-            Expires = DateTime.UtcNow.AddDays(7)
-        };
-        httpContext.Response.Cookies.Append("X-Refresh-Token", refreshToken, refreshTokenOptions);
+            var refreshTokenOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                // Secure = true,
+                SameSite = SameSiteMode.Strict,
+                Expires = DateTime.UtcNow.AddDays(7)
+            };
+            httpContext.Response.Cookies.Append("X-Refresh-Token", refreshToken, refreshTokenOptions);
 
+            return new AuthResponseDto()
+            {
+                UserId = _user.Id
+            };
+        }
+        
         return new AuthResponseDto()
         {
             UserId = _user.Id,
+            accessToken = token,
+            refreshToken = refreshToken
         };
     }
 
@@ -97,13 +110,26 @@ public class AccountService : IAccountService
     {
         try
         {
-            var refreshToken = httpContext.Request.Cookies["X-Refresh-Token"];
+            var isMobile = httpContext.Request.Headers.ContainsKey("X-Mobile-Client");
+
+            string? refreshToken;
+            string? accessToken;
+
+            if (isMobile)
+            {
+                refreshToken = request.refreshToken;
+                accessToken = request.accessToken;
+            }
+            else
+            {
+                refreshToken = httpContext.Request.Cookies["X-Refresh-Token"];
+                accessToken = httpContext.Request.Cookies["X-Access-Token"];
+            }
+
             if (string.IsNullOrEmpty(refreshToken))
             {
                 throw new KeyNotFoundException("Refresh token not found");
             }
-
-            var accessToken = httpContext.Request.Cookies["X-Access-Token"];
 
             if (!string.IsNullOrEmpty(accessToken))
             {
@@ -143,29 +169,37 @@ public class AccountService : IAccountService
             var token = await _authManager.GenerateToken(_user);
             var newRefreshToken = await _authManager.CreateRefreshToken(_user);
 
-            var accessTokenOptions = new CookieOptions
+            if (!isMobile)
             {
-                HttpOnly = true,
-                // Secure = true,
-                SameSite = SameSiteMode.Strict,
-                Expires = DateTime.UtcNow.AddMinutes(10)
-            };
-            httpContext.Response.Cookies.Append("X-Access-Token", token, accessTokenOptions);
+                var accessTokenOptions = new CookieOptions
+                {
+                    HttpOnly = true,
+                    // Secure = true,
+                    SameSite = SameSiteMode.Strict,
+                    Expires = DateTime.UtcNow.AddMinutes(10)
+                };
+                httpContext.Response.Cookies.Append("X-Access-Token", token, accessTokenOptions);
 
-            var refreshTokenOptions = new CookieOptions
-            {
-                HttpOnly = true,
-                // Secure = true,
-                SameSite = SameSiteMode.Strict,
-                Expires = DateTime.UtcNow.AddDays(7)
-            };
-            httpContext.Response.Cookies.Append("X-Refresh-Token", newRefreshToken, refreshTokenOptions);
+                var refreshTokenOptions = new CookieOptions
+                {
+                    HttpOnly = true,
+                    // Secure = true,
+                    SameSite = SameSiteMode.Strict,
+                    Expires = DateTime.UtcNow.AddDays(7)
+                };
+                httpContext.Response.Cookies.Append("X-Refresh-Token", newRefreshToken, refreshTokenOptions);
 
-            // 5. Вернуть только нужную информацию (без токенов)
+                return new AuthResponseDto()
+                {
+                    UserId = _user.Id
+                };
+            }
+            
             return new AuthResponseDto
             {
-                UserId = _user.Id
-                // Можно добавить другие данные пользователя, если нужно
+                UserId = _user.Id,
+                accessToken = token,
+                refreshToken = newRefreshToken
             };
         }
         catch (Exception ex)

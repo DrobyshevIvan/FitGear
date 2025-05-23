@@ -1,0 +1,43 @@
+2025-05-23 07:46:08.637 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 4:46:08
+2025-05-23 08:01:31.018 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 5:01:31
+2025-05-23 08:16:31.847 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 5:16:31
+2025-05-23 08:31:32.142 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 5:31:32
+2025-05-23 08:35:41.275 +03:00 [WRN] As of ""2025-05-23T05:35:33.0214401+00:00"", the heartbeat has been running for ""00:00:01.9565974"" which is longer than ""00:00:01"". This could be caused by thread pool starvation.
+2025-05-23 08:46:32.718 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 5:46:32
+2025-05-23 10:35:55.047 +03:00 [INF] HTTP POST /api/User/register responded 400 in 2943.7681 ms
+2025-05-23 10:36:59.093 +03:00 [INF] HTTP POST /api/User/register responded 400 in 5.5370 ms
+2025-05-23 10:39:01.955 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 7:39:01
+2025-05-23 10:39:01.959 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4468.4092 ms
+2025-05-23 10:40:18.167 +03:00 [INF] Login Attempt for qwer@gmail.com
+2025-05-23 10:40:18.218 +03:00 [INF] Looking for user with email qwer@gmail.com
+2025-05-23 10:40:18.811 +03:00 [WRN] User with email qwer@gmail.com was not found
+2025-05-23 10:40:18.816 +03:00 [INF] HTTP POST /api/User/login responded 401 in 781.6899 ms
+2025-05-23 10:40:52.753 +03:00 [INF] Login Attempt for test1@gmail.com
+2025-05-23 10:40:52.755 +03:00 [INF] Looking for user with email test1@gmail.com
+2025-05-23 10:40:54.705 +03:00 [INF] Token generated for User with email test1@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MUBnbWFpbC5jb20iLCJqdGkiOiJmZTM0YTQ2Ni03N2VjLTQzNDQtYWViMi01YmZjYTYzODNiYjQiLCJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsInVpZCI6IjBjYWNjNzk0LTQ3NTAtNDYwNC1iMDMwLWFhMjEwMWU2MGMzMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDc5ODY2NTQsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.8Iqt2bcayvbJ4EHNPzwqv1IDPcRliUcM8EHDFS3B8Sg
+2025-05-23 10:40:57.131 +03:00 [INF] HTTP POST /api/User/login responded 200 in 4378.8449 ms
+2025-05-23 10:42:09.047 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-23 10:42:09.048 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-23 10:42:09.383 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjUwY2Y3ODMxLWMwMDAtNDI0Yy04ZGIwLWU5YmEzNDE0Zjk4YSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3OTg2NzI5LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.T4TSHh3xet3BrbjZLBAnH6sLwIY_JCvH1b8Z4iLu24w
+2025-05-23 10:42:09.657 +03:00 [INF] HTTP POST /api/User/login responded 200 in 611.0839 ms
+2025-05-23 10:43:18.926 +03:00 [INF] Login Attempt for test1@gmail.com
+2025-05-23 10:43:18.927 +03:00 [INF] Looking for user with email test1@gmail.com
+2025-05-23 10:43:19.107 +03:00 [INF] Token generated for User with email test1@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MUBnbWFpbC5jb20iLCJqdGkiOiJjNWM0YTFjMi1iYThhLTQwY2YtYjU5Yy04ZjRlOTEwZjZkNTAiLCJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsInVpZCI6IjBjYWNjNzk0LTQ3NTAtNDYwNC1iMDMwLWFhMjEwMWU2MGMzMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDc5ODY3OTksImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.4Zqzw2XyJuJIz3nF-_kBRB0EPvjmIHLfA81y6KGzkhk
+2025-05-23 10:43:19.288 +03:00 [INF] HTTP POST /api/User/login responded 200 in 516.4126 ms
+2025-05-23 10:43:46.187 +03:00 [INF] Login Attempt for test1@gmail.com
+2025-05-23 10:43:46.188 +03:00 [INF] Looking for user with email test1@gmail.com
+2025-05-23 10:43:46.339 +03:00 [INF] Token generated for User with email test1@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MUBnbWFpbC5jb20iLCJqdGkiOiJkY2RjOTc2ZS0zMmRkLTQwNTMtODhhNi0xYWI5OTcxZmQ5NGMiLCJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsInVpZCI6IjBjYWNjNzk0LTQ3NTAtNDYwNC1iMDMwLWFhMjEwMWU2MGMzMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDc5ODY4MjYsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.a68nuNsL79udgHepTAddwbLHOPilpo2L0Kvr3b2nwBY
+2025-05-23 10:43:46.414 +03:00 [INF] HTTP POST /api/User/login responded 200 in 256.4160 ms
+2025-05-23 10:45:15.167 +03:00 [INF] Login Attempt for test1@gmail.com
+2025-05-23 10:45:15.168 +03:00 [INF] Looking for user with email test1@gmail.com
+2025-05-23 10:45:15.471 +03:00 [INF] Token generated for User with email test1@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MUBnbWFpbC5jb20iLCJqdGkiOiIwZGFhZjllNy0zY2ZhLTQ3NzctYWZjNC1hN2MyYmFiZTM5N2IiLCJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsInVpZCI6IjBjYWNjNzk0LTQ3NTAtNDYwNC1iMDMwLWFhMjEwMWU2MGMzMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDc5ODY5MTUsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.q1omKEKOVI1p54iFp_D_DZjEXfdbXjqa01s6uVmlUdY
+2025-05-23 10:45:15.847 +03:00 [INF] HTTP POST /api/User/login responded 200 in 680.8074 ms
+2025-05-23 10:46:26.544 +03:00 [INF] Login Attempt for test1@gmail.com
+2025-05-23 10:46:26.545 +03:00 [INF] Looking for user with email test1@gmail.com
+2025-05-23 10:46:26.866 +03:00 [INF] Token generated for User with email test1@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MUBnbWFpbC5jb20iLCJqdGkiOiJiYzI1OTIwZi1mOGVmLTRjMDQtOThiOC1mMTcxYTI2NjRkYWMiLCJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsInVpZCI6IjBjYWNjNzk0LTQ3NTAtNDYwNC1iMDMwLWFhMjEwMWU2MGMzMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDc5ODY5ODYsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.jVpp2cyrXDl2p2K6yRX7RvScdUW2CtXPJTjbcbgUPos
+2025-05-23 10:46:27.112 +03:00 [INF] HTTP POST /api/User/login responded 200 in 568.6428 ms
+2025-05-23 10:48:17.658 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 0.4509 ms
+2025-05-23 10:48:36.335 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-23 10:48:36.336 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-23 10:48:36.656 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjdhNWE4ZWJmLWRlYTEtNDgyZi1iMjdkLTYyNjA0MWUzZjc1ZSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3OTg3MTE2LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.WEU6CU9lqhE0D7bWCO5gW_aDqwrhCULo3KWjrpFIyC8
+2025-05-23 10:48:36.853 +03:00 [INF] HTTP POST /api/User/login responded 200 in 519.3164 ms

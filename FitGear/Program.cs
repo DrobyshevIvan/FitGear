@@ -66,7 +66,12 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", b => b
-        .WithOrigins("http://localhost:3000") // или твой реальный адрес фронта
+        .WithOrigins(
+            "http://localhost:3000",     // для веб
+            "exp://localhost:19000",     // для Expo
+            "exp://192.168.0.153:8081",   // для физических устройств (замените на ваш IP)
+            "http://localhost:19000"     // для веб-версии Expo
+        )
         .AllowAnyHeader()
         .AllowAnyMethod()
         .AllowCredentials()
