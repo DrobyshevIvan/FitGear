@@ -12,31 +12,43 @@ export const AuthProvider = ({ children }) => {
     const navigate = useNavigate();
     const [error, setError] = useState(null);
 
-    const API_BASE = "http://localhost:5209";
+    const hasRole = (role) => Array.isArray(user?.roles) && user.roles.includes(role);
 
     const getProfile = async () => {
+        setLoading(true);
         try {
             const response = await api.get("/api/UserProfile/profile");
-            setUser(response.data);
+            const rolesResponse = await api.get("/api/User/roles");
+
+            let roles = [];
+            if (Array.isArray(rolesResponse.data)) {
+                roles = rolesResponse.data;
+            } else if (rolesResponse.data?.$values) {
+                roles = rolesResponse.data.$values;
+            } else if (typeof rolesResponse.data === "string") {
+                roles = [rolesResponse.data];
+            }
+
+            const userData = { ...response.data, roles };
+            setUser(userData);
         } catch (e) {
-            setError("Помилка при завантаженні профілю:");
+            console.error("[getProfile] error:", e);
             setUser(null);
+        } finally {
+            setLoading(false);
         }
     };
 
     const login = async (email, password) => {
+        if (user) {
+            setError("Ви вже залогінені");
+            return; 
+        }
+
         setError(null);
         try {
             const response = await api.post("/api/User/login", { email, password });
-
-            const token = response.data.userId;
-            if (token) {
-                localStorage.setItem("accessToken", token);
-            } else {
-                console.warn("Сервер не повернув accessToken");
-            }
-
-            getProfile();
+            await getProfile();
             navigate("/");
         } catch (e) {
             setError("Неправильний логін або пароль");
@@ -84,43 +96,76 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
+    const googleAuth = () => {
+        window.location.href = "http://localhost:5209/api/User/login/google?returnUrl=http://localhost:5173/";
+    };
+
     const refreshToken = async () => {
         try {
-            const token = localStorage.getItem("accessToken");
-            console.log(token);
-            await api.post("/api/User/refreshtoken", {
-                userId: token
-            });
-            getProfile();
+            await api.post("/api/User/refreshtoken", { userId: user?.id}, { withCredentials: true });            
+            await getProfile();
         } catch (e) {
             setUser(null);
+            navigate("/login");
+            console.log(e);
         }
     }
 
     const logout = async () => {
         try {
-            localStorage.removeItem("accessToken");
             setUser(null);
-            navigate("/login");
+            navigate("/");
         } catch (e) {
             console.log(e);
         }
     }
 
     useEffect(() => {
-        refreshToken();
+        const fetchUser = async () => {
+            await getProfile();
+        }
+        fetchUser();
     }, []);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            refreshToken();
-        }, 10 * 60 * 1000); // 10 хв
-        return () => clearInterval(interval);
-    }, []);
+        const responseInterceptor = api.interceptors.response.use(
+            response => response,
+            async (error) => {
+                const originalRequest = error.config;
+                if (error.response?.status === 401 && !originalRequest._retry) {
+                    originalRequest._retry = true;
+                    try {
+                        await refreshToken();
+                        return api(originalRequest);
+                    } catch (refreshError) {
+                        await logout();
+                        return Promise.reject(refreshError);
+                    }
+                }
+                return Promise.reject(error);
+            }
+        );
+
+        const interval = setInterval(refreshToken, 110 * 1000);
+
+        return () => {
+            api.interceptors.response.eject(responseInterceptor);
+            clearInterval(interval);
+        };
+
+    }, [logout, user]);
 
     return (
-        <AuthContext.Provider value={{ user, login, register, logout, loading, error, setError }}>
+        <AuthContext.Provider value={{ user, login, register, logout, loading, error, setError, hasRole, googleAuth }}>
             {children}
         </AuthContext.Provider>
     );
 }
+
+export const useAuth = () => {
+    const context = useContext(AuthContext);
+    if (!context) {
+        throw new Error("useAuth must be used within an AuthProvider");
+    }
+    return context;
+};

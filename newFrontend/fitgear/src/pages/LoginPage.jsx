@@ -2,13 +2,13 @@ import { useState, useContext, useEffect } from "react";
 import iconEyeOn from '../assets/eyeOn.svg';
 import iconEyeOff from '../assets/eyeOff.svg';
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../contexts/AuthContext";
+import { useAuth } from "../contexts/AuthContext";
 
 
 export default function LoginPage() {
     const navigate = useNavigate();
     const [isHidden, setHidden] = useState(true);
-    const { user, login, error, setError } = useContext(AuthContext);
+    const { user, login, error, setError, googleAuth } = useAuth();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -22,6 +22,11 @@ export default function LoginPage() {
         e.preventDefault();
         await login(email, password);
     };
+
+    const handleGoogleAuth = async (e) => {
+        e.preventDefault();
+        await googleAuth();
+    }
 
     return (
         <>
@@ -50,6 +55,9 @@ export default function LoginPage() {
                     </button>
                     <p className="mb-5">New here? <a onClick={() => navigate("/register")} className="text-blue-500 cursor-pointer underline select-none">Sign up</a></p>
                     <p>or</p>
+                    <button onClick={handleGoogleAuth} className="border border-gray-300 py-2 px-4 mt-3 cursor-pointer">
+                        Sign in with Google
+                    </button>
                 </form> 
             </div>  
         </>

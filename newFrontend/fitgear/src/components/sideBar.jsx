@@ -1,11 +1,11 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import { NavLink } from 'react-router-dom';
-import { AuthContext } from "../contexts/AuthContext";
+import { useAuth } from "../contexts/AuthContext";
 
 
 export default function SideBar() {
     const [active, setActive] = useState("Manage");
-    const { logout } = useContext(AuthContext);
+    const { logout } = useAuth();
 
     const navItems = [
         { name: "Manage", path: "/manage"},
