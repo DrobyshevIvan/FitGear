@@ -474,3 +474,20 @@ Error Number:515,State:2,Class:16
 2025-05-23 12:57:08.129 +03:00 [INF] Token generated for User with email test3@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0M0BnbWFpbC5jb20iLCJqdGkiOiI0NjA0MjdhNC0zYTcyLTRhZTQtYTEwNS1lY2FmYjAwYmEwMTgiLCJlbWFpbCI6InRlc3QzQGdtYWlsLmNvbSIsInVpZCI6ImNhMzZkMGViLThlYWMtNDJlOS05MmM1LTg1MWE2Mzk4MjE4OSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDc5OTQzNDgsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.G9fwI8oP6Ti1p_ro1BrX-l9WoTwod25AksdJuOgCqwI
 2025-05-23 12:57:08.177 +03:00 [INF] HTTP POST /api/User/login responded 200 in 125.8775 ms
 2025-05-23 12:57:13.015 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 311.0761 ms
+2025-05-23 13:00:28.523 +03:00 [INF] Login Attempt for test3@gmail.com
+2025-05-23 13:00:28.524 +03:00 [INF] Looking for user with email test3@gmail.com
+2025-05-23 13:00:28.713 +03:00 [INF] Token generated for User with email test3@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0M0BnbWFpbC5jb20iLCJqdGkiOiI4YzA0YmU2MC01NTQ3LTRjNGItOGRiNC1lYjE3OWU2MDdhNTciLCJlbWFpbCI6InRlc3QzQGdtYWlsLmNvbSIsInVpZCI6ImNhMzZkMGViLThlYWMtNDJlOS05MmM1LTg1MWE2Mzk4MjE4OSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDc5OTQ1NDgsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.sC1I5Y2vUGnqSXRzAJax8uY5W1SirfpBDLObh5HmS_8
+2025-05-23 13:00:29.312 +03:00 [INF] HTTP POST /api/User/login responded 200 in 790.4362 ms
+2025-05-23 13:01:42.499 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 198.0739 ms
+2025-05-23 13:07:52.955 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 5.0648 ms
+2025-05-23 13:07:53.035 +03:00 [INF] Refresh Token Attempt for 
+2025-05-23 13:07:53.444 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 414.8582 ms
+2025-05-23 13:07:53.525 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 37.1942 ms
+2025-05-23 13:10:05.918 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 10:10:05
+2025-05-23 13:11:05.608 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 0.6805 ms
+2025-05-23 13:11:11.729 +03:00 [INF] Login Attempt for test2@gmail.com
+2025-05-23 13:11:11.730 +03:00 [INF] Looking for user with email test2@gmail.com
+2025-05-23 13:11:11.955 +03:00 [INF] Token generated for User with email test2@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MkBnbWFpbC5jb20iLCJqdGkiOiI1YTFhNmQ3Zi1jZDIzLTQ5MDgtYjMyNC04OWUwOTllMzY0YWYiLCJlbWFpbCI6InRlc3QyQGdtYWlsLmNvbSIsInVpZCI6ImZhYTBlZjRlLTI3YWQtNGYwZi1hNmJjLTRkYjkzNWNhNzM2MCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDc5OTUxOTEsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.9FxAx1SrBj3OQleJIw58WlCQz47Y0V4ltsLOLUVVfX8
+2025-05-23 13:11:12.069 +03:00 [INF] HTTP POST /api/User/login responded 200 in 341.4757 ms
+2025-05-23 13:11:15.615 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 0.1743 ms
+2025-05-23 13:18:14.031 +03:00 [INF] Application is shutting down...
