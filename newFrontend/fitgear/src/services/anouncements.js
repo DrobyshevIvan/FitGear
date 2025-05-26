@@ -1,8 +1,9 @@
 import axios from "axios";
+import { api } from "../api/api";
 
 export const getAllAnnouncements = async (filter) => {
   try {
-    const response = await axios.get("http://localhost:5209/api/Announcements", { 
+    const response = await api.get("/api/Announcements", { 
       params: {
         Title: filter?.search,
         OrderBy: filter?.orderItem,
@@ -16,3 +17,35 @@ export const getAllAnnouncements = async (filter) => {
     throw new Error("Не вдалося завантажити оголошення");
   }
 };
+
+export const addAnnouncement = async (data) => {
+  try {
+    await api.post("/api/Announcements", {
+      title: data.title,
+      Description: data.description,
+      quantityAvailable: data.quantity,
+      pricePerDay: data.price,
+    });
+    return true;
+  } catch (err) {
+    console.log("addAnnouncement error:", err);
+    return false;
+  }
+}
+
+export const removeAnnouncement = async (id) => {
+  try {
+    await api.delete(`/api/Announcements/${id}`);
+  } catch (err) {
+    console.log("addAnnouncement error:", err);
+  }
+}
+
+export const getAnnouncementById = async (id) => {
+  try {
+    const response = await api.get(`/api/Announcements/${id}`);
+    return response.data;
+  } catch (err) {
+    console.log(err);
+  }
+}

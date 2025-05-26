@@ -1,11 +1,10 @@
-import { getAllAnnouncements } from "../services/anouncements"
+import { getAllAnnouncements, addAnnouncement, removeAnnouncement } from "../services/anouncements"
 import { useEffect, useState } from "react"
 import Card from "../components/productCard";
 import iconAdd from '../assets/plus.svg';
 import AddAnnouncement from "./addAnnouncement";
 import { useNavigate, Outlet, useMatch } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
-
 
 
 export default function Anouncements() {
@@ -28,6 +27,20 @@ export default function Anouncements() {
         fetchAnouncements();
     }, [filter]);
 
+    const handleNewAdd = async (data) => {
+        await addAnnouncement(data);
+        setIsModalOpen(false);
+        const updated = await getAllAnnouncements(filter);
+        setAnnounces(updated);
+    }
+
+    const handleRemove = async (id) => {
+        await removeAnnouncement(id);
+        const updated = await getAllAnnouncements(filter);
+        setAnnounces(updated);
+    }
+
+
     if (isEditing) {
         return <Outlet />;
     }
@@ -42,12 +55,12 @@ export default function Anouncements() {
                 <SearchBar search={filter.search} onSearchChange={search => setFilters(prev => ({ ...prev, search }))}/>
             </div>
 
-            <AddAnnouncement isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onSubmit={() => console.log("submited")} />
+            <AddAnnouncement isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onSubmit={handleNewAdd} />
                 
             <div>
                 <div className="grid place-items-center mt-6 px-14 grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
                     {anouncements.map(n => (
-                        <Card key={n.id} title={n.title} onEdit={() => navigate(`edit/${n.id}`)} onRemove={() => console.log('remove')}/>
+                        <Card key={n.id} title={n.title} onEdit={() => navigate(`edit/${n.id}`)} onRemove={() => handleRemove(n.id)}/>
                     ))}
                 </div>
             </div>

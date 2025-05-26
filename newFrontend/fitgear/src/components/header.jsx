@@ -1,11 +1,13 @@
 import { NavLink } from "react-router-dom";
+import { useAuth } from "../contexts/AuthContext";
 
 export default function Header() {
+    const { user, logout } = useAuth();
+
     const navItems = [
         { name: "Manage", path: "/manage/anouncements"},
         { name: "About us", path: "/"},
         { name: "Contacts", path: "/" },
-        { name: "Log in", path: "/login" },
     ];
 
     return (
@@ -20,12 +22,27 @@ export default function Header() {
                             key={item.name}
                             to={item.path}
                             className="flex cursor-pointer px-1 rounded-md text-lg text-white transition"
-                            >
-                            
-                            {item.name} 
+                        >
+
+                            {item.name}
 
                         </NavLink>
                     ))}
+                    {user ? (
+                        <button
+                            onClick={logout}
+                            className="flex cursor-pointer px-1 rounded-md text-lg text-white transition"
+                        >
+                            Logout
+                        </button>
+                    ) : (
+                        <NavLink
+                            to="/login"
+                            className="flex cursor-pointer px-1 rounded-md text-lg text-white transition"
+                        >
+                            Log in
+                        </NavLink>
+                    )}
                 </nav>
             </div>
         </>

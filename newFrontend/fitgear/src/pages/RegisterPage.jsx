@@ -21,7 +21,7 @@ export default function RegisterPage() {
         }
 
         setError("");
-        await register(email, password, "firstname", "last-name")
+        await register(email, password)
     }
 
     const handleSignIn = () => {

@@ -44,24 +44,24 @@ export const AuthProvider = ({ children }) => {
             setError("Ви вже залогінені");
             return; 
         }
-
         setError(null);
         try {
             const response = await api.post("/api/User/login", { email, password });
             await getProfile();
+            setError(null);
             navigate("/");
         } catch (e) {
             setError("Неправильний логін або пароль");
             console.log(e);
-        }
-        
+        } 
     };
 
-    const register = async (email, password, firstName, lastName ) => {
+    const register = async (email, password) => {
         setError(null);
         try {
-            await api.post("/api/User/register", { email, password, firstName, lastName});
+            await api.post("/api/User/register", { email, password});
             await login(email, password);
+            setError(null);
         } catch (e) {
             if (e.response && e.response.status === 400) {
                 let messages = [];
@@ -79,16 +79,13 @@ export const AuthProvider = ({ children }) => {
                     setError(messages[0]);
                 } else {
                     const errors = e.response.data;
-
                     for (const key in errors) {
                         if (Array.isArray(errors[key])) {
                             messages = messages.concat(errors[key]);
                         }
                     }
-
                     setError(messages[0]);
                 }
-
             } else {
                 setError("Error! Try again later");
             }
@@ -119,7 +116,7 @@ export const AuthProvider = ({ children }) => {
             console.log(e);
         }
     }
-
+    
     useEffect(() => {
         const fetchUser = async () => {
             await getProfile();
@@ -145,14 +142,12 @@ export const AuthProvider = ({ children }) => {
                 return Promise.reject(error);
             }
         );
-
-        const interval = setInterval(refreshToken, 110 * 1000);
+        const interval = setInterval(refreshToken, 10 * 30 * 1000);
 
         return () => {
             api.interceptors.response.eject(responseInterceptor);
             clearInterval(interval);
         };
-
     }, [logout, user]);
 
     return (
