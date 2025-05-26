@@ -14,7 +14,7 @@ namespace FitGear.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Announcement",
+                name: "Announcements",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
