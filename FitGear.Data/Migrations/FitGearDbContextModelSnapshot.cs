@@ -223,11 +223,9 @@ namespace FitGear.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
@@ -305,19 +303,19 @@ namespace FitGear.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "e6f4e5b4-89b9-4910-8776-b3c1afaf8bba",
+                            Id = "5a0e11f9-6c3c-4602-aaf5-f7ee4ce7754a",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
-                            Id = "02adc4ff-92d9-4bc8-800b-ef6730409b78",
+                            Id = "03babc1b-1031-4ecc-b504-eb1c3c0ada58",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "e439f856-8ac4-4733-ba6c-22166f0eb048",
+                            Id = "f4252df7-a608-4d85-a193-373a4e43b08a",
                             Name = "Moderator",
                             NormalizedName = "MODERATOR"
                         });

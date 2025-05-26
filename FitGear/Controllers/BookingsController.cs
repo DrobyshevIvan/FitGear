@@ -130,6 +130,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FitGear.Data;
 using FitGear.Models.Booking;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FitGear.Controllers
 {
@@ -146,6 +147,7 @@ namespace FitGear.Controllers
 
         // GET: api/Bookings
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<GetBookingDto>>> GetBookings()
         {
             var bookings = await _bookingService.GetBookingsAsync();

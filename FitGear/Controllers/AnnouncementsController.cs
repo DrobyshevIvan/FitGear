@@ -31,6 +31,7 @@ namespace FitGear.Controllers
 
         // GET: api/Announcement
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<GetAnnouncementDto>>> GetAnnouncements([FromQuery] AnnouncementFilter filter,
             [FromQuery] SortParams sortParams,
             [FromQuery] PageParams pageParams)
