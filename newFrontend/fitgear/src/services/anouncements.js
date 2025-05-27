@@ -5,7 +5,8 @@ export const getAllAnnouncements = async (filter) => {
   try {
     const response = await api.get("/api/Announcements", { 
       params: {
-        Title: filter?.search,
+        Title: filter?.search || "",
+        Description: filter?.search,  
         OrderBy: filter?.orderItem,
         SortDirection: filter?.sortDirection,
       }
@@ -45,6 +46,20 @@ export const getAnnouncementById = async (id) => {
   try {
     const response = await api.get(`/api/Announcements/${id}`);
     return response.data;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export const updateAnnouncement = async (id, data) => {
+  try {
+    await api.put(`/api/Announcements/${id}`, {
+      title: data.title,
+      description: data.description,
+      quantityAvailable: data.quantity,
+      pricePerDay: data.price,
+      id: id,
+    });
   } catch (err) {
     console.log(err);
   }
