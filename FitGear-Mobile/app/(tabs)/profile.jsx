@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
+import MenuList from '../../components/Profile/MenuList';
 import UserIntro from '../../components/Profile/UserIntro';
 import { useAuth } from '../context/AuthContext';
 
@@ -32,10 +33,12 @@ export default function profile() {
         fontFamily: 'nunito-bold',
         fontSize: 35
       }}>profile</Text>
-      
+
       {/* User Info */}
       <UserIntro />
 
+      {/* Menu */}
+      <MenuList/>
     </View>
   )
 }
