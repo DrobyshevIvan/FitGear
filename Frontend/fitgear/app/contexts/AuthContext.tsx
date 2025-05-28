@@ -79,9 +79,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const fetchUserInfo = async () => {
     try {
       const profileResponse = await axios.get(
-        `${API_BASE_URL}/api/UserProfile/profile`
+        `${API_BASE_URL}/api/UserProfile/profile`,
+        { withCredentials: true }
       );
-      const rolesResponse = await axios.get(`${API_BASE_URL}/api/User/roles`);
+      const rolesResponse = await axios.get(`${API_BASE_URL}/api/User/roles`, {
+        withCredentials: true,
+      });
       let roles: string[] = [];
       if (Array.isArray(rolesResponse.data)) {
         roles = rolesResponse.data;

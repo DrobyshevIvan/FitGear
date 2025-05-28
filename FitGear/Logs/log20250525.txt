@@ -1,0 +1,108 @@
+2025-05-25 08:08:00.269 +03:00 [INF] Cheeking for bookings to update status at: 25.05.2025 5:08:00
+2025-05-25 08:08:01.508 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-25 08:08:01.510 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-25 08:08:01.511 +03:00 [INF] Hosting environment: Development
+2025-05-25 08:08:01.511 +03:00 [INF] Content root path: C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear
+2025-05-25 08:11:04.212 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 45.4857 ms
+2025-05-25 08:11:04.224 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 3.2872 ms
+2025-05-25 08:11:06.374 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 3.3813 ms
+2025-05-25 08:11:06.377 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.1675 ms
+2025-05-25 08:11:09.832 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.2356 ms
+2025-05-25 08:11:09.838 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.3548 ms
+2025-05-25 08:11:56.934 +03:00 [INF] HTTP GET /api/User/login/google responded 302 in 156.0420 ms
+2025-05-25 08:12:02.731 +03:00 [INF] HTTP GET /signin-google responded 302 in 507.1847 ms
+2025-05-25 08:12:03.859 +03:00 [INF] User ivan.drobyshev@nure.ua already has Google login linked.
+2025-05-25 08:12:05.507 +03:00 [INF] Setting cookies for Google user ivan.drobyshev@nure.ua.
+2025-05-25 08:12:05.508 +03:00 [INF] Google login successful for ivan.drobyshev@nure.ua. Tokens set in cookies.
+2025-05-25 08:12:05.511 +03:00 [INF] HTTP GET /api/User/login/google/callback responded 302 in 2774.8867 ms
+2025-05-25 08:12:05.946 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 102.8271 ms
+2025-05-25 08:12:06.112 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 165.0762 ms
+2025-05-25 08:12:06.124 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 11.3989 ms
+2025-05-25 08:12:19.543 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 783.1969 ms
+2025-05-25 08:12:19.548 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.4649 ms
+2025-05-25 08:12:19.553 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.8219 ms
+2025-05-25 08:12:37.972 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 367.3261 ms
+2025-05-25 08:12:38.159 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.9990 ms
+2025-05-25 08:12:38.855 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.4157 ms
+2025-05-25 08:12:39.758 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.1342 ms
+2025-05-25 08:12:40.054 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.3089 ms
+2025-05-25 08:12:40.248 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.1928 ms
+2025-05-25 08:12:40.456 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.7595 ms
+2025-05-25 08:12:51.894 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 36.7282 ms
+2025-05-25 08:12:51.898 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.8375 ms
+2025-05-25 08:12:51.901 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.2687 ms
+2025-05-25 08:12:53.372 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.6408 ms
+2025-05-25 08:12:53.376 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.6924 ms
+2025-05-25 08:12:53.379 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.6764 ms
+2025-05-25 08:12:55.991 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.4563 ms
+2025-05-25 08:12:56.080 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 88.0867 ms
+2025-05-25 08:12:56.084 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.3630 ms
+2025-05-25 08:12:59.679 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.3740 ms
+2025-05-25 08:12:59.853 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.4549 ms
+2025-05-25 08:13:00.713 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 149.5969 ms
+2025-05-25 08:13:00.727 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.1813 ms
+2025-05-25 08:13:01.261 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.2146 ms
+2025-05-25 08:13:01.563 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 87.7630 ms
+2025-05-25 08:13:01.703 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.1157 ms
+2025-05-25 08:13:01.935 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 36.0437 ms
+2025-05-25 08:13:02.733 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.8015 ms
+2025-05-25 08:13:02.881 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.2370 ms
+2025-05-25 08:13:03.045 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.1134 ms
+2025-05-25 08:13:03.482 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 96.4935 ms
+2025-05-25 08:13:03.495 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.7550 ms
+2025-05-25 08:13:03.856 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.3785 ms
+2025-05-25 08:13:04.484 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.0876 ms
+2025-05-25 08:17:00.500 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 7.5276 ms
+2025-05-25 08:17:00.504 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 1.5340 ms
+2025-05-25 08:17:05.178 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.3830 ms
+2025-05-25 08:17:05.280 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.4645 ms
+2025-05-25 08:18:00.127 +03:00 [INF] HTTP GET /api/User/login/google responded 302 in 5.8176 ms
+2025-05-25 08:18:13.887 +03:00 [INF] HTTP GET /signin-google responded 302 in 349.7840 ms
+2025-05-25 08:18:13.933 +03:00 [INF] User ivan.drobyshev@nure.ua already has Google login linked.
+2025-05-25 08:18:14.068 +03:00 [INF] Setting cookies for Google user ivan.drobyshev@nure.ua.
+2025-05-25 08:18:14.069 +03:00 [INF] Google login successful for ivan.drobyshev@nure.ua. Tokens set in cookies.
+2025-05-25 08:18:14.069 +03:00 [INF] HTTP GET /api/User/login/google/callback responded 302 in 179.0860 ms
+2025-05-25 08:18:14.351 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 5.4248 ms
+2025-05-25 08:18:14.354 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 2.2941 ms
+2025-05-25 08:18:14.357 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 2.4114 ms
+2025-05-25 08:18:20.939 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 211.6510 ms
+2025-05-25 08:18:20.942 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.1255 ms
+2025-05-25 08:18:20.944 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.8619 ms
+2025-05-25 08:19:36.379 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 131.8410 ms
+2025-05-25 08:19:36.382 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.2306 ms
+2025-05-25 08:19:36.384 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.0144 ms
+2025-05-25 08:19:39.035 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.5039 ms
+2025-05-25 08:19:39.041 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 5.2231 ms
+2025-05-25 08:19:39.045 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.4519 ms
+2025-05-25 08:19:42.430 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1.7222 ms
+2025-05-25 08:19:42.434 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.4279 ms
+2025-05-25 08:19:42.437 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.1494 ms
+2025-05-25 08:23:10.769 +03:00 [INF] Cheeking for bookings to update status at: 25.05.2025 5:23:10
+2025-05-25 08:28:37.639 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 0.2407 ms
+2025-05-25 08:29:01.792 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-25 08:29:01.795 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-25 08:29:02.300 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImM4NmI4YWFmLTM2YjctNDYzNi1hY2JlLWIzOTNmNDQ1YTQxMSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJleHAiOjE3NDgxNTEwNjIsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.QOqzEMcpdu0vF-WNWqiBtjNH4_Hqy92xRIqCN9jlWHQ
+2025-05-25 08:29:02.471 +03:00 [INF] HTTP POST /api/User/login responded 200 in 701.5211 ms
+2025-05-25 08:29:04.140 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 127.8230 ms
+2025-05-25 08:29:04.186 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 40.0596 ms
+2025-05-25 08:29:18.633 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.2412 ms
+2025-05-25 08:29:24.943 +03:00 [INF] HTTP GET /api/User/login/google responded 302 in 1.0810 ms
+2025-05-25 08:29:28.550 +03:00 [INF] HTTP GET /signin-google responded 302 in 333.3996 ms
+2025-05-25 08:29:28.635 +03:00 [INF] User ivan.drobyshev@nure.ua already has Google login linked.
+2025-05-25 08:29:28.717 +03:00 [INF] Setting cookies for Google user ivan.drobyshev@nure.ua.
+2025-05-25 08:29:28.718 +03:00 [INF] Google login successful for ivan.drobyshev@nure.ua. Tokens set in cookies.
+2025-05-25 08:29:28.719 +03:00 [INF] HTTP GET /api/User/login/google/callback responded 302 in 165.5545 ms
+2025-05-25 08:29:29.453 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 4.1851 ms
+2025-05-25 08:29:29.517 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 5.1475 ms
+2025-05-25 08:29:37.145 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 6.2310 ms
+2025-05-25 08:29:37.152 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 5.4051 ms
+2025-05-25 08:29:46.968 +03:00 [INF] HTTP POST /api/User/logout responded 404 in 0.1703 ms
+2025-05-25 08:29:55.184 +03:00 [INF] Login Attempt for test1@gmail.com
+2025-05-25 08:29:55.185 +03:00 [INF] Looking for user with email test1@gmail.com
+2025-05-25 08:29:55.266 +03:00 [INF] Token generated for User with email test1@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MUBnbWFpbC5jb20iLCJqdGkiOiIwNGVjMzhiOS00MDEyLTQ3YmYtOTM5NS1mOTcyM2UzZDk4NmIiLCJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsInVpZCI6IjBjYWNjNzk0LTQ3NTAtNDYwNC1iMDMwLWFhMjEwMWU2MGMzMSIsImV4cCI6MTc0ODE1MTExNSwiaXNzIjoiRml0R2VhckFQSSIsImF1ZCI6IkZpdEdlYXJBUElDbGllbnQifQ.93eTaNZk7pFxd5wzWG3LVrdMoqGGRZjumB3LRKHIMg4
+2025-05-25 08:29:55.275 +03:00 [INF] HTTP POST /api/User/login responded 200 in 92.2258 ms
+2025-05-25 08:29:55.812 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 2.4922 ms
+2025-05-25 08:29:55.869 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 3.0868 ms
+2025-05-25 08:29:58.441 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 4.7466 ms
+2025-05-25 08:29:58.445 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 1.6821 ms
+2025-05-25 08:31:02.378 +03:00 [INF] Application is shutting down...

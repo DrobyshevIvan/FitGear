@@ -64,7 +64,7 @@ namespace FitGear.Controllers
         
         // PUT: api/Payment/5/process
         [HttpPut("{id}/process")]
-        [Authorize(Roles = "Administrator, Moderator")]
+        [Authorize]
         public async Task<ActionResult<Payment>> ProcessPayment(int id)
         {
             var payment = await _paymentService.ProcessPaymentAsync(id);

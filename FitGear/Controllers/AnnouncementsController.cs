@@ -42,7 +42,8 @@ namespace FitGear.Controllers
 
         // GET: api/Announcement/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<GetAnnouncementDto>> GetAnnouncement(int id)
+        [Authorize]
+        public async Task<ActionResult<GetDetailedAnnouncementDto>> GetAnnouncement(int id)
         {
             var announcement = await _announcementService.GetAnnouncementByIdAsync(id);
             if (announcement == null)

@@ -15,5 +15,11 @@ public class AnnouncementConfiguration : IEntityTypeConfiguration<Announcement>
 
         builder.Property(a => a.UpdatedAt)
             .HasDefaultValueSql("GETDATE()");
+        builder.HasOne(a => a.Category)
+            .WithMany(c => c.Announcements)
+            .HasForeignKey(a => a.CategoryId)
+            .OnDelete(DeleteBehavior.Restrict); // запретит удаление категории, если у нее есть связанные объявления
+        builder.Property(a => a.IsDeleted)
+            .HasDefaultValue(false);
     }
 }

@@ -58,10 +58,14 @@ public class AnnouncementService : IAnnouncementService
     //     return _mapper.Map<List<GetAnnouncementDto>>(announcements);
     // }
     
-    public async Task<GetAnnouncementDto> GetAnnouncementByIdAsync(int id)
+    public async Task<GetDetailedAnnouncementDto> GetAnnouncementByIdAsync(int id)
     {
-        var announcement = await _announcementsRepository.GetAsync(id);
-        return _mapper.Map<GetAnnouncementDto>(announcement);
+        var announcement = await _announcementsRepository.GetAsyncIncludingCategory(id);
+        var announcementDto = _mapper.Map<GetDetailedAnnouncementDto>(announcement);
+        announcementDto.CategoryName = announcement.Category?.Name ?? string.Empty;
+        announcementDto.AverageRating = announcement.Reviews.Any() ?
+            announcement.Reviews.Average(r => r.Rating) : 0;
+        return announcementDto;
     }
     
     public async Task<GetAnnouncementDto> CreateAnnouncementAsync(CreateAnnouncementDto announcementDto)
