@@ -1,4 +1,3 @@
-import axios from "axios";
 import { api } from "../api/api";
 
 export const getAllAnnouncements = async (filter) => {
@@ -15,7 +14,6 @@ export const getAllAnnouncements = async (filter) => {
     return response.data?.$values || [];
   } catch (error) {
     console.error("Failed to fetch announcements:", error);
-    throw new Error("Не вдалося завантажити оголошення");
   }
 };
 

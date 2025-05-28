@@ -121,6 +121,14 @@ export default function EditAnnouncement() {
                         </button>   
                     </div>
                 </div>
+                <div className="border max-w-[900px] mx-auto">
+                    <div>
+
+                    </div>
+                    <div className="flex">
+
+                    </div>
+                </div>
             </div>
         </>
     )
