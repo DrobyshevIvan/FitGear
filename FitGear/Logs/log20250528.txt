@@ -138,3 +138,14 @@
 2025-05-28 17:25:55.425 +03:00 [INF] HTTP POST /api/User/login responded 200 in 145.2724 ms
 2025-05-28 17:26:04.090 +03:00 [INF] HTTP GET /api/UserProfile/Profile responded 200 in 22.8020 ms
 2025-05-28 17:30:27.593 +03:00 [INF] Cheeking for bookings to update status at: 28.05.2025 14:30:27
+2025-05-28 18:09:03.555 +03:00 [INF] Cheeking for bookings to update status at: 28.05.2025 15:09:03
+2025-05-28 18:09:04.431 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-28 18:09:04.502 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-28 18:09:04.504 +03:00 [INF] Hosting environment: Development
+2025-05-28 18:09:04.506 +03:00 [INF] Content root path: C:\Users\masha\Documents\GitHub\FitGear\FitGear
+2025-05-28 18:11:26.369 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 94.6859 ms
+2025-05-28 18:11:49.255 +03:00 [INF] Login Attempt for usertest@example.com
+2025-05-28 18:11:49.260 +03:00 [INF] Looking for user with email usertest@example.com
+2025-05-28 18:11:49.461 +03:00 [INF] Token generated for User with email usertest@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VydGVzdEBleGFtcGxlLmNvbSIsImp0aSI6IjU1MmRiNzllLWY1NmItNDM4OS1iZWI5LTYyZTRiOGExNDA0MCIsImVtYWlsIjoidXNlcnRlc3RAZXhhbXBsZS5jb20iLCJ1aWQiOiIxZDcxN2RlMS0wMmRkLTRkMmMtYWI5NS1lMjZjY2NiMjdlYWQiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ4NDQ1MjI5LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.v195ZV41NQpJ-FcwfpU89opsCIBNWxYg3UpUJdcc0iI
+2025-05-28 18:11:49.648 +03:00 [INF] HTTP POST /api/User/login responded 200 in 575.6253 ms
+2025-05-28 18:11:57.021 +03:00 [INF] HTTP GET /api/UserProfile/Profile responded 200 in 93.9679 ms
