@@ -3,6 +3,7 @@ import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
+import { AuthProvider } from './context/AuthContext';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { useState } from 'react';
@@ -25,6 +26,7 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+      <AuthProvider>
       <Stack>
         {showWelcome ? (
           <Stack.Screen name='(auth)/entrancepage' options={{headerShown: false}}/>) : (
@@ -33,8 +35,10 @@ export default function RootLayout() {
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name='(auth)/authentication' options={{headerShown: false}}/>
         <Stack.Screen name='(auth)/register' options={{headerShown: false}}/>
+        <Stack.Screen name='usermenu/editprofilescreen' options={{headerShown: false}}/>
       </Stack>
       <StatusBar style="auto" />
+      </AuthProvider>
     </ThemeProvider>
   );
 }

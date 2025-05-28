@@ -1,7 +1,8 @@
-import { Feather } from '@expo/vector-icons';
+import { Feather, FontAwesome } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
-import { Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Alert, Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { useAuth } from '../context/AuthContext';
 
 export default function register() {
     const [email, setEmail] = useState('');
@@ -10,10 +11,34 @@ export default function register() {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const router = useRouter();
+    const { onRegister } = useAuth();
 
+    const handleRegister = async () => {
+      if (password !== confirmPassword) {
+        Alert.alert('Error', "Passwords don't march");
+        return;
+      }
+
+      try {
+        await onRegister(email, password);
+        Alert.alert('Success', 'Registration was successful');
+        router.push('/authentication');
+      } catch (error) {
+        let errorMessage = 'Something wrong';
+
+        if (error?.response?.data?.message) {
+          errorMessage = error.response.data.message;
+        } else if (error instanceof Error) {
+          errorMessage = error.message;
+        } else if(typeof error === 'string'){
+          errorMessage = error;
+        }
+        Alert.alert('Registration error', errorMessage);
+      }
+    };
   return (
     <ScrollView>
-        <Image source={require('./../../assets/images/logo-icon.png')}
+        <Image source={require('./../../assets/images/logo_icon.png')}
         style={styles.logoTop}/>
         <Text style={styles.title}>FitGear</Text>
 
@@ -54,7 +79,28 @@ export default function register() {
                     <Feather name={showPassword ? 'eye' : 'eye-off'} size={24} color='#444'/>
                 </TouchableOpacity>
             </View>
+            <TouchableOpacity style={styles.createButton}
+            onPress={handleRegister}>
+              <Text style={styles.createButtonText}>Create Account</Text>
+            </TouchableOpacity>
+            <Text style={styles.loginText}>
+              Already signed up?
+              <Text style={styles.loginLink}> Log in</Text>
+            </Text>
+            <Text style={styles.orText}>or</Text>
+
+            <TouchableOpacity style={styles.googleBtn}>
+              <Image source={require('./../../assets/images/icons8-google-96.png')}
+              style={styles.socialIcon}/>
+              <Text style={styles.googleBtnText}>Sign in with Google</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.facebookBtn}>
+              <FontAwesome name='facebook' size={24} color="white"/>
+              <Text style={styles.facebookBtnText}>Sign in with Facebook</Text>
+            </TouchableOpacity>
         </View>
+
+        <Image source={require('./../../assets/images/backimagebike.png')} style={styles.bikeImage}/>
     </ScrollView>
   )
 }
@@ -77,6 +123,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: 'blue',
         marginBottom: 10,
+        textAlign: 'center',
       },
       formContainer: {
         backgroundColor: '#f2f0e9',
@@ -187,6 +234,7 @@ const styles = StyleSheet.create({
         height: 140,
         marginTop: 30,
         resizeMode: 'contain',
+        
       },
       googleBtn: {
         flexDirection: 'row',
