@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using FitGear.Contracts;
+using FitGear.Core.Extenstions;
+using FitGear.Core.Filters;
 using FitGear.Data;
 using FitGear.Models.Booking;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -43,9 +45,21 @@ public class BookingService : IBookingService
         return booking;
     }
 
-    public async Task<IEnumerable<GetBookingDto>> GetBookingsAsync()
+    // public async Task<IEnumerable<GetBookingDto>> GetBookingsAsync()
+    // {
+    //     var bookings = await _bookingRepository.GetAllAsync();
+    //     return _mapper.Map<List<GetBookingDto>>(bookings);
+    // }
+    public async Task<IEnumerable<GetBookingDto>> GetBookingsAsync(BookingFilter bookingFilter)
     {
-        var bookings = await _bookingRepository.GetAllAsync();
+        var query = _bookingRepository.GetQueryable();
+        
+        if (bookingFilter != null)
+        {
+            query = query.Filter(bookingFilter);
+        }
+
+        var bookings = await query.ToListAsync();
         return _mapper.Map<List<GetBookingDto>>(bookings);
     }
 

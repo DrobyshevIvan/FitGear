@@ -22,19 +22,10 @@ const getAuthHeader = () => {
 };
 
 export const getAllAnnouncements = async (): Promise<Announcement[]> => {
-    const authHeaders = getAuthHeader();
-    const headers = { ...authHeaders } as Record<string, string>;
-    
-    const response = await fetch("http://localhost:5209/api/Announcements", {
-        headers
+    const response = await axios.get("http://localhost:5209/api/Announcements", {
+        withCredentials: true,
     });
-    
-    if (!response.ok) {
-        throw new Error("Failed to fetch announcements");
-    }
-    
-    const data = await response.json();
-    return data.$values || [];
+    return response.data.$values || [];
 };
 
 export const createAnnouncement = async (request: CreateAnnouncementRequest) => {

@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using FitGear.Core.Models.Category;
+using FitGear.Core.Models.Review;
 using FitGear.Data;
 using FitGear.Models.Announcement;
 using FitGear.Models.Booking;
@@ -14,6 +16,7 @@ public class MapperConfig : Profile
         CreateMap<Announcement, CreateAnnouncementDto>().ReverseMap();
         CreateMap<Announcement, GetAnnouncementDto>().ReverseMap();
         CreateMap<Announcement, UpdateAnnouncementDto>().ReverseMap();
+        CreateMap<Announcement, GetDetailedAnnouncementDto>().ReverseMap();
 
         CreateMap<Booking, CreateBookingDto>().ReverseMap();
         CreateMap<Booking, GetBookingDto>().ReverseMap();
@@ -24,5 +27,16 @@ public class MapperConfig : Profile
 
         CreateMap<User, ApiUserDto>().ReverseMap();
         CreateMap<User, UserProfileDto>().ReverseMap();
+        CreateMap<User, UpdateUserProfileDto>().ReverseMap();
+        CreateMap<User, UserDetailedProfileDto>().ReverseMap();
+        
+        CreateMap<Category, CategoryDto>().ReverseMap();
+        CreateMap<Category, UpdateCategoryDto>().ReverseMap();
+        
+        CreateMap<Review, CreateReviewDto>().ReverseMap();
+        CreateMap<Review, GetReviewDto>()
+            .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.User.UserName))
+            .ReverseMap();
+        CreateMap<Review, UpdateReviewDto>().ReverseMap();
     }
 }
