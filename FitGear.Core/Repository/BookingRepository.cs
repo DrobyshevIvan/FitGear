@@ -22,4 +22,11 @@ public class BookingRepository : GenericRepository<Booking>, IBookingRepository
                         (b.Status == BookingStatus.Active && b.To < now))
             .ToListAsync();
     }
+    
+    public IQueryable<Booking> GetQueryable()
+    {
+        return _context.Bookings
+            .Include(b => b.User)
+            .Include(b => b.Announcement);
+    }
 }

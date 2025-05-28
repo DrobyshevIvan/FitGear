@@ -70,7 +70,8 @@ builder.Services.AddCors(options =>
             "http://localhost:3000",     // для веб
             "exp://localhost:19000",     // для Expo
             "exp://192.168.0.153:8081",   // для физических устройств (замените на ваш IP)
-            "http://localhost:19000"     // для веб-версии Expo
+            "http://localhost:19000", // для веб-версии Expo
+            "http://localhost:5173"
         )
         .AllowAnyHeader()
         .AllowAnyMethod()
@@ -89,6 +90,10 @@ builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IUserProfileService, UserProfileService>();
 builder.Services.AddScoped<IUserProfileRepository, UserProfileRepository>();
 builder.Services.AddScoped<IAnnouncementService, AnnouncementService>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
+
 
 builder.Services.AddAuthentication(options =>
 {
