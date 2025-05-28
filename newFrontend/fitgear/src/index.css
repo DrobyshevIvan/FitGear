@@ -11,6 +11,10 @@
   background-color: var(--simple-yellow);
 }
 
+.bg-main {
+  background-color: var(--main-color);
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -40,6 +44,7 @@
 .fade-down {
   animation: fadeDown 1s ease-out forwards;
 }
+
 @layer components {
   .button-slide-color {
     @apply relative overflow-hidden text-black bg-[var(--simple-yellow)] transition-colors duration-300 z-0;
