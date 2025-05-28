@@ -45,6 +45,12 @@ export default function TabLayout() {
         title: 'Profile',
         tabBarIcon: ({ color }) => <FontAwesome name="user" size={24} color={color} />
       }}/>
+      <Tabs.Screen
+      name='explore'
+      options={{
+        title: "Explore",
+        href: null
+      }}/>
     </Tabs>
   );
 }

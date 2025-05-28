@@ -1,1 +1,13 @@
 
+2025-05-28 20:38:54.405 +03:00 [INF] Cheeking for bookings to update status at: 28.05.2025 17:38:54
+2025-05-28 20:38:56.194 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-28 20:38:56.364 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-28 20:38:56.367 +03:00 [INF] Hosting environment: Development
+2025-05-28 20:38:56.369 +03:00 [INF] Content root path: C:\Users\masha\Documents\GitHub\FitGear\FitGear
+2025-05-28 20:53:56.344 +03:00 [INF] Cheeking for bookings to update status at: 28.05.2025 17:53:56
+2025-05-28 21:08:56.510 +03:00 [INF] Cheeking for bookings to update status at: 28.05.2025 18:08:56
+2025-05-28 23:18:13.271 +03:00 [INF] Cheeking for bookings to update status at: 28.05.2025 20:18:13
+2025-05-28 23:18:15.081 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-28 23:18:15.240 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-28 23:18:15.243 +03:00 [INF] Hosting environment: Development
+2025-05-28 23:18:15.249 +03:00 [INF] Content root path: C:\Users\masha\Documents\GitHub\FitGear\FitGear

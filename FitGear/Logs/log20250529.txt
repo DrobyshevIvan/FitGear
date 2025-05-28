@@ -1,0 +1,49 @@
+2025-05-29 00:31:22.114 +03:00 [INF] Cheeking for bookings to update status at: 28.05.2025 21:31:22
+2025-05-29 00:31:23.014 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-29 00:31:23.091 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-29 00:31:23.093 +03:00 [INF] Hosting environment: Development
+2025-05-29 00:31:23.094 +03:00 [INF] Content root path: C:\Users\masha\Documents\GitHub\FitGear\FitGear
+2025-05-29 00:32:42.502 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 104.9563 ms
+2025-05-29 00:33:39.940 +03:00 [INF] Registration Attempt for seconduser@example.com
+2025-05-29 00:33:40.293 +03:00 [INF] HTTP POST /api/User/register responded 200 in 549.0161 ms
+2025-05-29 00:34:03.067 +03:00 [INF] Login Attempt for seconduser@example.com
+2025-05-29 00:34:03.070 +03:00 [INF] Looking for user with email seconduser@example.com
+2025-05-29 00:34:03.234 +03:00 [INF] Token generated for User with email seconduser@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwianRpIjoiOTJmMTI5NWYtOGJiOS00ZWJiLTg2YzYtMTJkZjVkMjRiMmY5IiwiZW1haWwiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwidWlkIjoiZDZiYWNmNjctMzBlNi00ZWI1LWJhMzQtZTU5ODNmMjEzMTJkIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc0ODQ2ODY0MywiaXNzIjoiRml0R2VhckFQSSIsImF1ZCI6IkZpdEdlYXJBUElDbGllbnQifQ.MZNvV-1QMoxW83e3TxYLlekVBnvfTxAXPfWMsxpFJiE
+2025-05-29 00:34:03.286 +03:00 [INF] HTTP POST /api/User/login responded 200 in 247.8038 ms
+2025-05-29 00:34:06.616 +03:00 [INF] HTTP GET /api/UserProfile/Profile responded 200 in 51.6572 ms
+2025-05-29 00:35:38.626 +03:00 [INF] HTTP PUT /api/UserProfile/profile responded 400 in 35.8065 ms
+2025-05-29 00:36:50.679 +03:00 [INF] HTTP PUT /api/UserProfile/profile responded 400 in 12.2146 ms
+2025-05-29 00:36:57.382 +03:00 [INF] HTTP PUT /api/UserProfile/profile responded 400 in 1.2076 ms
+2025-05-29 00:37:04.017 +03:00 [INF] HTTP PUT /api/UserProfile/profile responded 400 in 1.1631 ms
+2025-05-29 00:39:11.966 +03:00 [INF] HTTP PUT /api/UserProfile/profile responded 204 in 64.5444 ms
+2025-05-29 00:47:04.371 +03:00 [INF] Cheeking for bookings to update status at: 28.05.2025 21:47:04
+2025-05-29 00:47:05.292 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-29 00:47:05.367 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-29 00:47:05.368 +03:00 [INF] Hosting environment: Development
+2025-05-29 00:47:05.370 +03:00 [INF] Content root path: C:\Users\masha\Documents\GitHub\FitGear\FitGear
+2025-05-29 00:48:54.594 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 98.0903 ms
+2025-05-29 00:49:24.650 +03:00 [INF] Login Attempt for seconduser@example.com
+2025-05-29 00:49:24.654 +03:00 [INF] Looking for user with email seconduser@example.com
+2025-05-29 00:49:24.863 +03:00 [INF] Token generated for User with email seconduser@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwianRpIjoiNTc4N2I1NzYtNzIyMy00Y2ZmLWI5YTQtNWVkNTE3MTk0YmUwIiwiZW1haWwiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwidWlkIjoiZDZiYWNmNjctMzBlNi00ZWI1LWJhMzQtZTU5ODNmMjEzMTJkIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc0ODQ2OTU2NCwiaXNzIjoiRml0R2VhckFQSSIsImF1ZCI6IkZpdEdlYXJBUElDbGllbnQifQ.y_2JaW864ZBn_m3ZTB3pQNwPZwJSPBWZWAvFlca2dHE
+2025-05-29 00:49:25.069 +03:00 [INF] HTTP POST /api/User/login responded 200 in 612.8999 ms
+2025-05-29 00:49:29.307 +03:00 [INF] HTTP GET /api/UserProfile/Profile responded 200 in 102.1136 ms
+2025-05-29 00:50:18.662 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 7.1649 ms
+2025-05-29 00:50:35.858 +03:00 [INF] Login Attempt for seconduser@example.com
+2025-05-29 00:50:35.860 +03:00 [INF] Looking for user with email seconduser@example.com
+2025-05-29 00:50:35.934 +03:00 [INF] Token generated for User with email seconduser@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwianRpIjoiZjliOTYxMzAtOGI2OC00ZGNkLTg2MDgtN2E1YzNjZDdmZWMxIiwiZW1haWwiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwidWlkIjoiZDZiYWNmNjctMzBlNi00ZWI1LWJhMzQtZTU5ODNmMjEzMTJkIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc0ODQ2OTYzNSwiaXNzIjoiRml0R2VhckFQSSIsImF1ZCI6IkZpdEdlYXJBUElDbGllbnQifQ.8n_EJJHk0Qjx0oKJco-hXJE5AvJP1pawIiPuphQJDSg
+2025-05-29 00:50:35.964 +03:00 [INF] HTTP POST /api/User/login responded 200 in 121.6648 ms
+2025-05-29 00:50:41.046 +03:00 [INF] HTTP GET /api/UserProfile/Profile responded 200 in 29.8214 ms
+2025-05-29 00:55:06.184 +03:00 [INF] HTTP PUT /api/UserProfile/profile responded 204 in 60.3044 ms
+2025-05-29 01:02:05.347 +03:00 [INF] Cheeking for bookings to update status at: 28.05.2025 22:02:05
+2025-05-29 01:17:05.381 +03:00 [INF] Cheeking for bookings to update status at: 28.05.2025 22:17:05
+2025-05-29 01:32:05.398 +03:00 [INF] Cheeking for bookings to update status at: 28.05.2025 22:32:05
+2025-05-29 01:32:06.050 +03:00 [INF] Login Attempt for seconduser@example.com
+2025-05-29 01:32:06.052 +03:00 [INF] Looking for user with email seconduser@example.com
+2025-05-29 01:32:06.143 +03:00 [INF] Token generated for User with email seconduser@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwianRpIjoiMmZkYTUzZGMtNTU1NS00N2IyLTlmZWUtYzJjYTZmMjExNDIwIiwiZW1haWwiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwidWlkIjoiZDZiYWNmNjctMzBlNi00ZWI1LWJhMzQtZTU5ODNmMjEzMTJkIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc0ODQ3MjEyNiwiaXNzIjoiRml0R2VhckFQSSIsImF1ZCI6IkZpdEdlYXJBUElDbGllbnQifQ.iVei3sZJxdVO2aXnX7GFpY1fvKFgZLqocTsgh3UM3Tw
+2025-05-29 01:32:06.201 +03:00 [INF] HTTP POST /api/User/login responded 200 in 186.3455 ms
+2025-05-29 01:32:17.300 +03:00 [INF] HTTP GET /api/UserProfile/Profile responded 200 in 31.8104 ms
+2025-05-29 01:36:29.670 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 0.4458 ms
+2025-05-29 01:36:52.149 +03:00 [INF] Login Attempt for seconduser@example.com
+2025-05-29 01:36:52.150 +03:00 [INF] Looking for user with email seconduser@example.com
+2025-05-29 01:36:52.241 +03:00 [INF] Token generated for User with email seconduser@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwianRpIjoiMTc0ZGZhNGUtYzBlMi00M2U4LTgwZDUtYzFiOWM0NDIwOTI3IiwiZW1haWwiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwidWlkIjoiZDZiYWNmNjctMzBlNi00ZWI1LWJhMzQtZTU5ODNmMjEzMTJkIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc0ODQ3MjQxMiwiaXNzIjoiRml0R2VhckFQSSIsImF1ZCI6IkZpdEdlYXJBUElDbGllbnQifQ.NyyzsdTmiQAIgNA5m_l3pttOyPFtpKSUKPYOxSu1w2w
+2025-05-29 01:36:52.297 +03:00 [INF] HTTP POST /api/User/login responded 200 in 197.2916 ms
