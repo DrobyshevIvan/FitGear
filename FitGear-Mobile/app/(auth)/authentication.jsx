@@ -3,12 +3,34 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { useAuth } from '../context/AuthContext';
 
 export default function authentication() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordVisible, setPasswordVisible] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     const router = useRouter();
+    const auth = useAuth();
+
+    const handleLogin = async () => {
+      if (!email || !password) {
+        alert('Please enter email and password');
+      return;
+      }
+      try{
+        setIsLoading(true);
+        const result = await auth.onLogin(email, password);
+        console.log("Login succesful", result);
+        router.push('/home');
+      }
+      catch(error){
+        console.error("Login error:", error);
+        alert(error.response?.data?.message || "Login failed. Please try again.");
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
   return (
     <View style={styles.container}>
@@ -47,14 +69,14 @@ export default function authentication() {
             </TouchableOpacity>
         </View>
         <TouchableOpacity style={styles.loginBtn}
-        onPress={() => router.push('/home')}>
+        onPress={handleLogin}>
             <Text style={styles.loginBtnText}>Log in</Text>
         </TouchableOpacity>
 
         <Text style={styles.signupText}>
             New here?
         </Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => router.push('/register')}>
             <Text style={[styles.signupText, styles.link]}>Sign up</Text>
         </TouchableOpacity>
         <Text style={styles.orText}>or</Text>
@@ -91,6 +113,7 @@ const styles = StyleSheet.create({
         fontSize: 32,
         fontWeight: 'bold',
         color: 'blue',
+        textAlign: 'center',
         marginBottom: 10,
         marginTop: 80
       },

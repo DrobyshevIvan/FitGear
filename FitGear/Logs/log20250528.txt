@@ -1,0 +1,43 @@
+2025-05-28 00:11:51.392 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 212.8305 ms
+2025-05-28 00:14:08.700 +03:00 [INF] Cheeking for bookings to update status at: 27.05.2025 21:14:08
+2025-05-28 00:29:08.864 +03:00 [INF] Cheeking for bookings to update status at: 27.05.2025 21:29:08
+2025-05-28 00:44:09.065 +03:00 [INF] Cheeking for bookings to update status at: 27.05.2025 21:44:09
+2025-05-28 00:59:09.181 +03:00 [INF] Cheeking for bookings to update status at: 27.05.2025 21:59:09
+2025-05-28 01:14:09.322 +03:00 [INF] Cheeking for bookings to update status at: 27.05.2025 22:14:09
+2025-05-28 01:29:09.420 +03:00 [INF] Cheeking for bookings to update status at: 27.05.2025 22:29:09
+2025-05-28 01:31:56.832 +03:00 [INF] Login Attempt for usertest@example.com
+2025-05-28 01:31:56.844 +03:00 [INF] Looking for user with email usertest@example.com
+2025-05-28 01:31:57.400 +03:00 [INF] Token generated for User with email usertest@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VydGVzdEBleGFtcGxlLmNvbSIsImp0aSI6IjMwYTE5MzBlLWYxMjMtNDNkNC04NGE5LTI5NTViYjI3N2MwOSIsImVtYWlsIjoidXNlcnRlc3RAZXhhbXBsZS5jb20iLCJ1aWQiOiIxZDcxN2RlMS0wMmRkLTRkMmMtYWI5NS1lMjZjY2NiMjdlYWQiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ4Mzg1MjM3LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.wmG0SwAZEv8tzIv0qsehF4PM3PdLiMtYTV7AHmapHtc
+2025-05-28 01:31:58.039 +03:00 [INF] HTTP POST /api/User/login responded 200 in 1682.7967 ms
+2025-05-28 01:32:03.201 +03:00 [INF] HTTP GET /api/UserProfile/Profile responded 200 in 221.2494 ms
+2025-05-28 01:33:19.007 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 2.0406 ms
+2025-05-28 01:33:41.523 +03:00 [INF] Login Attempt for usertest@example.com
+2025-05-28 01:33:41.529 +03:00 [INF] Looking for user with email usertest@example.com
+2025-05-28 01:33:41.690 +03:00 [INF] Token generated for User with email usertest@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VydGVzdEBleGFtcGxlLmNvbSIsImp0aSI6IjE4NzhkODBmLWE3NjAtNDg5Ni05YTBiLWY4Zjg5YmY2NTY0YiIsImVtYWlsIjoidXNlcnRlc3RAZXhhbXBsZS5jb20iLCJ1aWQiOiIxZDcxN2RlMS0wMmRkLTRkMmMtYWI5NS1lMjZjY2NiMjdlYWQiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ4Mzg1MzQxLCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.wvJzQP24jUqWHIfajt6DnWqUgbvdDKcebSI8u6zqYJo
+2025-05-28 01:33:41.880 +03:00 [INF] HTTP POST /api/User/login responded 200 in 422.4482 ms
+2025-05-28 01:33:49.745 +03:00 [INF] HTTP GET /api/UserProfile/Profile responded 200 in 53.6955 ms
+2025-05-28 11:08:57.041 +03:00 [INF] Cheeking for bookings to update status at: 28.05.2025 08:08:57
+2025-05-28 11:08:59.076 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-28 11:08:59.238 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-28 11:08:59.241 +03:00 [INF] Hosting environment: Development
+2025-05-28 11:08:59.244 +03:00 [INF] Content root path: C:\Users\masha\Documents\GitHub\FitGear\FitGear
+2025-05-28 11:10:08.349 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 279.1632 ms
+2025-05-28 11:10:33.271 +03:00 [INF] Login Attempt for usertest@example.com
+2025-05-28 11:10:33.284 +03:00 [INF] Looking for user with email usertest@example.com
+2025-05-28 11:10:33.929 +03:00 [INF] Token generated for User with email usertest@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VydGVzdEBleGFtcGxlLmNvbSIsImp0aSI6IjAyOTViYzUyLTVlMjktNDgyNS1iYjJlLTY0OTMzMmU4NGEyYSIsImVtYWlsIjoidXNlcnRlc3RAZXhhbXBsZS5jb20iLCJ1aWQiOiIxZDcxN2RlMS0wMmRkLTRkMmMtYWI5NS1lMjZjY2NiMjdlYWQiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ4NDE5OTUzLCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.FKv-9hwz5BkqPXSmmYppkV-2kt5z-8bl2maE4__zDT0
+2025-05-28 11:10:34.519 +03:00 [INF] HTTP POST /api/User/login responded 200 in 1765.5768 ms
+2025-05-28 11:10:39.031 +03:00 [INF] HTTP GET /api/UserProfile/Profile responded 200 in 272.8844 ms
+2025-05-28 11:11:24.243 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 47.4637 ms
+2025-05-28 11:11:43.968 +03:00 [INF] Login Attempt for usertest@example.com
+2025-05-28 11:11:43.973 +03:00 [INF] Looking for user with email usertest@example.com
+2025-05-28 11:11:44.173 +03:00 [INF] Token generated for User with email usertest@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VydGVzdEBleGFtcGxlLmNvbSIsImp0aSI6ImIwZTFjNzdhLWJiZDUtNDk5YS1hNTBkLTRjYjhiMmRlZGU4ZCIsImVtYWlsIjoidXNlcnRlc3RAZXhhbXBsZS5jb20iLCJ1aWQiOiIxZDcxN2RlMS0wMmRkLTRkMmMtYWI5NS1lMjZjY2NiMjdlYWQiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ4NDIwMDI0LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.WK3yVh4_kpMRnQXGpJ_WnPDc3mVnrSAycZZ38yBUP6w
+2025-05-28 11:11:44.246 +03:00 [INF] HTTP POST /api/User/login responded 200 in 321.3262 ms
+2025-05-28 11:11:54.427 +03:00 [INF] HTTP GET /api/UserProfile/Profile responded 200 in 54.8205 ms
+2025-05-28 11:12:22.098 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 4.2352 ms
+2025-05-28 11:12:46.821 +03:00 [INF] Login Attempt for usertest@example.com
+2025-05-28 11:12:46.823 +03:00 [INF] Looking for user with email usertest@example.com
+2025-05-28 11:12:47.017 +03:00 [INF] Token generated for User with email usertest@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VydGVzdEBleGFtcGxlLmNvbSIsImp0aSI6IjlhMzM2NmUwLWJmMWQtNDA3My1hMWJlLWEyNWEyNDc4ZjQ3NCIsImVtYWlsIjoidXNlcnRlc3RAZXhhbXBsZS5jb20iLCJ1aWQiOiIxZDcxN2RlMS0wMmRkLTRkMmMtYWI5NS1lMjZjY2NiMjdlYWQiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ4NDIwMDg3LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.zDMIB3JOO_lINZYR-h5MXHa8q_fSiDESRDcfqnnDbt4
+2025-05-28 11:12:47.118 +03:00 [INF] HTTP POST /api/User/login responded 200 in 387.6589 ms
+2025-05-28 11:12:50.784 +03:00 [INF] HTTP GET /api/UserProfile/Profile responded 200 in 65.0512 ms
+2025-05-28 11:14:10.508 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 1.1851 ms
+2025-05-28 11:23:59.228 +03:00 [INF] Cheeking for bookings to update status at: 28.05.2025 08:23:59
