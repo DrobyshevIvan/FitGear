@@ -5,7 +5,7 @@ export const getAllAnnouncements = async (filter) => {
   try {
     const response = await api.get("/api/Announcements", { 
       params: {
-        Title: filter?.search || "",
+        Title: filter?.search,
         Description: filter?.search,  
         OrderBy: filter?.orderItem,
         SortDirection: filter?.sortDirection,

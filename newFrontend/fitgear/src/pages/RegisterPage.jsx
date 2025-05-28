@@ -3,11 +3,11 @@ import iconEyeOn from '../assets/eyeOn.svg';
 import iconEyeOff from '../assets/eyeOff.svg';
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
-
+import BackButton from "../components/BackButton";
 
 export default function RegisterPage() {
     const navigate = useNavigate();
-    const {register, loading, error, setError } = useContext(AuthContext);
+    const {register, loading, error, setError, googleAuth } = useContext(AuthContext);
     const [isHidden, setHidden] = useState(true);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -28,8 +28,16 @@ export default function RegisterPage() {
         navigate('/login');
     };
 
+    const handleGoogleAuth = async (e) => {
+        e.preventDefault();
+        await googleAuth();
+    };
+
     return (
         <>
+            <div className="fixed pt-5">
+                <BackButton />
+            </div>
             <div className="flex justify-center items-center min-h-screen">
                 <form className="flex flex-col items-center w-[25vw] min-w-[400px] h-[600px] mt-[-100px] border border-gray-300 shadow-xl/10 rounded-md">
                     <h1 className="text-3xl my-6 text-medium">Fitgear</h1>
@@ -63,6 +71,9 @@ export default function RegisterPage() {
                     </button>
                     <p className="mb-5">Already signed up? <a onClick={handleSignIn} className="text-blue-500 cursor-pointer underline select-none">Sign in</a></p>
                     <p>or</p>
+                    <button onClick={handleGoogleAuth} className="border border-gray-300 py-2 px-4 mt-3 cursor-pointer">
+                        Sign up with Google
+                    </button>
                 </form>
             </div>
         </>

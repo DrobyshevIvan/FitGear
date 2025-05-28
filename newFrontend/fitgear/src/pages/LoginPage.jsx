@@ -3,6 +3,7 @@ import iconEyeOn from '../assets/eyeOn.svg';
 import iconEyeOff from '../assets/eyeOff.svg';
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
+import BackButton from "../components/BackButton";
 
 
 export default function LoginPage() {
@@ -29,9 +30,12 @@ export default function LoginPage() {
     }
 
     return (
-        <>
+        <>  
+            <div className="fixed pt-5">
+                <BackButton />
+            </div>
             <div className="flex justify-center items-center min-h-screen">
-                <form className="flex flex-col items-center w-[25vw] h-[500px] mt-[-100px] border border-gray-300 shadow-xl/10 rounded-md">
+                <form className="flex flex-col items-center w-[25vw] h-[550px] min-w-[400px] mt-[-120px] border border-gray-300 shadow-xl/10 rounded-md">
                     <h1 className="text-3xl my-6 text-medium">Fitgear</h1>
                     <h3 className="text-2xl mt-2 mb-8 border-b-1 w-95 py-3">Login</h3>
                     <div className="w-90">

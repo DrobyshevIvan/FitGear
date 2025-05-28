@@ -135,7 +135,6 @@ export const AuthProvider = ({ children }) => {
                         await refreshToken();
                         return api(originalRequest);
                     } catch (refreshError) {
-                        await logout();
                         return Promise.reject(refreshError);
                     }
                 }
@@ -148,7 +147,7 @@ export const AuthProvider = ({ children }) => {
             api.interceptors.response.eject(responseInterceptor);
             clearInterval(interval);
         };
-    }, [logout, user]);
+    }, [user]);
 
     return (
         <AuthContext.Provider value={{ user, login, register, logout, loading, error, setError, hasRole, googleAuth }}>
