@@ -13,6 +13,7 @@ export default function MainPage() {
     <div className='flex flex-col'>
       <Header />
       <div className='relative w-full h-screen min-h-screen sm:min-h-[700px] md:min-h-[800px] lg:min-h-[900px]'>
+
         <div
           style={{ backgroundImage: `url(${background})`}}
           className='absolute inset-0 bg-cover bg-center z-0 bg-position-md bg-position-lg'
@@ -51,7 +52,6 @@ export default function MainPage() {
         </div>
       </div>
       <div className='relative w-full h-screen min-h-screen sm:min-h-[700px] md:min-h-[800px] lg:min-h-[900px]'>
-        
       </div>
     </div>
   );
