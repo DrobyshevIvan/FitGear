@@ -66,7 +66,7 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", b => b
-        .WithOrigins("http://localhost:3000") // или твой реальный адрес фронта
+        .WithOrigins("http://localhost:5173") // или твой реальный адрес фронта
         .AllowAnyHeader()
         .AllowAnyMethod()
         .AllowCredentials()

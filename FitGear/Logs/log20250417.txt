@@ -1,2 +1,0 @@
-2025-04-17 12:34:09.546 +03:00 [INF] Cheeking for bookings to update status at: 17.04.2025 9:34:09
-2025-04-17 12:49:09.770 +03:00 [INF] Cheeking for bookings to update status at: 17.04.2025 9:49:09
