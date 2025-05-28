@@ -1,5 +1,6 @@
 ﻿using System.Linq.Expressions;
 using FitGear.Core.Filters;
+using FitGear.Core.Pagination;
 using FitGear.Core.Sorting;
 using FitGear.Data;
 
@@ -30,7 +31,21 @@ public static class AnnouncementExtensions
             query = query.Where(a => a.PricePerDay <= announcementFilter.MaxPricePerDay);
         }
 
+        if (announcementFilter.Category is not null)
+        {
+            query = query.Where(a => a.Category.Name.Contains(announcementFilter.Category));
+        }
+
         return query;
+    }
+
+    public static IQueryable<Announcement> Paginate(this IQueryable<Announcement> query, PageParams pageParams)
+    {
+        var page = pageParams.Page ?? 1;
+        var pageSize = pageParams.Size ?? 10;
+
+        return query.Skip((page - 1) * pageSize)
+            .Take(pageSize);
     }
 
     public static IQueryable<Announcement> Sort(this IQueryable<Announcement> query, SortParams sortParams)
@@ -50,6 +65,7 @@ public static class AnnouncementExtensions
             nameof(Announcement.Description) => x => x.Description,
             nameof(Announcement.CreatedAt) => x => x.CreatedAt,
             nameof(Announcement.PricePerDay) => x => x.PricePerDay,
+            "Rating" => x => x.Reviews.Any() ? x.Reviews.Average(r => r.Rating) : 0,
             _ => x => x.Title
         };
     }

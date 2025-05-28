@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using FitGear.Contracts;
 using FitGear.Core.Filters;
+using FitGear.Core.Pagination;
 using FitGear.Core.Sorting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -30,16 +31,19 @@ namespace FitGear.Controllers
 
         // GET: api/Announcement
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<GetAnnouncementDto>>> GetAnnouncements([FromQuery] AnnouncementFilter filter,
-            [FromQuery] SortParams sortParams)
+            [FromQuery] SortParams sortParams,
+            [FromQuery] PageParams pageParams)
         {
-            var announcements = await _announcementService.GetAnnouncementsAsync(filter, sortParams);
+            var announcements = await _announcementService.GetAnnouncementsAsync(filter, sortParams, pageParams);
             return Ok(announcements);
         }
 
         // GET: api/Announcement/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<GetAnnouncementDto>> GetAnnouncement(int id)
+        [Authorize]
+        public async Task<ActionResult<GetDetailedAnnouncementDto>> GetAnnouncement(int id)
         {
             var announcement = await _announcementService.GetAnnouncementByIdAsync(id);
             if (announcement == null)

@@ -30,6 +30,9 @@ namespace FitGear.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
@@ -38,6 +41,11 @@ namespace FitGear.Migrations
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<decimal>("PricePerDay")
                         .HasColumnType("decimal(18, 2)");
@@ -54,7 +62,12 @@ namespace FitGear.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETDATE()");
 
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("Announcements");
                 });
@@ -91,6 +104,23 @@ namespace FitGear.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Bookings");
+                });
+
+            modelBuilder.Entity("FitGear.Data.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("FitGear.Data.Notification", b =>
@@ -223,11 +253,9 @@ namespace FitGear.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
@@ -305,19 +333,19 @@ namespace FitGear.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "e6f4e5b4-89b9-4910-8776-b3c1afaf8bba",
+                            Id = "17855cb3-f1bd-46db-b493-c60b627ed139",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
-                            Id = "02adc4ff-92d9-4bc8-800b-ef6730409b78",
+                            Id = "129bf042-1478-4968-b161-51f62de0f62e",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "e439f856-8ac4-4733-ba6c-22166f0eb048",
+                            Id = "c6acafa8-0252-4005-8439-fcd9d76ec1a4",
                             Name = "Moderator",
                             NormalizedName = "MODERATOR"
                         });
@@ -427,6 +455,17 @@ namespace FitGear.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("FitGear.Data.Announcement", b =>
+                {
+                    b.HasOne("FitGear.Data.Category", "Category")
+                        .WithMany("Announcements")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("FitGear.Data.Booking", b =>
@@ -558,6 +597,11 @@ namespace FitGear.Migrations
             modelBuilder.Entity("FitGear.Data.Booking", b =>
                 {
                     b.Navigation("Payment");
+                });
+
+            modelBuilder.Entity("FitGear.Data.Category", b =>
+                {
+                    b.Navigation("Announcements");
                 });
 
             modelBuilder.Entity("FitGear.Data.User", b =>

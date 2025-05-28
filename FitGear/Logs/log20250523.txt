@@ -1,0 +1,493 @@
+2025-05-23 07:46:08.637 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 4:46:08
+2025-05-23 08:01:31.018 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 5:01:31
+2025-05-23 08:16:31.847 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 5:16:31
+2025-05-23 08:31:32.142 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 5:31:32
+2025-05-23 08:35:41.275 +03:00 [WRN] As of ""2025-05-23T05:35:33.0214401+00:00"", the heartbeat has been running for ""00:00:01.9565974"" which is longer than ""00:00:01"". This could be caused by thread pool starvation.
+2025-05-23 08:46:32.718 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 5:46:32
+2025-05-23 10:35:55.047 +03:00 [INF] HTTP POST /api/User/register responded 400 in 2943.7681 ms
+2025-05-23 10:36:59.093 +03:00 [INF] HTTP POST /api/User/register responded 400 in 5.5370 ms
+2025-05-23 10:39:01.955 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 7:39:01
+2025-05-23 10:39:01.959 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4468.4092 ms
+2025-05-23 10:40:18.167 +03:00 [INF] Login Attempt for qwer@gmail.com
+2025-05-23 10:40:18.218 +03:00 [INF] Looking for user with email qwer@gmail.com
+2025-05-23 10:40:18.811 +03:00 [WRN] User with email qwer@gmail.com was not found
+2025-05-23 10:40:18.816 +03:00 [INF] HTTP POST /api/User/login responded 401 in 781.6899 ms
+2025-05-23 10:40:52.753 +03:00 [INF] Login Attempt for test1@gmail.com
+2025-05-23 10:40:52.755 +03:00 [INF] Looking for user with email test1@gmail.com
+2025-05-23 10:40:54.705 +03:00 [INF] Token generated for User with email test1@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MUBnbWFpbC5jb20iLCJqdGkiOiJmZTM0YTQ2Ni03N2VjLTQzNDQtYWViMi01YmZjYTYzODNiYjQiLCJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsInVpZCI6IjBjYWNjNzk0LTQ3NTAtNDYwNC1iMDMwLWFhMjEwMWU2MGMzMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDc5ODY2NTQsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.8Iqt2bcayvbJ4EHNPzwqv1IDPcRliUcM8EHDFS3B8Sg
+2025-05-23 10:40:57.131 +03:00 [INF] HTTP POST /api/User/login responded 200 in 4378.8449 ms
+2025-05-23 10:42:09.047 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-23 10:42:09.048 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-23 10:42:09.383 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjUwY2Y3ODMxLWMwMDAtNDI0Yy04ZGIwLWU5YmEzNDE0Zjk4YSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3OTg2NzI5LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.T4TSHh3xet3BrbjZLBAnH6sLwIY_JCvH1b8Z4iLu24w
+2025-05-23 10:42:09.657 +03:00 [INF] HTTP POST /api/User/login responded 200 in 611.0839 ms
+2025-05-23 10:43:18.926 +03:00 [INF] Login Attempt for test1@gmail.com
+2025-05-23 10:43:18.927 +03:00 [INF] Looking for user with email test1@gmail.com
+2025-05-23 10:43:19.107 +03:00 [INF] Token generated for User with email test1@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MUBnbWFpbC5jb20iLCJqdGkiOiJjNWM0YTFjMi1iYThhLTQwY2YtYjU5Yy04ZjRlOTEwZjZkNTAiLCJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsInVpZCI6IjBjYWNjNzk0LTQ3NTAtNDYwNC1iMDMwLWFhMjEwMWU2MGMzMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDc5ODY3OTksImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.4Zqzw2XyJuJIz3nF-_kBRB0EPvjmIHLfA81y6KGzkhk
+2025-05-23 10:43:19.288 +03:00 [INF] HTTP POST /api/User/login responded 200 in 516.4126 ms
+2025-05-23 10:43:46.187 +03:00 [INF] Login Attempt for test1@gmail.com
+2025-05-23 10:43:46.188 +03:00 [INF] Looking for user with email test1@gmail.com
+2025-05-23 10:43:46.339 +03:00 [INF] Token generated for User with email test1@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MUBnbWFpbC5jb20iLCJqdGkiOiJkY2RjOTc2ZS0zMmRkLTQwNTMtODhhNi0xYWI5OTcxZmQ5NGMiLCJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsInVpZCI6IjBjYWNjNzk0LTQ3NTAtNDYwNC1iMDMwLWFhMjEwMWU2MGMzMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDc5ODY4MjYsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.a68nuNsL79udgHepTAddwbLHOPilpo2L0Kvr3b2nwBY
+2025-05-23 10:43:46.414 +03:00 [INF] HTTP POST /api/User/login responded 200 in 256.4160 ms
+2025-05-23 10:45:15.167 +03:00 [INF] Login Attempt for test1@gmail.com
+2025-05-23 10:45:15.168 +03:00 [INF] Looking for user with email test1@gmail.com
+2025-05-23 10:45:15.471 +03:00 [INF] Token generated for User with email test1@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MUBnbWFpbC5jb20iLCJqdGkiOiIwZGFhZjllNy0zY2ZhLTQ3NzctYWZjNC1hN2MyYmFiZTM5N2IiLCJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsInVpZCI6IjBjYWNjNzk0LTQ3NTAtNDYwNC1iMDMwLWFhMjEwMWU2MGMzMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDc5ODY5MTUsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.q1omKEKOVI1p54iFp_D_DZjEXfdbXjqa01s6uVmlUdY
+2025-05-23 10:45:15.847 +03:00 [INF] HTTP POST /api/User/login responded 200 in 680.8074 ms
+2025-05-23 10:46:26.544 +03:00 [INF] Login Attempt for test1@gmail.com
+2025-05-23 10:46:26.545 +03:00 [INF] Looking for user with email test1@gmail.com
+2025-05-23 10:46:26.866 +03:00 [INF] Token generated for User with email test1@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MUBnbWFpbC5jb20iLCJqdGkiOiJiYzI1OTIwZi1mOGVmLTRjMDQtOThiOC1mMTcxYTI2NjRkYWMiLCJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsInVpZCI6IjBjYWNjNzk0LTQ3NTAtNDYwNC1iMDMwLWFhMjEwMWU2MGMzMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDc5ODY5ODYsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.jVpp2cyrXDl2p2K6yRX7RvScdUW2CtXPJTjbcbgUPos
+2025-05-23 10:46:27.112 +03:00 [INF] HTTP POST /api/User/login responded 200 in 568.6428 ms
+2025-05-23 10:48:17.658 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 0.4509 ms
+2025-05-23 10:48:36.335 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-23 10:48:36.336 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-23 10:48:36.656 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjdhNWE4ZWJmLWRlYTEtNDgyZi1iMjdkLTYyNjA0MWUzZjc1ZSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3OTg3MTE2LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.WEU6CU9lqhE0D7bWCO5gW_aDqwrhCULo3KWjrpFIyC8
+2025-05-23 10:48:36.853 +03:00 [INF] HTTP POST /api/User/login responded 200 in 519.3164 ms
+2025-05-23 10:53:26.604 +03:00 [INF] Login Attempt for test1@gmail.com
+2025-05-23 10:53:26.605 +03:00 [INF] Looking for user with email test1@gmail.com
+2025-05-23 10:53:26.801 +03:00 [INF] Token generated for User with email test1@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MUBnbWFpbC5jb20iLCJqdGkiOiIzZmI2YmJiZC03ZTlkLTQ5MmEtOTc5OS05NzhjZTM1YjA4YjEiLCJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsInVpZCI6IjBjYWNjNzk0LTQ3NTAtNDYwNC1iMDMwLWFhMjEwMWU2MGMzMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDc5ODc0MDYsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.w4XjOXRC2qt2BsGbnfqCGo2b08nny9iHgg6Q1nckUFU
+2025-05-23 10:53:26.955 +03:00 [INF] HTTP POST /api/User/login responded 200 in 352.5328 ms
+2025-05-23 10:53:39.833 +03:00 [INF] HTTP POST /api/User/login responded 400 in 1.2726 ms
+2025-05-23 10:54:02.373 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 7:54:02
+2025-05-23 10:54:57.884 +03:00 [INF] Application is shutting down...
+2025-05-23 10:56:04.773 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 7:56:04
+2025-05-23 10:56:08.736 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-23 10:56:08.739 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-23 10:56:08.739 +03:00 [INF] Hosting environment: Development
+2025-05-23 10:56:08.740 +03:00 [INF] Content root path: C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear
+2025-05-23 11:03:43.616 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 88.1611 ms
+2025-05-23 11:04:14.937 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-23 11:04:14.943 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-23 11:04:15.395 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjM1ZjllN2YzLTJjNTYtNGYwYy1iOTU2LTZjNDIwNjdiNzQ3NSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3OTg4MDU1LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.yU7TiPjoch0g-VeAFjqCnbh5Sg3O4zFY1NTpwPD6_qA
+2025-05-23 11:04:15.689 +03:00 [INF] HTTP POST /api/User/login responded 200 in 893.1368 ms
+2025-05-23 11:04:18.643 +03:00 [INF] HTTP GET /api/Announcement responded 404 in 9.1226 ms
+2025-05-23 11:04:32.341 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 239.5756 ms
+2025-05-23 11:05:29.792 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-23 11:05:29.792 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-23 11:05:30.210 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImY3YjgzODdmLTAwODYtNGQwYy05YjRlLTQyMjM4NzUxNWI3MiIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3OTg4MTMwLCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.qKkBB9nBigSgBiQwkUEgZuXfdBee1Qjn8OqgFThGwf0
+2025-05-23 11:05:30.337 +03:00 [INF] HTTP POST /api/User/login responded 200 in 548.7412 ms
+2025-05-23 11:05:43.642 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 6.5010 ms
+2025-05-23 11:11:09.968 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 8:11:09
+2025-05-23 11:16:08.343 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 6.0657 ms
+2025-05-23 11:26:10.378 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 8:26:10
+2025-05-23 11:34:22.596 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 0.9349 ms
+2025-05-23 11:36:32.043 +03:00 [INF] Application is shutting down...
+2025-05-23 11:36:41.282 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 8:36:41
+2025-05-23 11:36:42.147 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-23 11:36:42.149 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-23 11:36:42.149 +03:00 [INF] Hosting environment: Development
+2025-05-23 11:36:42.150 +03:00 [INF] Content root path: C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear
+2025-05-23 11:37:05.991 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-23 11:37:05.994 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-23 11:37:06.331 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImQ3MGE5ZGUwLTY4NTktNDE4Ni1hY2E3LTE3MzYzZGEyMWFjZSIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3OTg5NTQ2LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.5HDKYcil07Cs_lJo0d2LsqMCEuBFzhslL9UvUr3mm8A
+2025-05-23 11:37:06.584 +03:00 [INF] HTTP POST /api/User/login responded 200 in 751.4125 ms
+2025-05-23 11:37:09.869 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 115.8500 ms
+2025-05-23 11:39:23.927 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 6.0404 ms
+2025-05-23 11:39:23.990 +03:00 [INF] Refresh Token Attempt for 
+2025-05-23 11:39:24.323 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 341.6483 ms
+2025-05-23 11:39:24.408 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 30.0450 ms
+2025-05-23 11:40:02.007 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 7.9152 ms
+2025-05-23 11:40:02.487 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 5.3899 ms
+2025-05-23 11:40:19.164 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 0.4253 ms
+2025-05-23 11:40:38.730 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-23 11:40:38.731 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-23 11:40:39.011 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjVjMWY3MjllLTI0MTktNGMxZS05Y2NmLTczM2NlYTM3OTY4YyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3OTg5NzU5LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.JVYcEwiOeOeWiCiVYg7K1LZUEGx1rPnHSz87-xM2XKM
+2025-05-23 11:40:39.189 +03:00 [INF] HTTP POST /api/User/login responded 200 in 470.5509 ms
+2025-05-23 11:42:55.404 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.9240 ms
+2025-05-23 11:42:55.464 +03:00 [INF] Refresh Token Attempt for 
+2025-05-23 11:42:55.720 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 257.1078 ms
+2025-05-23 11:42:55.799 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 26.4630 ms
+2025-05-23 11:50:36.246 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.4478 ms
+2025-05-23 11:50:36.251 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.2835 ms
+2025-05-23 11:50:38.803 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.4928 ms
+2025-05-23 11:50:38.806 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.2933 ms
+2025-05-23 11:50:39.940 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.3082 ms
+2025-05-23 11:50:39.943 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.1515 ms
+2025-05-23 11:50:46.452 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.1954 ms
+2025-05-23 11:50:46.456 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.1940 ms
+2025-05-23 11:50:48.662 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.2087 ms
+2025-05-23 11:50:48.665 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.3765 ms
+2025-05-23 11:50:50.285 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.1398 ms
+2025-05-23 11:50:50.289 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.1392 ms
+2025-05-23 11:50:53.507 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.2113 ms
+2025-05-23 11:50:53.511 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.3688 ms
+2025-05-23 11:51:04.344 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.1239 ms
+2025-05-23 11:51:04.345 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.1140 ms
+2025-05-23 11:51:08.558 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.1910 ms
+2025-05-23 11:51:08.563 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.1366 ms
+2025-05-23 11:51:09.929 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.1466 ms
+2025-05-23 11:51:09.930 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.1258 ms
+2025-05-23 11:51:22.543 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.5746 ms
+2025-05-23 11:51:22.625 +03:00 [INF] Refresh Token Attempt for 
+2025-05-23 11:51:22.922 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 298.6673 ms
+2025-05-23 11:51:23.030 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 68.1905 ms
+2025-05-23 11:51:29.230 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 116.1155 ms
+2025-05-23 11:51:29.774 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 5.1732 ms
+2025-05-23 11:51:42.592 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 8:51:42
+2025-05-23 11:52:19.823 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.6616 ms
+2025-05-23 11:52:19.827 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 0.1892 ms
+2025-05-23 11:52:32.293 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 0.3308 ms
+2025-05-23 11:52:46.267 +03:00 [INF] Login Attempt for test@gmail.com
+2025-05-23 11:52:46.267 +03:00 [INF] Looking for user with email test@gmail.com
+2025-05-23 11:52:46.386 +03:00 [INF] Token generated for User with email test@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6IjEzZmM3NDM2LTY1NmItNDExMC1hYTdjLWMxOTVlYjkyMGUyNCIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJ1aWQiOiJlYWFiM2JlOS1hNThjLTQ5NTUtYTNmOS02ZDQxZmNhM2IzNzYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiVXNlciIsIk1vZGVyYXRvciIsIkFkbWluaXN0cmF0b3IiXSwiZXhwIjoxNzQ3OTkwNDg2LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.NUU-fF2qklYV8sxEJHUYGmg0WVXphBqdFZZz0J2ipZs
+2025-05-23 11:52:46.506 +03:00 [INF] HTTP POST /api/User/login responded 200 in 240.4854 ms
+2025-05-23 11:52:49.308 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 5.1496 ms
+2025-05-23 12:02:24.619 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 1.2800 ms
+2025-05-23 12:02:24.702 +03:00 [INF] Refresh Token Attempt for 
+2025-05-23 12:02:25.264 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 576.4525 ms
+2025-05-23 12:02:25.336 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 27.7708 ms
+2025-05-23 12:02:42.085 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 123.4611 ms
+2025-05-23 12:06:43.235 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 9:06:43
+2025-05-23 12:21:43.600 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 9:21:43
+2025-05-23 12:30:10.732 +03:00 [INF] Application is shutting down...
+2025-05-23 12:30:39.549 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 9:30:39
+2025-05-23 12:30:40.670 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-23 12:30:40.671 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-23 12:30:40.672 +03:00 [INF] Hosting environment: Development
+2025-05-23 12:30:40.672 +03:00 [INF] Content root path: C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear
+2025-05-23 12:31:24.386 +03:00 [INF] Registration Attempt for test2@gmail.com
+2025-05-23 12:31:38.407 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'FitGear.Data.FitGearDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'FirstName', table 'FitGearAPIDb.dbo.AspNetUsers'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:49736a57-2a81-42e4-a1f4-ed90fa36f237
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'FirstName', table 'FitGearAPIDb.dbo.AspNetUsers'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:49736a57-2a81-42e4-a1f4-ed90fa36f237
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-23 12:31:38.422 +03:00 [ERR] HTTP POST /api/User/register responded 500 in 14159.8850 ms
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'FirstName', table 'FitGearAPIDb.dbo.AspNetUsers'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:49736a57-2a81-42e4-a1f4-ed90fa36f237
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.CreateAsync(TUser user, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user, String password)
+   at FitGear.Services.AccountService.RegisterAsync(ApiUserDto userDto) in C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 47
+   at FitGear.Controllers.UserController.Register(ApiUserDto apiUserDto) in C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear\Controllers\UserController.cs:line 43
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-05-23 12:31:38.452 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'FirstName', table 'FitGearAPIDb.dbo.AspNetUsers'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:49736a57-2a81-42e4-a1f4-ed90fa36f237
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.CreateAsync(TUser user, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user, String password)
+   at FitGear.Services.AccountService.RegisterAsync(ApiUserDto userDto) in C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 47
+   at FitGear.Controllers.UserController.Register(ApiUserDto apiUserDto) in C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear\Controllers\UserController.cs:line 43
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-23 12:37:20.890 +03:00 [INF] Application is shutting down...
+2025-05-23 12:37:31.085 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 9:37:31
+2025-05-23 12:37:32.113 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-23 12:37:32.115 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-23 12:37:32.115 +03:00 [INF] Hosting environment: Development
+2025-05-23 12:37:32.116 +03:00 [INF] Content root path: C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear
+2025-05-23 12:37:40.064 +03:00 [INF] Registration Attempt for test2@gmail.com
+2025-05-23 12:37:41.273 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'FitGear.Data.FitGearDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'FirstName', table 'FitGearAPIDb.dbo.AspNetUsers'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:57d4ef38-cabe-4b0a-be22-fe8cf2cb81a7
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'FirstName', table 'FitGearAPIDb.dbo.AspNetUsers'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:57d4ef38-cabe-4b0a-be22-fe8cf2cb81a7
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-23 12:37:41.292 +03:00 [ERR] HTTP POST /api/User/register responded 500 in 1416.3830 ms
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'FirstName', table 'FitGearAPIDb.dbo.AspNetUsers'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:57d4ef38-cabe-4b0a-be22-fe8cf2cb81a7
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.CreateAsync(TUser user, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user, String password)
+   at FitGear.Services.AccountService.RegisterAsync(ApiUserDto userDto) in C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 47
+   at FitGear.Controllers.UserController.Register(ApiUserDto apiUserDto) in C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear\Controllers\UserController.cs:line 43
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-05-23 12:37:41.486 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'FirstName', table 'FitGearAPIDb.dbo.AspNetUsers'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:57d4ef38-cabe-4b0a-be22-fe8cf2cb81a7
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.CreateAsync(TUser user, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user, String password)
+   at FitGear.Services.AccountService.RegisterAsync(ApiUserDto userDto) in C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear\Services\AccountService.cs:line 47
+   at FitGear.Controllers.UserController.Register(ApiUserDto apiUserDto) in C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear\Controllers\UserController.cs:line 43
+   at lambda_method38(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-23 12:42:25.656 +03:00 [INF] Application is shutting down...
+2025-05-23 12:55:02.909 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 9:55:02
+2025-05-23 12:55:03.801 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-23 12:55:03.803 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-23 12:55:03.804 +03:00 [INF] Hosting environment: Development
+2025-05-23 12:55:03.804 +03:00 [INF] Content root path: C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear
+2025-05-23 12:55:11.880 +03:00 [INF] Registration Attempt for test2@gmail.com
+2025-05-23 12:55:13.377 +03:00 [INF] HTTP POST /api/User/register responded 200 in 1816.1023 ms
+2025-05-23 12:55:45.869 +03:00 [INF] Login Attempt for test2@gmail.com
+2025-05-23 12:55:45.872 +03:00 [INF] Looking for user with email test2@gmail.com
+2025-05-23 12:55:46.109 +03:00 [INF] Token generated for User with email test2@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MkBnbWFpbC5jb20iLCJqdGkiOiI0NDAwZmI5Zi1hM2NjLTRiNDYtOGMxMC0xNmFmMThhYjg1MjAiLCJlbWFpbCI6InRlc3QyQGdtYWlsLmNvbSIsInVpZCI6ImZhYTBlZjRlLTI3YWQtNGYwZi1hNmJjLTRkYjkzNWNhNzM2MCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDc5OTQyNjYsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.YVQToSY7w05YzxDllycv38D1Vjx61htOTQ38Q8EFIgA
+2025-05-23 12:55:46.243 +03:00 [INF] HTTP POST /api/User/login responded 200 in 385.4043 ms
+2025-05-23 12:57:07.638 +03:00 [INF] Registration Attempt for test3@gmail.com
+2025-05-23 12:57:08.025 +03:00 [INF] HTTP POST /api/User/register responded 200 in 419.2609 ms
+2025-05-23 12:57:08.052 +03:00 [INF] Login Attempt for test3@gmail.com
+2025-05-23 12:57:08.053 +03:00 [INF] Looking for user with email test3@gmail.com
+2025-05-23 12:57:08.129 +03:00 [INF] Token generated for User with email test3@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0M0BnbWFpbC5jb20iLCJqdGkiOiI0NjA0MjdhNC0zYTcyLTRhZTQtYTEwNS1lY2FmYjAwYmEwMTgiLCJlbWFpbCI6InRlc3QzQGdtYWlsLmNvbSIsInVpZCI6ImNhMzZkMGViLThlYWMtNDJlOS05MmM1LTg1MWE2Mzk4MjE4OSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDc5OTQzNDgsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.G9fwI8oP6Ti1p_ro1BrX-l9WoTwod25AksdJuOgCqwI
+2025-05-23 12:57:08.177 +03:00 [INF] HTTP POST /api/User/login responded 200 in 125.8775 ms
+2025-05-23 12:57:13.015 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 311.0761 ms
+2025-05-23 13:00:28.523 +03:00 [INF] Login Attempt for test3@gmail.com
+2025-05-23 13:00:28.524 +03:00 [INF] Looking for user with email test3@gmail.com
+2025-05-23 13:00:28.713 +03:00 [INF] Token generated for User with email test3@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0M0BnbWFpbC5jb20iLCJqdGkiOiI4YzA0YmU2MC01NTQ3LTRjNGItOGRiNC1lYjE3OWU2MDdhNTciLCJlbWFpbCI6InRlc3QzQGdtYWlsLmNvbSIsInVpZCI6ImNhMzZkMGViLThlYWMtNDJlOS05MmM1LTg1MWE2Mzk4MjE4OSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDc5OTQ1NDgsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.sC1I5Y2vUGnqSXRzAJax8uY5W1SirfpBDLObh5HmS_8
+2025-05-23 13:00:29.312 +03:00 [INF] HTTP POST /api/User/login responded 200 in 790.4362 ms
+2025-05-23 13:01:42.499 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 198.0739 ms
+2025-05-23 13:07:52.955 +03:00 [INF] HTTP GET /api/Announcements responded 401 in 5.0648 ms
+2025-05-23 13:07:53.035 +03:00 [INF] Refresh Token Attempt for 
+2025-05-23 13:07:53.444 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 414.8582 ms
+2025-05-23 13:07:53.525 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 37.1942 ms
+2025-05-23 13:10:05.918 +03:00 [INF] Cheeking for bookings to update status at: 23.05.2025 10:10:05
+2025-05-23 13:11:05.608 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 0.6805 ms
+2025-05-23 13:11:11.729 +03:00 [INF] Login Attempt for test2@gmail.com
+2025-05-23 13:11:11.730 +03:00 [INF] Looking for user with email test2@gmail.com
+2025-05-23 13:11:11.955 +03:00 [INF] Token generated for User with email test2@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MkBnbWFpbC5jb20iLCJqdGkiOiI1YTFhNmQ3Zi1jZDIzLTQ5MDgtYjMyNC04OWUwOTllMzY0YWYiLCJlbWFpbCI6InRlc3QyQGdtYWlsLmNvbSIsInVpZCI6ImZhYTBlZjRlLTI3YWQtNGYwZi1hNmJjLTRkYjkzNWNhNzM2MCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NDc5OTUxOTEsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.9FxAx1SrBj3OQleJIw58WlCQz47Y0V4ltsLOLUVVfX8
+2025-05-23 13:11:12.069 +03:00 [INF] HTTP POST /api/User/login responded 200 in 341.4757 ms
+2025-05-23 13:11:15.615 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 0.1743 ms
+2025-05-23 13:18:14.031 +03:00 [INF] Application is shutting down...

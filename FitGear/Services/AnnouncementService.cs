@@ -2,6 +2,7 @@
 using FitGear.Contracts;
 using FitGear.Core.Extenstions;
 using FitGear.Core.Filters;
+using FitGear.Core.Pagination;
 using FitGear.Core.Sorting;
 using FitGear.Data;
 using FitGear.Models.Announcement;
@@ -21,7 +22,9 @@ public class AnnouncementService : IAnnouncementService
         _mapper = mapper;
     }
     
-    public async Task<IEnumerable<GetAnnouncementDto>> GetAnnouncementsAsync(AnnouncementFilter filter, SortParams sortParams)
+    public async Task<IEnumerable<GetAnnouncementDto>> GetAnnouncementsAsync(AnnouncementFilter filter, 
+        SortParams sortParams, 
+        PageParams pageParams)
     {
         var query = _announcementsRepository.GetQueryable();
         
@@ -33,6 +36,11 @@ public class AnnouncementService : IAnnouncementService
         if (sortParams != null)
         {
             query = query.Sort(sortParams);
+        }
+        
+        if(pageParams != null)
+        {
+            query = query.Paginate(pageParams);
         }
         
         var announcements = await query.ToListAsync();
@@ -50,10 +58,14 @@ public class AnnouncementService : IAnnouncementService
     //     return _mapper.Map<List<GetAnnouncementDto>>(announcements);
     // }
     
-    public async Task<GetAnnouncementDto> GetAnnouncementByIdAsync(int id)
+    public async Task<GetDetailedAnnouncementDto> GetAnnouncementByIdAsync(int id)
     {
-        var announcement = await _announcementsRepository.GetAsync(id);
-        return _mapper.Map<GetAnnouncementDto>(announcement);
+        var announcement = await _announcementsRepository.GetAsyncIncludingCategory(id);
+        var announcementDto = _mapper.Map<GetDetailedAnnouncementDto>(announcement);
+        announcementDto.CategoryName = announcement.Category?.Name ?? string.Empty;
+        announcementDto.AverageRating = announcement.Reviews.Any() ?
+            announcement.Reviews.Average(r => r.Rating) : 0;
+        return announcementDto;
     }
     
     public async Task<GetAnnouncementDto> CreateAnnouncementAsync(CreateAnnouncementDto announcementDto)
