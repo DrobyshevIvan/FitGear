@@ -1,0 +1,340 @@
+2025-05-29 08:04:07.080 +03:00 [INF] Cheeking for bookings to update status at: 29.05.2025 5:04:07
+2025-05-29 08:04:07.972 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-29 08:04:07.974 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-29 08:04:07.976 +03:00 [INF] Hosting environment: Development
+2025-05-29 08:04:07.977 +03:00 [INF] Content root path: C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear
+2025-05-29 08:05:45.276 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 206.0551 ms
+2025-05-29 08:05:45.325 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 401 in 7.4109 ms
+2025-05-29 08:06:18.125 +03:00 [INF] Login Attempt for test2@gmail.com
+2025-05-29 08:06:18.130 +03:00 [INF] Looking for user with email test2@gmail.com
+2025-05-29 08:06:19.841 +03:00 [INF] Token generated for User with email test2@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MkBnbWFpbC5jb20iLCJqdGkiOiJjNjliMjE3Ny00MTVhLTQzYmItYjBhZC0xZTUxMGY0MTBkMmMiLCJlbWFpbCI6InRlc3QyQGdtYWlsLmNvbSIsInVpZCI6ImZhYTBlZjRlLTI3YWQtNGYwZi1hNmJjLTRkYjkzNWNhNzM2MCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluaXN0cmF0b3IiLCJleHAiOjE3NDg0OTU3NzksImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.5X3nGhQRmktGYzPW7L3-ckIjk_-fvlpaynehFxg5NZk
+2025-05-29 08:06:21.169 +03:00 [INF] HTTP POST /api/User/login responded 200 in 3152.7968 ms
+2025-05-29 08:06:21.267 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 94.6045 ms
+2025-05-29 08:06:21.303 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 32.0205 ms
+2025-05-29 08:06:28.348 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 761.2478 ms
+2025-05-29 08:06:28.386 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 35.8374 ms
+2025-05-29 08:06:32.599 +03:00 [INF] HTTP GET /api/Announcements/22 responded 200 in 20.7899 ms
+2025-05-29 08:06:32.603 +03:00 [INF] HTTP GET /api/Announcements/22 responded 200 in 2.4775 ms
+2025-05-29 08:06:36.352 +03:00 [INF] HTTP PUT /api/Announcements/22 responded 400 in 21.0628 ms
+2025-05-29 08:06:36.362 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 5.3111 ms
+2025-05-29 08:07:41.706 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 8.7499 ms
+2025-05-29 08:07:41.713 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 5.3107 ms
+2025-05-29 08:07:43.913 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.1429 ms
+2025-05-29 08:07:43.919 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.6969 ms
+2025-05-29 08:07:46.690 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 131.5865 ms
+2025-05-29 08:07:46.694 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.5629 ms
+2025-05-29 08:08:07.020 +03:00 [INF] HTTP POST /api/Announcements responded 400 in 5.5728 ms
+2025-05-29 08:08:07.156 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 131.7923 ms
+2025-05-29 08:09:07.646 +03:00 [INF] HTTP POST /api/Announcements responded 400 in 17.8672 ms
+2025-05-29 08:09:08.973 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 1316.5846 ms
+2025-05-29 08:10:55.268 +03:00 [INF] Application is shutting down...
+2025-05-29 08:11:13.304 +03:00 [INF] Cheeking for bookings to update status at: 29.05.2025 5:11:13
+2025-05-29 08:11:14.024 +03:00 [INF] Now listening on: http://localhost:5209
+2025-05-29 08:11:14.026 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-29 08:11:14.026 +03:00 [INF] Hosting environment: Development
+2025-05-29 08:11:14.027 +03:00 [INF] Content root path: C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear
+2025-05-29 08:11:21.467 +03:00 [INF] Refresh Token Attempt for faa0ef4e-27ad-4f0f-a6bc-4db935ca7360
+2025-05-29 08:11:21.482 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 152.7355 ms
+2025-05-29 08:11:21.801 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 309.7856 ms
+2025-05-29 08:11:21.886 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 79.2618 ms
+2025-05-29 08:11:22.009 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 96.1681 ms
+2025-05-29 08:11:22.018 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 7.7897 ms
+2025-05-29 08:11:53.473 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'FitGear.Data.FitGearDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Name', table 'FitGearAPIDb.dbo.Categories'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:96c37393-dbe3-4a55-9db7-52e8909b3556
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Name', table 'FitGearAPIDb.dbo.Categories'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:96c37393-dbe3-4a55-9db7-52e8909b3556
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-05-29 08:11:53.482 +03:00 [ERR] HTTP POST /api/Announcements responded 500 in 706.4642 ms
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Name', table 'FitGearAPIDb.dbo.Categories'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:96c37393-dbe3-4a55-9db7-52e8909b3556
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at FitGear.Repository.GenericRepository`1.AddAsync(T entity) in C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear.Core\Repository\GenericRepository.cs:line 34
+   at FitGear.Services.AnnouncementService.CreateAnnouncementAsync(CreateAnnouncementDto announcementDto) in C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear\Services\AnnouncementService.cs:line 74
+   at FitGear.Controllers.AnnouncementsController.PostAnnouncement(CreateAnnouncementDto createAnnouncementDto) in C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear\Controllers\AnnouncementsController.cs:line 86
+   at lambda_method334(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-05-29 08:11:53.500 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Name', table 'FitGearAPIDb.dbo.Categories'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:96c37393-dbe3-4a55-9db7-52e8909b3556
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at FitGear.Repository.GenericRepository`1.AddAsync(T entity) in C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear.Core\Repository\GenericRepository.cs:line 34
+   at FitGear.Services.AnnouncementService.CreateAnnouncementAsync(CreateAnnouncementDto announcementDto) in C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear\Services\AnnouncementService.cs:line 74
+   at FitGear.Controllers.AnnouncementsController.PostAnnouncement(CreateAnnouncementDto createAnnouncementDto) in C:\Study\2_2\PrpA\FitGear\backend\FitGear\FitGear\Controllers\AnnouncementsController.cs:line 86
+   at lambda_method334(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-29 08:11:53.659 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 136.6269 ms
+2025-05-29 08:16:22.737 +03:00 [INF] Refresh Token Attempt for faa0ef4e-27ad-4f0f-a6bc-4db935ca7360
+2025-05-29 08:16:23.570 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 843.9630 ms
+2025-05-29 08:16:23.584 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 7.2413 ms
+2025-05-29 08:16:23.596 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 5.7937 ms
+2025-05-29 08:16:23.670 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 52.0941 ms
+2025-05-29 08:16:23.677 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.7840 ms
+2025-05-29 08:17:47.458 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 155.6252 ms
+2025-05-29 08:17:48.770 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 164.0959 ms
+2025-05-29 08:17:51.225 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 147.8857 ms
+2025-05-29 08:17:51.302 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 95.7180 ms
+2025-05-29 08:17:51.721 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.4028 ms
+2025-05-29 08:17:52.452 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.9728 ms
+2025-05-29 08:17:55.634 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.2338 ms
+2025-05-29 08:17:55.823 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.4533 ms
+2025-05-29 08:17:55.977 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.5821 ms
+2025-05-29 08:17:56.241 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.9764 ms
+2025-05-29 08:17:56.353 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 3.1273 ms
+2025-05-29 08:17:56.783 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.6961 ms
+2025-05-29 08:17:56.951 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 4.0101 ms
+2025-05-29 08:17:57.095 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 2.9526 ms
+2025-05-29 08:18:01.143 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 7.2345 ms
+2025-05-29 08:18:01.237 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 89.3602 ms
+2025-05-29 08:18:30.975 +03:00 [INF] HTTP GET /api/User/login/google responded 302 in 107.3188 ms
+2025-05-29 08:18:35.287 +03:00 [INF] HTTP GET /signin-google responded 302 in 477.4003 ms
+2025-05-29 08:18:35.393 +03:00 [INF] User ivan.drobyshev@nure.ua already has Google login linked.
+2025-05-29 08:18:35.490 +03:00 [INF] Setting cookies for Google user ivan.drobyshev@nure.ua.
+2025-05-29 08:18:35.490 +03:00 [INF] Google login successful for ivan.drobyshev@nure.ua. Tokens set in cookies.
+2025-05-29 08:18:35.493 +03:00 [INF] HTTP GET /api/User/login/google/callback responded 302 in 201.9433 ms
+2025-05-29 08:18:35.840 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 12.5282 ms
+2025-05-29 08:18:35.848 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 5.9528 ms
+2025-05-29 08:18:35.859 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 11.3247 ms
+2025-05-29 08:18:35.867 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 6.8089 ms
+2025-05-29 08:23:52.738 +03:00 [INF] Refresh Token Attempt for 
+2025-05-29 08:23:52.739 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.9866 ms
+2025-05-29 08:23:53.723 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 980.9290 ms
+2025-05-29 08:23:53.838 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 112.8489 ms
+2025-05-29 08:26:14.433 +03:00 [INF] Cheeking for bookings to update status at: 29.05.2025 5:26:14
+2025-05-29 08:28:55.197 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 08:28:57.367 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2171.3585 ms
+2025-05-29 08:28:57.380 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 8.7960 ms
+2025-05-29 08:28:57.393 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 8.2839 ms
+2025-05-29 08:33:57.726 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 08:33:57.727 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.1055 ms
+2025-05-29 08:33:58.547 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 816.3663 ms
+2025-05-29 08:33:58.557 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 7.0693 ms
+2025-05-29 08:38:58.738 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 08:38:59.007 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 269.9662 ms
+2025-05-29 08:38:59.013 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 3.4704 ms
+2025-05-29 08:38:59.018 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 2.0939 ms
+2025-05-29 08:41:15.013 +03:00 [INF] Cheeking for bookings to update status at: 29.05.2025 5:41:15
+2025-05-29 08:43:59.738 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 08:43:59.744 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 6.9127 ms
+2025-05-29 08:43:59.931 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 184.0878 ms
+2025-05-29 08:43:59.938 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 4.8449 ms
+2025-05-29 08:49:00.810 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 08:49:01.031 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 222.6180 ms
+2025-05-29 08:49:01.038 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 3.2039 ms
+2025-05-29 08:49:01.045 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 3.6767 ms
+2025-05-29 08:54:01.741 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 08:54:01.742 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.7285 ms
+2025-05-29 08:54:01.937 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 187.8000 ms
+2025-05-29 08:54:01.982 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 42.1876 ms
+2025-05-29 08:56:15.169 +03:00 [INF] Cheeking for bookings to update status at: 29.05.2025 5:56:15
+2025-05-29 08:59:02.726 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 08:59:02.926 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 200.7380 ms
+2025-05-29 08:59:02.932 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 2.5630 ms
+2025-05-29 08:59:02.937 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 2.6321 ms
+2025-05-29 09:04:03.739 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 09:04:03.740 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.7582 ms
+2025-05-29 09:04:03.879 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 127.5173 ms
+2025-05-29 09:04:03.902 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 20.0878 ms
+2025-05-29 09:09:04.731 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 09:09:04.814 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 83.9380 ms
+2025-05-29 09:09:04.819 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 1.7000 ms
+2025-05-29 09:09:04.824 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 1.8876 ms
+2025-05-29 09:11:15.345 +03:00 [INF] Cheeking for bookings to update status at: 29.05.2025 6:11:15
+2025-05-29 09:14:05.748 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 09:14:05.749 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.3001 ms
+2025-05-29 09:14:05.757 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 5.1537 ms
+2025-05-29 09:14:05.794 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 33.2148 ms
+2025-05-29 09:19:06.738 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 09:19:06.999 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 261.8930 ms
+2025-05-29 09:19:07.004 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 1.5987 ms
+2025-05-29 09:19:07.062 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 26.7520 ms
+2025-05-29 09:24:07.732 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 09:24:07.733 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.4980 ms
+2025-05-29 09:24:07.865 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 44.5705 ms
+2025-05-29 09:24:07.892 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 24.4619 ms
+2025-05-29 09:26:15.419 +03:00 [INF] Cheeking for bookings to update status at: 29.05.2025 6:26:15
+2025-05-29 09:29:08.732 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 09:29:08.884 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 152.5504 ms
+2025-05-29 09:29:08.934 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 1.7707 ms
+2025-05-29 09:29:08.938 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 1.6038 ms
+2025-05-29 09:34:09.738 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 09:34:09.739 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.4495 ms
+2025-05-29 09:34:09.820 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 8.2881 ms
+2025-05-29 09:34:09.825 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 3.4167 ms
+2025-05-29 09:39:10.726 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 09:39:10.919 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 192.5339 ms
+2025-05-29 09:39:10.924 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 1.5678 ms
+2025-05-29 09:39:10.957 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 3.0778 ms
+2025-05-29 09:41:15.427 +03:00 [INF] Cheeking for bookings to update status at: 29.05.2025 6:41:15
+2025-05-29 09:44:11.725 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 09:44:11.726 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.5277 ms
+2025-05-29 09:44:11.816 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 4.6700 ms
+2025-05-29 09:44:11.821 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 2.9483 ms
+2025-05-29 09:49:12.724 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 09:49:12.927 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 203.5303 ms
+2025-05-29 09:49:12.932 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 2.7983 ms
+2025-05-29 09:49:13.197 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 3.9967 ms
+2025-05-29 09:54:13.807 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 09:54:13.808 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.5495 ms
+2025-05-29 09:54:13.846 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 32.9681 ms
+2025-05-29 09:54:13.853 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 3.5940 ms
+2025-05-29 09:56:15.515 +03:00 [INF] Cheeking for bookings to update status at: 29.05.2025 6:56:15
+2025-05-29 09:59:14.767 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 09:59:14.803 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 36.0531 ms
+2025-05-29 09:59:14.847 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 40.2390 ms
+2025-05-29 09:59:14.851 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 1.9582 ms
+2025-05-29 10:04:15.735 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 10:04:15.736 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 2.5304 ms
+2025-05-29 10:04:16.186 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 11.4454 ms
+2025-05-29 10:04:16.321 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 3.1848 ms
+2025-05-29 10:09:16.796 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 10:09:16.864 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 135.3095 ms
+2025-05-29 10:09:16.869 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 1.5027 ms
+2025-05-29 10:09:16.873 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 2.3157 ms
+2025-05-29 10:11:15.722 +03:00 [INF] Cheeking for bookings to update status at: 29.05.2025 7:11:15
+2025-05-29 10:14:17.731 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 10:14:17.731 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.4235 ms
+2025-05-29 10:14:17.743 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 5.1109 ms
+2025-05-29 10:14:17.749 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 2.9132 ms
+2025-05-29 10:19:18.897 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 10:19:20.482 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1596.6618 ms
+2025-05-29 10:19:20.528 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 2.4408 ms
+2025-05-29 10:19:20.615 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 2.0061 ms
+2025-05-29 10:22:33.579 +03:00 [INF] Login Attempt for test2@gmail.com
+2025-05-29 10:22:33.581 +03:00 [INF] Looking for user with email test2@gmail.com
+2025-05-29 10:22:33.841 +03:00 [INF] Token generated for User with email test2@gmail.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0MkBnbWFpbC5jb20iLCJqdGkiOiI1MmFjMTRjYy04YzE2LTRmZWQtODhjYy1mZjJjMzE5NWRjMmUiLCJlbWFpbCI6InRlc3QyQGdtYWlsLmNvbSIsInVpZCI6ImZhYTBlZjRlLTI3YWQtNGYwZi1hNmJjLTRkYjkzNWNhNzM2MCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluaXN0cmF0b3IiLCJleHAiOjE3NDg1MDM5NTMsImlzcyI6IkZpdEdlYXJBUEkiLCJhdWQiOiJGaXRHZWFyQVBJQ2xpZW50In0.N4R4ZpPuViS8StSGdDeINjCQZE4s1h0WWMmZVid0ngE
+2025-05-29 10:22:33.938 +03:00 [INF] HTTP POST /api/User/login responded 200 in 848.1785 ms
+2025-05-29 10:22:53.025 +03:00 [INF] HTTP GET /api/UserProfile/Profile responded 200 in 3.0439 ms
+2025-05-29 10:24:21.747 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 10:24:21.747 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 17.5119 ms
+2025-05-29 10:24:21.756 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 5.4568 ms
+2025-05-29 10:24:21.822 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 3.2263 ms
+2025-05-29 10:26:15.760 +03:00 [INF] Cheeking for bookings to update status at: 29.05.2025 7:26:15
+2025-05-29 10:29:22.736 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 10:29:23.237 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 501.4953 ms
+2025-05-29 10:29:23.252 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 6.1277 ms
+2025-05-29 10:29:23.283 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 4.7632 ms
