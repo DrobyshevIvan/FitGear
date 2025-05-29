@@ -11,9 +11,7 @@ export default function EditUser() {
     const [bookings, setBookings] = useState([]);
     const [reviews, setReviews] = useState([]);
     const [payments, setPayments] = useState([]);
-
     const { id } = useParams();
-
 
     useEffect(() => {
         const fetchUserData = async () => {

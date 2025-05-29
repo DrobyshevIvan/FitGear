@@ -1,9 +1,22 @@
 import { api } from "../api/api";
 
-export const getReviewsForAnnouncement = async () => {
+export const getReviewsForAnnouncement = async (id) => {
     try {
-        const response = await api.get('/api/Review'); 
-        return response.data?.values || [];
+        const response = await api.get('/api/Review', {
+            params: {
+                AnnouncementId: id,
+            }
+        }); 
+
+        return response.data?.$values || [];
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+export const deleteReview = async (id) => {
+    try {
+        await api.delete(`/api/Review/${id}`);
     } catch (err) {
         console.log(err);
     }

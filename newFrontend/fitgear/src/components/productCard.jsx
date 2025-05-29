@@ -1,12 +1,12 @@
 import horseImg from '../assets/horse.jpg';
 
-export default function Card({ title, price, onEdit, onRemove }) {
+export default function Card({ title, price, onEdit, onRemove, url }) {
     return (
         <div className="flex flex-col text-center w-full max-w-[300px] px-6 border border-gray-200 shadow-md py-3 rounded-lg">
             <img
                 alt={title}
-                src={horseImg}
-                className="aspect-square mx-auto mt-1 rounded-md max-w-[250px] max-h-[250px] bg-gray-200 object-cover xl:aspect-7/8"
+                src={url}
+                className="aspect-square mx-auto mt-1 rounded-md h-[250px] w-[250px] bg-gray-200 object-contain"
             />
             <div className='flex mt-3 px-2 justify-between'>
                 <h3 className="text-lg text-left text-gray-700">{title}</h3>

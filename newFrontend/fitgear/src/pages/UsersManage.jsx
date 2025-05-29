@@ -19,8 +19,13 @@ export default function Users() {
         fetchUsers();
     }, [filter]);
 
+    const handleUpdate = async () => {
+            const updated = await getAllAnnouncements(filter);
+            setAnnounces(updated);
+        };
+
     if (isEditing) {
-        return <Outlet />;
+        return <Outlet context={{ onUpdate: handleUpdate }} />;
     }
 
     return (

@@ -29,7 +29,7 @@ export default function BookingCard({ from, to, announcementId, status }) {
                 </div>
                 {anouncement ? (
                     <div className="flex">
-                        <img src={anouncement.url} alt="product" className="w-[250px] h-[200px] object-cover select-none"/>
+                        <img src={anouncement.url} alt="product" className="max-w-[250px] max-h-[250px] bg-gray-200 object-cover select-none"/>
                         <div className="text-left ml-6 mt-4 max-w-[600px] max-h-[100px]">
                             <p className="text-xl font-medium">{anouncement.title}</p>
                             <p className="text-md mt-4 line-clamp-3">{anouncement.descript}</p>

@@ -6,10 +6,13 @@ import AddAnnouncement from "./addAnnouncement";
 import { useNavigate, Outlet, useMatch } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
 import FilterSelect from "../components/FilterSelect";
+import Pagination from "../components/Pagination";
 
 
 export default function Anouncements() {
     const navigate = useNavigate();
+    const [page, setPage] = useState(1);
+    const totalPages = 10;
     const [anouncements, setAnnounces] = useState([]);
     const isEditing = useMatch("/manage/anouncements/edit/:id");
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -57,17 +60,18 @@ export default function Anouncements() {
                     <img src={iconAdd} alt="icon" />
                     Add new
                 </button>
-                <SearchBar search={filter.search} onSearchChange={search => setFilters(prev => ({ ...prev, search }))}/>
+                <SearchBar search={filter.search} onSearchChange={(value) => setFilters((prev) => ({ ...prev, search: value }))}/>
                 <FilterSelect onFilterChange={(sortDirection) => setFilters(prev => ({ ...prev, sortDirection }))}/>
             </div>
             <AddAnnouncement isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onSubmit={handleNewAdd} />
             <div>
                 <div className="grid place-items-center mt-6 px-14 grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
                     {anouncements.map(n => (
-                        <Card key={n.id} title={n.title} price={n.pricePerDay} onSubmit={(e) => {handleEdit(id)}} onEdit={() => navigate(`edit/${n.id}`)} onRemove={() => handleRemove(n.id)}/>
+                        <Card key={n.id} title={n.title} price={n.pricePerDay} url={n.url} onSubmit={(e) => {handleEdit(id)}} onEdit={() => navigate(`edit/${n.id}`)} onRemove={() => handleRemove(n.id)}/>
                     ))}
                 </div>
             </div>
+            <Pagination currentPage={page} totalPages={totalPages} onPageChange={p => {if(p >= 1 && p <= totalPages) setPage(p)}} />
         </>
     )
 }
