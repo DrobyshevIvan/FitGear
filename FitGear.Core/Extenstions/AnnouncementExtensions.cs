@@ -31,6 +31,11 @@ public static class AnnouncementExtensions
             query = query.Where(a => a.PricePerDay <= announcementFilter.MaxPricePerDay);
         }
 
+        if (announcementFilter.Category is not null)
+        {
+            query = query.Where(a => a.Category.Name.Contains(announcementFilter.Category));
+        }
+
         return query;
     }
 
@@ -60,6 +65,7 @@ public static class AnnouncementExtensions
             nameof(Announcement.Description) => x => x.Description,
             nameof(Announcement.CreatedAt) => x => x.CreatedAt,
             nameof(Announcement.PricePerDay) => x => x.PricePerDay,
+            "Rating" => x => x.Reviews.Any() ? x.Reviews.Average(r => r.Rating) : 0,
             _ => x => x.Title
         };
     }

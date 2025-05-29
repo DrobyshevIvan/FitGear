@@ -5,6 +5,7 @@ using FitGear.Services;
 using HotelListing.API.Core.Models.Users;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -97,6 +98,7 @@ namespace FitGear.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [Authorize]
         public async Task<ActionResult> GetRoles()
         {
             var roles = await _accountService.GetRolesFromRefreshToken(HttpContext);
@@ -155,6 +157,17 @@ namespace FitGear.Controllers
             }
 
             return Redirect(returnUrl);
+        }
+        
+        // GET: api/User/logout
+        [HttpPost("logout")]
+        [Authorize]
+        public async Task<IActionResult> Logout()
+        {
+            Response.Cookies.Append("X-Access-Token", "", new CookieOptions { Expires = DateTime.UtcNow.AddDays(-1) });
+            Response.Cookies.Append("X-Refresh-Token", "", new CookieOptions { Expires = DateTime.UtcNow.AddDays(-1) });
+
+            return Ok();
         }
     }
 }

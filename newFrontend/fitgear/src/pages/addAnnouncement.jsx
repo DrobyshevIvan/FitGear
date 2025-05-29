@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { addAnnouncement } from "../services/anouncements";
 
 export default function AddAnnouncement({ isOpen, onClose, onSubmit}) {
     const [formData, setFormData] = useState({
         title: "",
-        decription: "",
+        description: "",
         price: 0,
+        quantity: 0,
     });
 
     const handleChange = (e) => {
@@ -34,8 +36,8 @@ export default function AddAnnouncement({ isOpen, onClose, onSubmit}) {
                             block w-full p-2.5" placeholder="Title" required />
                         </div>
                         <div className="w-90 mt-5">
-                            <label htmlFor="decript" className="block mb-2 text-sm font-medium text-gray-900">Decription</label>
-                            <input type="text" id="decript" name="decription" value={formData.decription} onChange={handleChange} 
+                            <label htmlFor="descript" className="block mb-2 text-sm font-medium text-gray-900">Decription</label>
+                            <input type="text" id="descript" name="description" value={formData.description} onChange={handleChange} 
                                 className="bg-gray-50 border border-gray-300 text-gray-900 
                             text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 
                             block w-full p-2.5" placeholder="Decription" required />
@@ -43,6 +45,11 @@ export default function AddAnnouncement({ isOpen, onClose, onSubmit}) {
                         <div className="w-90 mt-5">
                             <label htmlFor="price" className="block mb-2 text-sm font-medium text-gray-900">Price (per day)</label>
                             <input type="number" id="price" name="price" value={formData.price} onChange={handleChange}
+                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="" required />
+                        </div>
+                        <div className="w-90 mt-5">
+                            <label htmlFor="quantity" className="block mb-2 text-sm font-medium text-gray-900">Quantity</label>
+                            <input type="number" id="quantity" name="quantity" value={formData.quantity} onChange={handleChange}
                                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="" required />
                         </div>
                         <div className="flex justify-between w-70 m-5 gap-5">
