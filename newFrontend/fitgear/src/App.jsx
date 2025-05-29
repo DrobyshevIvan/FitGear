@@ -5,6 +5,7 @@ import Users from './pages/UsersManage'
 import Anouncements from './pages/AnouncementsManage'
 import MainPage from './pages/MainPage'
 import EditAnnouncement from './pages/EditAnnouncement'
+import CategoriesManage from './pages/CategoriesManage'
 
 import './App.css'
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="anouncements" element={<Anouncements />}>
           <Route path="edit/:id" element={<EditAnnouncement />} />
         </Route> 
+        <Route path="categories" element={<CategoriesManage />} />
       </Route>
     </Routes>
     </>
