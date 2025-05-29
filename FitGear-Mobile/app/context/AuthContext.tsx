@@ -304,7 +304,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
                 {
                     headers: {
                         Authorization: `Bearer ${authState.accessToken}`,
-                        "X-Mobile-Client": true,
+                        "X-Mobile-Client": "true",
                         "Content-Type": "application/json"
                     },
                 }
@@ -339,7 +339,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
                         {
                             headers: {
                                 Authorization: `Bearer ${authState.accessToken}`,
-                                "X-Mobile-Client": true,
+                                "X-Mobile-Client": "true",
                                 "Content-Type": "application/json"
                             },
                         }

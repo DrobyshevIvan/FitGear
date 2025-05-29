@@ -1,17 +1,153 @@
 import AntDesign from '@expo/vector-icons/AntDesign';
-import React, { useState } from 'react';
-import { Modal, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { ActivityIndicator, FlatList, Modal, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import AnnouncementCard from '../../components/EquipmentCards/AnnouncementCard';
+import Category from '../../components/Home/Category';
 import { Colors } from '../../constants/Colors';
+import { useProduct } from '../context/ProductContext';
 
-export default function explore() {
+export default function explore(route) {
     const [modalVisible, setModalVisible] = useState(false);
+    const {selectedCategory, setSelectedCategory, filteredAnnouncements, isLoadingAnnouncements, searchQuery, setSearchQuery, getAnnouncements} = useProduct();
+
+    useEffect(() => {
+        if(route?.params?.selectedCategory){
+            setSelectedCategory(route.params.selectedCategory);
+            console.log('Set category from navigation:', route.params.selectedCategory);
+        }
+    }, [route?.params?.selectedCategory]);
 
     const handleFilterSelect = (filter) => {
         console.log('Choosen filter:', filter);
+        
+        let orderBy = '';
+        let sortDirection = 'Ascending';
+
+        switch(filter) {
+            case 'Price: low to high':
+                orderBy = 'pricePerDay';
+                sortDirection = 'Ascending';
+                break;
+            case 'Price: high to low':
+                orderBy = 'pricePerDay';
+                sortDirection = 'Descending';
+                break;
+            case 'New equipment':
+                orderBy = 'createdAt';
+                sortDirection = 'Descending';
+                break;
+                default: 
+                break;
+        }
+
+        if(orderBy){
+            getAnnouncements({
+                category: selectedCategory || undefined,
+                title: searchQuery || undefined,
+                orderBy,
+                sortDirection
+            });
+        }
         setModalVisible(false);
     };
 
+    const handleCategoryPressed = (categoryName) => {
+        console.log('Chosen category in explore: ', categoryName);
+
+        if (selectedCategory === categoryName) {
+            setSelectedCategory(null);
+        } else {
+            setSelectedCategory(categoryName);
+        }
+        //Тут буде логика фільтрації товарів за категорією
+        //filterProductsByCategory(categoryName);
+    };
+
+    const handleSearchChange = (text) => {
+        setSearchQuery(text);
+    };
+
+    const handleAnnouncementPress = (announcement) => {
+        console.log('Pressed announcemet:', announcement);
+    };
+
+    const renderAnnouncementItem = ({ item }) => (
+        <AnnouncementCard 
+            announcement={item}
+            onPress={handleAnnouncementPress}
+        />
+    );
+
+    const renderEmptyComponent = () => {
+        if (isLoadingAnnouncements) {
+            return (
+                <View style={{
+                    flex: 1,
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    paddingVertical: 50,
+                }}>
+                    <ActivityIndicator size="large" color={Colors.PRIMARY} />
+                    <Text style={{
+                        marginTop: 10,
+                        fontSize: 16,
+                        color: '#666',
+                        fontFamily: 'nunito-medium',
+                    }}>
+                        Loading announcements...
+                    </Text>
+                </View>
+            );
+        }
+        return (
+            <View style={{
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+                paddingVertical: 50,
+            }}>
+                <AntDesign name="inbox" size={60} color="#ccc" />
+                <Text style={{
+                    marginTop: 20,
+                    fontSize: 18,
+                    color: '#666',
+                    fontFamily: 'nunito-medium',
+                    textAlign: 'center',
+                }}>
+                    {searchQuery || selectedCategory ? 
+                        'No items found matching your search' : 
+                        'No announcements available'
+                    }
+                </Text>
+                {(searchQuery || selectedCategory) && (
+                    <TouchableOpacity
+                        style={{
+                            marginTop: 15,
+                            paddingHorizontal: 20,
+                            paddingVertical: 10,
+                            backgroundColor: Colors.PRIMARY,
+                            borderRadius: 20,
+                        }}
+                        onPress={() => {
+                            setSearchQuery('');
+                            setSelectedCategory(null);
+                        }}
+                    >
+                        <Text style={{
+                            color: '#fff',
+                            fontFamily: 'nunito-medium',
+                        }}>
+                            Clear filters
+                        </Text>
+                    </TouchableOpacity>
+                )}
+            </View>
+        );
+    };
+
     return (
+        <View style={{flex : 1}}> 
+
         <View style={{
             padding: 20,
             paddingTop: 35,
@@ -35,17 +171,29 @@ export default function explore() {
                     <AntDesign name='search1' size={24} color={Colors.PRIMARY} />
                     <TextInput
                         placeholder="Search.."
+                        value={searchQuery}
+                        onChangeText={handleSearchChange}
                         style={{
                             fontFamily: 'outfit-medium',
                             fontSize: 18,
                             marginLeft: 10,
                             flex: 1,
+                            paddingVertical: 10
                         }} />
+                        {searchQuery.length > 0 && (
+                            <TouchableOpacity
+                            onPress={() => setSearchQuery('')}
+                            style={{padding: 5}}
+                            >
+                                <AntDesign name='close' size={20} color="#666"/>
+                            </TouchableOpacity>
+                        )}
                 </View>
                 <TouchableOpacity onPress={() => setModalVisible(true)}>
                     <AntDesign name='filter' size={24} color="black" />
                 </TouchableOpacity>
             </View>
+
             <Modal
                 animationType="slide"
                 transparent={true}
@@ -98,6 +246,69 @@ export default function explore() {
                     </View>
                 </TouchableOpacity>
             </Modal>
+        </View>
+
+        <Category
+        onCategoryPress={handleCategoryPressed}
+        showSelected={true}
+        style={{
+            backgroundColor: '#f9f9f9',
+            borderBottomWidth: 1,
+            borderBottomColor: '#e0e0e0'
+        }}/>
+        {/*Тут буде список товарів */}
+        <View style={{ flex: 1 }}>
+                {/* Статус фільтрів */}
+                {(selectedCategory || searchQuery) && (
+                    <View style={{
+                        padding: 15,
+                        backgroundColor: '#f0f8ff',
+                        borderBottomWidth: 1,
+                        borderBottomColor: '#e0e0e0',
+                    }}>
+                        <View style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                        }}>
+                            <Text style={{
+                                fontSize: 14,
+                                color: Colors.PRIMARY,
+                                fontFamily: 'nunito-medium',
+                            }}>
+                                {selectedCategory && `Category: ${selectedCategory}`}
+                                {selectedCategory && searchQuery && ' • '}
+                                {searchQuery && `Search: "${searchQuery}"`}
+                            </Text>
+                            <Text style={{
+                                fontSize: 12,
+                                color: '#666',
+                                fontFamily: 'nunito-regular',
+                            }}>
+                                {filteredAnnouncements.length} item{filteredAnnouncements.length !== 1 ? 's' : ''}
+                            </Text>
+                        </View>
+                    </View>
+                )}
+
+                <FlatList
+                    data={filteredAnnouncements}
+                    renderItem={renderAnnouncementItem}
+                    keyExtractor={(item) => `announcement-${item.id}`}
+                    contentContainerStyle={{
+                        padding: 15,
+                        flexGrow: 1,
+                    }}
+                    showsVerticalScrollIndicator={false}
+                    ListEmptyComponent={renderEmptyComponent}
+                    numColumns={2}
+                    columnWrapperStyle={{
+                        justifyContent: 'space-between',
+                    }}
+                    ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
+                />
+            </View>
+
         </View>
     )
 }
