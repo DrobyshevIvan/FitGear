@@ -1,4 +1,5 @@
 import AntDesign from '@expo/vector-icons/AntDesign';
+import { router } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, FlatList, Modal, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import AnnouncementCard from '../../components/EquipmentCards/AnnouncementCard';
@@ -6,7 +7,7 @@ import Category from '../../components/Home/Category';
 import { Colors } from '../../constants/Colors';
 import { useProduct } from '../context/ProductContext';
 
-export default function explore(route) {
+export default function explore({route, navigation}) {
     const [modalVisible, setModalVisible] = useState(false);
     const {selectedCategory, setSelectedCategory, filteredAnnouncements, isLoadingAnnouncements, searchQuery, setSearchQuery, getAnnouncements} = useProduct();
 
@@ -69,6 +70,12 @@ export default function explore(route) {
 
     const handleAnnouncementPress = (announcement) => {
         console.log('Pressed announcemet:', announcement);
+        router.push({
+            pathname: '/announcementdetail',
+            params: {
+                announcementData: announcement.id.toString()
+            }
+        });
     };
 
     const renderAnnouncementItem = ({ item }) => (
