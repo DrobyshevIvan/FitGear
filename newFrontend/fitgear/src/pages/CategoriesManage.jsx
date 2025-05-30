@@ -75,7 +75,7 @@ export default function CategoriesManage() {
                     <span>{c.name}</span>
                     <button
                         onClick={() => {
-                            console.log("Удаляется категория:", categoryToDelete);
+                            console.log("Удаляется категория:", c);
                             setCategoryToDelete(c);
                             setIsDeleteOpen(true);
                         }
