@@ -3,6 +3,8 @@ import AddCategory from "./addCategory";
 import { addCategory, getAllCategories } from "../services/categories";
 import DeleteCategory from "./deleteCategory";
 import { deleteCategory } from "../services/categories";
+import EditCategory from "./editCategory";
+import { editCategory } from "../services/categories";
 
 export default function CategoriesManage() {
     const [categories, setCategories] = useState([]);
@@ -10,6 +12,9 @@ export default function CategoriesManage() {
 
     const [categoryToDelete, setCategoryToDelete] = useState(null);
     const [isDeleteOpen, setIsDeleteOpen] = useState(false);
+
+    const [isEditOpen, setIsEditOpen] = useState(false);
+    const [categoryToEdit, setCategoryToEdit] = useState(null);
 
     const normalizeCategories = (data) => {
         const array = Array.isArray(data) ? data : data?.$values;
@@ -54,6 +59,19 @@ export default function CategoriesManage() {
         setCategoryToDelete(null);
     }
 
+    const handleEdit = async (updatedCategory) => {
+        try {
+            console.log("Edited category:", updatedCategory)
+            await editCategory(updatedCategory);
+            const updated = await getAllCategories();
+            setCategories(normalizeCategories(updated));
+            setIsEditOpen(false);
+            setCategoryToEdit(null);
+        } catch (error) {
+            console.error("Ошибка про редактировании:", error)
+        }
+    }
+
     return (
         <div className="p-6">
             <button
@@ -73,17 +91,28 @@ export default function CategoriesManage() {
                 {Array.isArray(categories) && categories.map(c => (
                 <li key={c.id} className="border p-2 flex justify-between items-center">
                     <span>{c.name}</span>
-                    <button
-                        onClick={() => {
-                            console.log("Удаляется категория:", c);
-                            setCategoryToDelete(c);
-                            setIsDeleteOpen(true);
-                        }
-                        }
-                        className="text-red-500 hover:text-red-700"
-                    >
-                        Delete
-                    </button>
+                    <div className="flex space-x-5">
+                        <button
+                            onClick={() => {
+                                setCategoryToEdit(c);
+                                setIsEditOpen(true);
+                            }}
+                            className="text-blue-500 hover:text-blue-700"
+                        >
+                            Edit
+                        </button>
+                        <button
+                            onClick={() => {
+                                console.log("Удаляется категория:", c);
+                                setCategoryToDelete(c);
+                                setIsDeleteOpen(true);
+                            }
+                            }
+                            className="text-red-500 hover:text-red-700"
+                        >
+                            Delete
+                        </button>
+                    </div>
                 </li>
                 ))}
             </ul>
@@ -93,6 +122,13 @@ export default function CategoriesManage() {
                 onClose={() => setIsDeleteOpen(false)}
                 onConfirm={confirmDelete}
                 category={categoryToDelete}
+            />
+
+            <EditCategory
+                isOpen={isEditOpen}
+                onClose={() => setIsEditOpen(false)}
+                onSubmit={handleEdit}
+                category={categoryToEdit}
             />
         </div>
     );
