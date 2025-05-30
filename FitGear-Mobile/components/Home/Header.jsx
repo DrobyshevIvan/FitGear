@@ -7,7 +7,7 @@ import { Colors } from "../../constants/Colors";
 export default function Header() {
     const router = useRouter();
     const handleFocus = () => {
-        router.push('/(tabs)/mybookings');
+        router.push('/(tabs)/explore');
     }
 
   return (
