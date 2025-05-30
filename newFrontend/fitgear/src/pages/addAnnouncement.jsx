@@ -7,6 +7,7 @@ export default function AddAnnouncement({ isOpen, onClose, onSubmit}) {
         description: "",
         price: 0,
         quantity: 0,
+        categoryId: 1,
     });
 
     const handleChange = (e) => {

@@ -10,7 +10,7 @@ export default function Header() {
 
     const navItems = [
         { name: "Manage", path: "/manage/anouncements"},
-        { name: "About us", path: "/"},
+        { name: "About us", path: "#about-us-section"},
         { name: "Contacts", path: "/" },
     ];
 
@@ -33,15 +33,31 @@ export default function Header() {
                     </div>
 
                     <div className="hidden lg:flex items-center gap-5">
-                        {navItems.map(item => (
-                            <NavLink
-                                key={item.name}
-                                to={item.path}
-                                className="flex cursor-pointer px-1 rounded-md text-lg hover:underline transition fade-down"
-                            >
-                                {item.name}
-                            </NavLink>
-                        ))}
+                        {navItems.map(item => {
+                            if (item.path.startsWith("#")) {
+                                return (
+                                    <a
+                                        key={item.name}
+                                        href={item.path}
+                                        className="text-lg hover:underline transition"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        {item.name}
+                                    </a>
+                                );
+                            } else {
+                                return (
+                                    <NavLink
+                                        key={item.name}
+                                        to={item.path}
+                                        className="text-lg hover:underline transition"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        {item.name}
+                                    </NavLink>
+                                );
+                            }
+                        })}
                         {user ? (
                             <button
                                 onClick={logout}
