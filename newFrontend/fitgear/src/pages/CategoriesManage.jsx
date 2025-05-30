@@ -11,14 +11,23 @@ export default function CategoriesManage() {
     const [categoryToDelete, setCategoryToDelete] = useState(null);
     const [isDeleteOpen, setIsDeleteOpen] = useState(false);
 
+    const normalizeCategories = (data) => {
+        const array = Array.isArray(data) ? data : data?.$values;
+        if (!array) return [];
+
+        return array.map(c => ({
+            ...c,
+            id: c.id ?? parseInt(c.$id)
+        })
+
+        );
+    }
 
     useEffect(() => {
         getAllCategories().then(data => {
-            console.log("Изначальные категории:", data);
-            setCategories(data.$values.map(c => ({
-                ...c,
-                id: parseInt(c.$id)
-            })));
+            const normalized = normalizeCategories(data);
+            console.log("Изначальные категории:", normalized);
+            setCategories(normalized);
         });
     }, []);
 
@@ -26,8 +35,9 @@ export default function CategoriesManage() {
         await addCategory(data);
         setIsModalOpen(false);
         const updated = await getAllCategories();
-        console.log("Данные с бэкенда:", updated);
-        setCategories(Array.isArray(updated.$values) ? updated.$values : []);
+        const normalized = normalizeCategories(updated);
+        console.log("Данные с бэкенда:", normalized);
+        setCategories(normalized);
     };
 
     const confirmDelete = async (category) => {
@@ -39,7 +49,7 @@ export default function CategoriesManage() {
 
         await deleteCategory(id);
         const updated = await getAllCategories();
-        setCategories(updated.$values || []);
+        setCategories(normalizeCategories(updated));
         setIsDeleteOpen(false);
         setCategoryToDelete(null);
     }
@@ -60,7 +70,7 @@ export default function CategoriesManage() {
             />
 
             <ul className="space-y-2">
-                {categories.map(c => (
+                {Array.isArray(categories) && categories.map(c => (
                 <li key={c.id} className="border p-2 flex justify-between items-center">
                     <span>{c.name}</span>
                     <button
