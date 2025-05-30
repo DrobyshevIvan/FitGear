@@ -24,7 +24,7 @@ public class BookingService : IBookingService
         _mapper = mapper;
     }
 
-    public async Task<Booking> CreateBookingAsync(CreateBookingDto createBookingDto)
+    public async Task<GetBookingDto> CreateBookingAsync(CreateBookingDto createBookingDto)
     {
         var booking = _mapper.Map<Booking>(createBookingDto);
         var announcement = await _announcementsRepository.GetAsync(booking.AnnouncementId);
@@ -42,7 +42,7 @@ public class BookingService : IBookingService
         await _announcementsRepository.UpdateAsync(announcement);
         await _bookingRepository.AddAsync(booking);
 
-        return booking;
+        return _mapper.Map<GetBookingDto>(booking);
     }
 
     // public async Task<IEnumerable<GetBookingDto>> GetBookingsAsync()

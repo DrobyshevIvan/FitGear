@@ -338,3 +338,8 @@ Error Number:515,State:2,Class:16
 2025-05-29 10:29:23.237 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 501.4953 ms
 2025-05-29 10:29:23.252 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 6.1277 ms
 2025-05-29 10:29:23.283 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 4.7632 ms
+2025-05-29 10:34:23.737 +03:00 [INF] Refresh Token Attempt for d1009dc1-19db-4001-b9c4-1da055110a3f
+2025-05-29 10:34:23.738 +03:00 [INF] HTTP POST /api/User/refreshtoken responded 200 in 1.5085 ms
+2025-05-29 10:34:23.766 +03:00 [INF] HTTP GET /api/UserProfile/profile responded 200 in 25.2904 ms
+2025-05-29 10:34:23.773 +03:00 [INF] HTTP GET /api/User/roles responded 200 in 5.3032 ms
+2025-05-29 10:35:40.217 +03:00 [INF] Application is shutting down...

@@ -68,7 +68,7 @@ namespace FitGear.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         [Authorize]
-        public async Task<ActionResult<Booking>> PostBooking(CreateBookingDto createBookingDto)
+        public async Task<ActionResult<GetBookingDto>> PostBooking(CreateBookingDto createBookingDto)
         {
             var booking = await _bookingService.CreateBookingAsync(createBookingDto);
             if (booking == null)
