@@ -6,7 +6,7 @@ namespace FitGear.Contracts;
 
 public interface IBookingService
 {
-    Task<Booking> CreateBookingAsync(CreateBookingDto createBookingDto);
+    Task<GetBookingDto> CreateBookingAsync(CreateBookingDto createBookingDto);
     Task<IEnumerable<GetBookingDto>> GetBookingsAsync(BookingFilter bookingFilter);
     Task<GetBookingDto> GetBookingByIdAsync(int id);
     Task<bool> DeleteBookingAsync(int id);

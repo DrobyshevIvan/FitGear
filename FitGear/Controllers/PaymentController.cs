@@ -51,7 +51,7 @@ namespace FitGear.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         [Authorize]
-        public async Task<ActionResult<Payment>> PostPayment(CreatePaymentDto createPaymentDto)
+        public async Task<ActionResult<GetPaymentDto>> PostPayment(CreatePaymentDto createPaymentDto)
         {
             var payment = await _paymentService.CreatePaymentAsync(createPaymentDto);
             if (payment == null)

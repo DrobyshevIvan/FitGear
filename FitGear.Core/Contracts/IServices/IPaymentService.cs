@@ -5,7 +5,7 @@ namespace FitGear.Contracts;
 
 public interface IPaymentService
 {
-    Task<Payment> CreatePaymentAsync(CreatePaymentDto paymentDto);
+    Task<GetPaymentDto> CreatePaymentAsync(CreatePaymentDto paymentDto);
     Task<GetPaymentDto> ProcessPaymentAsync(int paymentId);
     Task<GetPaymentDto> GetPaymentAsync(int paymentId);
     Task<IEnumerable<GetPaymentDto>> GetUserPaymentsAsync(string userId);

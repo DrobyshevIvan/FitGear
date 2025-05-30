@@ -21,7 +21,7 @@ public class PaymentService : IPaymentService
         _bookingRepository = bookingRepository;
     }
     
-    public async Task<Payment> CreatePaymentAsync(CreatePaymentDto paymentDto)
+    public async Task<GetPaymentDto> CreatePaymentAsync(CreatePaymentDto paymentDto)
     {
         var payment = _mapper.Map<Payment>(paymentDto);
         payment.Status = PaymentStatus.Pending;
@@ -36,7 +36,9 @@ public class PaymentService : IPaymentService
         booking.Status = BookingStatus.Pending;
         await _bookingRepository.UpdateAsync(booking);
         
-        return await _paymentRepository.AddAsync(payment);
+        await _paymentRepository.AddAsync(payment);
+        
+        return _mapper.Map<GetPaymentDto>(payment);
     }
 
     public async Task<GetPaymentDto> ProcessPaymentAsync(int paymentId)

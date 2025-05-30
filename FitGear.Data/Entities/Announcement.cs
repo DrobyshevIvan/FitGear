@@ -15,5 +15,5 @@ public class Announcement
     public IList<Booking>? Bookings { get; set; } = new List<Booking>();
     public IList<Review>? Reviews { get; set; } = new List<Review>();
     public int CategoryId { get; set; }
-    public Category Category { get; set; } = new Category();
+    public Category Category { get; set; }
 }

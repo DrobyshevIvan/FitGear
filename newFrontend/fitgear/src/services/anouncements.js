@@ -1,21 +1,20 @@
-import axios from "axios";
 import { api } from "../api/api";
 
 export const getAllAnnouncements = async (filter) => {
   try {
     const response = await api.get("/api/Announcements", { 
       params: {
-        Title: filter?.search,
-        Description: filter?.search,  
+        Title: filter.search || "",  
         OrderBy: filter?.orderItem,
         SortDirection: filter?.sortDirection,
+        size: filter.size || 20,
+        page: filter.page || 1,
       }
     });
 
     return response.data?.$values || [];
   } catch (error) {
     console.error("Failed to fetch announcements:", error);
-    throw new Error("Не вдалося завантажити оголошення");
   }
 };
 
@@ -26,6 +25,7 @@ export const addAnnouncement = async (data) => {
       Description: data.description,
       quantityAvailable: data.quantity,
       pricePerDay: data.price,
+      categoryId: data.categoryId,
     });
     return true;
   } catch (err) {

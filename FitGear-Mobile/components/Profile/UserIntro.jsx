@@ -59,9 +59,10 @@ export default function UserIntro() {
             marginTop: 20
           }}>{lastName} {firstName}</Text>
           <Text style={{
-            fontFamily: 'nunito--medium',
+            fontFamily: 'nunito-medium',
             fontSize: 16
           }}>{email}</Text>
+          
     </View>
   )
 }

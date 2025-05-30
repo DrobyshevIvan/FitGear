@@ -1,17 +1,18 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useRouter } from 'expo-router';
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, Alert, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { ActivityIndicator, Alert, Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useAuth } from '../context/AuthContext';
 
 export default function editprofilescreen() {
     const router = useRouter();
-    const { getUserProfile, isLoadingProfile, authState } = useAuth();
+    const { getUserProfile, updateUserProfile, isLoadingProfile, authState } = useAuth();
 
     const [surname, setSurname] = useState('');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
+    const [userName, setUserName] = useState('');
     const [isLoading, setIsLoading] = useState(true);
     const [isSaving, setIsSaving] = useState(false);
 
@@ -43,12 +44,21 @@ export default function editprofilescreen() {
         setName(profile.firstName || '');
         setSurname(profile.lastName || '');
         setEmail(profile.email || '');
-        setPhone('');
+        setPhone(profile.phoneNumber || '');
+        setUserName(profile.userName || profile.email || '');
     };
 
     const handleSave = async () => {
         try {
-            setIsLoading(true);
+            setIsSaving(true);
+
+            const updateData = {
+                firstName: name,
+                lastName: surname,
+                phoneNumber: phone,
+                userName: userName
+            };
+            await updateUserProfile(updateData);
 
             Alert.alert('Successfully', 'Data was saved', [
                 {
@@ -80,12 +90,13 @@ export default function editprofilescreen() {
             </TouchableOpacity>
 
             <View style={styles.avatarContainer}>
-                <View style={styles.avatarCircle}>
-                    <Ionicons name="person" size={80} color="white"/>
-                </View>
+                <Image source={require('./../../assets/images/profileimage.png')} style={{
+                            width: 120,
+                            height: 120,
+                            borderRadius: 99
+                          }}/>
                 <View style={styles.photoButtons}>
-                    <Text style={styles.photoButtonText}>Edit photo</Text>
-                    <Text style={[styles.photoButtonText, {marginLeft: 40}]}>Delete photo</Text>
+                    <Text style={styles.photoButtonText}>Edit profile</Text>
                 </View>
             </View>
 
@@ -109,22 +120,23 @@ export default function editprofilescreen() {
             editable={!isSaving}
             />
 
+            <View style={styles.emailContainer}>
             <TextInput
-            style={styles.input}
+            style={[styles.input, styles.disabledInput]}
             placeholder='E-mail'
             placeholderTextColor="black"
             value={email}
-            onChangeText={setEmail}
-            keyboardType='email-address'
-            editable={!isSaving}
+            editable={false}
             />
+            <Text style={styles.disabledLabel}>Email cannot be changed</Text>
+            </View>
 
             <TextInput
             style={styles.input}
             placeholder='+380...'
             placeholderTextColor="gray"
             value={phone}
-            onChange={setPhone}
+            onChangeText={setPhone}
             keyboardType='phone-pad'
             editable={!isSaving}
             />
@@ -192,7 +204,8 @@ const styles = StyleSheet.create({
     photoButtonText: {
         textDecorationLine: 'underline',
         fontSize: 22,
-        fontFamily: 'outfit-bold'
+        fontFamily: 'outfit-bold',
+        textAlign: 'center',
     },
     separator: {
         borderBottomWidth: 1,
@@ -205,6 +218,19 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         marginBottom: 10,
         fontSize: 16,
+    },
+    emailContainer: {
+        marginBottom: 10,
+    },
+    disabledInput: {
+        backgroundColor: '#f5f5f5',
+        color: '#666',
+        marginBottom: 5,
+    },
+    disabledLabel: {
+        fontSize: 12,
+        color: '#999',
+        marginBottom: 5,
     },
     saveButton: {
         backgroundColor: 'navy',

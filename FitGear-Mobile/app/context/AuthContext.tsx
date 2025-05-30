@@ -8,6 +8,15 @@ interface UserProfile {
     firstName: string;
     lastName: string;
     roles: string[];
+    phoneNumber?: string;
+    userName?: string;
+}
+
+interface UpdateProfileData {
+    firstName: string;
+    lastName: string;
+    phoneNumber: string;
+    userName: string;
 }
 
 interface AuthState {
@@ -24,6 +33,7 @@ interface AuthContextType {
     onLogout: () => Promise<any>;
     onRefreshToken: () => Promise<any>;
     getUserProfile: () => Promise<UserProfile>;
+    updateUserProfile: (profileData: UpdateProfileData) => Promise<void>;
     isLoadingProfile: boolean;
 }
 
@@ -280,7 +290,84 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         }
     };
 
-    
+    const updateUserProfile = async (profileData: UpdateProfileData): Promise<void> => {
+        console.log("AuthProvider: Updating user profile...");
+
+        try {
+            if (!authState.accessToken) {
+                throw new Error("No access token available");
+            }
+
+            const response = await axios.put(
+                `${API_URL}/UserProfile/profile`,
+                profileData,
+                {
+                    headers: {
+                        Authorization: `Bearer ${authState.accessToken}`,
+                        "X-Mobile-Client": "true",
+                        "Content-Type": "application/json"
+                    },
+                }
+            );
+
+            console.log("AuthProvider: Profile updated successfully");
+
+            // Оновлюємо локальний стан профілю
+            setAuthState(prevState => ({
+                ...prevState,
+                userProfile: prevState.userProfile ? {
+                    ...prevState.userProfile,
+                    firstName: profileData.firstName,
+                    lastName: profileData.lastName,
+                    phoneNumber: profileData.phoneNumber,
+                    userName: profileData.userName
+                } : null,
+            }));
+
+        } catch (error: any) {
+            console.log("AuthProvider: Failed to update user profile:", error);
+
+            if (error.response?.status === 401) {
+                try {
+                    console.log("AuthProvider: Token might be expired, trying to refresh...");
+                    await refreshToken();
+
+                    // Повторний запит після оновлення токену
+                    await axios.put(
+                        `${API_URL}/UserProfile/profile`,
+                        profileData,
+                        {
+                            headers: {
+                                Authorization: `Bearer ${authState.accessToken}`,
+                                "X-Mobile-Client": "true",
+                                "Content-Type": "application/json"
+                            },
+                        }
+                    );
+
+                    // Оновлюємо локальний стан профілю після успішного збереження
+                    setAuthState(prevState => ({
+                        ...prevState,
+                        userProfile: prevState.userProfile ? {
+                            ...prevState.userProfile,
+                            firstName: profileData.firstName,
+                            lastName: profileData.lastName,
+                            phoneNumber: profileData.phoneNumber,
+                            userName: profileData.userName
+                        } : null,
+                    }));
+
+                } catch (refreshError) {
+                    console.error("AuthProvider: Token refresh failed:", refreshError);
+                    await logout();
+                    throw new Error("Session expired. Please login again.");
+                }
+            } else {
+                throw error;
+            }
+        }
+
+    };
 
     const value: AuthContextType = {
         authState,
@@ -289,6 +376,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         onLogout: logout,
         onRefreshToken: refreshToken,
         getUserProfile,
+        updateUserProfile,
         isLoadingProfile,
     };
 
