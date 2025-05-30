@@ -13,7 +13,9 @@ public class MapperConfig : Profile
 {
     public MapperConfig()
     {
-        CreateMap<Announcement, CreateAnnouncementDto>().ReverseMap();
+        CreateMap<CreateAnnouncementDto, Announcement>()
+            .ForMember(dest => dest.Category, opt => opt.Ignore())
+            .ReverseMap();
         CreateMap<Announcement, GetAnnouncementDto>().ReverseMap();
         CreateMap<Announcement, UpdateAnnouncementDto>().ReverseMap();
         CreateMap<Announcement, GetDetailedAnnouncementDto>().ReverseMap();

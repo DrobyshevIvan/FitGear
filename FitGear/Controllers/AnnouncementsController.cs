@@ -81,7 +81,7 @@ namespace FitGear.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         [Authorize(Roles = "Administrator, Moderator")]
-        public async Task<ActionResult<Announcement>> PostAnnouncement(CreateAnnouncementDto createAnnouncementDto)
+        public async Task<ActionResult<GetAnnouncementDto>> PostAnnouncement(CreateAnnouncementDto createAnnouncementDto)
         {
             var announcement = await _announcementService.CreateAnnouncementAsync(createAnnouncementDto);
             return CreatedAtAction(nameof(GetAnnouncement), new { id = announcement.Id }, announcement);
