@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { getAllBookings } from "../services/bookings";
 import { getAnnouncementById } from "../services/anouncements";
+import { getUserInfoById } from "../services/users";
+import { formatDate } from "../services/utils"; 
 
 
 export default function BookingsManage() {
@@ -32,10 +34,12 @@ export default function BookingsManage() {
             const enriched = await Promise.all(
                 rawBookings.map(async (c) => {
                     const announcement = await getAnnouncementById(c.announcementId);
+                    const user = await getUserInfoById(c.userId);
                     return {
                         ...c,
                         id: c.id ?? parseInt(c.$id),
-                        announcement: announcement
+                        announcement: announcement,
+                        user: user
                     };
                 })
             )
@@ -54,11 +58,23 @@ export default function BookingsManage() {
         <div className="flex justify-between items-start">
             <div className="w-full max-w-[80%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                 {filteredBookings
-                .map(c => (
-                    <div key={c.id} className="border p-4 rounded shadow bg-white flex flex-col justify-between transition-transform transform hover:scale-105 duration-200">
-                        <h1>{c.announcement.title}</h1>
-                        <h1>{c.status}</h1>
+                .map(b => (
+                    <div key={b.id} className="border space-y-1 p-4 rounded shadow bg-white flex flex-col justify-between transition-transform transform hover:scale-105 duration-200">
+                        <h3 className="text-lg font-semibold text-gray-800">{b.announcement.title}</h3>
+                        <p className="text-sm text-gray-500">Status: <span className="font-medium text-black">{b.status}</span></p>
+                        <p className="text-sm text-gray-500">
+                            From: <span className="text-black">{formatDate(b.from)}</span>
+                            <br />
+                            Till: <span className="text-black">{formatDate(b.to)}</span>
+                        </p>
+                        <p className="text-sm text-gray-500 truncate hover:overflow-visible hover:whitespace-normal hover:bg-white relative z-10">
+                            User: <span className="text-black">{b.user.firstName} {b.user.lastName}</span>
+                            <br />
+                            Email: <span className="text-black">{b.user.email}</span>
+                        </p>
+
                         <hr className="my-2 border-t border-gray-300" />
+
                         <div className="flex flex-col space-y-1 mt-2">
                             <button className="text-blue-500 hover:text-blue-700">
                                 Edit
@@ -76,7 +92,7 @@ export default function BookingsManage() {
                 <h3 className="font-bold mb-2">Status</h3>
                 <button
                     onClick={() => setFilterStatus(null)}
-                    className={`block w-full text-left px-4 py-2 rounded ${filterStatus === null ? "bg-blue-500 text-white" : "bg-gray-200"} transition-transform transform hover:scale-105 duration-200`}
+                    className={`block w-full text-left px-4 py-2 rounded shadow ${filterStatus === null ? "bg-blue-500 text-white" : "bg-gray-200"} transition-transform transform hover:scale-105 duration-200`}
                 >
                     ✕ All
                 </button>
@@ -84,7 +100,7 @@ export default function BookingsManage() {
                     <button
                         key={status}
                         onClick={() => setFilterStatus(status)}
-                        className={`block w-full text-left px-4 py-2 rounded ${filterStatus === status ? "bg-blue-500 text white" : "bg-gray-200"} transition-transform transform hover:scale-105 duration-200`}
+                        className={`block w-full text-left px-4 py-2 rounded shadow ${filterStatus === status ? "bg-blue-500 text white" : "bg-gray-200"} transition-transform transform hover:scale-105 duration-200`}
                     >
                         {status}
                     </button>
