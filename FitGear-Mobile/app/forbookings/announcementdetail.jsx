@@ -1,4 +1,5 @@
-import { AntDesign } from '@expo/vector-icons/AntDesign';
+import AntDesign from '@expo/vector-icons/AntDesign';
+import { router, useLocalSearchParams } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import { Dimensions, Image, ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
@@ -7,25 +8,117 @@ const { width } = Dimensions.get('window');
 
 export default function announcementdetail({ route, navigation }) {
     const [announcement, setAnnouncement] = useState(null);
+    const [loading, setLoading] = useState(true);
+    
+    const params = useLocalSearchParams();
+
 
     useEffect(() => {
-        if (route?.params?.announcement) {
-            setAnnouncement(route.params.announcement);
-            console.log('Announcement data:', route.params.announcement);
+        console.log('Route params:', route?.params);
+        console.log('Expo Router params:', params);
+        
+        let announcementData = null;
+        
+        // Спосіб 1: Expo Router params (окремі поля)
+        if (params.id) {
+            announcementData = {
+                id: parseInt(params.id),
+                title: params.title || '',
+                description: params.description || '',
+                pricePerDay: parseFloat(params.pricePerDay) || 0,
+                quantityAvailable: parseInt(params.quantityAvailable) || 0,
+                categoryName: params.categoryName || '',
+                categoryId: parseInt(params.categoryId) || 0,
+                url: params.url || null,
+                isDeleted: parseInt(params.isDeleted) || 0
+            };
+            console.log('Using Expo Router params:', announcementData);
         }
-    }, [route?.params?.announcement]);
+        // Спосіб 2: JSON string в Expo Router
+        else if (params.announcementData) {
+            try {
+                announcementData = JSON.parse(params.announcementData);
+                console.log('Using Expo Router JSON params:', announcementData);
+            } catch (error) {
+                console.error('Error parsing Expo Router JSON params:', error);
+            }
+        }
+        // Спосіб 3: React Navigation (fallback)
+        else if (route?.params?.announcement) {
+            try {
+                if (typeof route.params.announcement === 'string') {
+                    announcementData = JSON.parse(route.params.announcement);
+                } else {
+                    announcementData = route.params.announcement;
+                }
+                console.log('Using React Navigation params:', announcementData);
+            } catch (error) {
+                console.error('Error parsing React Navigation params:', error);
+            }
+        }
+
+
+        if (announcementData) {
+            setAnnouncement(announcementData);
+        } else {
+            console.error('No announcement data found in any params source');
+        }
+        
+        setLoading(false);
+    }, [params.id, 
+        params.title, 
+        params.description, 
+        params.pricePerDay, 
+        params.quantityAvailable, 
+        params.categoryName, 
+        params.categoryId, 
+        params.url,
+        params.isDeleted, 
+        params.announcementData, 
+        route?.params?.announcement]);
+
 
     const handleBookPress = () => {
         if (announcement) {
-            console.log('Booking announcement with ID:', announcement.id)
+            console.log('Booking announcement with ID:', announcement.id);
+            router.push({
+                pathname: 'forbookings/bookingscreen',
+                params: {
+                    id: announcement.id.toString(),
+                    title: announcement.title,
+                    description: announcement.description,
+                    pricePerDay: announcement.pricePerDay.toString(),
+                    quantityAvailable: announcement.quantityAvailable.toString(),
+                    categoryName: announcement.categoryName,
+                    categoryId: announcement.categoryId.toString(),
+                    url: announcement.url || '',
+                    isDeleted: announcement.isDeleted?.toString() || '0'
+                }
+            })
         }
     };
 
+
     const calculateWeekPrice = (pricePerDay) => {
-        return (pricePerDay * 7).toFixed(2);
+        return (pricePerDay * 24).toFixed(2);
     };
 
-    if (!announcement) {
+
+    const getAvailabilityColor = (quantity) => {
+        return quantity > 0 ? '#4CAF50' : '#f44336';
+    };
+
+
+    const handleGoBack = () => {
+        if (navigation) {
+            navigation.goBack();
+        } else {
+            router.back();
+        }
+    };
+
+
+    if (loading) {
         return (
             <View style={styles.loadingContainer}>
                 <Text style={styles.loadingText}>Loading...</Text>
@@ -33,16 +126,34 @@ export default function announcementdetail({ route, navigation }) {
         );
     }
 
+
+    if (!announcement) {
+        return (
+            <View style={styles.loadingContainer}>
+                <Text style={styles.loadingText}>No announcement data available</Text>
+                <TouchableOpacity 
+                    style={styles.backToListButton}
+                    onPress={handleGoBack}
+                >
+                    <Text style={styles.backToListText}>Go Back</Text>
+                </TouchableOpacity>
+            </View>
+        );
+    }
+
+
     return (
         <View style={styles.container}>
             <StatusBar barStyle='light-content' backgroundColor='transparent' translucent />
+            
             <View style={styles.header}>
                 <TouchableOpacity
                     style={styles.backButton}
-                    onPress={() => navigation.goBack()}>
+                    onPress={handleGoBack}>
                     <AntDesign name="arrowleft" size={24} color="#000" />
                 </TouchableOpacity>
             </View>
+
 
             <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
                 <View style={styles.imageContainer}>
@@ -50,63 +161,88 @@ export default function announcementdetail({ route, navigation }) {
                         <Image
                             source={{ uri: announcement.url }}
                             style={styles.image}
-                            resizeMode='cover' />
+                            resizeMode='cover' 
+                        />
                     ) : (
-                        <View>
+                        <View style={styles.placeholderImage}>
                             <AntDesign name='picture' size={60} color="#ccc" />
                             <Text style={styles.placeholderText}>No image available</Text>
                         </View>
                     )}
                 </View>
 
-                <View style={styles.categoryContainer}>
-                    <Text style={styles.categoryLabel}>Category:</Text>
-                    <Text style={styles.categoryValue}>{announcement.categoryName}</Text>
-                </View>
 
-                <View style={styles.ratingContainer}>
-                    <View style={styles.starsContainer}>
-                        {[1, 2, 3, 4, 5].map((star) => (
-                            <AntDesign
-                                key={star}
-                                name="star"
-                                size={16}
-                                color={star <= 4 ? "#FFD700" : "e0e0e0"} />
-                        ))}
+                <View style={styles.contentContainer}>
+                    <Text style={styles.title}>{announcement.title}</Text>
+
+
+                    <View style={styles.categoryContainer}>
+                        <Text style={styles.categoryLabel}>Category:</Text>
+                        <Text style={styles.categoryValue}>{announcement.categoryName}</Text>
                     </View>
-                    <Text style={styles.ratingText}>4.0 (12 reviews)</Text>
-                </View>
-                <View style={styles.availabilityContainer}>
-                    <Text style={styles.availabilityLabel}>Available quantity:</Text>
-                    <Text style={styles.availabilityValue}>{announcement.quantityAvailable} pcs</Text>
-                </View>
-                <View style={styles.section}>
-                    <Text style={styles.sectionTitle}>About</Text>
-                    <View style={styles.sectionContent}>
-                        <Text style={styles.descriptionText}>
-                            {announcement.description || 'No description available for this item.'}
+
+
+                    <View style={styles.ratingContainer}>
+                        <View style={styles.starsContainer}>
+                            {[1, 2, 3, 4, 5].map((star) => (
+                                <AntDesign
+                                    key={star}
+                                    name="star"
+                                    size={16}
+                                    color={star <= 4 ? "#FFD700" : "#e0e0e0"} 
+                                />
+                            ))}
+                        </View>
+                        <Text style={styles.ratingText}>4.0 (12 reviews)</Text>
+                    </View>
+
+
+                    <View style={styles.availabilityContainer}>
+                        <Text style={styles.availabilityLabel}>Available quantity:</Text>
+                        <Text style={[
+                            styles.availabilityValue, 
+                            { color: getAvailabilityColor(announcement.quantityAvailable) }
+                        ]}>
+                            {announcement.quantityAvailable} pcs
                         </Text>
                     </View>
-                </View>
-                <View style={styles.section}>
-                    <Text style={styles.sectionTitle}>Price</Text>
-                    <View style={styles.sectionContent}>
-                        <View style={styles.priceRow}>
-                            <Text style={styles.priceLabel}>For 1 day</Text>
-                            <Text style={styles.priceValue}>${announcement.pricePerDay}</Text>
-                        </View>
-                        <View style={styles.priceRow}>
-                            <Text style={styles.priceLabel}>For 7 days</Text>
-                            <Text style={styles.priceValue}>
-                                ${calculateWeekPrice(announcement.pricePerDay)}
+
+
+                    <View style={styles.section}>
+                        <Text style={styles.sectionTitle}>About</Text>
+                        <View style={styles.sectionContent}>
+                            <Text style={styles.descriptionText}>
+                                {announcement.description || 'No description available for this item.'}
                             </Text>
+                        </View>
+                    </View>
+
+
+                    <View style={styles.section}>
+                        <Text style={styles.sectionTitle}>Price</Text>
+                        <View style={styles.sectionContent}>
+                            <View style={styles.priceRow}>
+                                <Text style={styles.priceLabel}>For 1 hour</Text>
+                                <Text style={styles.priceValue}>${announcement.pricePerDay}</Text>
+                            </View>
+                            <View style={styles.priceRow}>
+                                <Text style={styles.priceLabel}>For 1 days</Text>
+                                <Text style={styles.priceValue}>
+                                    ${calculateWeekPrice(announcement.pricePerDay)}
+                                </Text>
+                            </View>
                         </View>
                     </View>
                 </View>
             </ScrollView>
+
+
             <View style={styles.bookButtonContainer}>
-                <TouchableOpacity 
-                    style={styles.bookButton}
+                <TouchableOpacity
+                    style={[
+                        styles.bookButton,
+                        announcement.quantityAvailable === 0 && styles.bookButtonDisabled
+                    ]}
                     onPress={handleBookPress}
                     disabled={announcement.quantityAvailable === 0}
                 >
@@ -115,9 +251,9 @@ export default function announcementdetail({ route, navigation }) {
                     </Text>
                 </TouchableOpacity>
             </View>
-
         </View>
-    )
+    );
+
 }
 
 const styles = StyleSheet.create({
@@ -130,10 +266,24 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#fff',
+        padding: 20,
     },
     loadingText: {
         fontSize: 16,
         color: '#666',
+        fontFamily: 'nunito-medium',
+        textAlign: 'center',
+        marginBottom: 20,
+    },
+    backToListButton: {
+        backgroundColor: Colors.PRIMARY,
+        paddingHorizontal: 20,
+        paddingVertical: 10,
+        borderRadius: 20,
+    },
+    backToListText: {
+        color: '#fff',
+        fontSize: 16,
         fontFamily: 'nunito-medium',
     },
     header: {
@@ -246,7 +396,6 @@ const styles = StyleSheet.create({
     },
     availabilityValue: {
         fontSize: 14,
-        color: announcement => announcement?.quantityAvailable > 0 ? '#4CAF50' : '#f44336',
         fontFamily: 'nunito-semibold',
     },
     section: {
@@ -313,6 +462,9 @@ const styles = StyleSheet.create({
         shadowRadius: 3.84,
         elevation: 5,
     },
+    bookButtonDisabled: {
+        backgroundColor: '#ccc',
+    },
     bookButtonText: {
         color: '#fff',
         fontSize: 18,
@@ -320,5 +472,6 @@ const styles = StyleSheet.create({
         fontFamily: 'nunito-bold',
         letterSpacing: 1,
     },
+
 
 })

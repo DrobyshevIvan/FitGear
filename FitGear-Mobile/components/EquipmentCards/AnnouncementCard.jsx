@@ -3,9 +3,9 @@ import React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
 
-export default function AnnouncementCard(announcement, onPress) {
+export default function AnnouncementCard({announcement, onPress}) {
     const renderRating = () => {
-        const rating = 4.5; // Заглушка для рейтингу
+        const rating = 4.5;
         return (
             <View style={{
                 flexDirection: 'row',
@@ -30,10 +30,9 @@ export default function AnnouncementCard(announcement, onPress) {
         backgroundColor: '#fff',
                 borderRadius: 15,
                 marginBottom: 15,
-                marginHorizontal: 15,
                 width: 'auto',
                 alignSelf: 'stretch',
-                
+                width: '100%',
                 shadowColor: "#000",
                 shadowOffset: {
                     width: 0,
@@ -54,7 +53,7 @@ export default function AnnouncementCard(announcement, onPress) {
                         source={{ uri: announcement.url }}
                         style={{
                             width: '100%',
-                            height: 150,
+                            height: 200,
                             borderTopLeftRadius: 15,
                             borderTopRightRadius: 15,
                         }}
@@ -63,7 +62,7 @@ export default function AnnouncementCard(announcement, onPress) {
                 ) : (
                     <View style={{
                         width: '100%',
-                        height: 150,
+                        height: 200,
                         borderTopLeftRadius: 15,
                         borderTopRightRadius: 15,
                         backgroundColor: '#f0f0f0',
@@ -168,7 +167,7 @@ export default function AnnouncementCard(announcement, onPress) {
                             color: '#666',
                             fontFamily: 'nunito-regular',
                         }}>
-                            per day
+                            per hour
                         </Text>
                     </View>
 
