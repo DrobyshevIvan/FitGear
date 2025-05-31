@@ -11,6 +11,7 @@ export default function explore({route, navigation}) {
     const [modalVisible, setModalVisible] = useState(false);
     const {selectedCategory, setSelectedCategory, filteredAnnouncements, isLoadingAnnouncements, searchQuery, setSearchQuery, getAnnouncements} = useProduct();
 
+
     useEffect(() => {
         if(route?.params?.selectedCategory){
             setSelectedCategory(route.params.selectedCategory);
@@ -18,11 +19,13 @@ export default function explore({route, navigation}) {
         }
     }, [route?.params?.selectedCategory]);
 
+
     const handleFilterSelect = (filter) => {
         console.log('Choosen filter:', filter);
-        
+       
         let orderBy = '';
         let sortDirection = 'Ascending';
+
 
         switch(filter) {
             case 'Price: low to high':
@@ -37,9 +40,10 @@ export default function explore({route, navigation}) {
                 orderBy = 'createdAt';
                 sortDirection = 'Descending';
                 break;
-                default: 
+                default:
                 break;
         }
+
 
         if(orderBy){
             getAnnouncements({
@@ -52,38 +56,60 @@ export default function explore({route, navigation}) {
         setModalVisible(false);
     };
 
+
     const handleCategoryPressed = (categoryName) => {
         console.log('Chosen category in explore: ', categoryName);
+
 
         if (selectedCategory === categoryName) {
             setSelectedCategory(null);
         } else {
             setSelectedCategory(categoryName);
         }
-        //Тут буде логика фільтрації товарів за категорією
-        //filterProductsByCategory(categoryName);
     };
+
 
     const handleSearchChange = (text) => {
         setSearchQuery(text);
     };
 
     const handleAnnouncementPress = (announcement) => {
-        console.log('Pressed announcemet:', announcement);
-        router.push({
-            pathname: '/announcementdetail',
-            params: {
-                announcementData: announcement.id.toString()
+        console.log('Pressed announcement:', announcement);
+        
+        try {
+            router.push({
+                pathname: 'forbookings/announcementdetail',
+                params: {
+                    id: announcement.id.toString(),
+                    title: announcement.title,
+                    description: announcement.description,
+                    pricePerDay: announcement.pricePerDay.toString(),
+                    quantityAvailable: announcement.quantityAvailable.toString(),
+                    categoryName: announcement.categoryName,
+                    categoryId: announcement.categoryId.toString(),
+                    url: announcement.url || '',
+                    isDeleted: announcement.isDeleted?.toString() || '0'
+                }
+            });
+            
+        } catch (error) {
+            console.error('Navigation error:', error);
+            if (navigation) {
+                navigation.navigate('announcementdetail', { 
+                    announcement: announcement 
+                });
             }
-        });
+        }
     };
 
+
     const renderAnnouncementItem = ({ item }) => (
-        <AnnouncementCard 
+        <AnnouncementCard
             announcement={item}
             onPress={handleAnnouncementPress}
         />
     );
+
 
     const renderEmptyComponent = () => {
         if (isLoadingAnnouncements) {
@@ -121,8 +147,8 @@ export default function explore({route, navigation}) {
                     fontFamily: 'nunito-medium',
                     textAlign: 'center',
                 }}>
-                    {searchQuery || selectedCategory ? 
-                        'No items found matching your search' : 
+                    {searchQuery || selectedCategory ?
+                        'No items found matching your search' :
                         'No announcements available'
                     }
                 </Text>
@@ -152,120 +178,121 @@ export default function explore({route, navigation}) {
         );
     };
 
-    return (
-        <View style={{flex : 1}}> 
 
-        <View style={{
-            padding: 20,
-            paddingTop: 35,
-            backgroundColor: Colors.PRIMARY,
-            borderBottomLeftRadius: 20,
-            borderBottomRightRadius: 20,
-        }}
-        >
+    return (
+        <View style={{flex : 1}}>
             <View style={{
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                backgroundColor: '#fff',
-                paddingHorizontal: 10,
-                marginVertical: 10,
-                marginTop: 15,
-                borderRadius: 15,
-            }}
-            >
-                <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
-                    <AntDesign name='search1' size={24} color={Colors.PRIMARY} />
-                    <TextInput
-                        placeholder="Search.."
-                        value={searchQuery}
-                        onChangeText={handleSearchChange}
-                        style={{
-                            fontFamily: 'outfit-medium',
-                            fontSize: 18,
-                            marginLeft: 10,
-                            flex: 1,
-                            paddingVertical: 10
-                        }} />
-                        {searchQuery.length > 0 && (
-                            <TouchableOpacity
-                            onPress={() => setSearchQuery('')}
-                            style={{padding: 5}}
-                            >
-                                <AntDesign name='close' size={20} color="#666"/>
-                            </TouchableOpacity>
-                        )}
+                padding: 20,
+                paddingTop: 35,
+                backgroundColor: Colors.PRIMARY,
+                borderBottomLeftRadius: 20,
+                borderBottomRightRadius: 20,
+            }}>
+                <View style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    backgroundColor: '#fff',
+                    paddingHorizontal: 10,
+                    marginVertical: 10,
+                    marginTop: 15,
+                    borderRadius: 15,
+                }}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
+                        <AntDesign name='search1' size={24} color={Colors.PRIMARY} />
+                        <TextInput
+                            placeholder="Search.."
+                            value={searchQuery}
+                            onChangeText={handleSearchChange}
+                            style={{
+                                fontFamily: 'outfit-medium',
+                                fontSize: 18,
+                                marginLeft: 10,
+                                flex: 1,
+                                paddingVertical: 10
+                            }} />
+                            {searchQuery.length > 0 && (
+                                <TouchableOpacity
+                                onPress={() => setSearchQuery('')}
+                                style={{padding: 5}}
+                                >
+                                    <AntDesign name='close' size={20} color="#666"/>
+                                </TouchableOpacity>
+                            )}
+                    </View>
+                    <TouchableOpacity onPress={() => setModalVisible(true)}>
+                        <AntDesign name='filter' size={24} color="black" />
+                    </TouchableOpacity>
                 </View>
-                <TouchableOpacity onPress={() => setModalVisible(true)}>
-                    <AntDesign name='filter' size={24} color="black" />
-                </TouchableOpacity>
+
+
+                <Modal
+                    animationType="slide"
+                    transparent={true}
+                    visible={modalVisible}
+                    onRequestClose={() => setModalVisible(false)}
+                >
+                    <TouchableOpacity
+                        style={{
+                            flex: 1,
+                            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}
+                        activeOpacity={1}
+                        onPressOut={() => setModalVisible(false)}>
+                        <View
+                            style={{
+                                backgroundColor: '#fff',
+                                width: '80%',
+                                padding: 20,
+                                borderRadius: 10,
+                                elevation: 10,
+                            }}>
+                            <Text
+                                style={{
+                                    fontSize: 20,
+                                    fontWeight: 'bold',
+                                    color: 'blue',
+                                    textAlign: 'center',
+                                    marginBottom: 10,
+                                }}>Filters</Text>
+                            <View style={{
+                                height: 1,
+                                backgroundColor: 'black',
+                                marginBottom: 10,
+                            }}/>
+
+
+                            <TouchableOpacity style={{paddingVertical: 10}}
+                            onPress={() => handleFilterSelect('Price: low to high')}>
+                                <Text style={{fontSize: 16}}>Price: low to high</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={{paddingVertical: 10}}
+                            onPress={() => handleFilterSelect('Price: high to low')}>
+                                <Text style={{fontSize: 16}}>Price: high to low</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={{paddingVertical: 10}}
+                            onPress={() => handleFilterSelect('New equipment')}>
+                                <Text style={{fontSize: 16}}>New equipment</Text>
+                            </TouchableOpacity>
+                        </View>
+                    </TouchableOpacity>
+                </Modal>
             </View>
 
-            <Modal
-                animationType="slide"
-                transparent={true}
-                visible={modalVisible}
-                onRequestClose={() => setModalVisible(false)}
-            >
-                <TouchableOpacity
-                    style={{
-                        flex: 1,
-                        backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                    }}
-                    activeOpacity={1}
-                    onPressOut={() => setModalVisible(false)}>
-                    <View
-                        style={{
-                            backgroundColor: '#fff',
-                            width: '80%',
-                            padding: 20,
-                            borderRadius: 10,
-                            elevation: 10,
-                        }}>
-                        <Text
-                            style={{
-                                fontSize: 20,
-                                fontWeight: 'bold',
-                                color: 'blue',
-                                textAlign: 'center',
-                                marginBottom: 10,
-                            }}>Filters</Text>
-                        <View style={{
-                            height: 1,
-                            backgroundColor: 'black',
-                            marginBottom: 10,
-                        }}/>
 
-                        <TouchableOpacity style={{paddingVertical: 10}}
-                        onPress={() => handleFilterSelect('Price: low to high')}>
-                            <Text style={{fontSize: 16}}>Price: low to high</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={{paddingVertical: 10}}
-                        onPress={() => handleFilterSelect('Price: high to low')}>
-                            <Text style={{fontSize: 16}}>Price: high to low</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={{paddingVertical: 10}}
-                        onPress={() => handleFilterSelect('New equipment')}>
-                            <Text style={{fontSize: 16}}>New equipment</Text>
-                        </TouchableOpacity>
-                    </View>
-                </TouchableOpacity>
-            </Modal>
-        </View>
+            <Category
+            onCategoryPress={handleCategoryPressed}
+            showSelected={true}
+            style={{
+                backgroundColor: '#f9f9f9',
+                borderBottomWidth: 1,
+                borderBottomColor: '#e0e0e0'
+            }}/>
 
-        <Category
-        onCategoryPress={handleCategoryPressed}
-        showSelected={true}
-        style={{
-            backgroundColor: '#f9f9f9',
-            borderBottomWidth: 1,
-            borderBottomColor: '#e0e0e0'
-        }}/>
-        {/*Тут буде список товарів */}
-        <View style={{ flex: 1 }}>
-                {/* Статус фільтрів */}
+
+            <View style={{ flex: 1 }}>
                 {(selectedCategory || searchQuery) && (
                     <View style={{
                         padding: 15,
@@ -298,6 +325,7 @@ export default function explore({route, navigation}) {
                     </View>
                 )}
 
+
                 <FlatList
                     data={filteredAnnouncements}
                     renderItem={renderAnnouncementItem}
@@ -308,14 +336,10 @@ export default function explore({route, navigation}) {
                     }}
                     showsVerticalScrollIndicator={false}
                     ListEmptyComponent={renderEmptyComponent}
-                    numColumns={2}
-                    columnWrapperStyle={{
-                        justifyContent: 'space-between',
-                    }}
-                    ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
+                    ItemSeparatorComponent={() => <View style={{ height: 15 }} />}
                 />
             </View>
-
         </View>
     )
+
 }

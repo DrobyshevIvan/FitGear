@@ -12,9 +12,10 @@ interface Announcement {
     description: string;
     quantityAvailable: number;
     pricePerDay: number;
-    isDeleted: number;
+    isDeleted: number | null;
     url: string | null;
     categoryName: string;
+    categoryId: number;
 }
 
 interface ProductContextType{
@@ -72,7 +73,7 @@ export const ProductProvider = ({ children } : {children: React.ReactNode}) => {
             return;
         }
         setIsLoadingCategories(true);
-    
+   
         try {
             const response = await axios.get(`${API_URL}/Category`, {
                 headers: {
@@ -82,11 +83,20 @@ export const ProductProvider = ({ children } : {children: React.ReactNode}) => {
             });
             console.log("ProductProvider: Categories loaded successfully");
             console.log("ProductProvider: Raw response data:", response.data);
+           
+            // ВИПРАВЛЕНО: Більш надійна обробка response
+            let categoriesData: Category[];
             
-            // Обробляємо відповідь з $values обгорткою
-            const categoriesData = response.data.$values ? response.data.$values as Category[] : response.data as Category[];
+            if (Array.isArray(response.data)) {
+                categoriesData = response.data as Category[];
+            } else if (response.data.$values && Array.isArray(response.data.$values)) {
+                categoriesData = response.data.$values as Category[];
+            } else {
+                console.warn("ProductProvider: Unexpected categories response format:", response.data);
+                categoriesData = [];
+            }
+            
             console.log("ProductProvider: Processed categories:", categoriesData);
-            
             setCategories(categoriesData);
         } catch (error: any){
             console.error("ProductProvider: Failed to get categories:", error);
@@ -99,8 +109,8 @@ export const ProductProvider = ({ children } : {children: React.ReactNode}) => {
         } finally {
             setIsLoadingCategories(false);
         }
-    
     };
+
 
     const getAnnouncements = async (params: AnnouncementFilters = {}): Promise<void> => {
         console.log("ProductProvider: Getting announcements...", params);
@@ -115,7 +125,7 @@ export const ProductProvider = ({ children } : {children: React.ReactNode}) => {
         try {
             // Формуємо параметри запиту
             const queryParams = new URLSearchParams();
-            
+           
             if (params.title) queryParams.append('Title', params.title);
             if (params.category) queryParams.append('Category', params.category);
             if (params.minPrice) queryParams.append('MinPricePerDay', params.minPrice.toString());
@@ -138,13 +148,27 @@ export const ProductProvider = ({ children } : {children: React.ReactNode}) => {
             console.log("ProductProvider: Announcements loaded successfully");
             console.log("ProductProvider: Raw announcements data:", response.data);
 
-            // Обробляємо відповідь з $values обгорткою
-            const announcementsData = response.data.$values ? response.data.$values as Announcement[] : response.data as Announcement[];
+            // ВИПРАВЛЕНО: Більш надійна обробка response
+            let announcementsData: Announcement[];
+            
+            if (Array.isArray(response.data)) {
+                announcementsData = response.data as Announcement[];
+            } else if (response.data.$values && Array.isArray(response.data.$values)) {
+                announcementsData = response.data.$values as Announcement[];
+            } else {
+                console.warn("ProductProvider: Unexpected announcements response format:", response.data);
+                announcementsData = [];
+            }
+
             console.log("ProductProvider: Processed announcements:", announcementsData);
 
-            // Групуємо по назві та залишаємо тільки унікальні (з найменшим ID)
+            // ВИПРАВЛЕНО: Покращена логіка унікальності
             const uniqueAnnouncements = announcementsData.reduce((acc: Announcement[], current: Announcement) => {
-                const existing = acc.find(item => item.title.toLowerCase() === current.title.toLowerCase());
+                const existing = acc.find(item => 
+                    item.title.toLowerCase().trim() === current.title.toLowerCase().trim() &&
+                    item.categoryName === current.categoryName
+                );
+                
                 if (!existing) {
                     acc.push(current);
                 } else if (current.id < existing.id) {
@@ -171,17 +195,21 @@ export const ProductProvider = ({ children } : {children: React.ReactNode}) => {
         }
     };
 
-     // Фільтровані оголошення базуючись на пошуку та вибраній категорії
-     const filteredAnnouncements = announcements.filter(announcement => {
-        const matchesSearch = searchQuery === '' || 
+    // ВИПРАВЛЕНО: Покращена фільтрація з урахуванням null значень
+    const filteredAnnouncements = announcements.filter(announcement => {
+        const matchesSearch = searchQuery === '' ||
             announcement.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             announcement.description.toLowerCase().includes(searchQuery.toLowerCase());
-        
-        const matchesCategory = selectedCategory === null || 
+       
+        const matchesCategory = selectedCategory === null ||
             announcement.categoryName === selectedCategory;
-        
-        return matchesSearch && matchesCategory && announcement.isDeleted === 0;
+       
+        // ВИПРАВЛЕНО: Враховуємо що isDeleted може бути null
+        const isNotDeleted = announcement.isDeleted === 0 || announcement.isDeleted === null;
+       
+        return matchesSearch && matchesCategory && isNotDeleted;
     });
+
 
 
     useEffect(() => {
