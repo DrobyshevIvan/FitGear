@@ -290,7 +290,7 @@ export default function bookingscreen() {
                 <TouchableOpacity style={styles.backButton} onPress={handleGoBack}>
                     <AntDesign name="arrowleft" size={24} color="#000" />
                 </TouchableOpacity>
-                <Text style={styles.headerTitle}>Book Item</Text>
+                <Text style={styles.headerTitle}>Book Inventory</Text>
             </View>
 
             <ScrollView 
@@ -702,7 +702,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
-        maxHeight: '70%',
+        maxHeight: '50%',
     },
     modalHeader: {
         flexDirection: 'row',
@@ -724,7 +724,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     timeList: {
-        flex: 1,
+        maxHeight: 300,
     },
     timeOption: {
         paddingVertical: 15,

@@ -41,7 +41,7 @@ export default function RootLayout() {
             <Stack.Screen name='usermenu/editprofilescreen' options={{ headerShown: false }} />
             <Stack.Screen name='forbookings/announcementdetail' options={{headerShown: false}}/>
             <Stack.Screen name='forbookings/bookingscreen' options={{headerShown: false}}/>
-            <Stack.Screen name='forboikings/paymentscreen' options={{headerShown: false}}/>
+            <Stack.Screen name='forbookings/paymentscreen' options={{headerShown: false}}/>
           </Stack>
           <StatusBar style="auto" />
           </BookingProvider>

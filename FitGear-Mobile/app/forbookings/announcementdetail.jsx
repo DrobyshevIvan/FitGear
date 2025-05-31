@@ -100,7 +100,7 @@ export default function announcementdetail({ route, navigation }) {
 
 
     const calculateWeekPrice = (pricePerDay) => {
-        return (pricePerDay * 7).toFixed(2);
+        return (pricePerDay * 24).toFixed(2);
     };
 
 
@@ -222,11 +222,11 @@ export default function announcementdetail({ route, navigation }) {
                         <Text style={styles.sectionTitle}>Price</Text>
                         <View style={styles.sectionContent}>
                             <View style={styles.priceRow}>
-                                <Text style={styles.priceLabel}>For 1 day</Text>
+                                <Text style={styles.priceLabel}>For 1 hour</Text>
                                 <Text style={styles.priceValue}>${announcement.pricePerDay}</Text>
                             </View>
                             <View style={styles.priceRow}>
-                                <Text style={styles.priceLabel}>For 7 days</Text>
+                                <Text style={styles.priceLabel}>For 1 days</Text>
                                 <Text style={styles.priceValue}>
                                     ${calculateWeekPrice(announcement.pricePerDay)}
                                 </Text>

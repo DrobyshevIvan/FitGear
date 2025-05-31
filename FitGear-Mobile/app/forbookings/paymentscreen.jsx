@@ -25,11 +25,10 @@ export default function paymentscreen() {
 
     const params = useLocalSearchParams();
     const { authState } = useAuth();
-    const { processPayment, isProcessingPayment } = useBooking();
+    const { processPayment, deletePayment, isProcessingPayment, isDeletingPayment } = useBooking();
 
 
     useEffect(() => {
-        // Отримуємо дані з параметрів
         const data = {
             bookingId: params.bookingId || '',
             paymentId: params.paymentId || '',
@@ -37,7 +36,6 @@ export default function paymentscreen() {
             totalHours: parseInt(params.totalHours) || 0,
             announcementTitle: params.announcementTitle || '',
             paymentUrl: params.paymentUrl || null,
-            // Додаткові дані які можуть прийти з booking screen
             fromDate: params.fromDate || '',
             toDate: params.toDate || '',
             fromTime: params.fromTime || '',
@@ -61,26 +59,22 @@ export default function paymentscreen() {
         params.pricePerHour
     ]);
 
-
-
     const handlePayment = useCallback(async () => {
         if (!paymentData || !paymentData.paymentId) {
             Alert.alert('Error', 'Payment information is missing');
             return;
         }
 
-
         try {
             await processPayment(parseInt(paymentData.paymentId));
-            
+           
             Alert.alert(
                 'Payment Successful!',
-                'Your payment has been processed successfully. You will be redirected to the home screen.',
+                'Your payment has been processed successfully.',
                 [
                     {
                         text: 'OK',
                         onPress: () => {
-                            // Перенаправляємо на головну сторінку
                             router.replace('/home');
                         }
                     }
@@ -95,11 +89,51 @@ export default function paymentscreen() {
         }
     }, [paymentData, processPayment]);
 
-
     const handleGoBack = useCallback(() => {
-        router.back();
-    }, []);
+        if (!paymentData || !paymentData.paymentId) {
+            router.back();
+            return;
+        }
 
+        Alert.alert(
+            'Cancel Payment',
+            'Are you sure you want to cancel this payment? This will delete your booking.',
+            [
+                {
+                    text: 'No, Stay',
+                    style: 'cancel',
+                },
+                {
+                    text: 'Yes, Cancel',
+                    style: 'destructive',
+                    onPress: async () => {
+                        try {
+                            await deletePayment(parseInt(paymentData.paymentId));
+                            
+                            Alert.alert(
+                                'Booking Cancelled',
+                                'Your booking has been cancelled successfully.',
+                                [
+                                    {
+                                        text: 'OK',
+                                        onPress: () => {
+                                            router.replace('/home');
+                                        }
+                                    }
+                                ]
+                            );
+                        } catch (error) {
+                            console.error('Delete payment error:', error);
+                            Alert.alert(
+                                'Error',
+                                error.message || 'An error occurred while cancelling your booking. Please try again.'
+                            );
+                        }
+                    }
+                }
+            ]
+        );
+    }, [paymentData, deletePayment]);
 
     const formatDate = (dateString) => {
         if (!dateString) return '';
@@ -111,12 +145,10 @@ export default function paymentscreen() {
         });
     };
 
-
     const formatDateTime = (dateString, timeString) => {
         if (!dateString || !timeString) return '';
         return `${formatDate(dateString)} at ${timeString}:00`;
     };
-
 
     if (loading) {
         return (
@@ -126,7 +158,6 @@ export default function paymentscreen() {
             </View>
         );
     }
-
 
     if (!paymentData) {
         return (
@@ -139,22 +170,31 @@ export default function paymentscreen() {
         );
     }
 
-
     return (
         <View style={styles.container}>
             <StatusBar barStyle='light-content' backgroundColor='transparent' translucent />
-            
+           
             {/* Header */}
             <View style={styles.header}>
-                <TouchableOpacity style={styles.headerBackButton} onPress={handleGoBack}>
-                    <AntDesign name="arrowleft" size={24} color="#000" />
+                <TouchableOpacity 
+                    style={[
+                        styles.headerBackButton,
+                        isDeletingPayment && styles.headerBackButtonDisabled
+                    ]} 
+                    onPress={handleGoBack}
+                    disabled={isDeletingPayment || isProcessingPayment}
+                >
+                    {isDeletingPayment ? (
+                        <ActivityIndicator size={20} color="#999" />
+                    ) : (
+                        <AntDesign name="arrowleft" size={24} color="#000" />
+                    )}
                 </TouchableOpacity>
                 <Text style={styles.headerTitle}>Payment</Text>
                 <View style={styles.headerSpacer} />
             </View>
 
-
-            <ScrollView 
+            <ScrollView
                 style={styles.scrollView}
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={styles.scrollContent}
@@ -166,7 +206,6 @@ export default function paymentscreen() {
                     </View>
                 </View>
 
-
                 {/* Receipt Container */}
                 <View style={styles.receiptContainer}>
                     {/* Company Header */}
@@ -175,10 +214,8 @@ export default function paymentscreen() {
                         <Text style={styles.companySubtitle}>Sports Equipment Rental</Text>
                     </View>
 
-
                     {/* Divider */}
                     <View style={styles.divider} />
-
 
                     {/* Customer Information */}
                     <View style={styles.section}>
@@ -194,7 +231,6 @@ export default function paymentscreen() {
                             <Text style={styles.infoValue}>{authState.userProfile?.email || ''}</Text>
                         </View>
                     </View>
-
 
                     {/* Rental Information */}
                     <View style={styles.section}>
@@ -213,7 +249,6 @@ export default function paymentscreen() {
                         </View>
                     </View>
 
-
                     {/* Booking Period */}
                     <View style={styles.section}>
                         <Text style={styles.sectionTitle}>Rental Period</Text>
@@ -231,7 +266,6 @@ export default function paymentscreen() {
                         </View>
                     </View>
 
-
                     {/* Payment Summary */}
                     <View style={styles.section}>
                         <Text style={styles.sectionTitle}>Payment Summary</Text>
@@ -245,7 +279,6 @@ export default function paymentscreen() {
                         </View>
                     </View>
 
-
                     {/* Total */}
                     <View style={styles.divider} />
                     <View style={styles.totalSection}>
@@ -255,7 +288,6 @@ export default function paymentscreen() {
                         </View>
                     </View>
 
-
                     {/* Footer */}
                     <View style={styles.receiptFooter}>
                         <Text style={styles.footerText}>Thank you for choosing FitGear!</Text>
@@ -263,21 +295,19 @@ export default function paymentscreen() {
                     </View>
                 </View>
 
-
                 {/* Additional Space */}
                 <View style={styles.bottomSpacer} />
             </ScrollView>
-
 
             {/* Pay Button */}
             <View style={styles.payButtonContainer}>
                 <TouchableOpacity
                     style={[
                         styles.payButton,
-                        isProcessingPayment && styles.payButtonDisabled
+                        (isProcessingPayment || isDeletingPayment) && styles.payButtonDisabled
                     ]}
                     onPress={handlePayment}
-                    disabled={isProcessingPayment}
+                    disabled={isProcessingPayment || isDeletingPayment}
                 >
                     {isProcessingPayment ? (
                         <View style={styles.loadingRow}>
@@ -294,6 +324,8 @@ export default function paymentscreen() {
             </View>
         </View>
     );
+
+
 
 }
 

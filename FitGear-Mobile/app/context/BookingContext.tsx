@@ -2,12 +2,14 @@ import axios from "axios";
 import { createContext, useContext, useState } from "react";
 import { API_URL, useAuth } from "./AuthContext";
 
+
 interface BookingData {
     from: string;
     to: string;
     userId: string;
     announcementId: number;
 }
+
 
 interface BookingResponse {
     id: number;
@@ -20,12 +22,14 @@ interface BookingResponse {
     status: string;
 }
 
+
 interface PaymentData {
     id?: number;
     amount: number;
     userId: string;
     bookingId: number;
 }
+
 
 interface PaymentResponse {
     id: number;
@@ -36,6 +40,7 @@ interface PaymentResponse {
     paymentUrl?: string;
 }
 
+
 interface ProcessPaymentResponse {
     id: number;
     status: string;
@@ -43,18 +48,29 @@ interface ProcessPaymentResponse {
     message?: string;
 }
 
+
+interface DeletePaymentResponse {
+    success: boolean;
+    message?: string;
+}
+
+
 interface BookingContextType {
     isLoadingBooking: boolean;
     isLoadingPayment: boolean;
     isProcessingPayment: boolean;
+    isDeletingPayment: boolean;
     createBooking: (bookingData: BookingData) => Promise<BookingResponse>;
     createPayment: (paymentData: PaymentData) => Promise<PaymentResponse>;
     processPayment: (paymentId: number) => Promise<ProcessPaymentResponse>;
+    deletePayment: (paymentId: number) => Promise<DeletePaymentResponse>;
     calculateHours: (fromDate: Date, toDate: Date) => number;
     calculateTotalPrice: (hours: number, pricePerHour: number) => number;
 }
 
+
 const BookingContext = createContext<BookingContextType | null>(null);
+
 
 export const useBooking = () => {
     const context = useContext(BookingContext);
@@ -64,22 +80,28 @@ export const useBooking = () => {
     return context;
 };
 
+
 export const BookingProvider = ({ children }: { children: React.ReactNode }) => {
     console.log("BookingProvider: Initializing...");
+
 
     const { authState } = useAuth();
     const [isLoadingBooking, setIsLoadingBooking] = useState(false);
     const [isLoadingPayment, setIsLoadingPayment] = useState(false);
     const [isProcessingPayment, setIsProcessingPayment] = useState(false);
+    const [isDeletingPayment, setIsDeletingPayment] = useState(false);
+
 
     const createBooking = async (bookingData: BookingData): Promise<BookingResponse> => {
         console.log("BookingProvider: Creating booking...", bookingData);
         setIsLoadingBooking(true);
 
+
         try {
             if (!authState.authenticated || !authState.accessToken) {
                 throw new Error("User not authenticated");
             }
+
 
             const response = await axios.post(
                 `${API_URL}/Bookings`,
@@ -93,19 +115,24 @@ export const BookingProvider = ({ children }: { children: React.ReactNode }) => 
                 }
             );
 
+
             console.log("BookingProvider: Booking created successfully", response.data);
             return response.data as BookingResponse;
 
+
         } catch (error: any) {
             console.error("BookingProvider: Failed to create booking:", error);
+
 
             if (error.response?.status === 401) {
                 throw new Error("Session expired. Please login again.");
             }
 
+
             if (error.response?.data?.message) {
                 throw new Error(error.response.data.message);
             }
+
 
             throw new Error(error.message || "Failed to create booking");
         } finally {
@@ -113,14 +140,17 @@ export const BookingProvider = ({ children }: { children: React.ReactNode }) => 
         }
     };
 
+
     const createPayment = async (paymentData: PaymentData): Promise<PaymentResponse> => {
         console.log("BookingProvider: Creating payment...", paymentData);
         setIsLoadingPayment(true);
+
 
         try {
             if (!authState.authenticated || !authState.accessToken) {
                 throw new Error("User not authenticated");
             }
+
 
             const response = await axios.post(
                 `${API_URL}/Payment`,
@@ -134,19 +164,24 @@ export const BookingProvider = ({ children }: { children: React.ReactNode }) => 
                 }
             );
 
+
             console.log("BookingProvider: Payment created successfully", response.data);
             return response.data as PaymentResponse;
 
+
         } catch (error: any) {
             console.error("BookingProvider: Failed to create payment:", error);
+
 
             if (error.response?.status === 401) {
                 throw new Error("Session expired. Please login again.");
             }
 
+
             if (error.response?.data?.message) {
                 throw new Error(error.response.data.message);
             }
+
 
             throw new Error(error.message || "Failed to process payment");
         } finally {
@@ -154,19 +189,21 @@ export const BookingProvider = ({ children }: { children: React.ReactNode }) => 
         }
     };
 
-    // НОВА ФУНКЦІЯ: Обробка платежу
+
     const processPayment = async (paymentId: number): Promise<ProcessPaymentResponse> => {
         console.log("BookingProvider: Processing payment...", paymentId);
         setIsProcessingPayment(true);
+
 
         try {
             if (!authState.authenticated || !authState.accessToken) {
                 throw new Error("User not authenticated");
             }
 
+
             const response = await axios.put(
                 `${API_URL}/Payment/${paymentId}/process`,
-                {}, // Порожнє тіло запиту, оскільки PUT endpoint приймає тільки ID в URL
+                {},
                 {
                     headers: {
                         "Authorization": `Bearer ${authState.accessToken}`,
@@ -176,27 +213,34 @@ export const BookingProvider = ({ children }: { children: React.ReactNode }) => 
                 }
             );
 
+
             console.log("BookingProvider: Payment processed successfully", response.data);
             return response.data as ProcessPaymentResponse;
 
+
         } catch (error: any) {
             console.error("BookingProvider: Failed to process payment:", error);
+
 
             if (error.response?.status === 401) {
                 throw new Error("Session expired. Please login again.");
             }
 
+
             if (error.response?.status === 404) {
                 throw new Error("Payment not found.");
             }
+
 
             if (error.response?.status === 400) {
                 throw new Error(error.response.data?.message || "Payment cannot be processed at this time.");
             }
 
+
             if (error.response?.data?.message) {
                 throw new Error(error.response.data.message);
             }
+
 
             throw new Error(error.message || "Failed to process payment");
         } finally {
@@ -204,34 +248,112 @@ export const BookingProvider = ({ children }: { children: React.ReactNode }) => 
         }
     };
 
+
+    // НОВА ФУНКЦІЯ: Видалення платежу та замовлення
+    const deletePayment = async (paymentId: number): Promise<DeletePaymentResponse> => {
+        console.log("BookingProvider: Deleting payment...", paymentId);
+        setIsDeletingPayment(true);
+
+
+        try {
+            if (!authState.authenticated || !authState.accessToken) {
+                throw new Error("User not authenticated");
+            }
+
+
+            const response = await axios.delete(
+                `${API_URL}/Payment/${paymentId}/delete`,
+                {
+                    headers: {
+                        "Authorization": `Bearer ${authState.accessToken}`,
+                        "X-Mobile-Client": "true",
+                    },
+                }
+            );
+
+
+            console.log("BookingProvider: Payment deleted successfully", response.data);
+            
+            // Якщо API повертає просто статус 200/204, створюємо успішну відповідь
+            if (response.status === 200 || response.status === 204) {
+                return { success: true, message: "Payment and booking deleted successfully" };
+            }
+            
+            return response.data as DeletePaymentResponse;
+
+
+        } catch (error: any) {
+            console.error("BookingProvider: Failed to delete payment:", error);
+
+
+            if (error.response?.status === 401) {
+                throw new Error("Session expired. Please login again.");
+            }
+
+
+            if (error.response?.status === 404) {
+                throw new Error("Payment not found.");
+            }
+
+
+            if (error.response?.status === 400) {
+                throw new Error(error.response.data?.message || "Payment cannot be deleted at this time.");
+            }
+
+
+            if (error.response?.status === 403) {
+                throw new Error("You don't have permission to delete this payment.");
+            }
+
+
+            if (error.response?.data?.message) {
+                throw new Error(error.response.data.message);
+            }
+
+
+            throw new Error(error.message || "Failed to delete payment");
+        } finally {
+            setIsDeletingPayment(false);
+        }
+    };
+
+
     const calculateHours = (fromDate: Date, toDate: Date): number => {
         const diffInMs = toDate.getTime() - fromDate.getTime();
         const diffInHours = Math.ceil(diffInMs / (1000 * 60 * 60));
         return Math.max(diffInHours, 0);
     };
 
+
     const calculateTotalPrice = (hours: number, pricePerHour: number): number => {
         const totalHours = Math.max(hours, 1);
         return totalHours * pricePerHour;
     };
 
+
     const value: BookingContextType = {
         isLoadingBooking,
         isLoadingPayment,
         isProcessingPayment,
+        isDeletingPayment,
         createBooking,
         createPayment,
         processPayment,
+        deletePayment,
         calculateHours,
         calculateTotalPrice,
     };
+
 
     console.log("BookingProvider: Current state:", {
         isLoadingBooking,
         isLoadingPayment,
         isProcessingPayment,
+        isDeletingPayment,
         authenticated: authState.authenticated,
     });
 
+
     return <BookingContext.Provider value={value}>{children}</BookingContext.Provider>;
 };
+

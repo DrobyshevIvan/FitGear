@@ -5,7 +5,7 @@ import { Colors } from '../../constants/Colors';
 
 export default function AnnouncementCard({announcement, onPress}) {
     const renderRating = () => {
-        const rating = 4.5; // Заглушка для рейтингу
+        const rating = 4.5;
         return (
             <View style={{
                 flexDirection: 'row',
@@ -30,7 +30,6 @@ export default function AnnouncementCard({announcement, onPress}) {
         backgroundColor: '#fff',
                 borderRadius: 15,
                 marginBottom: 15,
-                //marginHorizontal: 15,
                 width: 'auto',
                 alignSelf: 'stretch',
                 width: '100%',
@@ -168,7 +167,7 @@ export default function AnnouncementCard({announcement, onPress}) {
                             color: '#666',
                             fontFamily: 'nunito-regular',
                         }}>
-                            per day
+                            per hour
                         </Text>
                     </View>
 
