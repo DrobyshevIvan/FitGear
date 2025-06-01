@@ -56,3 +56,1886 @@
 2025-06-01 03:00:19.115 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 51.7661 ms
 2025-06-01 03:00:21.203 +03:00 [INF] HTTP GET /api/UserProfile/Profile responded 200 in 58.6977 ms
 2025-06-01 03:00:22.743 +03:00 [INF] HTTP GET /api/Bookings responded 200 in 67.1764 ms
+2025-06-01 03:02:27.319 +03:00 [INF] Cheeking for bookings to update status at: 01.06.2025 00:02:27
+2025-06-01 10:53:05.612 +03:00 [INF] Cheeking for bookings to update status at: 01.06.2025 07:53:05
+2025-06-01 10:53:07.687 +03:00 [INF] Now listening on: http://localhost:5209
+2025-06-01 10:53:07.903 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-01 10:53:07.907 +03:00 [INF] Hosting environment: Development
+2025-06-01 10:53:07.910 +03:00 [INF] Content root path: C:\Users\masha\Documents\GitHub\FitGear\FitGear
+2025-06-01 10:58:24.299 +03:00 [INF] Login Attempt for seconduser@example.com
+2025-06-01 10:58:24.305 +03:00 [INF] Looking for user with email seconduser@example.com
+2025-06-01 10:58:24.686 +03:00 [INF] Token generated for User with email seconduser@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwianRpIjoiMWRmZDU1YmEtNTFlZC00MmEwLTk2NDctMGFiMDY0YmE0OWVjIiwiZW1haWwiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwidWlkIjoiZDZiYWNmNjctMzBlNi00ZWI1LWJhMzQtZTU5ODNmMjEzMTJkIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc0ODc2NTMwNCwiaXNzIjoiRml0R2VhckFQSSIsImF1ZCI6IkZpdEdlYXJBUElDbGllbnQifQ.-Qwuk6tD1P3KwjRvpJgU1G8QuxIGghgZyUm4jhz227M
+2025-06-01 10:58:25.050 +03:00 [INF] HTTP POST /api/User/login responded 200 in 1148.7735 ms
+2025-06-01 10:58:33.492 +03:00 [INF] HTTP POST /api/Review/5 responded 404 in 294.1374 ms
+2025-06-01 10:59:29.387 +03:00 [INF] HTTP POST /api/Review/6 responded 201 in 441.1102 ms
+2025-06-01 10:59:44.002 +03:00 [INF] HTTP GET /api/Review responded 200 in 117.8316 ms
+2025-06-01 11:06:15.781 +03:00 [INF] HTTP POST /api/Review/6 responded 400 in 268.2175 ms
+2025-06-01 11:06:19.350 +03:00 [INF] HTTP GET /api/Review responded 200 in 65.5633 ms
+2025-06-01 11:08:07.871 +03:00 [INF] Cheeking for bookings to update status at: 01.06.2025 08:08:07
+2025-06-01 11:51:29.787 +03:00 [INF] Cheeking for bookings to update status at: 01.06.2025 08:51:29
+2025-06-01 12:03:16.081 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 9.2857 ms
+2025-06-01 12:03:36.759 +03:00 [INF] Login Attempt for seconduser@example.com
+2025-06-01 12:03:36.781 +03:00 [INF] Looking for user with email seconduser@example.com
+2025-06-01 12:03:37.035 +03:00 [INF] Token generated for User with email seconduser@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwianRpIjoiY2FlNzRjYTUtZjJlMi00ZDZlLTlhMGYtMWFmNDc4Nzk4NjU0IiwiZW1haWwiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwidWlkIjoiZDZiYWNmNjctMzBlNi00ZWI1LWJhMzQtZTU5ODNmMjEzMTJkIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc0ODc2OTIxNywiaXNzIjoiRml0R2VhckFQSSIsImF1ZCI6IkZpdEdlYXJBUElDbGllbnQifQ.yQKd_L4K-wMy0sgKR1h_OvSYfIIVxUWuT70klWNzCOg
+2025-06-01 12:03:37.153 +03:00 [INF] HTTP POST /api/User/login responded 200 in 480.6006 ms
+2025-06-01 12:03:37.441 +03:00 [INF] HTTP GET /api/Category responded 200 in 185.8759 ms
+2025-06-01 12:03:37.515 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 172.4703 ms
+2025-06-01 12:03:52.195 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.3658 ms
+2025-06-01 12:04:12.403 +03:00 [INF] HTTP GET /api/Review responded 200 in 73.5451 ms
+2025-06-01 12:04:22.165 +03:00 [INF] HTTP GET /api/Review responded 200 in 62.6088 ms
+2025-06-01 12:05:04.877 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.7920 ms
+2025-06-01 12:05:27.950 +03:00 [INF] HTTP POST /api/Review/7 responded 201 in 120.8442 ms
+2025-06-01 12:05:28.039 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.3157 ms
+2025-06-01 12:05:28.131 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.5403 ms
+2025-06-01 12:05:47.491 +03:00 [INF] HTTP GET /api/Review responded 200 in 118.6619 ms
+2025-06-01 12:06:29.839 +03:00 [INF] Cheeking for bookings to update status at: 01.06.2025 09:06:29
+2025-06-01 12:21:29.869 +03:00 [INF] Cheeking for bookings to update status at: 01.06.2025 09:21:29
+2025-06-01 12:33:35.975 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 4.5848 ms
+2025-06-01 12:34:14.488 +03:00 [INF] Login Attempt for seconduser@example.com
+2025-06-01 12:34:14.489 +03:00 [INF] Looking for user with email seconduser@example.com
+2025-06-01 12:34:14.589 +03:00 [INF] Token generated for User with email seconduser@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwianRpIjoiZTM1MDRlNDMtZWY4Zi00YWY1LWJhZDgtYTA3ZTQ0YzE2MzM1IiwiZW1haWwiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwidWlkIjoiZDZiYWNmNjctMzBlNi00ZWI1LWJhMzQtZTU5ODNmMjEzMTJkIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc0ODc3MTA1NCwiaXNzIjoiRml0R2VhckFQSSIsImF1ZCI6IkZpdEdlYXJBUElDbGllbnQifQ.JKQKeF1NhEbVA-3omG1B6FFnZ03LiwlYcab5GwumzBc
+2025-06-01 12:34:14.637 +03:00 [INF] HTTP POST /api/User/login responded 200 in 173.8982 ms
+2025-06-01 12:34:14.716 +03:00 [INF] HTTP GET /api/Category responded 200 in 35.3574 ms
+2025-06-01 12:34:14.726 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 28.0214 ms
+2025-06-01 12:34:26.460 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.4047 ms
+2025-06-01 12:34:57.677 +03:00 [INF] HTTP POST /api/Review/11 responded 201 in 50.3002 ms
+2025-06-01 12:34:57.721 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.2863 ms
+2025-06-01 12:34:57.773 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.7637 ms
+2025-06-01 12:35:08.321 +03:00 [INF] HTTP GET /api/Review responded 200 in 30.8356 ms
+2025-06-01 12:36:29.921 +03:00 [INF] Cheeking for bookings to update status at: 01.06.2025 09:36:29
+2025-06-01 12:48:12.059 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 0.8032 ms
+2025-06-01 12:48:31.734 +03:00 [INF] Login Attempt for seconduser@example.com
+2025-06-01 12:48:31.735 +03:00 [INF] Looking for user with email seconduser@example.com
+2025-06-01 12:48:31.839 +03:00 [INF] Token generated for User with email seconduser@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwianRpIjoiMDAxNDdhYTktZWQ1Yi00YjM4LTgyNGEtNjI0NzBlODc4NGY2IiwiZW1haWwiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwidWlkIjoiZDZiYWNmNjctMzBlNi00ZWI1LWJhMzQtZTU5ODNmMjEzMTJkIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc0ODc3MTkxMSwiaXNzIjoiRml0R2VhckFQSSIsImF1ZCI6IkZpdEdlYXJBUElDbGllbnQifQ.Yalc4yTq8OFFpetwGYh2_aVfgi8VSHkbH0obbxdWByg
+2025-06-01 12:48:31.873 +03:00 [INF] HTTP POST /api/User/login responded 200 in 153.8615 ms
+2025-06-01 12:48:31.970 +03:00 [INF] HTTP GET /api/Category responded 200 in 39.4912 ms
+2025-06-01 12:48:31.982 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 45.6908 ms
+2025-06-01 12:48:34.141 +03:00 [INF] HTTP GET /api/Review responded 200 in 65.6501 ms
+2025-06-01 12:48:34.193 +03:00 [INF] HTTP GET /api/Review responded 200 in 90.9538 ms
+2025-06-01 12:48:34.222 +03:00 [INF] HTTP GET /api/Review responded 200 in 115.2827 ms
+2025-06-01 12:48:34.251 +03:00 [INF] HTTP GET /api/Review responded 200 in 110.3496 ms
+2025-06-01 12:48:34.251 +03:00 [INF] HTTP GET /api/Review responded 200 in 77.8740 ms
+2025-06-01 12:48:34.260 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.3937 ms
+2025-06-01 12:48:34.323 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.1745 ms
+2025-06-01 12:48:34.365 +03:00 [INF] HTTP GET /api/Review responded 200 in 76.3427 ms
+2025-06-01 12:48:34.367 +03:00 [INF] HTTP GET /api/Review responded 200 in 74.6298 ms
+2025-06-01 12:48:34.386 +03:00 [INF] HTTP GET /api/Review responded 200 in 75.9585 ms
+2025-06-01 12:48:34.390 +03:00 [INF] HTTP GET /api/Review responded 200 in 66.5908 ms
+2025-06-01 12:48:34.422 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.6395 ms
+2025-06-01 12:48:34.563 +03:00 [INF] HTTP GET /api/Review responded 200 in 62.7980 ms
+2025-06-01 12:48:34.583 +03:00 [INF] HTTP GET /api/Review responded 200 in 59.4833 ms
+2025-06-01 12:48:34.583 +03:00 [INF] HTTP GET /api/Review responded 200 in 59.0255 ms
+2025-06-01 12:48:34.590 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.8555 ms
+2025-06-01 12:48:34.590 +03:00 [INF] HTTP GET /api/Review responded 200 in 66.5981 ms
+2025-06-01 12:48:34.670 +03:00 [INF] HTTP GET /api/Review responded 200 in 68.8628 ms
+2025-06-01 12:48:34.689 +03:00 [INF] HTTP GET /api/Review responded 200 in 69.8103 ms
+2025-06-01 12:48:34.695 +03:00 [INF] HTTP GET /api/Review responded 200 in 74.5269 ms
+2025-06-01 12:48:34.695 +03:00 [INF] HTTP GET /api/Review responded 200 in 59.1106 ms
+2025-06-01 12:48:34.696 +03:00 [INF] HTTP GET /api/Review responded 200 in 59.4988 ms
+2025-06-01 12:48:34.744 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.2072 ms
+2025-06-01 12:48:34.744 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.6483 ms
+2025-06-01 12:48:34.792 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.1133 ms
+2025-06-01 12:48:34.825 +03:00 [INF] HTTP GET /api/Review responded 200 in 63.1615 ms
+2025-06-01 12:48:34.829 +03:00 [INF] HTTP GET /api/Review responded 200 in 64.9590 ms
+2025-06-01 12:48:34.832 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.9328 ms
+2025-06-01 12:48:34.832 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.8664 ms
+2025-06-01 12:48:34.854 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.6435 ms
+2025-06-01 12:48:34.927 +03:00 [INF] HTTP GET /api/Review responded 200 in 75.6497 ms
+2025-06-01 12:48:34.929 +03:00 [INF] HTTP GET /api/Review responded 200 in 60.5920 ms
+2025-06-01 12:48:34.944 +03:00 [INF] HTTP GET /api/Review responded 200 in 58.1228 ms
+2025-06-01 12:48:34.944 +03:00 [INF] HTTP GET /api/Review responded 200 in 75.3199 ms
+2025-06-01 12:48:34.949 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.0825 ms
+2025-06-01 12:48:35.010 +03:00 [INF] HTTP GET /api/Review responded 200 in 60.4287 ms
+2025-06-01 12:48:35.011 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.7751 ms
+2025-06-01 12:48:35.010 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.0826 ms
+2025-06-01 12:48:35.033 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.3437 ms
+2025-06-01 12:48:35.050 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.5362 ms
+2025-06-01 12:48:35.070 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.0611 ms
+2025-06-01 12:48:35.088 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.7370 ms
+2025-06-01 12:48:35.106 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.6379 ms
+2025-06-01 12:48:35.127 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.2412 ms
+2025-06-01 12:48:35.178 +03:00 [INF] HTTP GET /api/Review responded 200 in 71.8869 ms
+2025-06-01 12:48:35.178 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.8384 ms
+2025-06-01 12:48:35.178 +03:00 [INF] HTTP GET /api/Review responded 200 in 69.4558 ms
+2025-06-01 12:48:35.200 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.7757 ms
+2025-06-01 12:48:35.201 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.6086 ms
+2025-06-01 12:48:35.278 +03:00 [INF] HTTP GET /api/Review responded 200 in 66.0272 ms
+2025-06-01 12:48:35.284 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.8202 ms
+2025-06-01 12:48:35.283 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.6742 ms
+2025-06-01 12:48:35.299 +03:00 [INF] HTTP GET /api/Review responded 200 in 70.5169 ms
+2025-06-01 12:48:35.301 +03:00 [INF] HTTP GET /api/Review responded 200 in 72.0754 ms
+2025-06-01 12:48:35.354 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.8392 ms
+2025-06-01 12:48:35.357 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.2152 ms
+2025-06-01 12:48:35.417 +03:00 [INF] HTTP GET /api/Review responded 200 in 82.6057 ms
+2025-06-01 12:48:35.417 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.5874 ms
+2025-06-01 12:48:35.440 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.7763 ms
+2025-06-01 12:48:35.442 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.2224 ms
+2025-06-01 12:48:35.417 +03:00 [INF] HTTP GET /api/Review responded 200 in 61.9713 ms
+2025-06-01 12:48:35.479 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.9263 ms
+2025-06-01 12:48:35.513 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.5929 ms
+2025-06-01 12:48:35.529 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.6149 ms
+2025-06-01 12:48:35.531 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.5470 ms
+2025-06-01 12:48:35.549 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.4941 ms
+2025-06-01 12:48:35.573 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.9713 ms
+2025-06-01 12:48:35.609 +03:00 [INF] HTTP GET /api/Review responded 200 in 60.3424 ms
+2025-06-01 12:48:35.622 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.3865 ms
+2025-06-01 12:48:35.641 +03:00 [INF] HTTP GET /api/Review responded 200 in 69.9475 ms
+2025-06-01 12:48:35.645 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.8737 ms
+2025-06-01 12:48:35.661 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.1463 ms
+2025-06-01 12:48:35.680 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.6624 ms
+2025-06-01 12:48:35.714 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.8198 ms
+2025-06-01 12:48:35.719 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.6811 ms
+2025-06-01 12:48:35.733 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.3987 ms
+2025-06-01 12:48:35.750 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.3907 ms
+2025-06-01 12:48:35.767 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.7424 ms
+2025-06-01 12:48:35.787 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.2607 ms
+2025-06-01 12:48:35.800 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.5575 ms
+2025-06-01 12:48:35.835 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.7569 ms
+2025-06-01 12:48:35.855 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.3799 ms
+2025-06-01 12:48:35.872 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.5968 ms
+2025-06-01 12:48:35.891 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.0996 ms
+2025-06-01 12:48:35.891 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.9372 ms
+2025-06-01 12:48:35.913 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.0429 ms
+2025-06-01 12:48:35.927 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.2557 ms
+2025-06-01 12:48:35.948 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.0999 ms
+2025-06-01 12:48:35.978 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.8513 ms
+2025-06-01 12:48:35.978 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.4771 ms
+2025-06-01 12:48:36.001 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.7293 ms
+2025-06-01 12:48:36.014 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.7797 ms
+2025-06-01 12:48:36.032 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.1762 ms
+2025-06-01 12:48:36.048 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.6951 ms
+2025-06-01 12:48:36.067 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.3017 ms
+2025-06-01 12:48:36.087 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.2900 ms
+2025-06-01 12:48:36.109 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.1384 ms
+2025-06-01 12:48:36.132 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.4200 ms
+2025-06-01 12:48:36.133 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.2162 ms
+2025-06-01 12:48:36.147 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.0863 ms
+2025-06-01 12:48:36.166 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.1398 ms
+2025-06-01 12:48:36.184 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.9161 ms
+2025-06-01 12:48:36.200 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.5140 ms
+2025-06-01 12:48:36.232 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.0015 ms
+2025-06-01 12:48:36.239 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.4082 ms
+2025-06-01 12:48:36.239 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.8850 ms
+2025-06-01 12:48:36.288 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.0810 ms
+2025-06-01 12:48:36.289 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.8516 ms
+2025-06-01 12:48:36.289 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.8494 ms
+2025-06-01 12:48:36.322 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.1587 ms
+2025-06-01 12:48:36.343 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.9647 ms
+2025-06-01 12:48:36.361 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.6806 ms
+2025-06-01 12:48:36.396 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.5079 ms
+2025-06-01 12:48:36.400 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.9958 ms
+2025-06-01 12:48:36.418 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.3392 ms
+2025-06-01 12:48:36.434 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.5754 ms
+2025-06-01 12:48:36.473 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.8448 ms
+2025-06-01 12:48:36.455 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.7596 ms
+2025-06-01 12:48:36.509 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.3519 ms
+2025-06-01 12:48:36.493 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.8831 ms
+2025-06-01 12:48:36.528 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.9333 ms
+2025-06-01 12:48:36.546 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.5643 ms
+2025-06-01 12:48:36.566 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.5618 ms
+2025-06-01 12:48:36.586 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.2595 ms
+2025-06-01 12:48:36.623 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.8973 ms
+2025-06-01 12:48:36.636 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.1108 ms
+2025-06-01 12:48:36.656 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.2859 ms
+2025-06-01 12:48:36.656 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.8576 ms
+2025-06-01 12:48:36.673 +03:00 [INF] HTTP GET /api/Review responded 200 in 17.7853 ms
+2025-06-01 12:48:36.672 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.2309 ms
+2025-06-01 12:48:36.705 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.6438 ms
+2025-06-01 12:48:36.726 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.5262 ms
+2025-06-01 12:48:36.725 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.9643 ms
+2025-06-01 12:48:36.778 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.7545 ms
+2025-06-01 12:48:36.779 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.3226 ms
+2025-06-01 12:48:36.799 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.7678 ms
+2025-06-01 12:48:36.821 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.6020 ms
+2025-06-01 12:48:36.835 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.4457 ms
+2025-06-01 12:48:36.870 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.6136 ms
+2025-06-01 12:48:36.870 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.1680 ms
+2025-06-01 12:48:36.906 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.9697 ms
+2025-06-01 12:48:36.887 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.5974 ms
+2025-06-01 12:48:36.936 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.7227 ms
+2025-06-01 12:48:36.940 +03:00 [INF] HTTP GET /api/Review responded 200 in 19.4488 ms
+2025-06-01 12:48:36.940 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.8110 ms
+2025-06-01 12:48:36.978 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.8290 ms
+2025-06-01 12:48:36.978 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.3732 ms
+2025-06-01 12:48:37.024 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.9312 ms
+2025-06-01 12:48:37.040 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.5819 ms
+2025-06-01 12:48:37.042 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.3953 ms
+2025-06-01 12:48:37.061 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.5198 ms
+2025-06-01 12:48:37.083 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.6279 ms
+2025-06-01 12:48:37.096 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.3845 ms
+2025-06-01 12:48:37.117 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.0691 ms
+2025-06-01 12:48:37.152 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.9225 ms
+2025-06-01 12:48:37.152 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.1336 ms
+2025-06-01 12:48:37.185 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.1331 ms
+2025-06-01 12:48:37.203 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.9695 ms
+2025-06-01 12:48:37.206 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.9800 ms
+2025-06-01 12:48:37.224 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.4088 ms
+2025-06-01 12:48:37.244 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.8527 ms
+2025-06-01 12:48:37.262 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.8777 ms
+2025-06-01 12:48:37.294 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.4014 ms
+2025-06-01 12:48:37.331 +03:00 [INF] HTTP GET /api/Review responded 200 in 69.1445 ms
+2025-06-01 12:48:37.332 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.7264 ms
+2025-06-01 12:48:37.351 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.8704 ms
+2025-06-01 12:48:37.331 +03:00 [INF] HTTP GET /api/Review responded 200 in 71.9595 ms
+2025-06-01 12:48:37.356 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.3398 ms
+2025-06-01 12:48:37.430 +03:00 [INF] HTTP GET /api/Review responded 200 in 74.5417 ms
+2025-06-01 12:48:37.430 +03:00 [INF] HTTP GET /api/Review responded 200 in 59.9979 ms
+2025-06-01 12:48:37.451 +03:00 [INF] HTTP GET /api/Review responded 200 in 80.8078 ms
+2025-06-01 12:48:37.452 +03:00 [INF] HTTP GET /api/Review responded 200 in 65.4466 ms
+2025-06-01 12:48:37.453 +03:00 [INF] HTTP GET /api/Review responded 200 in 30.3745 ms
+2025-06-01 12:48:37.505 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.0090 ms
+2025-06-01 12:48:37.510 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.6197 ms
+2025-06-01 12:48:37.522 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.2180 ms
+2025-06-01 12:48:37.556 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.2587 ms
+2025-06-01 12:48:37.560 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.5548 ms
+2025-06-01 12:48:37.588 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.5341 ms
+2025-06-01 12:48:37.605 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.0147 ms
+2025-06-01 12:48:37.605 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.7768 ms
+2025-06-01 12:48:37.624 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.4179 ms
+2025-06-01 12:48:37.658 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.5642 ms
+2025-06-01 12:48:37.661 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.3569 ms
+2025-06-01 12:48:37.674 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.1311 ms
+2025-06-01 12:48:37.704 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.1478 ms
+2025-06-01 12:48:37.706 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.1204 ms
+2025-06-01 12:48:37.736 +03:00 [INF] HTTP GET /api/Review responded 200 in 30.7416 ms
+2025-06-01 12:48:37.736 +03:00 [INF] HTTP GET /api/Review responded 200 in 26.2835 ms
+2025-06-01 12:48:37.759 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.8204 ms
+2025-06-01 12:48:37.736 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.1076 ms
+2025-06-01 12:48:37.785 +03:00 [INF] HTTP GET /api/Review responded 200 in 26.4919 ms
+2025-06-01 12:48:37.804 +03:00 [INF] HTTP GET /api/Review responded 200 in 31.4360 ms
+2025-06-01 12:48:37.854 +03:00 [INF] HTTP GET /api/Review responded 200 in 69.0382 ms
+2025-06-01 12:48:37.854 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.7858 ms
+2025-06-01 12:48:37.857 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.6058 ms
+2025-06-01 12:48:37.858 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.0043 ms
+2025-06-01 12:48:37.930 +03:00 [INF] HTTP GET /api/Review responded 200 in 64.9639 ms
+2025-06-01 12:48:37.932 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.4347 ms
+2025-06-01 12:48:37.938 +03:00 [INF] HTTP GET /api/Review responded 200 in 60.9563 ms
+2025-06-01 12:48:37.939 +03:00 [INF] HTTP GET /api/Review responded 200 in 61.5607 ms
+2025-06-01 12:48:37.969 +03:00 [INF] HTTP GET /api/Review responded 200 in 92.0345 ms
+2025-06-01 12:48:37.984 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.6800 ms
+2025-06-01 12:48:37.985 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.1401 ms
+2025-06-01 12:48:38.004 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.4187 ms
+2025-06-01 12:48:38.036 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.5589 ms
+2025-06-01 12:48:38.053 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.8426 ms
+2025-06-01 12:48:38.059 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.9116 ms
+2025-06-01 12:48:38.060 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.2706 ms
+2025-06-01 12:48:38.087 +03:00 [INF] HTTP GET /api/Review responded 200 in 29.5957 ms
+2025-06-01 12:48:38.105 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.8309 ms
+2025-06-01 12:48:38.135 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.0773 ms
+2025-06-01 12:48:38.154 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.7211 ms
+2025-06-01 12:48:38.171 +03:00 [INF] HTTP GET /api/Review responded 200 in 65.2578 ms
+2025-06-01 12:48:38.191 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.2009 ms
+2025-06-01 12:48:38.191 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.2683 ms
+2025-06-01 12:48:38.226 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.3439 ms
+2025-06-01 12:48:38.211 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.6612 ms
+2025-06-01 12:48:38.259 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.4697 ms
+2025-06-01 12:48:38.276 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.3969 ms
+2025-06-01 12:48:38.277 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.1755 ms
+2025-06-01 12:48:38.300 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.8354 ms
+2025-06-01 12:48:38.300 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.7752 ms
+2025-06-01 12:48:38.351 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.6783 ms
+2025-06-01 12:48:38.336 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.9075 ms
+2025-06-01 12:48:38.356 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.7932 ms
+2025-06-01 12:48:38.399 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.2637 ms
+2025-06-01 12:48:38.399 +03:00 [INF] HTTP GET /api/Review responded 200 in 31.9543 ms
+2025-06-01 12:48:38.433 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.3771 ms
+2025-06-01 12:48:38.435 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.0197 ms
+2025-06-01 12:48:38.452 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.1449 ms
+2025-06-01 12:48:38.471 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.8127 ms
+2025-06-01 12:48:38.507 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.6584 ms
+2025-06-01 12:48:38.492 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.4813 ms
+2025-06-01 12:48:38.530 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.3538 ms
+2025-06-01 12:48:38.545 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.7180 ms
+2025-06-01 12:48:38.577 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.3387 ms
+2025-06-01 12:48:38.580 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.1220 ms
+2025-06-01 12:48:38.615 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.5867 ms
+2025-06-01 12:48:38.632 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.9528 ms
+2025-06-01 12:48:38.639 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.2781 ms
+2025-06-01 12:48:38.637 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.6181 ms
+2025-06-01 12:48:38.686 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.8117 ms
+2025-06-01 12:48:38.691 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.5986 ms
+2025-06-01 12:48:38.709 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.1835 ms
+2025-06-01 12:48:38.726 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.4671 ms
+2025-06-01 12:48:38.779 +03:00 [INF] HTTP GET /api/Review responded 200 in 68.5335 ms
+2025-06-01 12:48:38.778 +03:00 [INF] HTTP GET /api/Review responded 200 in 71.0168 ms
+2025-06-01 12:48:38.815 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.2271 ms
+2025-06-01 12:48:38.843 +03:00 [INF] HTTP GET /api/Review responded 200 in 63.8163 ms
+2025-06-01 12:48:38.861 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.9729 ms
+2025-06-01 12:48:38.883 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.7295 ms
+2025-06-01 12:48:38.904 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.2242 ms
+2025-06-01 12:48:38.881 +03:00 [INF] HTTP GET /api/Review responded 200 in 68.2965 ms
+2025-06-01 12:48:38.922 +03:00 [INF] HTTP GET /api/Review responded 200 in 20.1072 ms
+2025-06-01 12:48:38.882 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.5083 ms
+2025-06-01 12:48:38.965 +03:00 [INF] HTTP GET /api/Review responded 200 in 30.4436 ms
+2025-06-01 12:48:38.965 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.5319 ms
+2025-06-01 12:48:38.998 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.3307 ms
+2025-06-01 12:48:38.998 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.9333 ms
+2025-06-01 12:48:39.020 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.4512 ms
+2025-06-01 12:48:39.035 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.3133 ms
+2025-06-01 12:48:39.056 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.2504 ms
+2025-06-01 12:48:39.089 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.8371 ms
+2025-06-01 12:48:39.094 +03:00 [INF] HTTP GET /api/Review responded 200 in 19.4522 ms
+2025-06-01 12:48:39.093 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.7368 ms
+2025-06-01 12:48:39.141 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.8716 ms
+2025-06-01 12:48:39.155 +03:00 [INF] HTTP GET /api/Review responded 200 in 29.5537 ms
+2025-06-01 12:48:39.159 +03:00 [INF] HTTP GET /api/Review responded 200 in 19.1671 ms
+2025-06-01 12:48:39.153 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.7351 ms
+2025-06-01 12:48:39.252 +03:00 [INF] HTTP GET /api/Review responded 200 in 93.1820 ms
+2025-06-01 12:48:39.257 +03:00 [INF] HTTP GET /api/Review responded 200 in 64.3377 ms
+2025-06-01 12:48:39.257 +03:00 [INF] HTTP GET /api/Review responded 200 in 81.4871 ms
+2025-06-01 12:48:39.332 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.2185 ms
+2025-06-01 12:48:39.339 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.9004 ms
+2025-06-01 12:48:39.332 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.2883 ms
+2025-06-01 12:48:39.332 +03:00 [INF] HTTP GET /api/Review responded 200 in 65.6253 ms
+2025-06-01 12:48:39.347 +03:00 [INF] HTTP GET /api/Review responded 200 in 79.0166 ms
+2025-06-01 12:48:39.420 +03:00 [INF] HTTP GET /api/Review responded 200 in 62.2764 ms
+2025-06-01 12:48:39.426 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.4089 ms
+2025-06-01 12:48:39.420 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.4793 ms
+2025-06-01 12:48:39.421 +03:00 [INF] HTTP GET /api/Review responded 200 in 64.1617 ms
+2025-06-01 12:48:39.433 +03:00 [INF] HTTP GET /api/Review responded 200 in 61.8254 ms
+2025-06-01 12:48:39.490 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.6156 ms
+2025-06-01 12:48:39.490 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.4470 ms
+2025-06-01 12:48:39.490 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.3640 ms
+2025-06-01 12:48:39.490 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.5803 ms
+2025-06-01 12:48:39.515 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.4480 ms
+2025-06-01 12:48:39.591 +03:00 [INF] HTTP GET /api/Review responded 200 in 74.0020 ms
+2025-06-01 12:48:39.593 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.4435 ms
+2025-06-01 12:48:39.592 +03:00 [INF] HTTP GET /api/Review responded 200 in 72.9037 ms
+2025-06-01 12:48:39.612 +03:00 [INF] HTTP GET /api/Review responded 200 in 20.6794 ms
+2025-06-01 12:48:39.593 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.6287 ms
+2025-06-01 12:48:39.659 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.8545 ms
+2025-06-01 12:48:39.660 +03:00 [INF] HTTP GET /api/Review responded 200 in 31.6211 ms
+2025-06-01 12:48:39.660 +03:00 [INF] HTTP GET /api/Review responded 200 in 30.9470 ms
+2025-06-01 12:48:39.698 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.4539 ms
+2025-06-01 12:48:39.696 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.6538 ms
+2025-06-01 12:48:39.731 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.6497 ms
+2025-06-01 12:48:39.764 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.3804 ms
+2025-06-01 12:48:39.768 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.4092 ms
+2025-06-01 12:48:39.786 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.4553 ms
+2025-06-01 12:48:39.820 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.8573 ms
+2025-06-01 12:48:39.825 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.1218 ms
+2025-06-01 12:48:39.841 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.1922 ms
+2025-06-01 12:48:39.862 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.0997 ms
+2025-06-01 12:48:39.898 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.4878 ms
+2025-06-01 12:48:39.879 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.2309 ms
+2025-06-01 12:48:39.931 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.6623 ms
+2025-06-01 12:48:39.939 +03:00 [INF] HTTP GET /api/Review responded 200 in 26.6788 ms
+2025-06-01 12:48:39.937 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.9472 ms
+2025-06-01 12:48:40.011 +03:00 [INF] HTTP GET /api/Review responded 200 in 74.3854 ms
+2025-06-01 12:48:40.034 +03:00 [INF] HTTP GET /api/Review responded 200 in 62.7148 ms
+2025-06-01 12:48:40.029 +03:00 [INF] HTTP GET /api/Review responded 200 in 74.8066 ms
+2025-06-01 12:48:40.033 +03:00 [INF] HTTP GET /api/Review responded 200 in 78.8328 ms
+2025-06-01 12:48:40.039 +03:00 [INF] HTTP GET /api/Review responded 200 in 29.4405 ms
+2025-06-01 12:48:40.101 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.0546 ms
+2025-06-01 12:48:40.118 +03:00 [INF] HTTP GET /api/Review responded 200 in 74.8411 ms
+2025-06-01 12:48:40.125 +03:00 [INF] HTTP GET /api/Review responded 200 in 60.6173 ms
+2025-06-01 12:48:40.126 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.4938 ms
+2025-06-01 12:48:40.125 +03:00 [INF] HTTP GET /api/Review responded 200 in 60.6221 ms
+2025-06-01 12:48:40.178 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.0698 ms
+2025-06-01 12:48:40.179 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.7640 ms
+2025-06-01 12:48:40.198 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.2211 ms
+2025-06-01 12:48:40.216 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.3971 ms
+2025-06-01 12:48:40.245 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.5149 ms
+2025-06-01 12:48:40.248 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.1851 ms
+2025-06-01 12:48:40.285 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.0211 ms
+2025-06-01 12:48:40.289 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.4364 ms
+2025-06-01 12:48:40.289 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.9686 ms
+2025-06-01 12:48:40.347 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.9266 ms
+2025-06-01 12:48:40.325 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.7353 ms
+2025-06-01 12:48:40.369 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.6937 ms
+2025-06-01 12:48:40.385 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.4712 ms
+2025-06-01 12:48:40.409 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.0639 ms
+2025-06-01 12:48:40.407 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.4716 ms
+2025-06-01 12:48:40.447 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.9787 ms
+2025-06-01 12:48:40.485 +03:00 [INF] HTTP GET /api/Review responded 200 in 60.0179 ms
+2025-06-01 12:48:40.520 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.3484 ms
+2025-06-01 12:48:40.521 +03:00 [INF] HTTP GET /api/Review responded 200 in 75.1474 ms
+2025-06-01 12:48:40.525 +03:00 [INF] HTTP GET /api/Review responded 200 in 59.1167 ms
+2025-06-01 12:48:40.541 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.0959 ms
+2025-06-01 12:48:40.547 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.3694 ms
+2025-06-01 12:48:40.597 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.1722 ms
+2025-06-01 12:48:40.603 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.1880 ms
+2025-06-01 12:48:40.602 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.5832 ms
+2025-06-01 12:48:40.651 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.5221 ms
+2025-06-01 12:48:40.652 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.9205 ms
+2025-06-01 12:48:40.684 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.9130 ms
+2025-06-01 12:48:40.709 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.1773 ms
+2025-06-01 12:48:40.723 +03:00 [INF] HTTP GET /api/Review responded 200 in 68.7386 ms
+2025-06-01 12:48:40.741 +03:00 [INF] HTTP GET /api/Review responded 200 in 70.4000 ms
+2025-06-01 12:48:40.748 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.5592 ms
+2025-06-01 12:48:40.746 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.6929 ms
+2025-06-01 12:48:40.781 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.5090 ms
+2025-06-01 12:48:40.801 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.1287 ms
+2025-06-01 12:48:40.834 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.2509 ms
+2025-06-01 12:48:40.854 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.8160 ms
+2025-06-01 12:48:40.857 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.3288 ms
+2025-06-01 12:48:40.874 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.6817 ms
+2025-06-01 12:48:40.909 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.2365 ms
+2025-06-01 12:48:40.911 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.6609 ms
+2025-06-01 12:48:40.937 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.2262 ms
+2025-06-01 12:48:40.959 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.9985 ms
+2025-06-01 12:48:40.960 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.6300 ms
+2025-06-01 12:48:40.974 +03:00 [INF] HTTP GET /api/Review responded 200 in 62.5417 ms
+2025-06-01 12:48:40.992 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.7913 ms
+2025-06-01 12:48:40.992 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.1953 ms
+2025-06-01 12:48:41.038 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.6693 ms
+2025-06-01 12:48:41.043 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.3917 ms
+2025-06-01 12:48:41.061 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.8670 ms
+2025-06-01 12:48:41.075 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.0045 ms
+2025-06-01 12:48:41.104 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.4953 ms
+2025-06-01 12:48:41.109 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.6121 ms
+2025-06-01 12:48:41.109 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.0446 ms
+2025-06-01 12:48:41.154 +03:00 [INF] HTTP GET /api/Review responded 200 in 29.7306 ms
+2025-06-01 12:48:41.152 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.6859 ms
+2025-06-01 12:48:41.177 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.4446 ms
+2025-06-01 12:48:41.199 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.9392 ms
+2025-06-01 12:48:41.205 +03:00 [INF] HTTP GET /api/Review responded 200 in 27.5630 ms
+2025-06-01 12:48:41.205 +03:00 [INF] HTTP GET /api/Review responded 200 in 27.6619 ms
+2025-06-01 12:48:41.237 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.7768 ms
+2025-06-01 12:48:41.251 +03:00 [INF] HTTP GET /api/Review responded 200 in 30.7804 ms
+2025-06-01 12:48:41.277 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.1379 ms
+2025-06-01 12:48:41.284 +03:00 [INF] HTTP GET /api/Review responded 200 in 20.4793 ms
+2025-06-01 12:48:41.283 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.4003 ms
+2025-06-01 12:48:41.315 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.5806 ms
+2025-06-01 12:48:41.315 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.1799 ms
+2025-06-01 12:48:41.345 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.9067 ms
+2025-06-01 12:48:41.378 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.9696 ms
+2025-06-01 12:48:41.376 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.1819 ms
+2025-06-01 12:48:41.398 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.6394 ms
+2025-06-01 12:48:41.414 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.3915 ms
+2025-06-01 12:48:41.434 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.8674 ms
+2025-06-01 12:48:41.446 +03:00 [INF] HTTP GET /api/Review responded 200 in 31.9706 ms
+2025-06-01 12:48:41.481 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.5553 ms
+2025-06-01 12:48:41.482 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.1834 ms
+2025-06-01 12:48:41.500 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.7278 ms
+2025-06-01 12:48:41.511 +03:00 [INF] HTTP GET /api/Review responded 200 in 29.8269 ms
+2025-06-01 12:48:41.524 +03:00 [INF] HTTP GET /api/Review responded 200 in 27.1009 ms
+2025-06-01 12:48:41.535 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.2335 ms
+2025-06-01 12:48:41.568 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.0779 ms
+2025-06-01 12:48:41.586 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.6177 ms
+2025-06-01 12:48:41.589 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.2608 ms
+2025-06-01 12:48:41.602 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.8488 ms
+2025-06-01 12:48:41.655 +03:00 [INF] HTTP GET /api/Review responded 200 in 69.2530 ms
+2025-06-01 12:48:41.669 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.8521 ms
+2025-06-01 12:48:41.669 +03:00 [INF] HTTP GET /api/Review responded 200 in 67.5491 ms
+2025-06-01 12:48:41.672 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.7748 ms
+2025-06-01 12:48:41.673 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.5862 ms
+2025-06-01 12:48:41.697 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.5188 ms
+2025-06-01 12:48:41.732 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.7620 ms
+2025-06-01 12:48:41.733 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.7538 ms
+2025-06-01 12:48:41.753 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.2038 ms
+2025-06-01 12:48:41.767 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.5849 ms
+2025-06-01 12:48:41.803 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.0043 ms
+2025-06-01 12:48:41.826 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.2022 ms
+2025-06-01 12:48:41.826 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.9170 ms
+2025-06-01 12:48:41.828 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.7805 ms
+2025-06-01 12:48:41.866 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.0213 ms
+2025-06-01 12:48:41.881 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.2969 ms
+2025-06-01 12:48:41.933 +03:00 [INF] HTTP GET /api/Review responded 200 in 73.0136 ms
+2025-06-01 12:48:41.934 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.7816 ms
+2025-06-01 12:48:41.935 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.6105 ms
+2025-06-01 12:48:41.958 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.5374 ms
+2025-06-01 12:48:41.957 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.8799 ms
+2025-06-01 12:48:42.011 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.1456 ms
+2025-06-01 12:48:42.030 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.3723 ms
+2025-06-01 12:48:42.046 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.7458 ms
+2025-06-01 12:48:42.051 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.3733 ms
+2025-06-01 12:48:42.051 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.7883 ms
+2025-06-01 12:48:42.101 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.9042 ms
+2025-06-01 12:48:42.102 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.3848 ms
+2025-06-01 12:48:42.102 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.5863 ms
+2025-06-01 12:48:42.138 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.2438 ms
+2025-06-01 12:48:42.137 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.7116 ms
+2025-06-01 12:48:42.174 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.4159 ms
+2025-06-01 12:48:42.174 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.2799 ms
+2025-06-01 12:48:42.210 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.1815 ms
+2025-06-01 12:48:42.210 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.6160 ms
+2025-06-01 12:48:42.242 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.0348 ms
+2025-06-01 12:48:42.272 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.3372 ms
+2025-06-01 12:48:42.278 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.9194 ms
+2025-06-01 12:48:42.280 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.6904 ms
+2025-06-01 12:48:42.323 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.3420 ms
+2025-06-01 12:48:42.326 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.1950 ms
+2025-06-01 12:48:42.326 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.5619 ms
+2025-06-01 12:48:42.361 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.1985 ms
+2025-06-01 12:48:42.398 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.2919 ms
+2025-06-01 12:48:42.398 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.4575 ms
+2025-06-01 12:48:42.434 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.4955 ms
+2025-06-01 12:48:42.417 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.7326 ms
+2025-06-01 12:48:42.455 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.1790 ms
+2025-06-01 12:48:42.491 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.2288 ms
+2025-06-01 12:48:42.456 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.9818 ms
+2025-06-01 12:48:42.511 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.8466 ms
+2025-06-01 12:48:42.511 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.9982 ms
+2025-06-01 12:48:42.560 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.5636 ms
+2025-06-01 12:48:42.581 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.9819 ms
+2025-06-01 12:48:42.566 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.6319 ms
+2025-06-01 12:48:42.599 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.3489 ms
+2025-06-01 12:48:42.630 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.7246 ms
+2025-06-01 12:48:42.635 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.1710 ms
+2025-06-01 12:48:42.665 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.1506 ms
+2025-06-01 12:48:42.672 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.2096 ms
+2025-06-01 12:48:42.672 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.4688 ms
+2025-06-01 12:48:42.713 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.3057 ms
+2025-06-01 12:48:42.718 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.7954 ms
+2025-06-01 12:48:42.733 +03:00 [INF] HTTP GET /api/Review responded 200 in 31.7910 ms
+2025-06-01 12:48:42.747 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.3599 ms
+2025-06-01 12:48:42.782 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.7323 ms
+2025-06-01 12:48:42.783 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.3216 ms
+2025-06-01 12:48:42.801 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.8504 ms
+2025-06-01 12:48:42.818 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.2832 ms
+2025-06-01 12:48:42.833 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.1567 ms
+2025-06-01 12:48:42.863 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.4714 ms
+2025-06-01 12:48:42.881 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.2161 ms
+2025-06-01 12:48:42.883 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.6705 ms
+2025-06-01 12:48:42.914 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.7580 ms
+2025-06-01 12:48:42.925 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.5596 ms
+2025-06-01 12:48:42.928 +03:00 [INF] HTTP GET /api/Review responded 200 in 31.3737 ms
+2025-06-01 12:48:42.946 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.4714 ms
+2025-06-01 12:48:42.966 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.0689 ms
+2025-06-01 12:48:42.999 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.7171 ms
+2025-06-01 12:48:43.000 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.4664 ms
+2025-06-01 12:48:43.000 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.2158 ms
+2025-06-01 12:48:43.029 +03:00 [INF] HTTP GET /api/Review responded 200 in 31.0575 ms
+2025-06-01 12:48:43.065 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.9418 ms
+2025-06-01 12:48:43.071 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.9073 ms
+2025-06-01 12:48:43.085 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.3764 ms
+2025-06-01 12:48:43.105 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.1519 ms
+2025-06-01 12:48:43.125 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.6593 ms
+2025-06-01 12:48:43.125 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.9082 ms
+2025-06-01 12:48:43.164 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.7055 ms
+2025-06-01 12:48:43.163 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.2582 ms
+2025-06-01 12:48:43.200 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.0605 ms
+2025-06-01 12:48:43.215 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.4077 ms
+2025-06-01 12:48:43.249 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.8618 ms
+2025-06-01 12:48:43.251 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.6076 ms
+2025-06-01 12:48:43.283 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.4317 ms
+2025-06-01 12:48:43.287 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.2273 ms
+2025-06-01 12:48:43.290 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.2383 ms
+2025-06-01 12:48:43.346 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.8593 ms
+2025-06-01 12:48:43.346 +03:00 [INF] HTTP GET /api/Review responded 200 in 59.3969 ms
+2025-06-01 12:48:43.346 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.5594 ms
+2025-06-01 12:48:43.380 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.9223 ms
+2025-06-01 12:48:43.382 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.2749 ms
+2025-06-01 12:48:43.413 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.2013 ms
+2025-06-01 12:48:43.424 +03:00 [INF] HTTP GET /api/Review responded 200 in 27.1369 ms
+2025-06-01 12:48:43.458 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.8549 ms
+2025-06-01 12:48:43.460 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.6766 ms
+2025-06-01 12:48:43.489 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.6832 ms
+2025-06-01 12:48:43.474 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.3067 ms
+2025-06-01 12:48:43.521 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.0097 ms
+2025-06-01 12:48:43.508 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.5058 ms
+2025-06-01 12:48:43.551 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.6493 ms
+2025-06-01 12:48:43.569 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.8412 ms
+2025-06-01 12:48:43.569 +03:00 [INF] HTTP GET /api/Review responded 200 in 31.5725 ms
+2025-06-01 12:48:43.601 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.9904 ms
+2025-06-01 12:48:43.607 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.5651 ms
+2025-06-01 12:48:43.623 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.5582 ms
+2025-06-01 12:48:43.655 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.0851 ms
+2025-06-01 12:48:43.661 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.5787 ms
+2025-06-01 12:48:43.672 +03:00 [INF] HTTP GET /api/Review responded 200 in 31.9367 ms
+2025-06-01 12:48:43.688 +03:00 [INF] HTTP GET /api/Review responded 200 in 31.9392 ms
+2025-06-01 12:48:43.701 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.4921 ms
+2025-06-01 12:48:43.721 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.7713 ms
+2025-06-01 12:48:43.735 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.9240 ms
+2025-06-01 12:48:43.748 +03:00 [INF] HTTP GET /api/Review responded 200 in 29.6021 ms
+2025-06-01 12:48:43.776 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.3507 ms
+2025-06-01 12:48:43.794 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.2010 ms
+2025-06-01 12:48:43.807 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.5663 ms
+2025-06-01 12:48:43.807 +03:00 [INF] HTTP GET /api/Review responded 200 in 58.6584 ms
+2025-06-01 12:48:43.828 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.7622 ms
+2025-06-01 12:48:43.829 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.9497 ms
+2025-06-01 12:48:43.876 +03:00 [INF] HTTP GET /api/Review responded 200 in 31.8747 ms
+2025-06-01 12:48:43.861 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.5203 ms
+2025-06-01 12:48:43.896 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.7432 ms
+2025-06-01 12:48:43.897 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.4177 ms
+2025-06-01 12:48:43.933 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.3574 ms
+2025-06-01 12:48:43.948 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.0673 ms
+2025-06-01 12:48:43.964 +03:00 [INF] HTTP GET /api/Review responded 200 in 31.0983 ms
+2025-06-01 12:48:43.964 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.8174 ms
+2025-06-01 12:48:44.032 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.4677 ms
+2025-06-01 12:48:44.035 +03:00 [INF] HTTP GET /api/Review responded 200 in 72.0208 ms
+2025-06-01 12:48:44.035 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.5497 ms
+2025-06-01 12:48:44.035 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.5381 ms
+2025-06-01 12:48:44.055 +03:00 [INF] HTTP GET /api/Review responded 200 in 26.3071 ms
+2025-06-01 12:48:44.128 +03:00 [INF] HTTP GET /api/Review responded 200 in 68.3743 ms
+2025-06-01 12:48:44.128 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.2967 ms
+2025-06-01 12:48:44.129 +03:00 [INF] HTTP GET /api/Review responded 200 in 70.6580 ms
+2025-06-01 12:48:44.146 +03:00 [INF] HTTP GET /api/Review responded 200 in 71.8174 ms
+2025-06-01 12:48:44.146 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.0999 ms
+2025-06-01 12:48:44.176 +03:00 [INF] HTTP GET /api/Review responded 200 in 19.2654 ms
+2025-06-01 12:48:44.174 +03:00 [INF] HTTP GET /api/Review responded 200 in 30.2422 ms
+2025-06-01 12:48:44.215 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.8003 ms
+2025-06-01 12:48:44.215 +03:00 [INF] HTTP GET /api/Review responded 200 in 29.5718 ms
+2025-06-01 12:48:44.249 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.8740 ms
+2025-06-01 12:48:44.250 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.5157 ms
+2025-06-01 12:48:44.284 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.2691 ms
+2025-06-01 12:48:44.306 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.6094 ms
+2025-06-01 12:48:44.303 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.1939 ms
+2025-06-01 12:48:44.321 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.2388 ms
+2025-06-01 12:48:44.351 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.0655 ms
+2025-06-01 12:48:44.351 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.0656 ms
+2025-06-01 12:48:44.367 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.2493 ms
+2025-06-01 12:48:44.398 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.6688 ms
+2025-06-01 12:48:44.412 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.5949 ms
+2025-06-01 12:48:44.431 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.0095 ms
+2025-06-01 12:48:44.396 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.4347 ms
+2025-06-01 12:48:44.451 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.1015 ms
+2025-06-01 12:48:44.449 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.6907 ms
+2025-06-01 12:48:44.499 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.1098 ms
+2025-06-01 12:48:44.516 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.2360 ms
+2025-06-01 12:48:44.535 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.8670 ms
+2025-06-01 12:48:44.500 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.3034 ms
+2025-06-01 12:48:44.553 +03:00 [INF] HTTP GET /api/Review responded 200 in 19.3046 ms
+2025-06-01 12:48:44.553 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.1183 ms
+2025-06-01 12:48:44.598 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.6936 ms
+2025-06-01 12:48:44.600 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.7804 ms
+2025-06-01 12:48:44.633 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.4592 ms
+2025-06-01 12:48:44.635 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.6171 ms
+2025-06-01 12:48:44.654 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.9596 ms
+2025-06-01 12:48:44.649 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.5170 ms
+2025-06-01 12:48:44.691 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.0106 ms
+2025-06-01 12:48:44.705 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.6087 ms
+2025-06-01 12:48:44.743 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.6148 ms
+2025-06-01 12:48:44.758 +03:00 [INF] HTTP GET /api/Review responded 200 in 65.4068 ms
+2025-06-01 12:48:44.762 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.0899 ms
+2025-06-01 12:48:44.764 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.2046 ms
+2025-06-01 12:48:44.812 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.0099 ms
+2025-06-01 12:48:44.813 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.7238 ms
+2025-06-01 12:48:44.846 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.0238 ms
+2025-06-01 12:48:44.844 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.2180 ms
+2025-06-01 12:48:44.874 +03:00 [INF] HTTP GET /api/Review responded 200 in 29.5056 ms
+2025-06-01 12:48:44.864 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.0061 ms
+2025-06-01 12:48:44.893 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.0616 ms
+2025-06-01 12:48:44.903 +03:00 [INF] HTTP GET /api/Review responded 200 in 28.9309 ms
+2025-06-01 12:48:44.919 +03:00 [INF] HTTP GET /api/Review responded 200 in 29.0805 ms
+2025-06-01 12:48:44.946 +03:00 [INF] HTTP GET /api/Review responded 200 in 28.8306 ms
+2025-06-01 12:48:44.964 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.0010 ms
+2025-06-01 12:48:44.982 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.1401 ms
+2025-06-01 12:48:44.944 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.2490 ms
+2025-06-01 12:48:44.984 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.5167 ms
+2025-06-01 12:48:45.045 +03:00 [INF] HTTP GET /api/Review responded 200 in 59.1404 ms
+2025-06-01 12:48:45.047 +03:00 [INF] HTTP GET /api/Review responded 200 in 62.0158 ms
+2025-06-01 12:48:45.052 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.8245 ms
+2025-06-01 12:48:45.053 +03:00 [INF] HTTP GET /api/Review responded 200 in 31.7035 ms
+2025-06-01 12:48:45.052 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.9396 ms
+2025-06-01 12:48:45.087 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.1244 ms
+2025-06-01 12:48:45.087 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.5096 ms
+2025-06-01 12:48:45.135 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.1286 ms
+2025-06-01 12:48:45.156 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.8258 ms
+2025-06-01 12:48:45.135 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.8522 ms
+2025-06-01 12:48:45.161 +03:00 [INF] HTTP GET /api/Review responded 200 in 27.0152 ms
+2025-06-01 12:48:45.163 +03:00 [INF] HTTP GET /api/Review responded 200 in 18.0722 ms
+2025-06-01 12:48:45.193 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.4963 ms
+2025-06-01 12:48:45.227 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.0469 ms
+2025-06-01 12:48:45.231 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.1029 ms
+2025-06-01 12:48:45.230 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.2255 ms
+2025-06-01 12:48:45.277 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.5596 ms
+2025-06-01 12:48:45.280 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.0821 ms
+2025-06-01 12:48:45.318 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.4029 ms
+2025-06-01 12:48:45.324 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.0719 ms
+2025-06-01 12:48:45.341 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.0028 ms
+2025-06-01 12:48:45.373 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.3649 ms
+2025-06-01 12:48:45.391 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.4457 ms
+2025-06-01 12:48:45.395 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.8821 ms
+2025-06-01 12:48:45.413 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.3450 ms
+2025-06-01 12:48:45.432 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.1569 ms
+2025-06-01 12:48:45.447 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.1162 ms
+2025-06-01 12:48:45.467 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.0152 ms
+2025-06-01 12:48:45.482 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.1612 ms
+2025-06-01 12:48:45.499 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.0639 ms
+2025-06-01 12:48:45.528 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.5591 ms
+2025-06-01 12:48:45.547 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.1855 ms
+2025-06-01 12:48:45.548 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.7584 ms
+2025-06-01 12:48:45.563 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.0710 ms
+2025-06-01 12:48:45.595 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.8835 ms
+2025-06-01 12:48:45.596 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.7674 ms
+2025-06-01 12:48:45.634 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.2812 ms
+2025-06-01 12:48:45.648 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.5180 ms
+2025-06-01 12:48:45.669 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.1184 ms
+2025-06-01 12:48:45.654 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.4144 ms
+2025-06-01 12:48:45.692 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.8441 ms
+2025-06-01 12:48:45.691 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.9538 ms
+2025-06-01 12:48:45.724 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.9427 ms
+2025-06-01 12:48:45.755 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.8752 ms
+2025-06-01 12:48:45.777 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.2373 ms
+2025-06-01 12:48:45.782 +03:00 [INF] HTTP GET /api/Review responded 200 in 28.4847 ms
+2025-06-01 12:48:45.780 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.6314 ms
+2025-06-01 12:48:45.817 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.5954 ms
+2025-06-01 12:48:45.820 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.2668 ms
+2025-06-01 12:48:45.867 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.9401 ms
+2025-06-01 12:48:45.869 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.3567 ms
+2025-06-01 12:48:45.900 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.1872 ms
+2025-06-01 12:48:45.917 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.8687 ms
+2025-06-01 12:48:45.922 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.3472 ms
+2025-06-01 12:48:45.935 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.0316 ms
+2025-06-01 12:48:45.967 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.5758 ms
+2025-06-01 12:48:45.985 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.2786 ms
+2025-06-01 12:48:46.000 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.3298 ms
+2025-06-01 12:48:46.021 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.7089 ms
+2025-06-01 12:48:46.020 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.2171 ms
+2025-06-01 12:48:46.042 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.2256 ms
+2025-06-01 12:48:46.055 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.4443 ms
+2025-06-01 12:48:46.073 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.8592 ms
+2025-06-01 12:48:46.105 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.1630 ms
+2025-06-01 12:48:46.110 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.0482 ms
+2025-06-01 12:48:46.124 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.6637 ms
+2025-06-01 12:48:46.155 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.1956 ms
+2025-06-01 12:48:46.155 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.5654 ms
+2025-06-01 12:48:46.190 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.2134 ms
+2025-06-01 12:48:46.188 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.7847 ms
+2025-06-01 12:48:46.220 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.3649 ms
+2025-06-01 12:48:46.236 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.7683 ms
+2025-06-01 12:48:46.224 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.5854 ms
+2025-06-01 12:48:46.254 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.8850 ms
+2025-06-01 12:48:46.275 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.4699 ms
+2025-06-01 12:48:46.274 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.4476 ms
+2025-06-01 12:48:46.305 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.6351 ms
+2025-06-01 12:48:46.339 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.6759 ms
+2025-06-01 12:48:46.325 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.4008 ms
+2025-06-01 12:48:46.370 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.7067 ms
+2025-06-01 12:48:46.387 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.7510 ms
+2025-06-01 12:48:46.392 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.0236 ms
+2025-06-01 12:48:46.407 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.4505 ms
+2025-06-01 12:48:46.427 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.8541 ms
+2025-06-01 12:48:46.428 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.7637 ms
+2025-06-01 12:48:46.458 +03:00 [INF] HTTP GET /api/Review responded 200 in 31.0149 ms
+2025-06-01 12:48:46.491 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.0715 ms
+2025-06-01 12:48:46.457 +03:00 [INF] HTTP GET /api/Review responded 200 in 31.5899 ms
+2025-06-01 12:48:46.493 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.8366 ms
+2025-06-01 12:48:46.526 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.7408 ms
+2025-06-01 12:48:46.528 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.8340 ms
+2025-06-01 12:48:46.575 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.5431 ms
+2025-06-01 12:48:46.586 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.9340 ms
+2025-06-01 12:48:46.598 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.8021 ms
+2025-06-01 12:48:46.602 +03:00 [INF] HTTP GET /api/Review responded 200 in 28.4761 ms
+2025-06-01 12:48:46.634 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.1620 ms
+2025-06-01 12:48:46.651 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.3738 ms
+2025-06-01 12:48:46.656 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.9724 ms
+2025-06-01 12:48:46.669 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.1025 ms
+2025-06-01 12:48:46.693 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.9970 ms
+2025-06-01 12:48:46.711 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.5665 ms
+2025-06-01 12:48:46.745 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.5579 ms
+2025-06-01 12:48:46.750 +03:00 [INF] HTTP GET /api/Review responded 200 in 64.3460 ms
+2025-06-01 12:48:46.751 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.5460 ms
+2025-06-01 12:48:46.796 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.3891 ms
+2025-06-01 12:48:46.813 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.6164 ms
+2025-06-01 12:48:46.829 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.5257 ms
+2025-06-01 12:48:46.849 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.5135 ms
+2025-06-01 12:48:46.851 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.4979 ms
+2025-06-01 12:48:46.882 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.5553 ms
+2025-06-01 12:48:46.902 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.6397 ms
+2025-06-01 12:48:46.905 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.9997 ms
+2025-06-01 12:48:46.922 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.4797 ms
+2025-06-01 12:48:46.956 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.9025 ms
+2025-06-01 12:48:46.974 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.9809 ms
+2025-06-01 12:48:46.980 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.7217 ms
+2025-06-01 12:48:46.974 +03:00 [INF] HTTP GET /api/Review responded 200 in 66.9566 ms
+2025-06-01 12:48:47.015 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.4875 ms
+2025-06-01 12:48:47.013 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.2534 ms
+2025-06-01 12:48:47.049 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.0846 ms
+2025-06-01 12:48:47.077 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.7000 ms
+2025-06-01 12:48:47.081 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.2440 ms
+2025-06-01 12:48:47.094 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.9683 ms
+2025-06-01 12:48:47.132 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.8991 ms
+2025-06-01 12:48:47.146 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.7131 ms
+2025-06-01 12:48:47.165 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.3823 ms
+2025-06-01 12:48:47.168 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.2134 ms
+2025-06-01 12:48:47.183 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.0373 ms
+2025-06-01 12:48:47.217 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.2525 ms
+2025-06-01 12:48:47.234 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.0413 ms
+2025-06-01 12:48:47.239 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.9631 ms
+2025-06-01 12:48:47.253 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.3076 ms
+2025-06-01 12:48:47.272 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.1046 ms
+2025-06-01 12:48:47.303 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.5200 ms
+2025-06-01 12:48:47.304 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.3553 ms
+2025-06-01 12:48:47.331 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.2854 ms
+2025-06-01 12:48:47.355 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.0777 ms
+2025-06-01 12:48:47.355 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.8410 ms
+2025-06-01 12:48:47.387 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.3912 ms
+2025-06-01 12:48:47.386 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.7387 ms
+2025-06-01 12:48:47.410 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.7097 ms
+2025-06-01 12:48:47.423 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.0155 ms
+2025-06-01 12:48:47.458 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.1364 ms
+2025-06-01 12:48:47.458 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.8998 ms
+2025-06-01 12:48:47.490 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.0012 ms
+2025-06-01 12:48:47.507 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.3789 ms
+2025-06-01 12:48:47.525 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.8627 ms
+2025-06-01 12:48:47.526 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.5946 ms
+2025-06-01 12:48:47.549 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.5440 ms
+2025-06-01 12:48:47.566 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.2472 ms
+2025-06-01 12:48:47.568 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.7038 ms
+2025-06-01 12:48:47.597 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.1689 ms
+2025-06-01 12:48:47.629 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.7880 ms
+2025-06-01 12:48:47.629 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.6837 ms
+2025-06-01 12:48:47.634 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.1036 ms
+2025-06-01 12:48:47.582 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.8308 ms
+2025-06-01 12:48:47.653 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.5827 ms
+2025-06-01 12:48:47.685 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.7621 ms
+2025-06-01 12:48:47.710 +03:00 [INF] HTTP GET /api/Review responded 200 in 27.8568 ms
+2025-06-01 12:48:47.710 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.8826 ms
+2025-06-01 12:48:47.742 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.3407 ms
+2025-06-01 12:48:47.744 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.5880 ms
+2025-06-01 12:48:47.759 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.8714 ms
+2025-06-01 12:48:47.803 +03:00 [INF] HTTP GET /api/Review responded 200 in 61.4594 ms
+2025-06-01 12:48:47.809 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.9589 ms
+2025-06-01 12:48:47.824 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.0821 ms
+2025-06-01 12:48:47.811 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.0398 ms
+2025-06-01 12:48:47.829 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.1685 ms
+2025-06-01 12:48:47.862 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.7633 ms
+2025-06-01 12:48:47.896 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.3428 ms
+2025-06-01 12:48:47.900 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.2467 ms
+2025-06-01 12:48:47.900 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.4936 ms
+2025-06-01 12:48:47.943 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.9874 ms
+2025-06-01 12:48:47.973 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.4944 ms
+2025-06-01 12:48:47.960 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.8057 ms
+2025-06-01 12:48:47.980 +03:00 [INF] HTTP GET /api/Review responded 200 in 18.1064 ms
+2025-06-01 12:48:47.980 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.3542 ms
+2025-06-01 12:48:48.007 +03:00 [INF] HTTP GET /api/Review responded 200 in 29.2358 ms
+2025-06-01 12:48:48.019 +03:00 [INF] HTTP GET /api/Review responded 200 in 30.9058 ms
+2025-06-01 12:48:48.058 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.1794 ms
+2025-06-01 12:48:48.060 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.1443 ms
+2025-06-01 12:48:48.078 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.2643 ms
+2025-06-01 12:48:48.076 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.9920 ms
+2025-06-01 12:48:48.108 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.5997 ms
+2025-06-01 12:48:48.141 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.5729 ms
+2025-06-01 12:48:48.145 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.4589 ms
+2025-06-01 12:48:48.180 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.9090 ms
+2025-06-01 12:48:48.180 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.2273 ms
+2025-06-01 12:48:48.203 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.4565 ms
+2025-06-01 12:48:48.219 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.0141 ms
+2025-06-01 12:48:48.242 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.6231 ms
+2025-06-01 12:48:48.257 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.9837 ms
+2025-06-01 12:48:48.294 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.7088 ms
+2025-06-01 12:48:48.318 +03:00 [INF] HTTP GET /api/Review responded 200 in 60.9042 ms
+2025-06-01 12:48:48.320 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.0953 ms
+2025-06-01 12:48:48.335 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.9495 ms
+2025-06-01 12:48:48.356 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.6345 ms
+2025-06-01 12:48:48.358 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.0316 ms
+2025-06-01 12:48:48.392 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.5895 ms
+2025-06-01 12:48:48.433 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.2225 ms
+2025-06-01 12:48:48.433 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.5269 ms
+2025-06-01 12:48:48.427 +03:00 [INF] HTTP GET /api/Review responded 200 in 58.2395 ms
+2025-06-01 12:48:48.491 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.2054 ms
+2025-06-01 12:48:48.474 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.5726 ms
+2025-06-01 12:48:48.528 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.6621 ms
+2025-06-01 12:48:48.536 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.0505 ms
+2025-06-01 12:48:48.552 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.6843 ms
+2025-06-01 12:48:48.589 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.5787 ms
+2025-06-01 12:48:48.603 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.4075 ms
+2025-06-01 12:48:48.609 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.6359 ms
+2025-06-01 12:48:48.589 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.4342 ms
+2025-06-01 12:48:48.641 +03:00 [INF] HTTP GET /api/Review responded 200 in 19.4133 ms
+2025-06-01 12:48:48.641 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.6284 ms
+2025-06-01 12:48:48.691 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.7181 ms
+2025-06-01 12:48:48.701 +03:00 [INF] HTTP GET /api/Review responded 200 in 28.0200 ms
+2025-06-01 12:48:48.718 +03:00 [INF] HTTP GET /api/Review responded 200 in 19.4647 ms
+2025-06-01 12:48:48.694 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.1438 ms
+2025-06-01 12:48:48.771 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.4645 ms
+2025-06-01 12:48:48.775 +03:00 [INF] HTTP GET /api/Review responded 200 in 58.0234 ms
+2025-06-01 12:48:48.776 +03:00 [INF] HTTP GET /api/Review responded 200 in 26.8974 ms
+2025-06-01 12:48:48.820 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.6812 ms
+2025-06-01 12:48:48.838 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.6558 ms
+2025-06-01 12:48:48.827 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.9006 ms
+2025-06-01 12:48:48.874 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.7413 ms
+2025-06-01 12:48:48.881 +03:00 [INF] HTTP GET /api/Review responded 200 in 30.7524 ms
+2025-06-01 12:48:48.873 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.2543 ms
+2025-06-01 12:48:48.937 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.3383 ms
+2025-06-01 12:48:48.936 +03:00 [INF] HTTP GET /api/Review responded 200 in 58.2092 ms
+2025-06-01 12:48:48.958 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.4140 ms
+2025-06-01 12:48:48.982 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.2618 ms
+2025-06-01 12:48:49.000 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.5316 ms
+2025-06-01 12:48:49.036 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.7842 ms
+2025-06-01 12:48:49.058 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.0903 ms
+2025-06-01 12:48:49.054 +03:00 [INF] HTTP GET /api/Review responded 200 in 69.5880 ms
+2025-06-01 12:48:49.073 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.2318 ms
+2025-06-01 12:48:49.075 +03:00 [INF] HTTP GET /api/Review responded 200 in 19.8372 ms
+2025-06-01 12:48:49.124 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.7800 ms
+2025-06-01 12:48:49.140 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.4714 ms
+2025-06-01 12:48:49.164 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.0689 ms
+2025-06-01 12:48:49.164 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.7103 ms
+2025-06-01 12:48:49.181 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.1257 ms
+2025-06-01 12:48:49.140 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.4715 ms
+2025-06-01 12:48:49.233 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.7668 ms
+2025-06-01 12:48:49.233 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.0385 ms
+2025-06-01 12:48:49.273 +03:00 [INF] HTTP GET /api/Review responded 200 in 64.2852 ms
+2025-06-01 12:48:49.275 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.4562 ms
+2025-06-01 12:48:49.316 +03:00 [INF] HTTP GET /api/Review responded 200 in 64.9115 ms
+2025-06-01 12:48:49.319 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.5671 ms
+2025-06-01 12:48:49.358 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.8131 ms
+2025-06-01 12:48:49.355 +03:00 [INF] HTTP GET /api/Review responded 200 in 61.6807 ms
+2025-06-01 12:48:49.358 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.0239 ms
+2025-06-01 12:48:49.410 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.2494 ms
+2025-06-01 12:48:49.410 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.9460 ms
+2025-06-01 12:48:49.432 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.2229 ms
+2025-06-01 12:48:49.460 +03:00 [INF] HTTP GET /api/Review responded 200 in 27.9741 ms
+2025-06-01 12:48:49.460 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.9626 ms
+2025-06-01 12:48:49.460 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.7861 ms
+2025-06-01 12:48:49.515 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.7505 ms
+2025-06-01 12:48:49.515 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.7458 ms
+2025-06-01 12:48:49.541 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.6987 ms
+2025-06-01 12:48:49.544 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.2103 ms
+2025-06-01 12:48:49.591 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.8603 ms
+2025-06-01 12:48:49.594 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.6931 ms
+2025-06-01 12:48:49.614 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.6703 ms
+2025-06-01 12:48:49.617 +03:00 [INF] HTTP GET /api/Review responded 200 in 27.1108 ms
+2025-06-01 12:48:49.669 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.9240 ms
+2025-06-01 12:48:49.673 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.6551 ms
+2025-06-01 12:48:49.674 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.8995 ms
+2025-06-01 12:48:49.712 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.2214 ms
+2025-06-01 12:48:49.711 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.6614 ms
+2025-06-01 12:48:49.756 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.5982 ms
+2025-06-01 12:48:49.756 +03:00 [INF] HTTP GET /api/Review responded 200 in 30.4357 ms
+2025-06-01 12:48:49.756 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.4032 ms
+2025-06-01 12:48:49.790 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.8077 ms
+2025-06-01 12:48:49.793 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.0260 ms
+2025-06-01 12:48:49.850 +03:00 [INF] HTTP GET /api/Review responded 200 in 60.2884 ms
+2025-06-01 12:48:49.850 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.3929 ms
+2025-06-01 12:48:49.882 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.0951 ms
+2025-06-01 12:48:49.890 +03:00 [INF] HTTP GET /api/Review responded 200 in 27.0126 ms
+2025-06-01 12:48:49.890 +03:00 [INF] HTTP GET /api/Review responded 200 in 58.1278 ms
+2025-06-01 12:48:49.943 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.8009 ms
+2025-06-01 12:48:49.943 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.2786 ms
+2025-06-01 12:48:49.964 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.1098 ms
+2025-06-01 12:48:49.966 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.6028 ms
+2025-06-01 12:48:50.018 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.4801 ms
+2025-06-01 12:48:50.018 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.5573 ms
+2025-06-01 12:48:50.040 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.4816 ms
+2025-06-01 12:48:50.077 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.3651 ms
+2025-06-01 12:48:50.096 +03:00 [INF] HTTP GET /api/Review responded 200 in 72.7355 ms
+2025-06-01 12:48:50.100 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.8549 ms
+2025-06-01 12:48:50.114 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.6853 ms
+2025-06-01 12:48:50.167 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.6803 ms
+2025-06-01 12:48:50.148 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.4244 ms
+2025-06-01 12:48:50.172 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.4395 ms
+2025-06-01 12:48:50.174 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.5182 ms
+2025-06-01 12:48:50.224 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.7142 ms
+2025-06-01 12:48:50.224 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.2820 ms
+2025-06-01 12:48:50.241 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.0627 ms
+2025-06-01 12:48:50.245 +03:00 [INF] HTTP GET /api/Review responded 200 in 28.3953 ms
+2025-06-01 12:48:50.245 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.1318 ms
+2025-06-01 12:48:50.277 +03:00 [INF] HTTP GET /api/Review responded 200 in 16.7374 ms
+2025-06-01 12:48:50.276 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.0370 ms
+2025-06-01 12:48:50.329 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.1919 ms
+2025-06-01 12:48:50.330 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.8607 ms
+2025-06-01 12:48:50.365 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.6458 ms
+2025-06-01 12:48:50.366 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.1171 ms
+2025-06-01 12:48:50.388 +03:00 [INF] HTTP GET /api/Review responded 200 in 26.7583 ms
+2025-06-01 12:48:50.366 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.5551 ms
+2025-06-01 12:48:50.440 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.9412 ms
+2025-06-01 12:48:50.440 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.8062 ms
+2025-06-01 12:48:50.458 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.5553 ms
+2025-06-01 12:48:50.461 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.4346 ms
+2025-06-01 12:48:50.508 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.2827 ms
+2025-06-01 12:48:50.508 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.4258 ms
+2025-06-01 12:48:50.519 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.5430 ms
+2025-06-01 12:48:50.540 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.7914 ms
+2025-06-01 12:48:50.579 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.2518 ms
+2025-06-01 12:48:50.540 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.9306 ms
+2025-06-01 12:48:50.598 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.0880 ms
+2025-06-01 12:48:50.598 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.8184 ms
+2025-06-01 12:48:50.645 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.8090 ms
+2025-06-01 12:48:50.645 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.8269 ms
+2025-06-01 12:48:50.645 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.3263 ms
+2025-06-01 12:48:50.681 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.8138 ms
+2025-06-01 12:48:50.681 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.8795 ms
+2025-06-01 12:48:50.719 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.2288 ms
+2025-06-01 12:48:50.735 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.8729 ms
+2025-06-01 12:48:50.773 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.1609 ms
+2025-06-01 12:48:50.773 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.3487 ms
+2025-06-01 12:48:50.775 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.1769 ms
+2025-06-01 12:48:50.807 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.2970 ms
+2025-06-01 12:48:50.821 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.4262 ms
+2025-06-01 12:48:50.842 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.6891 ms
+2025-06-01 12:48:50.841 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.6601 ms
+2025-06-01 12:48:50.870 +03:00 [INF] HTTP GET /api/Review responded 200 in 28.6921 ms
+2025-06-01 12:48:50.891 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.2223 ms
+2025-06-01 12:48:50.907 +03:00 [INF] HTTP GET /api/Review responded 200 in 17.6210 ms
+2025-06-01 12:48:50.906 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.1126 ms
+2025-06-01 12:48:50.937 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.8785 ms
+2025-06-01 12:48:50.939 +03:00 [INF] HTTP GET /api/Review responded 200 in 20.8311 ms
+2025-06-01 12:48:50.986 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.0333 ms
+2025-06-01 12:48:50.987 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.0242 ms
+2025-06-01 12:48:51.006 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.6130 ms
+2025-06-01 12:48:51.028 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.8485 ms
+2025-06-01 12:48:51.062 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.4561 ms
+2025-06-01 12:48:51.076 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.8418 ms
+2025-06-01 12:48:51.082 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.0425 ms
+2025-06-01 12:48:51.082 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.9533 ms
+2025-06-01 12:48:51.126 +03:00 [INF] HTTP GET /api/Review responded 200 in 31.6065 ms
+2025-06-01 12:48:51.161 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.3819 ms
+2025-06-01 12:48:51.124 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.9674 ms
+2025-06-01 12:48:51.167 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.0377 ms
+2025-06-01 12:48:51.169 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.6228 ms
+2025-06-01 12:48:51.222 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.5552 ms
+2025-06-01 12:48:51.241 +03:00 [INF] HTTP GET /api/Review responded 200 in 59.6430 ms
+2025-06-01 12:48:51.248 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.5489 ms
+2025-06-01 12:48:51.251 +03:00 [INF] HTTP GET /api/Review responded 200 in 30.0430 ms
+2025-06-01 12:48:51.297 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.5291 ms
+2025-06-01 12:48:51.297 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.6040 ms
+2025-06-01 12:48:51.314 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.6133 ms
+2025-06-01 12:48:51.348 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.9260 ms
+2025-06-01 12:48:51.366 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.0523 ms
+2025-06-01 12:48:51.390 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.7310 ms
+2025-06-01 12:48:51.386 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.8599 ms
+2025-06-01 12:48:51.407 +03:00 [INF] HTTP GET /api/Review responded 200 in 20.4590 ms
+2025-06-01 12:48:51.406 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.2853 ms
+2025-06-01 12:48:51.463 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.6661 ms
+2025-06-01 12:48:51.483 +03:00 [INF] HTTP GET /api/Review responded 200 in 59.2121 ms
+2025-06-01 12:48:51.502 +03:00 [INF] HTTP GET /api/Review responded 200 in 60.4226 ms
+2025-06-01 12:48:51.522 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.7114 ms
+2025-06-01 12:48:51.522 +03:00 [INF] HTTP GET /api/Review responded 200 in 58.2200 ms
+2025-06-01 12:48:51.541 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.6964 ms
+2025-06-01 12:48:51.563 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.7560 ms
+2025-06-01 12:48:51.563 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.9572 ms
+2025-06-01 12:48:51.613 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.1374 ms
+2025-06-01 12:48:51.599 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.8639 ms
+2025-06-01 12:48:51.636 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.3078 ms
+2025-06-01 12:48:51.634 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.4848 ms
+2025-06-01 12:48:51.682 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.2283 ms
+2025-06-01 12:48:51.682 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.0733 ms
+2025-06-01 12:48:51.716 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.4365 ms
+2025-06-01 12:48:51.719 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.4128 ms
+2025-06-01 12:48:51.757 +03:00 [INF] HTTP GET /api/Review responded 200 in 59.6860 ms
+2025-06-01 12:48:51.762 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.3218 ms
+2025-06-01 12:48:51.778 +03:00 [INF] HTTP GET /api/Review responded 200 in 58.7337 ms
+2025-06-01 12:48:51.799 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.5122 ms
+2025-06-01 12:48:51.829 +03:00 [INF] HTTP GET /api/Review responded 200 in 31.1318 ms
+2025-06-01 12:48:51.812 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.2411 ms
+2025-06-01 12:48:51.864 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.7456 ms
+2025-06-01 12:48:51.883 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.0418 ms
+2025-06-01 12:48:51.907 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.7677 ms
+2025-06-01 12:48:51.867 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.5421 ms
+2025-06-01 12:48:51.925 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.3618 ms
+2025-06-01 12:48:51.923 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.5422 ms
+2025-06-01 12:48:52.003 +03:00 [INF] HTTP GET /api/Review responded 200 in 77.9077 ms
+2025-06-01 12:48:52.022 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.7100 ms
+2025-06-01 12:48:52.007 +03:00 [INF] HTTP GET /api/Review responded 200 in 66.4959 ms
+2025-06-01 12:48:52.041 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.9553 ms
+2025-06-01 12:48:52.041 +03:00 [INF] HTTP GET /api/Review responded 200 in 31.8357 ms
+2025-06-01 12:48:52.085 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.8278 ms
+2025-06-01 12:48:52.103 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.1114 ms
+2025-06-01 12:48:52.123 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.1838 ms
+2025-06-01 12:48:52.142 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.3809 ms
+2025-06-01 12:48:52.158 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.3039 ms
+2025-06-01 12:48:52.182 +03:00 [INF] HTTP GET /api/Review responded 200 in 58.7480 ms
+2025-06-01 12:48:52.197 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.1276 ms
+2025-06-01 12:48:52.202 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.5898 ms
+2025-06-01 12:48:52.241 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.4079 ms
+2025-06-01 12:48:52.203 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.5436 ms
+2025-06-01 12:48:52.266 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.4889 ms
+2025-06-01 12:48:52.266 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.7057 ms
+2025-06-01 12:48:52.316 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.7024 ms
+2025-06-01 12:48:52.319 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.3402 ms
+2025-06-01 12:48:52.355 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.9469 ms
+2025-06-01 12:48:52.375 +03:00 [INF] HTTP GET /api/Review responded 200 in 58.1490 ms
+2025-06-01 12:48:52.396 +03:00 [INF] HTTP GET /api/Review responded 200 in 73.8081 ms
+2025-06-01 12:48:52.416 +03:00 [INF] HTTP GET /api/Review responded 200 in 61.2846 ms
+2025-06-01 12:48:52.434 +03:00 [INF] HTTP GET /api/Review responded 200 in 59.9489 ms
+2025-06-01 12:48:52.454 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.6808 ms
+2025-06-01 12:48:52.434 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.3520 ms
+2025-06-01 12:48:52.467 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.2217 ms
+2025-06-01 12:48:52.483 +03:00 [INF] HTTP GET /api/Review responded 200 in 31.9114 ms
+2025-06-01 12:48:52.542 +03:00 [INF] HTTP GET /api/Review responded 200 in 72.4826 ms
+2025-06-01 12:48:52.542 +03:00 [INF] HTTP GET /api/Review responded 200 in 74.7820 ms
+2025-06-01 12:48:52.542 +03:00 [INF] HTTP GET /api/Review responded 200 in 74.6047 ms
+2025-06-01 12:48:52.576 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.8459 ms
+2025-06-01 12:48:52.609 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.2918 ms
+2025-06-01 12:48:52.616 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.9360 ms
+2025-06-01 12:48:52.616 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.0524 ms
+2025-06-01 12:48:52.663 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.5175 ms
+2025-06-01 12:48:52.685 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.2773 ms
+2025-06-01 12:48:52.667 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.8617 ms
+2025-06-01 12:48:52.708 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.0422 ms
+2025-06-01 12:48:52.707 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.7184 ms
+2025-06-01 12:48:52.747 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.4966 ms
+2025-06-01 12:48:52.760 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.2039 ms
+2025-06-01 12:48:52.790 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.5289 ms
+2025-06-01 12:48:52.791 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.3291 ms
+2025-06-01 12:48:52.827 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.1933 ms
+2025-06-01 12:48:52.845 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.6640 ms
+2025-06-01 12:48:52.862 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.6146 ms
+2025-06-01 12:48:52.881 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.7587 ms
+2025-06-01 12:48:52.900 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.9713 ms
+2025-06-01 12:48:52.914 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.8210 ms
+2025-06-01 12:48:52.930 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.9121 ms
+2025-06-01 12:48:52.933 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.7501 ms
+2025-06-01 12:48:52.949 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.1800 ms
+2025-06-01 12:48:52.983 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.7722 ms
+2025-06-01 12:48:52.987 +03:00 [INF] HTTP GET /api/Review responded 200 in 19.8924 ms
+2025-06-01 12:48:52.986 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.4537 ms
+2025-06-01 12:48:53.029 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.1002 ms
+2025-06-01 12:48:53.035 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.8357 ms
+2025-06-01 12:48:53.045 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.3599 ms
+2025-06-01 12:48:53.061 +03:00 [INF] HTTP GET /api/Review responded 200 in 28.7312 ms
+2025-06-01 12:48:53.089 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.8731 ms
+2025-06-01 12:48:53.108 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.3425 ms
+2025-06-01 12:48:53.126 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.2777 ms
+2025-06-01 12:48:53.143 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.3002 ms
+2025-06-01 12:48:53.143 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.1637 ms
+2025-06-01 12:48:53.161 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.1617 ms
+2025-06-01 12:48:53.178 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.1092 ms
+2025-06-01 12:48:53.209 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.6221 ms
+2025-06-01 12:48:53.242 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.2459 ms
+2025-06-01 12:48:53.211 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.9294 ms
+2025-06-01 12:48:53.249 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.2346 ms
+2025-06-01 12:48:53.248 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.4878 ms
+2025-06-01 12:48:53.292 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.7944 ms
+2025-06-01 12:48:53.311 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.1445 ms
+2025-06-01 12:48:53.311 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.5637 ms
+2025-06-01 12:48:53.343 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.1642 ms
+2025-06-01 12:48:53.346 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.0969 ms
+2025-06-01 12:48:53.377 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.1685 ms
+2025-06-01 12:48:53.362 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.8090 ms
+2025-06-01 12:48:53.407 +03:00 [INF] HTTP GET /api/Review responded 200 in 30.2070 ms
+2025-06-01 12:48:53.405 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.0034 ms
+2025-06-01 12:48:53.435 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.9828 ms
+2025-06-01 12:48:53.454 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.0747 ms
+2025-06-01 12:48:53.435 +03:00 [INF] HTTP GET /api/Review responded 200 in 29.9918 ms
+2025-06-01 12:48:53.472 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.0634 ms
+2025-06-01 12:48:53.472 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.9684 ms
+2025-06-01 12:48:53.526 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.8522 ms
+2025-06-01 12:48:53.528 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.5845 ms
+2025-06-01 12:48:53.555 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.3134 ms
+2025-06-01 12:48:53.560 +03:00 [INF] HTTP GET /api/Review responded 200 in 19.2571 ms
+2025-06-01 12:48:53.555 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.0048 ms
+2025-06-01 12:48:53.593 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.2005 ms
+2025-06-01 12:48:53.593 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.0831 ms
+2025-06-01 12:48:53.637 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.0260 ms
+2025-06-01 12:48:53.637 +03:00 [INF] HTTP GET /api/Review responded 200 in 30.5007 ms
+2025-06-01 12:48:53.673 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.9205 ms
+2025-06-01 12:48:53.689 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.6794 ms
+2025-06-01 12:48:53.707 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.9944 ms
+2025-06-01 12:48:53.728 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.3347 ms
+2025-06-01 12:48:53.730 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.4988 ms
+2025-06-01 12:48:53.760 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.5521 ms
+2025-06-01 12:48:53.763 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.9786 ms
+2025-06-01 12:48:53.763 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.2718 ms
+2025-06-01 12:48:53.807 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.6891 ms
+2025-06-01 12:48:53.824 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.9298 ms
+2025-06-01 12:48:53.845 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.7276 ms
+2025-06-01 12:48:53.845 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.1633 ms
+2025-06-01 12:48:53.846 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.8411 ms
+2025-06-01 12:48:53.881 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.0228 ms
+2025-06-01 12:48:53.894 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.7974 ms
+2025-06-01 12:48:53.929 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.9850 ms
+2025-06-01 12:48:53.946 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.2726 ms
+2025-06-01 12:48:53.948 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.9947 ms
+2025-06-01 12:48:53.983 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.1170 ms
+2025-06-01 12:48:53.969 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.8844 ms
+2025-06-01 12:48:54.018 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.3002 ms
+2025-06-01 12:48:54.023 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.5887 ms
+2025-06-01 12:48:54.024 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.8359 ms
+2025-06-01 12:48:54.084 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.4226 ms
+2025-06-01 12:48:54.084 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.6702 ms
+2025-06-01 12:48:54.084 +03:00 [INF] HTTP GET /api/Review responded 200 in 62.3513 ms
+2025-06-01 12:48:54.107 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.1056 ms
+2025-06-01 12:48:54.107 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.1669 ms
+2025-06-01 12:48:54.154 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.9739 ms
+2025-06-01 12:48:54.156 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.4967 ms
+2025-06-01 12:48:54.185 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.7935 ms
+2025-06-01 12:48:54.202 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.5391 ms
+2025-06-01 12:48:54.237 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.3616 ms
+2025-06-01 12:48:54.215 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.4008 ms
+2025-06-01 12:48:54.243 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.5441 ms
+2025-06-01 12:48:54.243 +03:00 [INF] HTTP GET /api/Review responded 200 in 26.7470 ms
+2025-06-01 12:48:54.294 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.5046 ms
+2025-06-01 12:48:54.299 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.5646 ms
+2025-06-01 12:48:54.300 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.1515 ms
+2025-06-01 12:48:54.325 +03:00 [INF] HTTP GET /api/Review responded 200 in 26.2046 ms
+2025-06-01 12:48:54.328 +03:00 [INF] HTTP GET /api/Review responded 200 in 17.1837 ms
+2025-06-01 12:48:54.300 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.1253 ms
+2025-06-01 12:48:54.397 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.1259 ms
+2025-06-01 12:48:54.398 +03:00 [INF] HTTP GET /api/Review responded 200 in 69.8471 ms
+2025-06-01 12:48:54.403 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.5842 ms
+2025-06-01 12:48:54.405 +03:00 [INF] HTTP GET /api/Review responded 200 in 28.1181 ms
+2025-06-01 12:48:54.440 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.6840 ms
+2025-06-01 12:48:54.437 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.0201 ms
+2025-06-01 12:48:54.491 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.1353 ms
+2025-06-01 12:48:54.492 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.5634 ms
+2025-06-01 12:48:54.525 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.7628 ms
+2025-06-01 12:48:54.555 +03:00 [INF] HTTP GET /api/Review responded 200 in 61.4759 ms
+2025-06-01 12:48:54.576 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.2288 ms
+2025-06-01 12:48:54.576 +03:00 [INF] HTTP GET /api/Review responded 200 in 47.9087 ms
+2025-06-01 12:48:54.560 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.7368 ms
+2025-06-01 12:48:54.580 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.9463 ms
+2025-06-01 12:48:54.639 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.2443 ms
+2025-06-01 12:48:54.656 +03:00 [INF] HTTP GET /api/Review responded 200 in 71.2478 ms
+2025-06-01 12:48:54.653 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.0147 ms
+2025-06-01 12:48:54.669 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.3729 ms
+2025-06-01 12:48:54.691 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.3109 ms
+2025-06-01 12:48:54.691 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.9255 ms
+2025-06-01 12:48:54.734 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.2020 ms
+2025-06-01 12:48:54.734 +03:00 [INF] HTTP GET /api/Review responded 200 in 29.2410 ms
+2025-06-01 12:48:54.752 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.1676 ms
+2025-06-01 12:48:54.792 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.3807 ms
+2025-06-01 12:48:54.805 +03:00 [INF] HTTP GET /api/Review responded 200 in 67.2760 ms
+2025-06-01 12:48:54.810 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.7299 ms
+2025-06-01 12:48:54.849 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.1519 ms
+2025-06-01 12:48:54.847 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.7546 ms
+2025-06-01 12:48:54.866 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.0475 ms
+2025-06-01 12:48:54.867 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.4931 ms
+2025-06-01 12:48:54.909 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.6446 ms
+2025-06-01 12:48:54.956 +03:00 [INF] HTTP GET /api/Review responded 200 in 75.8830 ms
+2025-06-01 12:48:54.977 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.2813 ms
+2025-06-01 12:48:54.960 +03:00 [INF] HTTP GET /api/Review responded 200 in 74.4837 ms
+2025-06-01 12:48:55.000 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.8368 ms
+2025-06-01 12:48:55.000 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.4904 ms
+2025-06-01 12:48:55.100 +03:00 [INF] HTTP GET /api/Review responded 200 in 86.5702 ms
+2025-06-01 12:48:55.100 +03:00 [INF] HTTP GET /api/Review responded 200 in 88.9504 ms
+2025-06-01 12:48:55.107 +03:00 [INF] HTTP GET /api/Review responded 200 in 78.1108 ms
+2025-06-01 12:48:55.113 +03:00 [INF] HTTP GET /api/Review responded 200 in 84.2597 ms
+2025-06-01 12:48:55.114 +03:00 [INF] HTTP GET /api/Review responded 200 in 101.1479 ms
+2025-06-01 12:48:55.225 +03:00 [INF] HTTP GET /api/Review responded 200 in 96.3321 ms
+2025-06-01 12:48:55.226 +03:00 [INF] HTTP GET /api/Review responded 200 in 98.8148 ms
+2025-06-01 12:48:55.227 +03:00 [INF] HTTP GET /api/Review responded 200 in 82.3522 ms
+2025-06-01 12:48:55.234 +03:00 [INF] HTTP GET /api/Review responded 200 in 89.6082 ms
+2025-06-01 12:48:55.235 +03:00 [INF] HTTP GET /api/Review responded 200 in 90.5230 ms
+2025-06-01 12:48:55.301 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.6484 ms
+2025-06-01 12:48:55.302 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.5193 ms
+2025-06-01 12:48:55.302 +03:00 [INF] HTTP GET /api/Review responded 200 in 62.5010 ms
+2025-06-01 12:48:55.302 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.1083 ms
+2025-06-01 12:48:55.321 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.3665 ms
+2025-06-01 12:48:55.389 +03:00 [INF] HTTP GET /api/Review responded 200 in 67.2820 ms
+2025-06-01 12:48:55.406 +03:00 [INF] HTTP GET /api/Review responded 200 in 65.2125 ms
+2025-06-01 12:48:55.406 +03:00 [INF] HTTP GET /api/Review responded 200 in 65.2329 ms
+2025-06-01 12:48:55.409 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.9778 ms
+2025-06-01 12:48:55.411 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.3434 ms
+2025-06-01 12:48:55.506 +03:00 [INF] HTTP GET /api/Review responded 200 in 87.9361 ms
+2025-06-01 12:48:55.515 +03:00 [INF] HTTP GET /api/Review responded 200 in 76.7213 ms
+2025-06-01 12:48:55.506 +03:00 [INF] HTTP GET /api/Review responded 200 in 85.5583 ms
+2025-06-01 12:48:55.525 +03:00 [INF] HTTP GET /api/Review responded 200 in 86.6344 ms
+2025-06-01 12:48:55.526 +03:00 [INF] HTTP GET /api/Review responded 200 in 87.6663 ms
+2025-06-01 12:48:55.605 +03:00 [INF] HTTP GET /api/Review responded 200 in 72.7978 ms
+2025-06-01 12:48:55.605 +03:00 [INF] HTTP GET /api/Review responded 200 in 75.2998 ms
+2025-06-01 12:48:55.606 +03:00 [INF] HTTP GET /api/Review responded 200 in 60.4248 ms
+2025-06-01 12:48:55.610 +03:00 [INF] HTTP GET /api/Review responded 200 in 64.7316 ms
+2025-06-01 12:48:55.611 +03:00 [INF] HTTP GET /api/Review responded 200 in 27.6701 ms
+2025-06-01 12:48:55.684 +03:00 [INF] HTTP GET /api/Review responded 200 in 67.9593 ms
+2025-06-01 12:48:55.689 +03:00 [INF] HTTP GET /api/Review responded 200 in 75.1145 ms
+2025-06-01 12:48:55.706 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.9710 ms
+2025-06-01 12:48:55.706 +03:00 [INF] HTTP GET /api/Review responded 200 in 72.0853 ms
+2025-06-01 12:48:55.711 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.9265 ms
+2025-06-01 12:48:55.746 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.9578 ms
+2025-06-01 12:48:55.761 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.6800 ms
+2025-06-01 12:48:55.816 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.7293 ms
+2025-06-01 12:48:55.800 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.6304 ms
+2025-06-01 12:48:55.821 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.1853 ms
+2025-06-01 12:48:55.823 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.1057 ms
+2025-06-01 12:48:55.872 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.0735 ms
+2025-06-01 12:48:55.911 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.6021 ms
+2025-06-01 12:48:55.892 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.0453 ms
+2025-06-01 12:48:55.919 +03:00 [INF] HTTP GET /api/Review responded 200 in 28.4393 ms
+2025-06-01 12:48:55.919 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.7374 ms
+2025-06-01 12:48:55.974 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.1290 ms
+2025-06-01 12:48:55.976 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.0761 ms
+2025-06-01 12:48:55.972 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.5593 ms
+2025-06-01 12:48:56.029 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.2701 ms
+2025-06-01 12:48:56.048 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.6538 ms
+2025-06-01 12:48:56.029 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.1469 ms
+2025-06-01 12:48:56.085 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.8860 ms
+2025-06-01 12:48:56.102 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.2046 ms
+2025-06-01 12:48:56.126 +03:00 [INF] HTTP GET /api/Review responded 200 in 61.5256 ms
+2025-06-01 12:48:56.127 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.2899 ms
+2025-06-01 12:48:56.149 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.3105 ms
+2025-06-01 12:48:56.149 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.0060 ms
+2025-06-01 12:48:56.228 +03:00 [INF] HTTP GET /api/Review responded 200 in 59.9395 ms
+2025-06-01 12:48:56.229 +03:00 [INF] HTTP GET /api/Review responded 200 in 60.7140 ms
+2025-06-01 12:48:56.228 +03:00 [INF] HTTP GET /api/Review responded 200 in 76.5973 ms
+2025-06-01 12:48:56.246 +03:00 [INF] HTTP GET /api/Review responded 200 in 78.2087 ms
+2025-06-01 12:48:56.250 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.6728 ms
+2025-06-01 12:48:56.351 +03:00 [INF] HTTP GET /api/Review responded 200 in 82.2971 ms
+2025-06-01 12:48:56.351 +03:00 [INF] HTTP GET /api/Review responded 200 in 82.8659 ms
+2025-06-01 12:48:56.351 +03:00 [INF] HTTP GET /api/Review responded 200 in 80.8387 ms
+2025-06-01 12:48:56.376 +03:00 [INF] HTTP GET /api/Review responded 200 in 82.1860 ms
+2025-06-01 12:48:56.377 +03:00 [INF] HTTP GET /api/Review responded 200 in 82.8491 ms
+2025-06-01 12:48:56.468 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.4292 ms
+2025-06-01 12:48:56.484 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.0279 ms
+2025-06-01 12:48:56.482 +03:00 [INF] HTTP GET /api/Review responded 200 in 73.5749 ms
+2025-06-01 12:48:56.484 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.8834 ms
+2025-06-01 12:48:56.488 +03:00 [INF] HTTP GET /api/Review responded 200 in 28.6417 ms
+2025-06-01 12:48:56.595 +03:00 [INF] HTTP GET /api/Review responded 200 in 88.8706 ms
+2025-06-01 12:48:56.595 +03:00 [INF] HTTP GET /api/Review responded 200 in 71.7050 ms
+2025-06-01 12:48:56.613 +03:00 [INF] HTTP GET /api/Review responded 200 in 90.1339 ms
+2025-06-01 12:48:56.596 +03:00 [INF] HTTP GET /api/Review responded 200 in 72.9864 ms
+2025-06-01 12:48:56.630 +03:00 [INF] HTTP GET /api/Review responded 200 in 106.6914 ms
+2025-06-01 12:48:56.655 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.8628 ms
+2025-06-01 12:48:56.688 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.3519 ms
+2025-06-01 12:48:56.654 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.2510 ms
+2025-06-01 12:48:56.709 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.5960 ms
+2025-06-01 12:48:56.707 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.5716 ms
+2025-06-01 12:48:56.759 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.1553 ms
+2025-06-01 12:48:56.776 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.5167 ms
+2025-06-01 12:48:56.782 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.5745 ms
+2025-06-01 12:48:56.782 +03:00 [INF] HTTP GET /api/Review responded 200 in 26.2555 ms
+2025-06-01 12:48:56.870 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.4522 ms
+2025-06-01 12:48:56.925 +03:00 [INF] HTTP GET /api/Review responded 200 in 73.2566 ms
+2025-06-01 12:48:56.925 +03:00 [INF] HTTP GET /api/Review responded 200 in 72.5395 ms
+2025-06-01 12:48:56.925 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.9740 ms
+2025-06-01 12:48:56.963 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.2774 ms
+2025-06-01 12:48:56.925 +03:00 [INF] HTTP GET /api/Review responded 200 in 73.3582 ms
+2025-06-01 12:48:56.967 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.7804 ms
+2025-06-01 12:48:57.060 +03:00 [INF] HTTP GET /api/Review responded 200 in 75.0474 ms
+2025-06-01 12:48:57.060 +03:00 [INF] HTTP GET /api/Review responded 200 in 74.9606 ms
+2025-06-01 12:48:57.067 +03:00 [INF] HTTP GET /api/Review responded 200 in 70.6580 ms
+2025-06-01 12:48:57.060 +03:00 [INF] HTTP GET /api/Review responded 200 in 76.8403 ms
+2025-06-01 12:48:57.073 +03:00 [INF] HTTP GET /api/Review responded 200 in 77.1105 ms
+2025-06-01 12:48:57.156 +03:00 [INF] HTTP GET /api/Review responded 200 in 71.0489 ms
+2025-06-01 12:48:57.156 +03:00 [INF] HTTP GET /api/Review responded 200 in 67.4814 ms
+2025-06-01 12:48:57.156 +03:00 [INF] HTTP GET /api/Review responded 200 in 71.9886 ms
+2025-06-01 12:48:57.182 +03:00 [INF] HTTP GET /api/Review responded 200 in 97.0005 ms
+2025-06-01 12:48:57.182 +03:00 [INF] HTTP GET /api/Review responded 200 in 93.4815 ms
+2025-06-01 12:48:57.233 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.5943 ms
+2025-06-01 12:48:57.253 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.6198 ms
+2025-06-01 12:48:57.260 +03:00 [INF] HTTP GET /api/Review responded 200 in 26.5669 ms
+2025-06-01 12:48:57.260 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.5888 ms
+2025-06-01 12:48:57.280 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.0562 ms
+2025-06-01 12:48:57.382 +03:00 [INF] HTTP GET /api/Review responded 200 in 76.9981 ms
+2025-06-01 12:48:57.383 +03:00 [INF] HTTP GET /api/Review responded 200 in 94.7803 ms
+2025-06-01 12:48:57.383 +03:00 [INF] HTTP GET /api/Review responded 200 in 77.4888 ms
+2025-06-01 12:48:57.402 +03:00 [INF] HTTP GET /api/Review responded 200 in 96.6763 ms
+2025-06-01 12:48:57.402 +03:00 [INF] HTTP GET /api/Review responded 200 in 96.6500 ms
+2025-06-01 12:48:57.465 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.7823 ms
+2025-06-01 12:48:57.465 +03:00 [INF] HTTP GET /api/Review responded 200 in 58.3038 ms
+2025-06-01 12:48:57.465 +03:00 [INF] HTTP GET /api/Review responded 200 in 60.8640 ms
+2025-06-01 12:48:57.516 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.1953 ms
+2025-06-01 12:48:57.537 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.7615 ms
+2025-06-01 12:48:57.556 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.5539 ms
+2025-06-01 12:48:57.573 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.2870 ms
+2025-06-01 12:48:57.577 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.3808 ms
+2025-06-01 12:48:57.579 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.7754 ms
+2025-06-01 12:48:57.629 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.9086 ms
+2025-06-01 12:48:57.636 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.8708 ms
+2025-06-01 12:48:57.653 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.4018 ms
+2025-06-01 12:48:57.675 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.8639 ms
+2025-06-01 12:48:57.675 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.6611 ms
+2025-06-01 12:48:57.728 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.4710 ms
+2025-06-01 12:48:57.714 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.0171 ms
+2025-06-01 12:48:57.764 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.4693 ms
+2025-06-01 12:48:57.787 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.7687 ms
+2025-06-01 12:48:57.771 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.5854 ms
+2025-06-01 12:48:57.837 +03:00 [INF] HTTP GET /api/Review responded 200 in 68.8978 ms
+2025-06-01 12:48:57.856 +03:00 [INF] HTTP GET /api/Review responded 200 in 68.7265 ms
+2025-06-01 12:48:57.861 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.8039 ms
+2025-06-01 12:48:57.879 +03:00 [INF] HTTP GET /api/Review responded 200 in 26.8000 ms
+2025-06-01 12:48:57.914 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.9960 ms
+2025-06-01 12:48:57.918 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.6373 ms
+2025-06-01 12:48:57.947 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.7043 ms
+2025-06-01 12:48:57.949 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.0895 ms
+2025-06-01 12:48:57.982 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.1251 ms
+2025-06-01 12:48:57.986 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.7267 ms
+2025-06-01 12:48:57.986 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.1756 ms
+2025-06-01 12:48:58.037 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.5256 ms
+2025-06-01 12:48:58.052 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.5584 ms
+2025-06-01 12:48:58.072 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.4074 ms
+2025-06-01 12:48:58.071 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.4864 ms
+2025-06-01 12:48:58.094 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.3234 ms
+2025-06-01 12:48:58.094 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.9429 ms
+2025-06-01 12:48:58.144 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.0409 ms
+2025-06-01 12:48:58.168 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.4092 ms
+2025-06-01 12:48:58.168 +03:00 [INF] HTTP GET /api/Review responded 200 in 58.9566 ms
+2025-06-01 12:48:58.183 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.9754 ms
+2025-06-01 12:48:58.187 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.6555 ms
+2025-06-01 12:48:58.299 +03:00 [INF] HTTP GET /api/Review responded 200 in 80.2774 ms
+2025-06-01 12:48:58.301 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.2742 ms
+2025-06-01 12:48:58.301 +03:00 [INF] HTTP GET /api/Review responded 200 in 67.6184 ms
+2025-06-01 12:48:58.301 +03:00 [INF] HTTP GET /api/Review responded 200 in 66.0820 ms
+2025-06-01 12:48:58.313 +03:00 [INF] HTTP GET /api/Review responded 200 in 79.8203 ms
+2025-06-01 12:48:58.388 +03:00 [INF] HTTP GET /api/Review responded 200 in 69.7519 ms
+2025-06-01 12:48:58.403 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.8938 ms
+2025-06-01 12:48:58.388 +03:00 [INF] HTTP GET /api/Review responded 200 in 71.4734 ms
+2025-06-01 12:48:58.388 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.4404 ms
+2025-06-01 12:48:58.407 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.0745 ms
+2025-06-01 12:48:58.459 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.1792 ms
+2025-06-01 12:48:58.473 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.7031 ms
+2025-06-01 12:48:58.473 +03:00 [INF] HTTP GET /api/Review responded 200 in 60.1044 ms
+2025-06-01 12:48:58.494 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.5578 ms
+2025-06-01 12:48:58.496 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.8090 ms
+2025-06-01 12:48:58.546 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.9264 ms
+2025-06-01 12:48:58.549 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.9289 ms
+2025-06-01 12:48:58.549 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.9430 ms
+2025-06-01 12:48:58.598 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.4576 ms
+2025-06-01 12:48:58.616 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.0003 ms
+2025-06-01 12:48:58.617 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.6977 ms
+2025-06-01 12:48:58.638 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.1189 ms
+2025-06-01 12:48:58.638 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.7127 ms
+2025-06-01 12:48:58.673 +03:00 [INF] HTTP GET /api/Review responded 200 in 21.6602 ms
+2025-06-01 12:48:58.673 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.8751 ms
+2025-06-01 12:48:58.725 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.4172 ms
+2025-06-01 12:48:58.745 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.4612 ms
+2025-06-01 12:48:58.765 +03:00 [INF] HTTP GET /api/Review responded 200 in 58.5826 ms
+2025-06-01 12:48:58.780 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.5420 ms
+2025-06-01 12:48:58.785 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.7657 ms
+2025-06-01 12:48:58.800 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.0373 ms
+2025-06-01 12:48:58.840 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.6983 ms
+2025-06-01 12:48:58.842 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.4339 ms
+2025-06-01 12:48:58.844 +03:00 [INF] HTTP GET /api/Review responded 200 in 26.2545 ms
+2025-06-01 12:48:58.886 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.7934 ms
+2025-06-01 12:48:58.886 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.6175 ms
+2025-06-01 12:48:58.924 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.7761 ms
+2025-06-01 12:48:58.929 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.1302 ms
+2025-06-01 12:48:58.944 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.0801 ms
+2025-06-01 12:48:58.981 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.8729 ms
+2025-06-01 12:48:58.999 +03:00 [INF] HTTP GET /api/Review responded 200 in 69.7491 ms
+2025-06-01 12:48:59.017 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.1870 ms
+2025-06-01 12:48:59.041 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.6517 ms
+2025-06-01 12:48:59.024 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.1740 ms
+2025-06-01 12:48:59.079 +03:00 [INF] HTTP GET /api/Review responded 200 in 58.4186 ms
+2025-06-01 12:48:59.084 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.7334 ms
+2025-06-01 12:48:59.084 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.7571 ms
+2025-06-01 12:48:59.125 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.1573 ms
+2025-06-01 12:48:59.126 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.7057 ms
+2025-06-01 12:48:59.210 +03:00 [INF] HTTP GET /api/Review responded 200 in 77.7879 ms
+2025-06-01 12:48:59.221 +03:00 [INF] HTTP GET /api/Review responded 200 in 64.6219 ms
+2025-06-01 12:48:59.227 +03:00 [INF] HTTP GET /api/Review responded 200 in 96.3241 ms
+2025-06-01 12:48:59.230 +03:00 [INF] HTTP GET /api/Review responded 200 in 73.1186 ms
+2025-06-01 12:48:59.230 +03:00 [INF] HTTP GET /api/Review responded 200 in 73.4045 ms
+2025-06-01 12:48:59.313 +03:00 [INF] HTTP GET /api/Review responded 200 in 77.4235 ms
+2025-06-01 12:48:59.313 +03:00 [INF] HTTP GET /api/Review responded 200 in 60.5352 ms
+2025-06-01 12:48:59.328 +03:00 [INF] HTTP GET /api/Review responded 200 in 90.0597 ms
+2025-06-01 12:48:59.352 +03:00 [INF] HTTP GET /api/Review responded 200 in 99.1566 ms
+2025-06-01 12:48:59.352 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.1837 ms
+2025-06-01 12:48:59.467 +03:00 [INF] HTTP GET /api/Review responded 200 in 76.9835 ms
+2025-06-01 12:48:59.467 +03:00 [INF] HTTP GET /api/Review responded 200 in 77.0454 ms
+2025-06-01 12:48:59.467 +03:00 [INF] HTTP GET /api/Review responded 200 in 94.9633 ms
+2025-06-01 12:48:59.478 +03:00 [INF] HTTP GET /api/Review responded 200 in 70.2237 ms
+2025-06-01 12:48:59.480 +03:00 [INF] HTTP GET /api/Review responded 200 in 89.9563 ms
+2025-06-01 12:48:59.550 +03:00 [INF] HTTP GET /api/Review responded 200 in 67.8377 ms
+2025-06-01 12:48:59.555 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.5546 ms
+2025-06-01 12:48:59.557 +03:00 [INF] HTTP GET /api/Review responded 200 in 58.3859 ms
+2025-06-01 12:48:59.572 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.9714 ms
+2025-06-01 12:48:59.596 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.5243 ms
+2025-06-01 12:48:59.596 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.9446 ms
+2025-06-01 12:48:59.703 +03:00 [INF] HTTP GET /api/Review responded 200 in 93.1416 ms
+2025-06-01 12:48:59.704 +03:00 [INF] HTTP GET /api/Review responded 200 in 91.5645 ms
+2025-06-01 12:48:59.704 +03:00 [INF] HTTP GET /api/Review responded 200 in 92.1396 ms
+2025-06-01 12:48:59.714 +03:00 [INF] HTTP GET /api/Review responded 200 in 84.3341 ms
+2025-06-01 12:48:59.714 +03:00 [INF] HTTP GET /api/Review responded 200 in 103.1082 ms
+2025-06-01 12:48:59.815 +03:00 [INF] HTTP GET /api/Review responded 200 in 83.5526 ms
+2025-06-01 12:48:59.815 +03:00 [INF] HTTP GET /api/Review responded 200 in 81.8953 ms
+2025-06-01 12:48:59.816 +03:00 [INF] HTTP GET /api/Review responded 200 in 83.8045 ms
+2025-06-01 12:48:59.816 +03:00 [INF] HTTP GET /api/Review responded 200 in 84.0767 ms
+2025-06-01 12:48:59.816 +03:00 [INF] HTTP GET /api/Review responded 200 in 83.6506 ms
+2025-06-01 12:48:59.874 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.2028 ms
+2025-06-01 12:48:59.877 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.8550 ms
+2025-06-01 12:48:59.878 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.0088 ms
+2025-06-01 12:48:59.964 +03:00 [INF] HTTP GET /api/Review responded 200 in 67.8446 ms
+2025-06-01 12:48:59.964 +03:00 [INF] HTTP GET /api/Review responded 200 in 67.8217 ms
+2025-06-01 12:48:59.964 +03:00 [INF] HTTP GET /api/Review responded 200 in 84.1430 ms
+2025-06-01 12:48:59.965 +03:00 [INF] HTTP GET /api/Review responded 200 in 68.4986 ms
+2025-06-01 12:48:59.965 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.9891 ms
+2025-06-01 12:49:00.046 +03:00 [INF] HTTP GET /api/Review responded 200 in 72.8271 ms
+2025-06-01 12:49:00.060 +03:00 [INF] HTTP GET /api/Review responded 200 in 69.5520 ms
+2025-06-01 12:49:00.062 +03:00 [INF] HTTP GET /api/Review responded 200 in 72.4428 ms
+2025-06-01 12:49:00.066 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.0595 ms
+2025-06-01 12:49:00.066 +03:00 [INF] HTTP GET /api/Review responded 200 in 75.9154 ms
+2025-06-01 12:49:00.132 +03:00 [INF] HTTP GET /api/Review responded 200 in 63.4419 ms
+2025-06-01 12:49:00.134 +03:00 [INF] HTTP GET /api/Review responded 200 in 63.3301 ms
+2025-06-01 12:49:00.154 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.6193 ms
+2025-06-01 12:49:00.138 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.8136 ms
+2025-06-01 12:49:00.173 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.1075 ms
+2025-06-01 12:49:00.209 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.4592 ms
+2025-06-01 12:49:00.232 +03:00 [INF] HTTP GET /api/Review responded 200 in 58.9361 ms
+2025-06-01 12:49:00.247 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.1284 ms
+2025-06-01 12:49:00.253 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.1332 ms
+2025-06-01 12:49:00.267 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.0458 ms
+2025-06-01 12:49:00.303 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.8756 ms
+2025-06-01 12:49:00.324 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.1874 ms
+2025-06-01 12:49:00.344 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.2238 ms
+2025-06-01 12:49:00.323 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.2117 ms
+2025-06-01 12:49:00.366 +03:00 [INF] HTTP GET /api/Review responded 200 in 43.1562 ms
+2025-06-01 12:49:00.380 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.0595 ms
+2025-06-01 12:49:00.420 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.0886 ms
+2025-06-01 12:49:00.440 +03:00 [INF] HTTP GET /api/Review responded 200 in 59.8505 ms
+2025-06-01 12:49:00.441 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.1860 ms
+2025-06-01 12:49:00.481 +03:00 [INF] HTTP GET /api/Review responded 200 in 61.0510 ms
+2025-06-01 12:49:00.497 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.0617 ms
+2025-06-01 12:49:00.516 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.3395 ms
+2025-06-01 12:49:00.535 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.4936 ms
+2025-06-01 12:49:00.556 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.2011 ms
+2025-06-01 12:49:00.589 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.7689 ms
+2025-06-01 12:49:00.541 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.1571 ms
+2025-06-01 12:49:00.596 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.0615 ms
+2025-06-01 12:49:00.610 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.0823 ms
+2025-06-01 12:49:00.634 +03:00 [INF] HTTP GET /api/Review responded 200 in 40.4270 ms
+2025-06-01 12:49:00.648 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.5205 ms
+2025-06-01 12:49:00.684 +03:00 [INF] HTTP GET /api/Review responded 200 in 53.6865 ms
+2025-06-01 12:49:00.701 +03:00 [INF] HTTP GET /api/Review responded 200 in 52.1597 ms
+2025-06-01 12:49:00.722 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.1719 ms
+2025-06-01 12:49:00.726 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.4419 ms
+2025-06-01 12:49:00.726 +03:00 [INF] HTTP GET /api/Review responded 200 in 24.7445 ms
+2025-06-01 12:49:00.792 +03:00 [INF] HTTP GET /api/Review responded 200 in 65.7970 ms
+2025-06-01 12:49:00.793 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.0992 ms
+2025-06-01 12:49:00.792 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.9713 ms
+2025-06-01 12:49:00.814 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.1139 ms
+2025-06-01 12:49:00.814 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.8503 ms
+2025-06-01 12:49:00.885 +03:00 [INF] HTTP GET /api/Review responded 200 in 64.0950 ms
+2025-06-01 12:49:00.900 +03:00 [INF] HTTP GET /api/Review responded 200 in 61.6640 ms
+2025-06-01 12:49:00.900 +03:00 [INF] HTTP GET /api/Review responded 200 in 61.1312 ms
+2025-06-01 12:49:00.904 +03:00 [INF] HTTP GET /api/Review responded 200 in 29.5056 ms
+2025-06-01 12:49:00.899 +03:00 [INF] HTTP GET /api/Review responded 200 in 80.7050 ms
+2025-06-01 12:49:00.979 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.7163 ms
+2025-06-01 12:49:00.979 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.8906 ms
+2025-06-01 12:49:00.979 +03:00 [INF] HTTP GET /api/Review responded 200 in 73.0420 ms
+2025-06-01 12:49:01.006 +03:00 [INF] HTTP GET /api/Review responded 200 in 29.7106 ms
+2025-06-01 12:49:01.006 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.9707 ms
+2025-06-01 12:49:01.062 +03:00 [INF] HTTP GET /api/Review responded 200 in 49.2115 ms
+2025-06-01 12:49:01.079 +03:00 [INF] HTTP GET /api/Review responded 200 in 63.9539 ms
+2025-06-01 12:49:01.078 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.2456 ms
+2025-06-01 12:49:01.078 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.3640 ms
+2025-06-01 12:49:01.083 +03:00 [INF] HTTP GET /api/Review responded 200 in 26.0150 ms
+2025-06-01 12:49:01.157 +03:00 [INF] HTTP GET /api/Review responded 200 in 71.4857 ms
+2025-06-01 12:49:01.157 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.1263 ms
+2025-06-01 12:49:01.157 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.1326 ms
+2025-06-01 12:49:01.195 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.6958 ms
+2025-06-01 12:49:01.210 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.8714 ms
+2025-06-01 12:49:01.247 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.7929 ms
+2025-06-01 12:49:01.231 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.6223 ms
+2025-06-01 12:49:01.290 +03:00 [INF] HTTP GET /api/Review responded 200 in 63.1938 ms
+2025-06-01 12:49:01.292 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.6281 ms
+2025-06-01 12:49:01.326 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.5697 ms
+2025-06-01 12:49:01.346 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.3834 ms
+2025-06-01 12:49:01.363 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.8838 ms
+2025-06-01 12:49:01.384 +03:00 [INF] HTTP GET /api/Review responded 200 in 58.0674 ms
+2025-06-01 12:49:01.389 +03:00 [INF] HTTP GET /api/Review responded 200 in 44.4782 ms
+2025-06-01 12:49:01.403 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.8121 ms
+2025-06-01 12:49:01.426 +03:00 [INF] HTTP GET /api/Review responded 200 in 37.4461 ms
+2025-06-01 12:49:01.426 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.8880 ms
+2025-06-01 12:49:01.532 +03:00 [INF] HTTP GET /api/Review responded 200 in 59.4763 ms
+2025-06-01 12:49:01.534 +03:00 [INF] HTTP GET /api/Review responded 200 in 59.7259 ms
+2025-06-01 12:49:01.532 +03:00 [INF] HTTP GET /api/Review responded 200 in 75.0573 ms
+2025-06-01 12:49:01.534 +03:00 [INF] HTTP GET /api/Review responded 200 in 79.1195 ms
+2025-06-01 12:49:01.550 +03:00 [INF] HTTP GET /api/Review responded 200 in 77.1313 ms
+2025-06-01 12:49:01.630 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.4410 ms
+2025-06-01 12:49:01.630 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.4580 ms
+2025-06-01 12:49:01.630 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.3593 ms
+2025-06-01 12:49:01.632 +03:00 [INF] HTTP GET /api/Review responded 200 in 76.7528 ms
+2025-06-01 12:49:01.647 +03:00 [INF] HTTP GET /api/Review responded 200 in 73.8480 ms
+2025-06-01 12:49:01.708 +03:00 [INF] HTTP GET /api/Review responded 200 in 59.4813 ms
+2025-06-01 12:49:01.708 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.4891 ms
+2025-06-01 12:49:01.724 +03:00 [INF] HTTP GET /api/Review responded 200 in 58.4523 ms
+2025-06-01 12:49:01.749 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.5382 ms
+2025-06-01 12:49:01.750 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.8057 ms
+2025-06-01 12:49:01.901 +03:00 [INF] HTTP GET /api/Review responded 200 in 70.5398 ms
+2025-06-01 12:49:01.922 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.1575 ms
+2025-06-01 12:49:01.922 +03:00 [INF] HTTP GET /api/Review responded 200 in 74.7499 ms
+2025-06-01 12:49:01.925 +03:00 [INF] HTTP GET /api/Review responded 200 in 58.3949 ms
+2025-06-01 12:49:01.926 +03:00 [INF] HTTP GET /api/Review responded 200 in 41.0539 ms
+2025-06-01 12:49:02.022 +03:00 [INF] HTTP GET /api/Review responded 200 in 68.6629 ms
+2025-06-01 12:49:02.040 +03:00 [INF] HTTP GET /api/Review responded 200 in 68.5777 ms
+2025-06-01 12:49:02.039 +03:00 [INF] HTTP GET /api/Review responded 200 in 66.5848 ms
+2025-06-01 12:49:02.044 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.3925 ms
+2025-06-01 12:49:02.045 +03:00 [INF] HTTP GET /api/Review responded 200 in 27.4636 ms
+2025-06-01 12:49:02.143 +03:00 [INF] HTTP GET /api/Review responded 200 in 81.5712 ms
+2025-06-01 12:49:02.151 +03:00 [INF] HTTP GET /api/Review responded 200 in 71.1166 ms
+2025-06-01 12:49:02.151 +03:00 [INF] HTTP GET /api/Review responded 200 in 71.4395 ms
+2025-06-01 12:49:02.151 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.2312 ms
+2025-06-01 12:49:02.151 +03:00 [INF] HTTP GET /api/Review responded 200 in 69.6859 ms
+2025-06-01 12:49:02.233 +03:00 [INF] HTTP GET /api/Review responded 200 in 68.3503 ms
+2025-06-01 12:49:02.234 +03:00 [INF] HTTP GET /api/Review responded 200 in 54.5779 ms
+2025-06-01 12:49:02.233 +03:00 [INF] HTTP GET /api/Review responded 200 in 67.1902 ms
+2025-06-01 12:49:02.244 +03:00 [INF] HTTP GET /api/Review responded 200 in 64.2537 ms
+2025-06-01 12:49:02.244 +03:00 [INF] HTTP GET /api/Review responded 200 in 64.3003 ms
+2025-06-01 12:49:02.318 +03:00 [INF] HTTP GET /api/Review responded 200 in 66.7963 ms
+2025-06-01 12:49:02.318 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.4512 ms
+2025-06-01 12:49:02.318 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.5932 ms
+2025-06-01 12:49:02.330 +03:00 [INF] HTTP GET /api/Review responded 200 in 63.7078 ms
+2025-06-01 12:49:02.331 +03:00 [INF] HTTP GET /api/Review responded 200 in 65.0486 ms
+2025-06-01 12:49:02.455 +03:00 [INF] HTTP GET /api/Review responded 200 in 97.2199 ms
+2025-06-01 12:49:02.455 +03:00 [INF] HTTP GET /api/Review responded 200 in 114.5507 ms
+2025-06-01 12:49:02.455 +03:00 [INF] HTTP GET /api/Review responded 200 in 112.7946 ms
+2025-06-01 12:49:02.455 +03:00 [INF] HTTP GET /api/Review responded 200 in 97.3846 ms
+2025-06-01 12:49:02.455 +03:00 [INF] HTTP GET /api/Review responded 200 in 97.4185 ms
+2025-06-01 12:51:29.942 +03:00 [INF] Cheeking for bookings to update status at: 01.06.2025 09:51:29
+2025-06-01 12:59:21.080 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 3.6566 ms
+2025-06-01 12:59:46.715 +03:00 [INF] Login Attempt for seconduser@example.com
+2025-06-01 12:59:46.721 +03:00 [INF] Looking for user with email seconduser@example.com
+2025-06-01 12:59:46.825 +03:00 [INF] Token generated for User with email seconduser@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwianRpIjoiZWI0NmY2ZGItYmVmNS00YTU4LWI2ZWItOWRkZTM5ZGJjOWJlIiwiZW1haWwiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwidWlkIjoiZDZiYWNmNjctMzBlNi00ZWI1LWJhMzQtZTU5ODNmMjEzMTJkIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc0ODc3MjU4NiwiaXNzIjoiRml0R2VhckFQSSIsImF1ZCI6IkZpdEdlYXJBUElDbGllbnQifQ.AZBe4lX9HH70IyN4ApfBRvjyGK106bDL7KM2cksRRNw
+2025-06-01 12:59:46.872 +03:00 [INF] HTTP POST /api/User/login responded 200 in 171.0430 ms
+2025-06-01 12:59:46.976 +03:00 [INF] HTTP GET /api/Category responded 200 in 39.0525 ms
+2025-06-01 12:59:46.982 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 29.0863 ms
+2025-06-01 12:59:53.540 +03:00 [INF] HTTP GET /api/Review responded 200 in 55.4341 ms
+2025-06-01 12:59:53.579 +03:00 [INF] HTTP GET /api/Review responded 200 in 80.0612 ms
+2025-06-01 12:59:53.622 +03:00 [INF] HTTP GET /api/Review responded 200 in 81.8671 ms
+2025-06-01 12:59:53.646 +03:00 [INF] HTTP GET /api/Review responded 200 in 105.6221 ms
+2025-06-01 12:59:53.625 +03:00 [INF] HTTP GET /api/Review responded 200 in 110.2060 ms
+2025-06-01 12:59:53.657 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.4086 ms
+2025-06-01 13:00:19.051 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 0.1623 ms
+2025-06-01 13:00:39.663 +03:00 [INF] Login Attempt for usertest@example.com
+2025-06-01 13:00:39.664 +03:00 [INF] Looking for user with email usertest@example.com
+2025-06-01 13:00:39.738 +03:00 [INF] Token generated for User with email usertest@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VydGVzdEBleGFtcGxlLmNvbSIsImp0aSI6IjVkN2QzMmY1LTllMDctNDRlZS05Yjk0LTg0MzY3MzFhYmUwZiIsImVtYWlsIjoidXNlcnRlc3RAZXhhbXBsZS5jb20iLCJ1aWQiOiIxZDcxN2RlMS0wMmRkLTRkMmMtYWI5NS1lMjZjY2NiMjdlYWQiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbmlzdHJhdG9yIiwiZXhwIjoxNzQ4NzcyNjM5LCJpc3MiOiJGaXRHZWFyQVBJIiwiYXVkIjoiRml0R2VhckFQSUNsaWVudCJ9.DyS06YrV9B007nBty0zEr0Js-lBEDeijgLXpT7wlL18
+2025-06-01 13:00:39.772 +03:00 [INF] HTTP POST /api/User/login responded 200 in 121.4261 ms
+2025-06-01 13:00:39.878 +03:00 [INF] HTTP GET /api/Category responded 200 in 46.5275 ms
+2025-06-01 13:00:39.885 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 37.0658 ms
+2025-06-01 13:00:42.304 +03:00 [INF] HTTP GET /api/Review responded 200 in 63.1653 ms
+2025-06-01 13:00:42.305 +03:00 [INF] HTTP GET /api/Review responded 200 in 65.1183 ms
+2025-06-01 13:00:42.350 +03:00 [INF] HTTP GET /api/Review responded 200 in 45.1869 ms
+2025-06-01 13:00:42.343 +03:00 [INF] HTTP GET /api/Review responded 200 in 39.3288 ms
+2025-06-01 13:00:42.342 +03:00 [INF] HTTP GET /api/Review responded 200 in 87.2287 ms
+2025-06-01 13:00:42.389 +03:00 [INF] HTTP GET /api/Review responded 200 in 20.4150 ms
+2025-06-01 13:00:46.199 +03:00 [INF] HTTP GET /api/Review responded 200 in 17.5316 ms
+2025-06-01 13:01:08.275 +03:00 [INF] HTTP POST /api/Review/11 responded 201 in 25.6453 ms
+2025-06-01 13:01:08.369 +03:00 [INF] HTTP GET /api/Review responded 200 in 27.8320 ms
+2025-06-01 13:01:08.458 +03:00 [INF] HTTP GET /api/Review responded 200 in 19.8999 ms
+2025-06-01 13:01:42.046 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 42.4797 ms
+2025-06-01 13:01:43.593 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 19.6833 ms
+2025-06-01 13:01:43.776 +03:00 [INF] HTTP GET /api/Review responded 200 in 48.9501 ms
+2025-06-01 13:01:43.777 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.5601 ms
+2025-06-01 13:01:43.821 +03:00 [INF] HTTP GET /api/Review responded 200 in 35.7116 ms
+2025-06-01 13:01:43.821 +03:00 [INF] HTTP GET /api/Review responded 200 in 80.9339 ms
+2025-06-01 13:03:18.652 +03:00 [INF] HTTP GET /api/UserProfile/Profile responded 200 in 37.2931 ms
+2025-06-01 13:03:23.604 +03:00 [INF] HTTP GET /api/Bookings responded 200 in 64.4443 ms
+2025-06-01 13:03:26.166 +03:00 [INF] HTTP GET /api/Bookings responded 200 in 12.2658 ms
+2025-06-01 13:06:29.966 +03:00 [INF] Cheeking for bookings to update status at: 01.06.2025 10:06:29
+2025-06-01 13:29:33.900 +03:00 [INF] Cheeking for bookings to update status at: 01.06.2025 10:29:33
+2025-06-01 13:32:53.328 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 7.1930 ms
+2025-06-01 13:33:12.989 +03:00 [INF] Login Attempt for seconduser@example.com
+2025-06-01 13:33:12.991 +03:00 [INF] Looking for user with email seconduser@example.com
+2025-06-01 13:33:13.084 +03:00 [INF] Token generated for User with email seconduser@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwianRpIjoiNTlmZjc3ZjctZGJkZC00ZDNiLTkxMzQtMTZlYmZhNTc3NWQ3IiwiZW1haWwiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwidWlkIjoiZDZiYWNmNjctMzBlNi00ZWI1LWJhMzQtZTU5ODNmMjEzMTJkIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc0ODc3NDU5MywiaXNzIjoiRml0R2VhckFQSSIsImF1ZCI6IkZpdEdlYXJBUElDbGllbnQifQ.IbVco25tz7we7-FrsB7qHpvqWrnRuyOlLRsLupv7ABg
+2025-06-01 13:33:13.114 +03:00 [INF] HTTP POST /api/User/login responded 200 in 149.1865 ms
+2025-06-01 13:33:13.193 +03:00 [INF] HTTP GET /api/Category responded 200 in 33.4371 ms
+2025-06-01 13:33:13.206 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 31.8521 ms
+2025-06-01 13:33:15.012 +03:00 [INF] HTTP GET /api/Review responded 200 in 23.7105 ms
+2025-06-01 13:33:15.063 +03:00 [INF] HTTP GET /api/Review responded 200 in 33.1988 ms
+2025-06-01 13:33:15.068 +03:00 [INF] HTTP GET /api/Review responded 200 in 19.6901 ms
+2025-06-01 13:33:15.088 +03:00 [INF] HTTP GET /api/Review responded 200 in 19.9907 ms
+2025-06-01 13:33:15.146 +03:00 [INF] HTTP GET /api/Review responded 200 in 57.5281 ms
+2025-06-01 13:33:15.146 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.6109 ms
+2025-06-01 13:33:21.375 +03:00 [INF] HTTP GET /api/Review responded 200 in 22.3721 ms
+2025-06-01 13:34:13.781 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 0.2661 ms
+2025-06-01 13:34:35.444 +03:00 [INF] Login Attempt for seconduser@example.com
+2025-06-01 13:34:35.449 +03:00 [INF] Looking for user with email seconduser@example.com
+2025-06-01 13:34:35.534 +03:00 [INF] Token generated for User with email seconduser@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwianRpIjoiMTRiNmE5MjItMjlhMC00YmJmLThiNTEtYmYxNjNiYzQzMzM3IiwiZW1haWwiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwidWlkIjoiZDZiYWNmNjctMzBlNi00ZWI1LWJhMzQtZTU5ODNmMjEzMTJkIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc0ODc3NDY3NSwiaXNzIjoiRml0R2VhckFQSSIsImF1ZCI6IkZpdEdlYXJBUElDbGllbnQifQ.z4jH9CkbhioQBB5om6B9KBlQRzEAriPY4EkX1BlJtfg
+2025-06-01 13:34:35.577 +03:00 [INF] HTTP POST /api/User/login responded 200 in 150.4240 ms
+2025-06-01 13:34:35.653 +03:00 [INF] HTTP GET /api/Category responded 200 in 39.2523 ms
+2025-06-01 13:34:35.662 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 33.5250 ms
+2025-06-01 13:34:37.610 +03:00 [INF] HTTP GET /api/Review responded 200 in 56.3116 ms
+2025-06-01 13:34:37.621 +03:00 [INF] HTTP GET /api/Review responded 200 in 51.7093 ms
+2025-06-01 13:34:37.664 +03:00 [INF] HTTP GET /api/Review responded 200 in 75.0001 ms
+2025-06-01 13:34:37.702 +03:00 [INF] HTTP GET /api/Review responded 200 in 91.4782 ms
+2025-06-01 13:34:37.719 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.3977 ms
+2025-06-01 13:34:37.720 +03:00 [INF] HTTP GET /api/Review responded 200 in 109.1808 ms
+2025-06-01 13:34:39.277 +03:00 [INF] HTTP GET /api/Review responded 200 in 17.8216 ms
+2025-06-01 13:34:40.871 +03:00 [INF] HTTP GET /api/Review responded 200 in 20.5931 ms
+2025-06-01 13:38:15.828 +03:00 [INF] Cheeking for bookings to update status at: 01.06.2025 10:38:15
+2025-06-01 13:38:16.769 +03:00 [INF] Now listening on: http://localhost:5209
+2025-06-01 13:38:16.869 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-01 13:38:16.870 +03:00 [INF] Hosting environment: Development
+2025-06-01 13:38:16.872 +03:00 [INF] Content root path: C:\Users\masha\Documents\GitHub\FitGear\FitGear
+2025-06-01 13:38:28.689 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 90.0994 ms
+2025-06-01 13:39:31.717 +03:00 [INF] Registration Attempt for newuser@example.com
+2025-06-01 13:39:31.784 +03:00 [INF] HTTP POST /api/User/register responded 400 in 283.2518 ms
+2025-06-01 13:39:53.477 +03:00 [INF] Registration Attempt for newuser@example.com
+2025-06-01 13:39:53.907 +03:00 [INF] HTTP POST /api/User/register responded 200 in 459.8647 ms
+2025-06-01 13:40:31.815 +03:00 [INF] Registration Attempt for newuser@example.com
+2025-06-01 13:40:31.903 +03:00 [ERR] HTTP POST /api/User/register responded 500 in 139.4027 ms
+System.Exception: User already exists
+   at FitGear.Services.AccountService.RegisterAsync(ApiUserDto userDto) in C:\Users\masha\Documents\GitHub\FitGear\FitGear\Services\AccountService.cs:line 42
+   at FitGear.Controllers.UserController.Register(ApiUserDto apiUserDto) in C:\Users\masha\Documents\GitHub\FitGear\FitGear\Controllers\UserController.cs:line 44
+   at lambda_method39(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-06-01 13:40:31.934 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: User already exists
+   at FitGear.Services.AccountService.RegisterAsync(ApiUserDto userDto) in C:\Users\masha\Documents\GitHub\FitGear\FitGear\Services\AccountService.cs:line 42
+   at FitGear.Controllers.UserController.Register(ApiUserDto apiUserDto) in C:\Users\masha\Documents\GitHub\FitGear\FitGear\Controllers\UserController.cs:line 44
+   at lambda_method39(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-01 13:41:04.064 +03:00 [INF] Login Attempt for newuser@example.com
+2025-06-01 13:41:04.068 +03:00 [INF] Looking for user with email newuser@example.com
+2025-06-01 13:41:04.152 +03:00 [WRN] User with email newuser@example.com was not found
+2025-06-01 13:41:04.174 +03:00 [INF] HTTP POST /api/User/login responded 401 in 143.6304 ms
+2025-06-01 13:42:34.709 +03:00 [INF] Registration Attempt for newuser@example.com
+2025-06-01 13:42:34.784 +03:00 [ERR] HTTP POST /api/User/register responded 500 in 125.1447 ms
+System.Exception: User already exists
+   at FitGear.Services.AccountService.RegisterAsync(ApiUserDto userDto) in C:\Users\masha\Documents\GitHub\FitGear\FitGear\Services\AccountService.cs:line 42
+   at FitGear.Controllers.UserController.Register(ApiUserDto apiUserDto) in C:\Users\masha\Documents\GitHub\FitGear\FitGear\Controllers\UserController.cs:line 44
+   at lambda_method39(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-06-01 13:42:34.791 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: User already exists
+   at FitGear.Services.AccountService.RegisterAsync(ApiUserDto userDto) in C:\Users\masha\Documents\GitHub\FitGear\FitGear\Services\AccountService.cs:line 42
+   at FitGear.Controllers.UserController.Register(ApiUserDto apiUserDto) in C:\Users\masha\Documents\GitHub\FitGear\FitGear\Controllers\UserController.cs:line 44
+   at lambda_method39(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-01 13:43:32.431 +03:00 [INF] Registration Attempt for newuser@example.com
+2025-06-01 13:43:32.513 +03:00 [ERR] HTTP POST /api/User/register responded 500 in 99.6080 ms
+System.Exception: User already exists
+   at FitGear.Services.AccountService.RegisterAsync(ApiUserDto userDto) in C:\Users\masha\Documents\GitHub\FitGear\FitGear\Services\AccountService.cs:line 42
+   at FitGear.Controllers.UserController.Register(ApiUserDto apiUserDto) in C:\Users\masha\Documents\GitHub\FitGear\FitGear\Controllers\UserController.cs:line 44
+   at lambda_method39(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-06-01 13:43:32.521 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: User already exists
+   at FitGear.Services.AccountService.RegisterAsync(ApiUserDto userDto) in C:\Users\masha\Documents\GitHub\FitGear\FitGear\Services\AccountService.cs:line 42
+   at FitGear.Controllers.UserController.Register(ApiUserDto apiUserDto) in C:\Users\masha\Documents\GitHub\FitGear\FitGear\Controllers\UserController.cs:line 44
+   at lambda_method39(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-01 13:44:50.921 +03:00 [INF] Registration Attempt for newuser@example.com
+2025-06-01 13:44:50.982 +03:00 [ERR] HTTP POST /api/User/register responded 500 in 76.1539 ms
+System.Exception: User already exists
+   at FitGear.Services.AccountService.RegisterAsync(ApiUserDto userDto) in C:\Users\masha\Documents\GitHub\FitGear\FitGear\Services\AccountService.cs:line 42
+   at FitGear.Controllers.UserController.Register(ApiUserDto apiUserDto) in C:\Users\masha\Documents\GitHub\FitGear\FitGear\Controllers\UserController.cs:line 44
+   at lambda_method39(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-06-01 13:44:50.989 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: User already exists
+   at FitGear.Services.AccountService.RegisterAsync(ApiUserDto userDto) in C:\Users\masha\Documents\GitHub\FitGear\FitGear\Services\AccountService.cs:line 42
+   at FitGear.Controllers.UserController.Register(ApiUserDto apiUserDto) in C:\Users\masha\Documents\GitHub\FitGear\FitGear\Controllers\UserController.cs:line 44
+   at lambda_method39(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-01 13:45:17.483 +03:00 [INF] Login Attempt for seconduser@example.com
+2025-06-01 13:45:17.499 +03:00 [INF] Looking for user with email seconduser@example.com
+2025-06-01 13:45:17.646 +03:00 [INF] Token generated for User with email seconduser@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwianRpIjoiNTRlNzhlYzMtNDhhMy00YjY2LWIwZGItZGI3NjFkOWY0YjE5IiwiZW1haWwiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwidWlkIjoiZDZiYWNmNjctMzBlNi00ZWI1LWJhMzQtZTU5ODNmMjEzMTJkIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc0ODc3NTMxNywiaXNzIjoiRml0R2VhckFQSSIsImF1ZCI6IkZpdEdlYXJBUElDbGllbnQifQ.YEAFRONBcg_StpN9t998CVLm3MNM0mAWHybV-lzAlrY
+2025-06-01 13:45:17.714 +03:00 [INF] HTTP POST /api/User/login responded 200 in 250.1025 ms
+2025-06-01 13:45:17.869 +03:00 [INF] HTTP GET /api/Category responded 200 in 95.3863 ms
+2025-06-01 13:45:17.945 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 163.1175 ms
+2025-06-01 13:45:19.766 +03:00 [INF] HTTP GET /api/Review responded 200 in 254.3289 ms
+2025-06-01 13:45:19.766 +03:00 [INF] HTTP GET /api/Review responded 200 in 146.8539 ms
+2025-06-01 13:45:19.766 +03:00 [INF] HTTP GET /api/Review responded 200 in 149.1962 ms
+2025-06-01 13:45:19.783 +03:00 [INF] HTTP GET /api/Review responded 200 in 235.2084 ms
+2025-06-01 13:45:19.783 +03:00 [INF] HTTP GET /api/Review responded 200 in 213.6959 ms
+2025-06-01 13:45:19.815 +03:00 [INF] HTTP GET /api/Review responded 200 in 25.5887 ms
+2025-06-01 13:45:22.884 +03:00 [INF] HTTP GET /api/Review responded 200 in 32.3071 ms
+2025-06-01 13:45:24.657 +03:00 [INF] HTTP GET /api/Review responded 200 in 36.3273 ms
+2025-06-01 13:45:31.564 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.0173 ms
+2025-06-01 13:45:36.595 +03:00 [INF] HTTP GET /api/UserProfile/Profile responded 200 in 46.9991 ms
+2025-06-01 13:45:38.172 +03:00 [INF] HTTP GET /api/Bookings responded 200 in 76.7702 ms
+2025-06-01 13:49:03.578 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 0.3412 ms
+2025-06-01 13:49:40.503 +03:00 [INF] Login Attempt for seconduser@example.com
+2025-06-01 13:49:40.504 +03:00 [INF] Looking for user with email seconduser@example.com
+2025-06-01 13:49:40.568 +03:00 [INF] Token generated for User with email seconduser@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwianRpIjoiMDJhNmRiYzgtYjExNC00MWJlLWJjYzMtZDUxM2ZiNTcyYThlIiwiZW1haWwiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwidWlkIjoiZDZiYWNmNjctMzBlNi00ZWI1LWJhMzQtZTU5ODNmMjEzMTJkIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc0ODc3NTU4MCwiaXNzIjoiRml0R2VhckFQSSIsImF1ZCI6IkZpdEdlYXJBUElDbGllbnQifQ.0WjLROQLR58jnu41Zk79fg8BILyY_wDx9yjAupY_FA4
+2025-06-01 13:49:40.602 +03:00 [INF] HTTP POST /api/User/login responded 200 in 118.6929 ms
+2025-06-01 13:49:40.693 +03:00 [INF] HTTP GET /api/Category responded 200 in 21.1091 ms
+2025-06-01 13:49:40.752 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 64.6958 ms
+2025-06-01 13:49:42.512 +03:00 [INF] HTTP GET /api/UserProfile/Profile responded 200 in 19.3858 ms
+2025-06-01 13:49:43.575 +03:00 [INF] HTTP GET /api/Bookings responded 200 in 26.0184 ms
+2025-06-01 13:50:10.070 +03:00 [INF] HTTP GET /api/User/validate-token responded 404 in 37.2511 ms
+2025-06-01 13:50:35.444 +03:00 [INF] Login Attempt for seconduser@example.com
+2025-06-01 13:50:35.445 +03:00 [INF] Looking for user with email seconduser@example.com
+2025-06-01 13:50:35.526 +03:00 [INF] Token generated for User with email seconduser@example.com | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwianRpIjoiNzkzYjZhOWEtOTFhMy00NjMxLTkwOWItNWI0OGEwMWQ1N2M2IiwiZW1haWwiOiJzZWNvbmR1c2VyQGV4YW1wbGUuY29tIiwidWlkIjoiZDZiYWNmNjctMzBlNi00ZWI1LWJhMzQtZTU5ODNmMjEzMTJkIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsImV4cCI6MTc0ODc3NTYzNSwiaXNzIjoiRml0R2VhckFQSSIsImF1ZCI6IkZpdEdlYXJBUElDbGllbnQifQ.izz45TH2D7JW7wdjLooykxlUNhHHRqu4M0pDsHwQ_6U
+2025-06-01 13:50:35.564 +03:00 [INF] HTTP POST /api/User/login responded 200 in 133.3459 ms
+2025-06-01 13:50:35.626 +03:00 [INF] HTTP GET /api/Category responded 200 in 19.1018 ms
+2025-06-01 13:50:35.645 +03:00 [INF] HTTP GET /api/Announcements responded 200 in 21.7245 ms
+2025-06-01 13:50:38.625 +03:00 [INF] HTTP GET /api/UserProfile/Profile responded 200 in 38.8873 ms
+2025-06-01 13:50:40.033 +03:00 [INF] HTTP GET /api/Bookings responded 200 in 31.0188 ms
+2025-06-01 13:50:40.460 +03:00 [INF] HTTP GET /api/Review responded 200 in 90.9067 ms
+2025-06-01 13:50:40.475 +03:00 [INF] HTTP GET /api/Review responded 200 in 79.0556 ms
+2025-06-01 13:50:40.477 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.1949 ms
+2025-06-01 13:50:40.475 +03:00 [INF] HTTP GET /api/Review responded 200 in 79.4188 ms
+2025-06-01 13:50:40.511 +03:00 [INF] HTTP GET /api/Review responded 200 in 84.3651 ms
+2025-06-01 13:50:40.569 +03:00 [INF] HTTP GET /api/Review responded 200 in 85.7822 ms
+2025-06-01 13:50:40.570 +03:00 [INF] HTTP GET /api/Review responded 200 in 42.4994 ms
+2025-06-01 13:50:40.589 +03:00 [INF] HTTP GET /api/Review responded 200 in 38.0371 ms
+2025-06-01 13:50:40.604 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.5953 ms
+2025-06-01 13:50:40.637 +03:00 [INF] HTTP GET /api/Review responded 200 in 50.0524 ms
+2025-06-01 13:50:40.637 +03:00 [INF] HTTP GET /api/Review responded 200 in 46.1256 ms
+2025-06-01 13:50:40.637 +03:00 [INF] HTTP GET /api/Review responded 200 in 34.5928 ms
+2025-06-01 13:50:47.609 +03:00 [INF] HTTP GET /api/Bookings responded 200 in 32.4651 ms
