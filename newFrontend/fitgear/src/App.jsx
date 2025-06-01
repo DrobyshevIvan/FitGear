@@ -9,6 +9,7 @@ import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import ProtectedRoute from './api/ProtectedRoute.jsx'
 import EditUser from './pages/EditUser.jsx'
+import BookingsManage from './pages/BookingsManage.jsx'
 
 import './App.css'
 
@@ -26,6 +27,7 @@ import './App.css'
           <Route path="anouncements" element={<Anouncements />}>
             <Route path="edit/:id" element={<EditAnnouncement />} />
           </Route> 
+          <Route path="bookings" element={<BookingsManage />} />
           <Route path="categories" element={<CategoriesManage />} />
         </Route>
       </Routes>
