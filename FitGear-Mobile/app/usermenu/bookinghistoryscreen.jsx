@@ -69,7 +69,7 @@ export default function bookinghistoryscreen() {
             await getUserBookingHistory();
         } catch (err) {
             console.error('Failed to load booking history:', err);
-            setError(err.message || 'Не вдалося завантажити історію бронювань');
+            setError(err.message || 'Failed to load booking history');
         }
     };
 
@@ -116,9 +116,9 @@ export default function bookinghistoryscreen() {
     const renderEmptyState = () => (
         <View style={styles.emptyContainer}>
             <AntDesign name="calendar" size={64} color="#ccc" />
-            <Text style={styles.emptyTitle}>Історія бронювань порожня</Text>
+            <Text style={styles.emptyTitle}>Booking history empty</Text>
             <Text style={styles.emptySubtitle}>
-                Ваші майбутні та минулі бронювання з'являться тут
+                Your future and past bookings will appeared here 
             </Text>
         </View>
     );
@@ -126,7 +126,7 @@ export default function bookinghistoryscreen() {
     const renderErrorState = () => (
         <View style={styles.errorContainer}>
             <AntDesign name="exclamationcircle" size={64} color="#F44336" />
-            <Text style={styles.errorTitle}>Помилка завантаження</Text>
+            <Text style={styles.errorTitle}>Loading error</Text>
             <Text style={styles.errorSubtitle}>{error}</Text>
         </View>
     );
@@ -135,11 +135,11 @@ export default function bookinghistoryscreen() {
         return (
             <SafeAreaView style={styles.container}>
                 <View style={styles.header}>
-                    <Text style={styles.headerTitle}>Історія бронювань</Text>
+                    <Text style={styles.headerTitle}>Loading history</Text>
                 </View>
                 <View style={styles.loadingContainer}>
                     <ActivityIndicator size="large" color={Colors.PRIMARY} />
-                    <Text style={styles.loadingText}>Завантаження...</Text>
+                    <Text style={styles.loadingText}>Loading...</Text>
                 </View>
             </SafeAreaView>
         );
@@ -155,9 +155,9 @@ export default function bookinghistoryscreen() {
                     <AntDesign name="arrowleft" size={24} color="#2C2C2C" />
                 </TouchableOpacity>
                 <View style={styles.headerContent}>
-                    <Text style={styles.headerTitle}>Історія бронювань</Text>
+                    <Text style={styles.headerTitle}>Bookings history</Text>
                     <Text style={styles.headerSubtitle}>
-                        Усього бронювань: {bookingHistory.length}
+                        Total bookings: {bookingHistory.length}
                     </Text>
                 </View>
             </View>

@@ -8,8 +8,6 @@ export default function MenuList() {
 
     const menuItems = [
         {label: 'User profile', route: '/usermenu/editprofilescreen'},
-        {label: 'Promocodes'},
-        {label: 'Rating'},
         {label: 'My booking History', route: '/usermenu/bookinghistoryscreen'},
     ];
 

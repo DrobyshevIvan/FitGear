@@ -8,7 +8,7 @@ export default function entrancepage() {
     <View>
       <View style={{display: 'flex', alignItems: 'center', marginTop: 100}}>
         <Image 
-        source={require('./../../assets/images/icon.png')}
+        source={require('./../../assets/images/explorescreen.png')}
         style={styles.container}
         />
       </View>
