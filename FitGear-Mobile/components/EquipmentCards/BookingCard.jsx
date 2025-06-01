@@ -1,9 +1,82 @@
 import { AntDesign } from '@expo/vector-icons';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { useReview } from '../../app/context/ReviewContext';
 import { Colors } from '../../constants/Colors';
 
 export default function BookingCard({booking, announcement}) {
+    const { calculateReviewStats } = useReview();
+        const [reviewStats, setReviewStats] = useState({
+            averageRating: 0,
+            totalReviews: 0
+        });
+        const [isLoadingStats, setIsLoadingStats] = useState(true);
+    
+        // Завантажуємо статистику рейтингів при монтуванні компонента
+        useEffect(() => {
+            const loadStats = async () => {
+                if (!announcement?.id) return;
+                
+                try {
+                    setIsLoadingStats(true);
+                    const stats = await calculateReviewStats(announcement.id);
+                    setReviewStats(stats);
+                } catch (error) {
+                    console.error('Failed to load review stats for announcement:', announcement.id, error);
+                } finally {
+                    setIsLoadingStats(false);
+                }
+            };
+    
+            loadStats();
+        }, [announcement?.id, calculateReviewStats]);
+    
+        const renderRating = () => {
+            // Якщо немає рейтингів, не показуємо зірочку
+            if (reviewStats.totalReviews === 0) {
+                return (
+                    <View style={{
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        marginTop: 5,
+                    }}>
+                        <Text style={{
+                            fontSize: 14,
+                            color: '#999',
+                            fontFamily: 'nunito-regular',
+                        }}>
+                            No reviews yet
+                        </Text>
+                    </View>
+                );
+            }
+    
+            return (
+                <View style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    marginTop: 5,
+                }}>
+                    <AntDesign name="star" size={16} color="#FFD700" />
+                    <Text style={{
+                        marginLeft: 5,
+                        fontSize: 14,
+                        color: '#666',
+                        fontFamily: 'nunito-medium',
+                    }}>
+                        {reviewStats.averageRating.toFixed(1)}
+                    </Text>
+                    <Text style={{
+                        marginLeft: 3,
+                        fontSize: 12,
+                        color: '#999',
+                        fontFamily: 'nunito-regular',
+                    }}>
+                        ({reviewStats.totalReviews})
+                    </Text>
+                </View>
+            );
+        };
     const getStatusColor = (status) => {
         switch (status?.toLowerCase()) {
             case 'confirmed':
@@ -67,26 +140,7 @@ export default function BookingCard({booking, announcement}) {
         return `${fromFormatted} - ${toFormatted}`;
     };
 
-    const renderRating = () => {
-        const rating = 4.5;
-        return (
-            <View style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                marginTop: 5,
-            }}>
-                <AntDesign name="star" size={16} color="#FFD700" />
-                <Text style={{
-                    marginLeft: 5,
-                    fontSize: 14,
-                    color: '#666',
-                    fontFamily: 'nunito-medium',
-                }}>
-                    {rating.toFixed(1)}
-                </Text>
-            </View>
-        );
-    };
+    
 
     return (
         <TouchableOpacity 
