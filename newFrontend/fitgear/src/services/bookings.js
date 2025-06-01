@@ -11,3 +11,12 @@ export const deleteBooking = async (id) => {
     const response = await axios.delete(`${API_URL}/${id}`)
     return response.data;
 }
+
+export const editBooking = async (updatedData) => {
+    const response = await axios.put(`${API_URL}/${updatedData.id}`, updatedData, {
+        headers: {
+            "Content-Type": "application/json"
+        }
+    });
+    return response.data;
+}

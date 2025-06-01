@@ -1,19 +1,23 @@
 import { useState, useEffect, useCallback } from "react";
-import { getAllBookings, deleteBooking } from "../services/bookings";
+import { getAllBookings, deleteBooking, editBooking } from "../services/bookings";
 import { getAnnouncementById } from "../services/anouncements";
 import { getUserInfoById } from "../services/users";
 import { formatDate } from "../services/utils"; 
 import DeleteBooking from "./deleteBooking"
+import EditBooking from "./editBooking";
 
+export const statuses = ["Pending", "Confirmed", "Active", "Completed", "Cancelled", "Rejected"];
 
 export default function BookingsManage() {
     const [bookings, setBookings] = useState([]);
     const [filterStatus, setFilterStatus] = useState(null);
     const [sortOrder, setSortOrder] = useState(null);
-    const statuses = ["Pending", "Confirmed", "Active", "Completed", "Cancelled", "Rejected"];
-
+    
     const [bookingToDelete, setBookingToDelete] = useState(null);
     const [isDeleteOpen, setIsDeleteOpen] = useState(false);
+
+    const [bookingToEdit, setBookingToEdit] = useState(null);
+    const [isEditOpen, setIsEditOpen] = useState(false);
 
     const fetchData = useCallback(async () => {
         const rawBookings = await getAllBookings();
@@ -64,6 +68,13 @@ export default function BookingsManage() {
         setBookingToDelete(null);
 
     }
+
+    const handleEdit = async (updatedBooking) => {
+        await editBooking(updatedBooking);
+        fetchData();
+        setIsEditOpen(false);
+        setBookingToEdit(null);
+    }
     
     return (
         <div className="flex justify-between items-start">
@@ -87,7 +98,13 @@ export default function BookingsManage() {
                         <hr className="my-2 border-t border-gray-300" />
 
                         <div className="flex flex-col space-y-1 mt-2">
-                            <button className="text-blue-500 hover:text-blue-700">
+                            <button className="text-blue-500 hover:text-blue-700"
+                                onClick={() => {
+                                    console.log("Editing booking:", b)
+                                    setBookingToEdit(b);
+                                    setIsEditOpen(true);
+                                }}
+                            >
                                 Edit
                             </button>
                             <button className="text-red-500 hover:text-red-700"
@@ -158,6 +175,13 @@ export default function BookingsManage() {
                 onClose={() => setIsDeleteOpen(false)}
                 onConfirm={confirmDelete}
                 booking={bookingToDelete}
+            />
+
+            <EditBooking
+                isOpen={isEditOpen}
+                onClose={() => setIsEditOpen(false)}
+                onSubmit={handleEdit}
+                booking={bookingToEdit}
             />
         </div>
 
