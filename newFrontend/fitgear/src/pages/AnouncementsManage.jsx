@@ -1,5 +1,5 @@
 import { getAllAnnouncements, addAnnouncement, removeAnnouncement, updateAnnouncement } from "../services/anouncements"
-import { useEffect, useState } from "react"
+import { use, useEffect, useState } from "react"
 import Card from "../components/productCard";
 import iconAdd from '../assets/plus.svg';
 import AddAnnouncement from "./addAnnouncement";
@@ -12,7 +12,7 @@ import Pagination from "../components/Pagination";
 export default function Anouncements() {
     const navigate = useNavigate();
     const [page, setPage] = useState(1);
-    const totalPages = 10;
+    const [hasMore, setHasMore] = useState(true);
     const [anouncements, setAnnounces] = useState([]);
     const isEditing = useMatch("/manage/anouncements/edit/:id");
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,12 +20,15 @@ export default function Anouncements() {
         search: "",
         orderItem: "PricePerDay",
         sortDirection: "Ascending",
+        page: 1,
+        size: 20,
     })
 
     useEffect(() => {
         const fetchAnouncements = async () => {
             let data = await getAllAnnouncements(filter);
             setAnnounces(data);
+            setHasMore(data.length === filter.size);
         }
         fetchAnouncements();
     }, [filter]);
@@ -48,7 +51,6 @@ export default function Anouncements() {
         setAnnounces(updated);
     };
 
-
     if (isEditing) {
         return <Outlet context={{ onUpdate: handleUpdate }} />;
     }
@@ -65,13 +67,26 @@ export default function Anouncements() {
             </div>
             <AddAnnouncement isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onSubmit={handleNewAdd} />
             <div>
-                <div className="grid place-items-center mt-6 px-14 grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-                    {anouncements.map(n => (
-                        <Card key={n.id} title={n.title} price={n.pricePerDay} url={n.url} onSubmit={(e) => {handleEdit(id)}} onEdit={() => navigate(`edit/${n.id}`)} onRemove={() => handleRemove(n.id)}/>
-                    ))}
-                </div>
+                {
+                    anouncements.length === 0 ? (
+                        <div className="text-3xl text-center mt-4">
+                            Nothing found...
+                        </div>
+                    ) : (
+                        <div className="grid place-items-center mt-6 px-14 grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+                            {anouncements.map(n => (
+                                <Card key={n.id} title={n.title} price={n.pricePerDay} url={n.url} onSubmit={(e) => { handleEdit(id) }} onEdit={() => navigate(`edit/${n.id}`)} onRemove={() => handleRemove(n.id)} />
+                            ))}
+                        </div>
+                    )
+                }
             </div>
-            <Pagination currentPage={page} totalPages={totalPages} onPageChange={p => {if(p >= 1 && p <= totalPages) setPage(p)}} />
+            {(anouncements.length >= filter.size || filter.page > 1) && (
+                <Pagination currentPage={filter.page} totalPages={hasMore ? filter.page + 1 : filter.page} onPageChange={p => {
+                    if (p > filter.page && !hasMore) return;
+                    if (p >= 1) setFilters(prev => ({ ...prev, page: p }))
+                }} />
+            )}
         </>
     )
 }

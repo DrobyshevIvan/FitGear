@@ -7,7 +7,7 @@ export const getAllUsers = async (filter) => {
                 FirstName: filter?.search,
             }
         });
-        return response.data?.$values || [];
+        return response.data || [];
     } catch (err) {
         console.log(err);
     }

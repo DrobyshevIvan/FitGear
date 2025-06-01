@@ -8,7 +8,7 @@ export const getReviewsForAnnouncement = async (id) => {
             }
         }); 
 
-        return response.data?.$values || [];
+        return response.data || [];
     } catch (err) {
         console.log(err);
     }

@@ -1,4 +1,4 @@
-import Man from "../assets/man.jpg";
+import Man from "../assets/user.jpg";
 import { Trash2 } from 'lucide-react';
 
 export default function ReviewCard({ id, comment, createdAt, rating, userId, userName, onDelete }) {
