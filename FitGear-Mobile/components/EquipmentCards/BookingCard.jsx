@@ -97,18 +97,18 @@ export default function BookingCard({booking, announcement}) {
     const getStatusText = (status) => {
         switch (status?.toLowerCase()) {
             case 'confirmed':
-                return 'Підтверджено';
+                return 'Confirmed';
             case 'pending':
-                return 'Очікує';
+                return 'Pending';
             case 'cancelled':
             case 'canceled':
-                return 'Скасовано';
+                return 'Cancelled';
             case 'completed':
-                return 'Завершено';
+                return 'Completed';
             case 'active':
-                return 'Активне';
+                return 'Active';
             default:
-                return status || 'Невідомо';
+                return status || 'Unknown';
         }
     };
 
@@ -249,7 +249,7 @@ export default function BookingCard({booking, announcement}) {
                 }}
                 numberOfLines={2}
                 >
-                    {announcement?.title || 'Замовлення #' + booking.id}
+                    {announcement?.title || 'Booking #' + booking.id}
                 </Text>
 
                 {/* Опис або ID бронювання */}
@@ -261,7 +261,7 @@ export default function BookingCard({booking, announcement}) {
                 }}
                 numberOfLines={2}
                 >
-                    {announcement?.description || `Бронювання ID: ${booking.id}`}
+                    {announcement?.description || `Booking ID: ${booking.id}`}
                 </Text>
 
                 {/* Період бронювання */}

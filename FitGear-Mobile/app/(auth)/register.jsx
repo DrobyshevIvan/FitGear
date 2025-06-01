@@ -75,7 +75,7 @@ export default function register() {
                 value={confirmPassword}
                 onChangeText={setConfirmPassword}
                 />
-                <TouchableOpacity onPress={() => setShowConfirmPassword(!showPassword)}>
+                <TouchableOpacity onPress={() => setShowConfirmPassword(!showConfirmPassword)}>
                     <Feather name={showPassword ? 'eye' : 'eye-off'} size={24} color='#444'/>
                 </TouchableOpacity>
             </View>

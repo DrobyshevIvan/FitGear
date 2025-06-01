@@ -15,6 +15,7 @@ export default function editprofilescreen() {
     const [userName, setUserName] = useState('');
     const [isLoading, setIsLoading] = useState(true);
     const [isSaving, setIsSaving] = useState(false);
+    const [isFirstTimeUser, setIsFirstTimeUser] = useState(false);
 
     useEffect(() => {
         loadUserProfile();
@@ -26,18 +27,26 @@ export default function editprofilescreen() {
 
             if (authState.userProfile) {
                 fillFormWithProfileData(authState.userProfile);
+                checkIfFirstTimeUser(authState.userProfile);
                 setIsLoading(false);
                 return;
             }
 
             const profile = await getUserProfile();
             fillFormWithProfileData(profile);
+            checkIfFirstTimeUser(profile);
         } catch (error) {
             console.error('Error loading profile:', error);
             Alert.alert('Error', 'Failed to load this profile');
         } finally {
             setIsLoading(false);
         }
+    };
+
+    const checkIfFirstTimeUser = (profile) => {
+        // Перевіряємо чи це перший раз користувача (немає номера телефону)
+        const hasNoPhone = !profile.phoneNumber || profile.phoneNumber.trim() === '';
+        setIsFirstTimeUser(hasNoPhone);
     };
 
     const fillFormWithProfileData = (profile) => {
@@ -48,36 +57,91 @@ export default function editprofilescreen() {
         setUserName(profile.userName || profile.email || '');
     };
 
+    const validateForm = () => {
+        if (!phone || phone.trim() === '') {
+            Alert.alert('Required Field', 'Phone number is required');
+            return false;
+        }
+        
+        
+
+        if (!name || name.trim() === '') {
+            Alert.alert('Required Field', 'Name is required');
+            return false;
+        }
+
+        if (!surname || surname.trim() === '') {
+            Alert.alert('Required Field', 'Surname is required');
+            return false;
+        }
+
+        return true;
+    };
+
     const handleSave = async () => {
+        if (!validateForm()) {
+            return;
+        }
+
         try {
             setIsSaving(true);
 
             const updateData = {
-                firstName: name,
-                lastName: surname,
-                phoneNumber: phone,
-                userName: userName
+                firstName: name.trim(),
+                lastName: surname.trim(),
+                phoneNumber: phone.trim(),
+                userName: userName.trim() || email
             };
             await updateUserProfile(updateData);
 
-            Alert.alert('Successfully', 'Data was saved', [
-                {
-                    text: 'OK',
-                    onPress: () => router.back()
-                }
-            ]);
+            if (isFirstTimeUser) {
+                Alert.alert('Welcome!', 'Profile completed successfully', [
+                    {
+                        text: 'Continue',
+                        onPress: () => router.replace('/home')
+                    }
+                ]);
+            } else {
+                Alert.alert('Successfully', 'Data was saved', [
+                    {
+                        text: 'OK',
+                        onPress: () => router.back()
+                    }
+                ]);
+            }
         } catch (error) {
             console.error('Error saving profile:', error);
-            Alert.alert('Error', 'Data was not saved');
+            Alert.alert('Error', 'Data was not saved. Please try again.');
         } finally {
             setIsSaving(false);
+        }
+    };
+
+    const handleCancel = () => {
+        if (isFirstTimeUser) {
+            Alert.alert(
+                'Profile Incomplete',
+                'You need to complete your profile to continue using the app.',
+                [
+                    { text: 'Continue Editing', style: 'default' },
+                    { 
+                        text: 'Logout', 
+                        style: 'destructive',
+                        onPress: () => {
+                            router.replace('/authentication');
+                        }
+                    }
+                ]
+            );
+        } else {
+            router.back();
         }
     };
 
     if (isLoading || isLoadingProfile) {
         return (
             <View style={[styles.container, styles.centered]}>
-                <ActivityIndicator size='large' color="$4285F4"/>
+                <ActivityIndicator size='large' color="#4285F4"/>
                 <Text style={styles.loadingText}>Loading profile...</Text>
             </View>
         );
@@ -85,16 +149,25 @@ export default function editprofilescreen() {
 
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.backArrow} onPress={() => router.back()}>
-                <Ionicons name="arrow-back" size={30} color='black'/>
-            </TouchableOpacity>
+            {!isFirstTimeUser && (
+                <TouchableOpacity style={styles.backArrow} onPress={handleCancel}>
+                    <Ionicons name="arrow-back" size={30} color='black'/>
+                </TouchableOpacity>
+            )}
+
+            {isFirstTimeUser && (
+                <View style={styles.welcomeHeader}>
+                    <Text style={styles.welcomeTitle}>Complete Your Profile</Text>
+                    <Text style={styles.welcomeSubtitle}>Please fill in your details to continue</Text>
+                </View>
+            )}
 
             <View style={styles.avatarContainer}>
                 <Image source={require('./../../assets/images/profileimage.png')} style={{
-                            width: 120,
-                            height: 120,
-                            borderRadius: 99
-                          }}/>
+                    width: 120,
+                    height: 120,
+                    borderRadius: 99
+                }}/>
                 <View style={styles.photoButtons}>
                     <Text style={styles.photoButtonText}>Edit profile</Text>
                 </View>
@@ -103,63 +176,83 @@ export default function editprofilescreen() {
             <View style={styles.separator}/>
 
             <TextInput
-            style={styles.input}
-            placeholder='Surname'
-            placeholderTextColor="black"
-            value={surname}
-            onChangeText={setSurname}
-            editable={!isSaving}
+                style={styles.input}
+                placeholder='Surname *'
+                placeholderTextColor="gray"
+                value={surname}
+                onChangeText={setSurname}
+                editable={!isSaving}
             />
 
             <TextInput
-            style={styles.input}
-            placeholder='Name'
-            placeholderTextColor="black"
-            value={name}
-            onChangeText={setName}
-            editable={!isSaving}
+                style={styles.input}
+                placeholder='Name *'
+                placeholderTextColor="gray"
+                value={name}
+                onChangeText={setName}
+                editable={!isSaving}
             />
 
             <View style={styles.emailContainer}>
-            <TextInput
-            style={[styles.input, styles.disabledInput]}
-            placeholder='E-mail'
-            placeholderTextColor="black"
-            value={email}
-            editable={false}
-            />
-            <Text style={styles.disabledLabel}>Email cannot be changed</Text>
+                <TextInput
+                    style={[styles.input, styles.disabledInput]}
+                    placeholder='E-mail'
+                    placeholderTextColor="gray"
+                    value={email}
+                    editable={false}
+                />
+                <Text style={styles.disabledLabel}>Email cannot be changed</Text>
+            </View>
+
+            <View style={styles.phoneContainer}>
+                <TextInput
+                    style={[styles.input, styles.requiredInput]}
+                    placeholder='Phone Number *'
+                    placeholderTextColor="gray"
+                    value={phone}
+                    onChangeText={setPhone}
+                    keyboardType='phone-pad'
+                    editable={!isSaving}
+                />
+                <Text style={styles.requiredLabel}>* Required field</Text>
             </View>
 
             <TextInput
-            style={styles.input}
-            placeholder='+380...'
-            placeholderTextColor="gray"
-            value={phone}
-            onChangeText={setPhone}
-            keyboardType='phone-pad'
-            editable={!isSaving}
+                style={styles.input}
+                placeholder='Username'
+                placeholderTextColor="gray"
+                value={userName}
+                onChangeText={setUserName}
+                editable={!isSaving}
             />
 
-            <TouchableOpacity style={[styles.saveButton, isSaving && styles.disabledButton]}
-            onPress={handleSave}
-            disabled={isSaving}
+
+            <TouchableOpacity 
+                style={[styles.saveButton, isSaving && styles.disabledButton]}
+                onPress={handleSave}
+                disabled={isSaving}
             >
                 {isSaving ? (
                     <ActivityIndicator size="small" color="white"/>
                 ) : (
-                    <Text style={styles.saveText}>Save changes</Text>
+                    <Text style={styles.saveText}>
+                        {isFirstTimeUser ? 'Complete Profile' : 'Save changes'}
+                    </Text>
                 )}
             </TouchableOpacity>
-            <TouchableOpacity 
-            style={[styles.cancelButton, isSaving && styles.disabledButton]}
-            onPress={() => router.back()}
-            disabled={isSaving}
+
+            <TouchableOpacity
+                style={[styles.cancelButton, isSaving && styles.disabledButton]}
+                onPress={handleCancel}
+                disabled={isSaving}
             >
-                <Text style={styles.cancelText}>Cancel</Text>
+                <Text style={styles.cancelText}>
+                    {isFirstTimeUser ? 'Logout' : 'Cancel'}
+                </Text>
             </TouchableOpacity>
         </View>
     )
+
 }
 
 const styles = StyleSheet.create({
@@ -182,18 +275,25 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         marginTop: 50
     },
+    welcomeHeader: {
+        marginTop: 50,
+        marginBottom: 20,
+        alignItems: 'center',
+    },
+    welcomeTitle: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        color: '#333',
+        marginBottom: 8,
+    },
+    welcomeSubtitle: {
+        fontSize: 16,
+        color: '#666',
+        textAlign: 'center',
+    },
     avatarContainer: {
         alignItems: 'center',
         marginTop: 10
-    },
-    avatarCircle: {
-        backgroundColor: '#4285F4',
-        borderRadius: 100,
-        width: 120,
-        height: 120,
-        justifyContent: 'center',
-        alignItems: 'center',
-        elevation: 4,
     },
     photoButtons: {
         flexDirection: 'row',
@@ -219,7 +319,14 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         fontSize: 16,
     },
+    requiredInput: {
+        borderWidth: 1,
+        borderColor: '#ff6b6b',
+    },
     emailContainer: {
+        marginBottom: 10,
+    },
+    phoneContainer: {
         marginBottom: 10,
     },
     disabledInput: {
@@ -232,6 +339,11 @@ const styles = StyleSheet.create({
         color: '#999',
         marginBottom: 5,
     },
+    requiredLabel: {
+        fontSize: 12,
+        color: '#ff6b6b',
+        marginBottom: 5,
+    },
     saveButton: {
         backgroundColor: 'navy',
         padding: 20,
@@ -242,6 +354,7 @@ const styles = StyleSheet.create({
     saveText: {
         color: 'white',
         fontSize: 16,
+        fontWeight: 'bold',
     },
     cancelButton: {
         backgroundColor: '#d3d3d3',
@@ -257,6 +370,7 @@ const styles = StyleSheet.create({
     disabledButton: {
         opacity: 0.6,
     },
+
 
 
 });
