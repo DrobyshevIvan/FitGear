@@ -1,7 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\masha\\Documents\\GitHub\\FitGear\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Alesia\\University\\FitGear\\FitGear\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E28B261C-617D-4759-B469-AD7BF3A1FC74}|FitGear\\FitGear.csproj|c:\\alesia\\university\\fitgear\\fitgear\\fitgear\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E28B261C-617D-4759-B469-AD7BF3A1FC74}|FitGear\\FitGear.csproj|solutionrelative:fitgear\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,6 +14,29 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Alesia\\University\\FitGear\\FitGear\\FitGear\\appsettings.json",
+              "RelativeDocumentMoniker": "FitGear\\appsettings.json",
+              "ToolTip": "C:\\Alesia\\University\\FitGear\\FitGear\\FitGear\\appsettings.json",
+              "RelativeToolTip": "FitGear\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-30T08:24:39.612Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 87,
           "SelectedChildIndex": -1,
           "Children": [
             {
@@ -17,11 +45,7 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{2d7728c2-de0a-45b5-99aa-89b609dfde73}"
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             }
           ]
         }

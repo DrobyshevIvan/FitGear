@@ -1,11 +1,56 @@
 import { AntDesign } from '@expo/vector-icons';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { useReview } from '../../app/context/ReviewContext';
 import { Colors } from '../../constants/Colors';
 
-export default function AnnouncementCard(announcement, onPress) {
+export default function AnnouncementCard({announcement, onPress}) {
+    const { calculateReviewStats } = useReview();
+    const [reviewStats, setReviewStats] = useState({
+        averageRating: 0,
+        totalReviews: 0
+    });
+    const [isLoadingStats, setIsLoadingStats] = useState(true);
+
+    // Завантажуємо статистику рейтингів при монтуванні компонента
+    useEffect(() => {
+        const loadStats = async () => {
+            if (!announcement?.id) return;
+            
+            try {
+                setIsLoadingStats(true);
+                const stats = await calculateReviewStats(announcement.id);
+                setReviewStats(stats);
+            } catch (error) {
+                console.error('Failed to load review stats for announcement:', announcement.id, error);
+            } finally {
+                setIsLoadingStats(false);
+            }
+        };
+
+        loadStats();
+    }, [announcement?.id, calculateReviewStats]);
+
     const renderRating = () => {
-        const rating = 4.5; // Заглушка для рейтингу
+        // Якщо немає рейтингів, не показуємо зірочку
+        if (reviewStats.totalReviews === 0) {
+            return (
+                <View style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    marginTop: 5,
+                }}>
+                    <Text style={{
+                        fontSize: 14,
+                        color: '#999',
+                        fontFamily: 'nunito-regular',
+                    }}>
+                        No reviews yet
+                    </Text>
+                </View>
+            );
+        }
+
         return (
             <View style={{
                 flexDirection: 'row',
@@ -19,21 +64,29 @@ export default function AnnouncementCard(announcement, onPress) {
                     color: '#666',
                     fontFamily: 'nunito-medium',
                 }}>
-                    {rating.toFixed(1)}
+                    {reviewStats.averageRating.toFixed(1)}
+                </Text>
+                <Text style={{
+                    marginLeft: 3,
+                    fontSize: 12,
+                    color: '#999',
+                    fontFamily: 'nunito-regular',
+                }}>
+                    ({reviewStats.totalReviews})
                 </Text>
             </View>
         );
     };
 
-  return (
-    <TouchableOpacity style={{
-        backgroundColor: '#fff',
+    return (
+        <TouchableOpacity 
+            style={{
+                backgroundColor: '#fff',
                 borderRadius: 15,
                 marginBottom: 15,
-                marginHorizontal: 15,
                 width: 'auto',
                 alignSelf: 'stretch',
-                
+                width: '100%',
                 shadowColor: "#000",
                 shadowOffset: {
                     width: 0,
@@ -42,19 +95,19 @@ export default function AnnouncementCard(announcement, onPress) {
                 shadowOpacity: 0.1,
                 shadowRadius: 3.84,
                 elevation: 5,
-    }}
-    onPress={() => onPress && onPress(announcement)}
-    activeOpacity={0.7}
-    >
-        <View style={{
-            position:'relative'
-        }}>
-            {announcement.url ? (
-                    <Image 
+            }}
+            onPress={() => onPress && onPress(announcement)}
+            activeOpacity={0.7}
+        >
+            <View style={{
+                position: 'relative'
+            }}>
+                {announcement.url ? (
+                    <Image
                         source={{ uri: announcement.url }}
                         style={{
                             width: '100%',
-                            height: 150,
+                            height: 200,
                             borderTopLeftRadius: 15,
                             borderTopRightRadius: 15,
                         }}
@@ -63,7 +116,7 @@ export default function AnnouncementCard(announcement, onPress) {
                 ) : (
                     <View style={{
                         width: '100%',
-                        height: 150,
+                        height: 200,
                         borderTopLeftRadius: 15,
                         borderTopRightRadius: 15,
                         backgroundColor: '#f0f0f0',
@@ -130,7 +183,7 @@ export default function AnnouncementCard(announcement, onPress) {
                     fontFamily: 'nunito-bold',
                     color: '#2C2C2C',
                     marginBottom: 5,
-                }} 
+                }}
                 numberOfLines={2}
                 >
                     {announcement.title}
@@ -168,15 +221,16 @@ export default function AnnouncementCard(announcement, onPress) {
                             color: '#666',
                             fontFamily: 'nunito-regular',
                         }}>
-                            per day
+                            per hour
                         </Text>
                     </View>
 
                     {/* Рейтинг */}
                     {renderRating()}
                 </View>
+            </View>
+        </TouchableOpacity>
+    );
 
-        </View>
-    </TouchableOpacity>
-  )
+
 }

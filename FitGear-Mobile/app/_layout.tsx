@@ -6,7 +6,9 @@ import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import 'react-native-reanimated';
 import { AuthProvider } from './context/AuthContext';
+import { BookingProvider } from './context/BookingContext';
 import { ProductProvider } from './context/ProductContext';
+import { ReviewProvider } from './context/ReviewContext';
 
 export default function RootLayout() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -28,6 +30,8 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <AuthProvider>
         <ProductProvider>
+          <BookingProvider>
+            <ReviewProvider>
           <Stack>
             {showWelcome ? (
               <Stack.Screen name='(auth)/entrancepage' options={{ headerShown: false }} />) : (
@@ -38,8 +42,14 @@ export default function RootLayout() {
             <Stack.Screen name='(auth)/register' options={{ headerShown: false }} />
             <Stack.Screen name='usermenu/editprofilescreen' options={{ headerShown: false }} />
             <Stack.Screen name='forbookings/announcementdetail' options={{headerShown: false}}/>
+            <Stack.Screen name='forbookings/bookingscreen' options={{headerShown: false}}/>
+            <Stack.Screen name='forbookings/paymentscreen' options={{headerShown: false}}/>
+            <Stack.Screen name='usermenu/bookinghistoryscreen' options={{ headerShown: false }} />
+            <Stack.Screen name='forbookings/reviewlistscreen' options={{headerShown: false}}/>
           </Stack>
           <StatusBar style="auto" />
+          </ReviewProvider>
+          </BookingProvider>
         </ProductProvider>
       </AuthProvider>
     </ThemeProvider>
