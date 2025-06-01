@@ -4,31 +4,31 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function Pagination({currentPage, totalPages, onPageChange }) {
-    const getNumber = () => {
-        const delta = 1;
-        const range = [];
+export default function Pagination({ currentPage, totalPages, onPageChange }) {
+  const getNumber = () => {
+    const delta = 2;
+    const range = [];
 
-        for (let i = 1; i <= totalPages; i++) {
-            if (i === 1 || i === totalPages || (i >= currentPage - delta && i <= currentPage + delta)) {
-                range.push(i);
-            }
-        }
-
-        const pages = [];
-        let lastPage = 0;
-        for (let page of range) {
-            if (page - lastPage > 1) {   
-                pages.push("ellipsis-" + page);  
-            }
-            pages.push(page);           
-            lastPage = page;             
-        }
-
-        return pages;
+    for (let i = 1; i <= totalPages; i++) {
+      if (i === 1 || i === totalPages || (i >= currentPage - delta && i <= currentPage + delta)) {
+        range.push(i);
+      }
     }
 
-    const pages = getNumber();
+    const pages = [];
+    let lastPage = 0;
+    for (let page of range) {
+      if (page - lastPage > 1) {
+        pages.push("ellipsis-" + page);
+      }
+      pages.push(page);
+      lastPage = page;
+    }
+
+    return pages;
+  }
+
+  const pages = getNumber();
 
     return (
     <div className="flex justify-between items-center gap-3 mt-4 mx-36">
@@ -47,7 +47,7 @@ export default function Pagination({currentPage, totalPages, onPageChange }) {
             ) : (
                 <button
                     key={page}
-                    onClick={() => onPageChange(currentPage = page)}
+                    onClick={() => onPageChange(page)}
                     className={classNames(
                         page === currentPage
                         ? 'z-10 text-indigo-700 font-bold border-t-2 border-indigo-700'

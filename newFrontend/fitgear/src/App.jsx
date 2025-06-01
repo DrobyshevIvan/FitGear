@@ -20,7 +20,7 @@ import './App.css'
         <Route path="/" element={<MainPage />}/>
         <Route path="/login" element={<LoginPage />}/>
         <Route path="/Register" element={<RegisterPage />}/>
-        <Route path="/manage" element={<ProtectedRoute requiredRole="Administrator"><ManagePage /></ProtectedRoute>}>
+        <Route path="/manage" element={<ProtectedRoute requiredRole={["Administrator", "Moderator"]}><ManagePage /></ProtectedRoute>}>
           <Route path="users" element={<Users />}>
             <Route path="edit/:id" element={<EditUser />} />
           </Route>

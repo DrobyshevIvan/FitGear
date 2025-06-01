@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import { useState } from "react";
 import { Menu } from "lucide-react";
+import { Link } from 'react-scroll';
 
 
 export default function Header() {
@@ -10,8 +11,8 @@ export default function Header() {
 
     const navItems = [
         { name: "Manage", path: "/manage/anouncements"},
-        { name: "About us", path: "#about-us-section"},
-        { name: "Contacts", path: "/" },
+        { name: "About us", path: "#about-us"},
+        { name: "Contacts", path: "#Contacts" },
     ];
 
     return (
@@ -35,22 +36,27 @@ export default function Header() {
                     <div className="hidden lg:flex items-center gap-5">
                         {navItems.map(item => {
                             if (item.path.startsWith("#")) {
+                                const target = item.path.substring(1);
+
                                 return (
-                                    <a
-                                        key={item.name}
-                                        href={item.path}
-                                        className="text-lg hover:underline transition"
-                                        onClick={() => setMobileMenuOpen(false)}
+                                    <Link 
+                                    key={item.name} 
+                                    to={target} 
+                                    smooth={true} 
+                                    duration={300} 
+                                    offset={-150} 
+                                    className="text-lg hover:underline cursor-pointer transition fade-down"
+                                    onClick={() => setMobileMenuOpen(false)}
                                     >
                                         {item.name}
-                                    </a>
+                                    </Link>
                                 );
                             } else {
                                 return (
                                     <NavLink
                                         key={item.name}
                                         to={item.path}
-                                        className="text-lg hover:underline transition"
+                                        className="text-lg hover:underline transition fade-down"
                                         onClick={() => setMobileMenuOpen(false)}
                                     >
                                         {item.name}
@@ -78,35 +84,35 @@ export default function Header() {
                 {mobileMenuOpen && (
                     <div className="lg:hidden absolute top-18 right-0 w-64 bg-white border shadow-md z-50 transition-all">
                         <div className="flex flex-col">
-                            {navItems.map(item => (
-                                <NavLink
-                                    key={item.name}
-                                    to={item.path}
-                                    className="text-lg hover:underline transition"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    {item.name}
-                                </NavLink>
-                            ))}
-                            {user ? (
-                                <button
-                                    onClick={() => {
-                                        logout()
-                                        setMobileMenuOpen(false)
-                                    }}
-                                    className="text-lg hover:underline transition"
-                                >
-                                    Logout
-                                </button>
-                            ) : (
-                                <NavLink
-                                    to="/login"
-                                    className="text-lg hover:underline transition"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    Log in
-                                </NavLink>
-                            )}
+                            {navItems.map(item => {
+                                if (item.path.startsWith("#")) {
+                                    const target = item.path.substring(1);
+                                    return (
+                                        <Link
+                                            key={item.name}
+                                            to={target}
+                                            smooth={true}
+                                            duration={500}
+                                            offset={-70}
+                                            className="text-lg hover:underline cursor-pointer transition"
+                                            onClick={() => setMobileMenuOpen(false)}
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    );
+                                } else {
+                                    return (
+                                        <NavLink
+                                            key={item.name}
+                                            to={item.path}
+                                            className="text-lg hover:underline transition"
+                                            onClick={() => setMobileMenuOpen(false)}
+                                        >
+                                            {item.name}
+                                        </NavLink>
+                                    );
+                                }
+                            })}
                         </div>
                     </div>
                 )}

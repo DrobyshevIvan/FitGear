@@ -2,21 +2,19 @@ import BackButton from "../components/BackButton";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getUserInfoById } from "../services/users";
-import Man from "../assets/man.jpg";
+import Man from "../assets/user.jpg";
 import BookingCard from "../components/BookingCard";
 
 
 export default function EditUser() {
     const [formData, setFormData] = useState(null);
     const [bookings, setBookings] = useState([]);
-    const [reviews, setReviews] = useState([]);
     const [payments, setPayments] = useState([]);
     const { id } = useParams();
 
     useEffect(() => {
         const fetchUserData = async () => {
             const data = await getUserInfoById(id);
-            console.log(data);
             setFormData({
                 email: data.email, 
                 firstName: data.firstName, 
@@ -24,9 +22,8 @@ export default function EditUser() {
                 roles: data.roles, 
                 phoneNumber: data.phoneNumber
             });
-            setBookings(data.bookings?.$values || []);
-            setReviews(data.reviews?.$values || []);
-            setPayments(data.payments?.$values || []);
+            setBookings(data.bookings || []);
+            setPayments(data.payments || []);
         }
         fetchUserData();
     }, [id]);
@@ -40,7 +37,7 @@ export default function EditUser() {
                 <div className="flex justify-center gap-32 mx-auto border border-gray-300 shadow-md max-w-[1000px] p-12">
                     <div className="flex flex-col justify-center w-[250px] select-none">
                         <img src={Man} alt="" className="rounded-full object-cover w-[200px] h-[200px] mx-auto " />
-                        <h3 className="text-2xl select-text">NIGGER {formData.lastName}</h3>
+                        <h3 className="text-2xl select-text">{formData.firstName} {formData.lastName}</h3>
                     </div>
                     <div className="flex flex-col gap-5 text-left">
                         <div >

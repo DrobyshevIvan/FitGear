@@ -5,14 +5,18 @@ const ProtectedRoute = ({ children, requiredRole }) => {
     const { user, loading, hasRole } = useAuth();
 
     if (loading) {
-        return (
-            <>
-                <div>Завантаження</div>
-            </>
-        );
+        return <div>Завантаження...</div>;
     }
 
-    if (!user || (requiredRole && !hasRole(requiredRole))) {
+    const checkRole = () => {
+        if (!requiredRole) return true;
+        if (Array.isArray(requiredRole)) {
+            return requiredRole.some(role => hasRole(role));
+        }
+        return hasRole(requiredRole);
+    };
+
+    if (!user || !checkRole()) {
         return <Navigate to="/" replace />;
     }
 

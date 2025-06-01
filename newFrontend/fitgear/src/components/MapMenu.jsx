@@ -15,8 +15,8 @@ export default function MapMenu() {
             <div className="max-w-[1300px] mx-auto p-6 border border-gray-200 shadow-md">
                 <h2 className="text-5xl mb-4">Find a Pickup Point Near You</h2>
                 <p className="text-2xl mb-12">Select a nearby location and grab your rented sports equipment in minutes</p>
-                <div className="flex flex-col md:flex-row gap-6">
-                    <div className="flex-1 w-[500px] h-[400px] overflow-hidden">
+                <div className="flex flex-col md:flex-row gap-6 items-center">
+                    <div className="flex w-[400px] h-[300px] md:w-[500px] md:h-[400px] overflow-hidden">
                         <LoadScript googleMapsApiKey="AIzaSyDQIq_wuuRuA5hZSbQlsWaY4Tryig3Ji9c">
                             <GoogleMap
                                 mapContainerStyle={{ width: "100%", height: "100%" }}

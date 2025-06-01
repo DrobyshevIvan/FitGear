@@ -12,15 +12,29 @@
   background-color: var(--simple-yellow);
 }
 
+.button-yellow:hover {
+  background-color: var(--light-lime);
+  transform: scale(1.05);
+}
+
 .bg-main {
   background-color: var(--main-color);
 }
 
+.bg-down {
+  background-color: #9fc0b3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 .bg-gradient {
-  background: linear-gradient(90deg,rgba(176, 211, 247, 1) 0%, rgba(95, 182, 232, 1) 100%, rgba(169, 217, 217, 1) 100%);
+  /* background: linear-gradient(90deg,rgba(176, 211, 247, 1) 0%, rgba(95, 182, 232, 1) 100%, rgba(169, 217, 217, 1) 100%); */
   /* background: linear-gradient(90deg,rgba(28, 84, 140, 1) 0%, rgba(95, 182, 232, 1) 100%, rgba(169, 217, 217, 1) 100%); */
   /* background: linear-gradient(332deg,rgba(28, 84, 140, 1) 0%, rgba(95, 182, 232, 1) 100%); */
-  /* background: linear-gradient(41deg,rgba(159, 192, 179, 1) 0%, rgba(111, 135, 121, 1) 100%); */
+  background: linear-gradient(41deg,rgba(159, 192, 179, 1) 0%, rgba(111, 135, 121, 1) 100%);
 }
 
 .bg-gradient-2 {

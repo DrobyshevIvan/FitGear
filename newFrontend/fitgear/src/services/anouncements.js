@@ -12,7 +12,7 @@ export const getAllAnnouncements = async (filter) => {
       }
     });
 
-    return response.data?.$values || [];
+    return response.data || [];
   } catch (error) {
     console.error("Failed to fetch announcements:", error);
   }
@@ -53,12 +53,15 @@ export const getAnnouncementById = async (id) => {
 
 export const updateAnnouncement = async (id, data) => {
   try {
+    console.log(data);
     await api.put(`/api/Announcements/${id}`, {
       title: data.title,
       description: data.description,
       quantityAvailable: data.quantity,
       pricePerDay: data.price,
+      url: data.url,
       id: id,
+      categoryId: data.categoryId,
     });
   } catch (err) {
     console.log(err);
