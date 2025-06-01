@@ -945,3 +945,8 @@ Error Number:547,State:0,Class:16
 2025-05-31 12:25:05.872 +03:00 [INF] HTTP POST /api/Payment responded 201 in 26.1232 ms
 2025-05-31 12:25:12.814 +03:00 [INF] HTTP DELETE /api/Payment/17/delete responded 204 in 39.1620 ms
 2025-05-31 12:29:35.376 +03:00 [INF] Cheeking for bookings to update status at: 31.05.2025 09:29:35
+2025-05-31 12:33:59.016 +03:00 [INF] HTTP POST /api/Bookings responded 201 in 74.0030 ms
+2025-05-31 12:33:59.187 +03:00 [INF] HTTP POST /api/Payment responded 201 in 28.7066 ms
+2025-05-31 12:34:37.651 +03:00 [INF] HTTP PUT /api/Payment/18/process responded 200 in 47.2218 ms
+2025-05-31 12:35:02.142 +03:00 [INF] HTTP POST /api/Bookings responded 401 in 12.1653 ms
+2025-05-31 12:44:35.429 +03:00 [INF] Cheeking for bookings to update status at: 31.05.2025 09:44:35

@@ -10,7 +10,7 @@ export default function MenuList() {
         {label: 'User profile', route: '/usermenu/editprofilescreen'},
         {label: 'Promocodes'},
         {label: 'Rating'},
-        {label: 'My booking History'},
+        {label: 'My booking History', route: '/usermenu/bookinghistoryscreen'},
     ];
 
   return (
