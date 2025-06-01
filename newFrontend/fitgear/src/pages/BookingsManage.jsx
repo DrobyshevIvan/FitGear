@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
-import { getAllBookings } from "../services/bookings";
+import { useState, useEffect, useCallback } from "react";
+import { getAllBookings, deleteBooking } from "../services/bookings";
 import { getAnnouncementById } from "../services/anouncements";
 import { getUserInfoById } from "../services/users";
 import { formatDate } from "../services/utils"; 
+import DeleteBooking from "./deleteBooking"
 
 
 export default function BookingsManage() {
@@ -10,25 +11,31 @@ export default function BookingsManage() {
     const [filterStatus, setFilterStatus] = useState(null);
     const statuses = ["Pending", "Confirmed", "Active", "Completed", "Cancelled", "Rejected"];
 
-    /*const NormalizeBookings = (data) => {
-        const array = Array.isArray(data) ? data : data?.$values;
-        if (!array) return [];
-        
-        return array.map(c => ({
-            ...c,
-            id: c.id ?? parseInt(c.$id),
-            announcementName: getAnnouncementById(c.announcementId)
-        }));
-    }*/
+    const [bookingToDelete, setBookingToDelete] = useState(null);
+    const [isDeleteOpen, setIsDeleteOpen] = useState(false);
+
+    const fetchData = useCallback(async () => {
+        const rawBookings = await getAllBookings();
+
+        const enriched = await Promise.all(
+            rawBookings.map(async (c) => {
+                const announcement = await getAnnouncementById(c.announcementId);
+                const user = await getUserInfoById(c.userId);
+                return {
+                    ...c,
+                    id: c.id ?? parseInt(c.$id),
+                    announcement: announcement,
+                    user: user
+                };
+            })
+        )
+        console.log("Bookings:", enriched);
+        setBookings(enriched);
+    }, []);
+
 
     useEffect(() => {
-        /*getAllBookings().then(data => {
-            const normalized = NormalizeBookings(data);
-            console.log("Bookings list:", normalized);
-            setBookings(normalized);
-        })*/
-
-        const fetchData = async () => {
+        /*const fetchData = async () => {
             const rawBookings = await getAllBookings();
 
             const enriched = await Promise.all(
@@ -45,14 +52,28 @@ export default function BookingsManage() {
             )
             console.log("Bookings:", enriched);
             setBookings(enriched);
-        };
+        };*/
         fetchData();
-    }, []
+    }, [fetchData]
     );
 
     const filteredBookings = bookings.filter(b => 
         !filterStatus || b.status === filterStatus
     );
+
+    const confirmDelete = async (booking) => {
+        const id = booking?.id || booking?.$id;
+        if (!id) {
+            console.error("Нет ID букинга для удаления", bookingToDelete)
+            return;
+        }
+
+        await deleteBooking(id);
+        await fetchData();
+        setIsDeleteOpen(false);
+        setBookingToDelete(null);
+
+    }
     
     return (
         <div className="flex justify-between items-start">
@@ -79,7 +100,13 @@ export default function BookingsManage() {
                             <button className="text-blue-500 hover:text-blue-700">
                                 Edit
                             </button>
-                            <button className="text-red-500 hover:text-red-700">
+                            <button className="text-red-500 hover:text-red-700"
+                                onClick={() => {
+                                    console.log("Deleting booking:", b)
+                                    setBookingToDelete(b);
+                                    setIsDeleteOpen(true);
+                                }}
+                            >
                                 Delete
                             </button>
                         </div>
@@ -107,6 +134,15 @@ export default function BookingsManage() {
                 ))
                 }
             </div>
+
+            <DeleteBooking
+                isOpen = {isDeleteOpen}
+                onClose={() => setIsDeleteOpen(false)}
+                onConfirm={confirmDelete}
+                booking={bookingToDelete}
+            />
         </div>
+
+        
     )
 }
