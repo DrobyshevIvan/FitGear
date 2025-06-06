@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  --main-color: #00296B;
+  --simple-yellow: #CEF300;
+  --spec-white: #D9D9D9;
+  --light-lime: #98D900;
+  --test-color: #bfebde;
+}
+
+.button-yellow {
+  background-color: var(--simple-yellow);
+}
+
+.button-yellow:hover {
+  background-color: var(--light-lime);
+  transform: scale(1.05);
+}
+
+.bg-main {
+  background-color: var(--main-color);
+}
+
+.bg-down {
+  background-color: #9fc0b3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.bg-gradient {
+  /* background: linear-gradient(90deg,rgba(176, 211, 247, 1) 0%, rgba(95, 182, 232, 1) 100%, rgba(169, 217, 217, 1) 100%); */
+  /* background: linear-gradient(90deg,rgba(28, 84, 140, 1) 0%, rgba(95, 182, 232, 1) 100%, rgba(169, 217, 217, 1) 100%); */
+  /* background: linear-gradient(332deg,rgba(28, 84, 140, 1) 0%, rgba(95, 182, 232, 1) 100%); */
+  background: linear-gradient(41deg,rgba(159, 192, 179, 1) 0%, rgba(111, 135, 121, 1) 100%);
+}
+
+.bg-gradient-2 {
+  /* background: linear-gradient(90deg,rgba(176, 211, 247, 1) 0%, rgba(95, 182, 232, 1) 100%, rgba(169, 217, 217, 1) 100%); */
+  /* background: linear-gradient(90deg,rgba(28, 84, 140, 1) 0%, rgba(95, 182, 232, 1) 100%, rgba(169, 217, 217, 1) 100%); */
+  /* background: linear-gradient(332deg,rgba(28, 84, 140, 1) 0%, rgba(95, 182, 232, 1) 100%);  */
+  background: linear-gradient(41deg, rgba(159, 192, 179, 1) 0%, rgba(111, 135, 121, 1) 100%);
+}
+
+.bg-map {
+  background-color: var(--test-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-down {
+  animation: fadeDown 1s ease-out forwards;
+}
+
+@layer components {
+  .button-slide-color {
+    @apply relative overflow-hidden text-black bg-[var(--simple-yellow)] transition-colors duration-300 z-0;
+  }
+
+  .button-slide-color::before {
+    content: "";
+    @apply absolute top-0 left-0 h-full bg-[var(--light-lime)] z-0 transition-all duration-500;
+    width: 0;
+  }
+
+  .button-slide-color:hover::before {
+    width: 100%;
+  }
+
+  .button-slide-color>* {
+    @apply relative z-10;
+  }
+}
+
+@media (max-width: 1024px) {
+  .bg-position-md {
+    background-position: center center;
+  }
+}
+
+@media (min-width: 1025px) {
+  .bg-position-lg {
+    background-position: calc(50% + 10vw) center;
+  }
+}

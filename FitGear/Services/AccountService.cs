@@ -1,0 +1,311 @@
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Runtime.CompilerServices;
+using System.Security.Claims;
+using AutoMapper;
+using FitGear.Contracts;
+using FitGear.Core.Contracts;
+using FitGear.Data;
+using HotelListing.API.Core.Models.Users;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
+namespace FitGear.Services;
+
+public class AccountService : IAccountService
+{
+    private readonly IAuthManager _authManager;
+    private readonly UserManager<User> _userManager;
+    private readonly IMapper _mapper;
+    private readonly ILogger<AccountService> _logger;
+    private User _user;
+
+    private const string _loginProvider = "FitGearApi";
+    private const string _refreshToken = "RefreshToken";
+
+    public AccountService(IAuthManager authManager,
+        UserManager<User> userManager,
+        IMapper mapper,
+        ILogger<AccountService> logger)
+    {
+        _authManager = authManager;
+        _userManager = userManager;
+        _mapper = mapper;
+        _logger = logger;
+    }
+
+    public async Task<IEnumerable<IdentityError>> RegisterAsync(ApiUserDto userDto)
+    {
+        _user = _mapper.Map<User>(userDto);
+
+        if (_userManager.FindByEmailAsync(_user.Email).Result != null)
+        {
+            throw new Exception("User already exists");
+        }
+
+        _user.UserName = userDto.Email;
+
+        var result = await _userManager.CreateAsync(_user, userDto.Password);
+
+        if (result.Succeeded)
+        {
+            await _userManager.AddToRoleAsync(_user, "User");
+        }
+
+        return result.Errors;
+    }
+
+    public async Task<AuthResponseDto> LoginAsync(LoginDto loginDto, HttpContext httpContext)
+    {
+        _logger.LogInformation($"Looking for user with email {loginDto.Email}");
+        _user = await _userManager.FindByEmailAsync(loginDto.Email);
+        bool isValidUser = await _userManager.CheckPasswordAsync(_user, loginDto.Password);
+
+        if (_user == null || isValidUser == false)
+        {
+            _logger.LogWarning($"User with email {loginDto.Email} was not found");
+            return null;
+        }
+
+        var token = await _authManager.GenerateToken(_user);
+        _logger.LogInformation($"Token generated for User with email {loginDto.Email} | Token: {token}");
+        var refreshToken = await _authManager.CreateRefreshToken(_user);
+        
+        var isMobile = httpContext.Request.Headers.ContainsKey("X-Mobile-Client");
+
+        if (!isMobile)
+        {
+            var accessTokenOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                // Secure = true,
+                SameSite = SameSiteMode.Strict,
+                Expires = DateTime.UtcNow.AddMinutes(10)
+            };
+            httpContext.Response.Cookies.Append("X-Access-Token", token, accessTokenOptions);
+
+            var refreshTokenOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                // Secure = true,
+                SameSite = SameSiteMode.Strict,
+                Expires = DateTime.UtcNow.AddDays(7)
+            };
+            httpContext.Response.Cookies.Append("X-Refresh-Token", refreshToken, refreshTokenOptions);
+
+            return new AuthResponseDto()
+            {
+                UserId = _user.Id
+            };
+        }
+        
+        return new AuthResponseDto()
+        {
+            UserId = _user.Id,
+            accessToken = token,
+            refreshToken = refreshToken
+        };
+    }
+
+    public async Task<AuthResponseDto> VerifyRefreshToken(AuthResponseDto request, HttpContext httpContext)
+    {
+        try
+        {
+            var isMobile = httpContext.Request.Headers.ContainsKey("X-Mobile-Client");
+
+            string? refreshToken;
+            string? accessToken;
+
+            if (isMobile)
+            {
+                refreshToken = request.refreshToken;
+                accessToken = request.accessToken;
+            }
+            else
+            {
+                refreshToken = httpContext.Request.Cookies["X-Refresh-Token"];
+                accessToken = httpContext.Request.Cookies["X-Access-Token"];
+            }
+
+            if (string.IsNullOrEmpty(refreshToken))
+            {
+                throw new KeyNotFoundException("Refresh token not found");
+            }
+
+            if (!string.IsNullOrEmpty(accessToken))
+            {
+                var jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
+
+                // Проверяем, что токен валидный
+                if (!jwtSecurityTokenHandler.CanReadToken(accessToken))
+                {
+                    _logger.LogWarning("Invalid token format");
+                    return null;
+                }
+
+                var tokenContent = jwtSecurityTokenHandler.ReadJwtToken(accessToken);
+
+                // Проверяем срок действия токена
+                if (tokenContent.ValidTo > DateTime.UtcNow)
+                {
+                    return request;
+                }
+            }
+
+            _user = await _authManager.FindUserByRefreshToken(refreshToken);
+
+            var storedRefreshToken =
+                await _userManager.GetAuthenticationTokenAsync(_user, _loginProvider, _refreshToken);
+
+            if (storedRefreshToken != refreshToken)
+            {
+                _logger.LogWarning("Refresh token mismatch");
+                return null;
+            }
+
+            // Удаляем старый refresh token
+            await _userManager.RemoveAuthenticationTokenAsync(_user, _loginProvider, _refreshToken);
+
+            // Создаем новые токены
+            var token = await _authManager.GenerateToken(_user);
+            var newRefreshToken = await _authManager.CreateRefreshToken(_user);
+
+            if (!isMobile)
+            {
+                var accessTokenOptions = new CookieOptions
+                {
+                    HttpOnly = true,
+                    // Secure = true,
+                    SameSite = SameSiteMode.Strict,
+                    Expires = DateTime.UtcNow.AddMinutes(10)
+                };
+                httpContext.Response.Cookies.Append("X-Access-Token", token, accessTokenOptions);
+
+                var refreshTokenOptions = new CookieOptions
+                {
+                    HttpOnly = true,
+                    // Secure = true,
+                    SameSite = SameSiteMode.Strict,
+                    Expires = DateTime.UtcNow.AddDays(7)
+                };
+                httpContext.Response.Cookies.Append("X-Refresh-Token", newRefreshToken, refreshTokenOptions);
+
+                return new AuthResponseDto()
+                {
+                    UserId = _user.Id
+                };
+            }
+            
+            return new AuthResponseDto
+            {
+                UserId = _user.Id,
+                accessToken = token,
+                refreshToken = newRefreshToken
+            };
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error verifying refresh token");
+            return null;
+        }
+    }
+
+    public async Task<IEnumerable<string>> GetRolesFromRefreshToken(HttpContext httpContext)
+    {
+        var refreshToken = httpContext.Request.Cookies["X-Refresh-Token"];
+        _user = await _authManager.FindUserByRefreshToken(refreshToken);
+
+        if (_user == null)
+        {
+            throw new KeyNotFoundException("User not found");
+        }
+
+        var roles = await _userManager.GetRolesAsync(_user);
+
+        return roles;
+    }
+
+    public async Task LoginWithGoogleAsync(ClaimsPrincipal? claimsPrincipal, HttpContext httpContext)
+    {
+        if (claimsPrincipal == null)
+        {
+            throw new ArgumentNullException($"Claims principal is null {nameof(claimsPrincipal)}");
+        }
+
+        var email = claimsPrincipal.FindFirstValue(ClaimTypes.Email);
+
+        if (email is null)
+        {
+            throw new KeyNotFoundException("Email not found in claims");
+        }
+
+        var user = await _userManager.FindByEmailAsync(email);
+
+        if (user == null)
+        {
+            var newUser = new User
+            {
+                UserName = email,
+                Email = email,
+                FirstName = claimsPrincipal.FindFirstValue(ClaimTypes.GivenName) ?? string.Empty,
+                LastName = claimsPrincipal.FindFirstValue(ClaimTypes.Surname) ?? string.Empty,
+                EmailConfirmed = true
+            };
+
+            var result = await _userManager.CreateAsync(newUser);
+
+            if (!result.Succeeded)
+            {
+                throw new Exception(
+                    $"User creation failed {string.Join(", ", result.Errors.Select(e => e.Description))}");
+            }
+
+            await _userManager.AddToRoleAsync(newUser, "User");
+            user = newUser;
+        }
+
+        var providerKey = claimsPrincipal.FindFirstValue(ClaimTypes.NameIdentifier) ?? email;
+        var info = new UserLoginInfo("Google", providerKey, "Google");
+
+        var userLogins = await _userManager.GetLoginsAsync(user);
+        var googleLogin = userLogins.FirstOrDefault(l => l.LoginProvider == info.LoginProvider && l.ProviderKey == info.ProviderKey);
+
+        if (googleLogin == null)
+        {
+            var loginResult = await _userManager.AddLoginAsync(user, info);
+            if (!loginResult.Succeeded)
+            {
+                // Логирование ошибок loginResult.Errors
+                throw new Exception($"Failed to add Google login: {string.Join(", ", loginResult.Errors.Select(e => e.Description))}");
+            }
+        }
+        else
+        {
+            // Логин уже существует, можно просто залогировать этот факт, если нужно
+            _logger.LogInformation($"User {user.Email} already has Google login linked.");
+        }
+
+        var accessToken = await _authManager.GenerateToken(user);
+        var refreshTokenValue = await _authManager.CreateRefreshToken(user); // Renamed
+
+        _logger.LogInformation($"Setting cookies for Google user {user.Email}.");
+        var accessTokenOptions = new CookieOptions
+        {
+            HttpOnly = true,
+            // Secure = true, // IMPORTANT: Set to true in production if served over HTTPS
+            SameSite = SameSiteMode.Strict, // Or SameSiteMode.Lax depending on your cross-site needs
+            Expires = DateTime.UtcNow.AddMinutes(10) // Consistent with LoginAsync
+        };
+        httpContext.Response.Cookies.Append("X-Access-Token", accessToken, accessTokenOptions);
+
+        var refreshTokenOptions = new CookieOptions
+        {
+            HttpOnly = true,
+            // Secure = true, // IMPORTANT: Set to true in production if served over HTTPS
+            SameSite = SameSiteMode.Strict,
+            Expires = DateTime.UtcNow.AddDays(7) // Consistent
+        };
+        httpContext.Response.Cookies.Append("X-Refresh-Token", refreshTokenValue, refreshTokenOptions);
+
+        _logger.LogInformation($"Google login successful for {user.Email}. Tokens set in cookies.");
+    }
+}

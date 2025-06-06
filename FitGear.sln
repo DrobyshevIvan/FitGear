@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitGear", "FitGear\FitGear.csproj", "{E28B261C-617D-4759-B469-AD7BF3A1FC74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitGear.Data", "FitGear.Data\FitGear.Data.csproj", "{3D74DE66-4546-4CDA-8012-A89B72837EC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitGear.Core", "FitGear.Core\FitGear.Core.csproj", "{E974FC99-14F4-40EE-94E4-CCC7FC993DF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{E28B261C-617D-4759-B469-AD7BF3A1FC74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E28B261C-617D-4759-B469-AD7BF3A1FC74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E28B261C-617D-4759-B469-AD7BF3A1FC74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D74DE66-4546-4CDA-8012-A89B72837EC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D74DE66-4546-4CDA-8012-A89B72837EC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D74DE66-4546-4CDA-8012-A89B72837EC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D74DE66-4546-4CDA-8012-A89B72837EC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E974FC99-14F4-40EE-94E4-CCC7FC993DF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E974FC99-14F4-40EE-94E4-CCC7FC993DF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E974FC99-14F4-40EE-94E4-CCC7FC993DF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E974FC99-14F4-40EE-94E4-CCC7FC993DF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,11 @@
+#root {
+  margin: 0 auto;
+  padding: 0rem;
+  padding-left: 0px;
+  text-align: center;
+}
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
